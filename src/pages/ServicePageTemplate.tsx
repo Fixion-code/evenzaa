@@ -42,6 +42,19 @@ export function ServicePageTemplate({
 
   return (
     <main className="pt-24 min-h-screen">
+      <Helmet>
+        <title>{seoTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={url} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-[#F7F5F1] -z-10" />
