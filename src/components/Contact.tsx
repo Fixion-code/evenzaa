@@ -29,17 +29,17 @@ export function Contact() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-muted-foreground">
-              Let's Create Together
+              Partner with us
             </span>
             <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
           
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8">
-            <span className="block mb-2">Ready to Light Up the Screen?</span>
+            <span className="block mb-2">Book your event crew</span>
           </h2>
           
           <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Tell us about your project and we'll get back to you with a plan to bring your vision to cinematic reality
+            Tell us about your event and manpower requirements. We'll get back to you within 24 hours with a customized proposal.
           </p>
         </div>
 
@@ -99,7 +99,7 @@ export function Contact() {
                   value={formData.message}
                   onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                   className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-blue/50 transition-all resize-none"
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell us about your event..."
                 />
               </div>
               <button
@@ -120,9 +120,9 @@ export function Contact() {
               <div className="w-12 h-12 bg-accent-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <div className="w-6 h-6 bg-accent-blue rounded-full" />
               </div>
-              <h4 className="font-black text-foreground mb-2">Project Discussion</h4>
+              <h4 className="font-black text-foreground mb-2">Event Requirements</h4>
               <p className="text-muted-foreground text-sm">
-                Share your vision and requirements with our team
+                Share your event date, venue, and manpower needs
               </p>
             </div>
             
@@ -130,9 +130,9 @@ export function Contact() {
               <div className="w-12 h-12 bg-accent-emerald/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <div className="w-6 h-6 bg-accent-emerald rounded-full" />
               </div>
-              <h4 className="font-black text-foreground mb-2">Custom Strategy</h4>
+              <h4 className="font-black text-foreground mb-2">Tailored Proposal</h4>
               <p className="text-muted-foreground text-sm">
-                Get a tailored approach for your unique project
+                Get a clear breakdown of roles, crew size, and costing
               </p>
             </div>
             
@@ -140,9 +140,9 @@ export function Contact() {
               <div className="w-12 h-12 bg-accent-purple/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <div className="w-6 h-6 bg-accent-purple rounded-full" />
               </div>
-              <h4 className="font-black text-foreground mb-2">Next Steps</h4>
+              <h4 className="font-black text-foreground mb-2">Seamless Execution</h4>
               <p className="text-muted-foreground text-sm">
-                Clear timeline and roadmap to bring your idea to life
+                Once confirmed, we handle the crew briefing, transport, and on-ground management
               </p>
             </div>
           </div>

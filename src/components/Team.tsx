@@ -12,67 +12,22 @@ import leoPhoto from '../assets/team-member-7.png'
 export function Team() {
   const wantedCriminals = [
     {
-      name: "Marcus 'The Pixel Bandit'",
-      crime: "ARMED CREATIVE ROBBERY",
-      bounty: "$8,500",
-      description: "Notorious for stealing ordinary footage and transforming it into extraordinary visual experiences. Approach with caution - carries dangerous levels of creative vision and technical expertise.",
+      name: "Shlok Aggarwal",
+      crime: "FOUNDER",
+      bounty: "Priceless",
+      description: "Years on the ground in India's events industry, building Evenza into a trusted name for hospitality manpower.",
       image: marcusPhoto,
       rotation: 'rotate-3',
-      mustacheStyle: "artistic"
+      mustacheStyle: "none"
     },
     {
-      name: "Sofia 'The Frame Thief'",
-      crime: "GRAND THEFT OF IMAGINATION",
-      bounty: "$6,200",
-      description: "Wanted for stealing impossible creative briefs and turning them into award-winning masterpieces. Armed with strategic thinking and dangerous levels of project management skills.",
+      name: "Stuti Shukla",
+      crime: "CO-FOUNDER",
+      bounty: "Priceless",
+      description: "Operational backbone — training crew, building processes, and ensuring service standards are met on every event.",
       image: sofiaPhoto,
-      rotation: 'rotate-2',
-      mustacheStyle: "handlebar"
-    },
-    {
-      name: "Jake 'The Render Rogue'",
-      crime: "MASTERMINDING TECHNICAL HEISTS",
-      bounty: "$11,800",
-      description: "Ringleader of rendering crimes, orchestrating elaborate computational operations. Wanted for leading sophisticated processing schemes that push hardware beyond its limits.",
-      image: jakePhoto,
-      rotation: 'rotate-2',
-      mustacheStyle: "thick"
-    },
-    {
-      name: "Maya 'The Code Crusher'",
-      crime: "DIGITAL WIZARDRY & ALGORITHM SORCERY",
-      bounty: "$9,300",
-      description: "Wanted for conjuring flawless code from chaotic requirements using forbidden programming magic. Known to transform complex problems into elegant solutions with mysterious technical powers.",
-      image: mayaPhoto,
       rotation: '-rotate-2',
-      mustacheStyle: "curly"
-    },
-    {
-      name: "Connor 'The Digital Desperado'",
-      crime: "PRODUCTION WITH INTENT TO AMAZE",
-      bounty: "$13,700",
-      description: "Mastermind behind revolutionary content creation operations. Wanted for disrupting traditional production methods and making competitors question their entire approach.",
-      image: connorPhoto,
-      rotation: 'rotate-1',
-      mustacheStyle: "villainous"
-    },
-    {
-      name: "Zara 'The Motion Maverick'",
-      crime: "ANIMATION MANIPULATION & EFFECT FORGERY",
-      bounty: "$7,900",
-      description: "Notorious for crafting motion graphics so smooth they defy the laws of physics. Armed with After Effects mastery and a dangerous eye for kinetic perfection.",
-      image: zaraPhoto,
-      rotation: '-rotate-1',
-      mustacheStyle: "artistic"
-    },
-    {
-      name: "Leo 'The Effect Enforcer'",
-      crime: "WANDERING VFX SYNTHESIS SCHEMES",
-      bounty: "$10,400",
-      description: "A nomadic visual effects outlaw who drifts from project to project, leaving behind a trail of jaw-dropping composites and impossible cinematic magic. Master of the digital realm.",
-      image: leoPhoto,
-      rotation: 'rotate-3',
-      mustacheStyle: "handlebar"
+      mustacheStyle: "none"
     }
   ]
 
@@ -82,9 +37,12 @@ export function Team() {
       thick: "M6 16c0-1 2-2 6-2s6 1 6 2c0 1-2 1-6 1s-6 0-6-1z",
       villainous: "M8 15c-1 0-2 1-2 2s1 1 2 0c1-1 2-1 4-1s3 0 4 1c1 1 2 0 2-1s-1-2-2-2c-2 0-4 1-8 1z",
       curly: "M6 16c0-2 1-2 2-1s1 1 2 0 1-1 2 0 1-1 2 0 2-1 2 1c0 1-1 1-2 1s-2 0-4 0-4 0-4-1z",
-      artistic: "M7 15c-1 1-1 2 0 2s2-1 3-1h4c1 0 2 1 3 1s1-1 0-2c-1-1-2-1-5-1s-4 0-5 1z"
+      artistic: "M7 15c-1 1-1 2 0 2s2-1 3-1h4c1 0 2 1 3 1s1-1 0-2c-1-1-2-1-5-1s-4 0-5 1z",
+      none: ""
     }
     
+    if (style === "none" || !mustaches[style as keyof typeof mustaches]) return null;
+
     return (
       <svg 
         className={`absolute ${className}`}
@@ -122,18 +80,18 @@ export function Team() {
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-muted-foreground">
-              Meet the Outlaws
+              Leadership
             </span>
             <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
           
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8 text-foreground">
-            <span className="block mb-2">These people are</span>
-            <span className="block text-foreground">WANTED</span>
+            <span className="block mb-2">Founder-led,</span>
+            <span className="block text-foreground">ACCOUNTABLE</span>
           </h2>
           
           <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Highly skilled and creatively dangerous
+            By design
           </p>
         </div>
 
@@ -196,14 +154,14 @@ export function Team() {
                   minHeight: '0', 
                   maxHeight: 'none' 
                 }}>
-                  {/* First row - 4 posters */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-8" style={{ 
+                  {/* Founders row - 2 posters */}
+                  <div className="flex flex-wrap justify-center gap-8 mb-8" style={{ 
                     overflow: 'visible', 
                     height: 'auto', 
                     minHeight: '0', 
                     maxHeight: 'none' 
                   }}>
-                    {wantedCriminals.slice(0, 4).map((criminal, index) => (
+                    {wantedCriminals.map((criminal, index) => (
                       <div
                         key={criminal.name}
                         className={`group transform ${criminal.rotation} hover:rotate-0 transition-all duration-500 hover:scale-105 hover:z-20`}
@@ -273,95 +231,7 @@ export function Team() {
                             {/* Details */}
                             <div className="text-left space-y-2" style={{ fontFamily: 'serif' }}>
                               <div className="font-black text-lg text-black">{criminal.name}</div>
-                              <div className="font-bold text-red-600 text-base">BOUNTY: {criminal.bounty}</div>
-                              <div className="text-sm text-gray-800 leading-relaxed bg-gray-50/50 p-3 border-l-2 border-black">
-                                {criminal.description}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  {/* Second row - 3 posters centered */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-5xl mx-auto" style={{ 
-                    overflow: 'visible', 
-                    height: 'auto', 
-                    minHeight: '0', 
-                    maxHeight: 'none' 
-                  }}>
-                    {wantedCriminals.slice(4, 7).map((criminal, index) => (
-                      <div
-                        key={criminal.name}
-                        className={`group transform ${criminal.rotation} hover:rotate-0 transition-all duration-500 hover:scale-105 hover:z-20`}
-                        style={{
-                          filter: 'drop-shadow(4px 4px 8px rgba(0,0,0,0.3))',
-                          overflow: 'visible',
-                          height: 'auto',
-                          minHeight: '0',
-                          maxHeight: 'none'
-                        }}
-                      >
-                        
-                        {/* Black Framed Wanted Poster */}
-                        <div className="bg-gradient-to-b from-white to-gray-50 border-4 border-black relative shadow-lg" style={{ 
-                          overflow: 'visible', 
-                          height: 'auto', 
-                          minHeight: '0', 
-                          maxHeight: 'none' 
-                        }}>
-                          
-                          {/* Modern push pins */}
-                          <div className="absolute -top-2 left-4 w-4 h-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg border border-red-700" />
-                          <div className="absolute -top-2 right-4 w-4 h-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg border border-red-700" />
-                          
-                          {/* Subtle modern paper effect */}
-                          <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-transparent to-gray-100/20" />
-                          <div className="absolute top-4 right-4 w-6 h-6 bg-slate-200/40 rounded-full" />
-                          <div className="absolute bottom-6 left-4 w-4 h-4 bg-gray-300/30 rounded-full" />
-
-                          <div className="p-6 text-center relative z-10">
-                            
-                            {/* WANTED Header */}
-                            <div className="mb-4">
-                              <h3 className="text-3xl font-black text-black mb-2"
-                                  style={{ 
-                                    fontFamily: 'serif',
-                                    letterSpacing: '0.1em'
-                                  }}>
-                                WANTED
-                              </h3>
-                              <div className="w-full h-0.5 bg-black mb-2" />
-                            </div>
-
-                            {/* Photo */}
-                            <div className="relative mb-4 mx-auto w-32 h-32 border-2 border-black bg-gray-100 rounded-sm" style={{ 
-                              overflow: 'visible' 
-                            }}>
-                              <ImageWithFallback
-                                src={criminal.image}
-                                alt={criminal.name}
-                                className="w-full h-full object-cover rounded-sm"
-                                style={{
-                                  filter: 'sepia(20%) contrast(105%) brightness(100%) hue-rotate(5deg) saturate(90%)'
-                                }}
-                              />
-                              
-                              {/* Subtle modern overlay */}
-                              <div className="absolute inset-0 bg-gradient-to-t from-slate-100/10 to-transparent rounded-sm" />
-                              
-                              {/* Mustache */}
-                              <Mustache 
-                                style={criminal.mustacheStyle} 
-                                className="bottom-4 left-1/2 -translate-x-1/2 opacity-80" 
-                              />
-                            </div>
-
-                            {/* Details */}
-                            <div className="text-left space-y-2" style={{ fontFamily: 'serif' }}>
-                              <div className="font-black text-lg text-black">{criminal.name}</div>
-                              <div className="font-bold text-red-600 text-base">BOUNTY: {criminal.bounty}</div>
+                              <div className="font-bold text-red-600 text-base">{criminal.crime}</div>
                               <div className="text-sm text-gray-800 leading-relaxed bg-gray-50/50 p-3 border-l-2 border-black">
                                 {criminal.description}
                               </div>

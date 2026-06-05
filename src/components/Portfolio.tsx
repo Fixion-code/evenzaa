@@ -5,24 +5,24 @@ import { Button } from './ui/button'
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="relative py-32 bg-background">
+    <section id="events" className="relative py-32 bg-background">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-muted-foreground">
-              Featured Work
+              Events We Power
             </span>
             <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
           </div>
           
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8">
-            <span className="block mb-2">Creative Productions</span>
+            <span className="block mb-2">Event Execution</span>
           </h2>
           
           <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Our latest commercial for Hampton - exploring the lonely journey of startup founders and the power of community.
+            Take a look at how we deploy structured manpower for grand events across the country.
           </p>
         </div>
 
@@ -55,37 +55,37 @@ export function Portfolio() {
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-4">
                   <span className="bg-accent-purple/10 text-accent-purple px-3 py-1 rounded-full text-sm font-medium">
-                    Commercial
+                    Event Manpower
                   </span>
                   <span className="text-sm text-muted-foreground">
-                    Client: Hampton
+                    Featured Coverage
                   </span>
                 </div>
                 
                 <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                  The Lonely Journey
+                  Seamless Event Logistics
                 </h3>
                 
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  A powerful commercial exploring the isolation that startup founders face and how joining Hampton's community can transform that journey. This piece captures the emotional weight of entrepreneurship and the relief that comes with finding your tribe.
+                  From the moment the first guest arrives to the final teardown, our crew ensures every moving piece of the event functions like clockwork. This showcases our team managing hospitality and operations on the ground.
                 </p>
                 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
                   <div>
                     <span className="text-muted-foreground block">Industry</span>
-                    <span className="font-medium">Community Platform</span>
+                    <span className="font-medium">Events & Weddings</span>
                   </div>
                   <div>
                     <span className="text-muted-foreground block">Style</span>
-                    <span className="font-medium">Narrative Drama</span>
+                    <span className="font-medium">On-ground Action</span>
                   </div>
                   <div>
                     <span className="text-muted-foreground block">Tone</span>
-                    <span className="font-medium">Emotional Journey</span>
+                    <span className="font-medium">Professional & Swift</span>
                   </div>
                   <div>
                     <span className="text-muted-foreground block">Format</span>
-                    <span className="font-medium">Digital Commercial</span>
+                    <span className="font-medium">Behind The Scenes</span>
                   </div>
                 </div>
               </div>

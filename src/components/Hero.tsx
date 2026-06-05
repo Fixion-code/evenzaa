@@ -134,34 +134,34 @@ export function Hero() {
                 window.scrollTo({ top: 0, behavior: 'smooth' })
               }}
             >
-              <span className="font-bagel text-white text-xl tracking-wider">MOJJU</span>
+              <span className="font-bagel text-white text-xl tracking-wider">Evenza</span>
             </motion.div>
 
             {/* Navigation Menu */}
             <div className="hidden md:flex items-center space-x-8">
               <a 
-                href="#portfolio" 
-                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
-              >
-                Work
-              </a>
-              <a 
-                href="#about" 
-                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
-              >
-                Process
-              </a>
-              <a 
                 href="#services" 
                 className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
               >
-                Capabilities
+                Services
               </a>
               <a 
-                href="#team" 
+                href="#roles" 
                 className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
               >
-                Team
+                Roles
+              </a>
+              <a 
+                href="#events" 
+                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
+              >
+                Events
+              </a>
+              <a 
+                href="#coverage" 
+                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
+              >
+                Coverage
               </a>
               <a 
                 href="#contact" 
@@ -251,32 +251,32 @@ export function Hero() {
             {/* Mobile Navigation Links */}
             <div className="flex flex-col space-y-4 text-white">
               <a 
-                href="#portfolio" 
-                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Work
-              </a>
-              <a 
-                href="#about" 
-                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Process
-              </a>
-              <a 
                 href="#services" 
                 className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Capabilities
+                Services
               </a>
               <a 
-                href="#team" 
+                href="#roles" 
                 className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Team
+                Roles
+              </a>
+              <a 
+                href="#events" 
+                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Events
+              </a>
+              <a 
+                href="#coverage" 
+                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Coverage
               </a>
               <a 
                 href="#contact" 
@@ -315,9 +315,9 @@ export function Hero() {
       >
         <div className="max-w-2xl">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-white">
-            <span className="block">AI FILM</span>
-            <span className="block">PRODUCTION</span>
-            <span className="block">WITHOUT LIMITS</span>
+            <span className="block">INDIA'S PREMIER</span>
+            <span className="block">EVENT MANPOWER &</span>
+            <span className="block">HOSPITALITY PARTNER</span>
           </h1>
         </div>
       </motion.div>

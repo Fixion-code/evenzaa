@@ -9,52 +9,52 @@ export function Services() {
 
   const services = [
     {
-      id: 'campaigns',
-      title: "Campaign & Ad Content",
-      description: "Multi-platform video campaigns ready for every channel—YouTube, TikTok, Instagram, and beyond.",
+      id: 'event-manpower',
+      title: "Event Manpower",
+      description: "Skilled crews deployed for events of any scale, anywhere in India.",
       color: 'accent-emerald',
       rotation: 'rotate-2',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?w=400&h=300&fit=crop&auto=format'
     },
     {
-      id: 'brand-films',
-      title: "Brand Films & Stories", 
-      description: "Cinematic brand videos that capture your essence and connect with audiences on an emotional level.",
+      id: 'hospitality-crew',
+      title: "Hospitality Crew", 
+      description: "F&B service, guest handling, VIP shadowing — handled with grace.",
       color: 'accent-blue',
       rotation: '-rotate-1',
-      image: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400&h=300&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop&auto=format'
     },
     {
-      id: 'trailers',
-      title: "Trailers & Promos",
-      description: "High-impact teasers that hook viewers instantly—perfect for launches, events, and announcements.",
+      id: 'volunteers',
+      title: "Volunteers",
+      description: "Trained volunteers for weddings, corporate, social and CSR events.",
       color: 'accent-purple',
       rotation: 'rotate-1',
-      image: 'https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=400&h=300&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&auto=format'
     },
     {
-      id: 'short-films',
-      title: "Short-Form Films",
-      description: "Festival-ready mini-movies up to 5 minutes—ideal for investors, events, and premium content.",
+      id: 'production-team',
+      title: "Production Team",
+      description: "Show flow, logistics, backstage and stage management.",
       color: 'accent-emerald',
       rotation: '-rotate-2',
-      image: 'https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400&h=300&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400&h=300&fit=crop&auto=format'
     },
     {
-      id: 'animation',
-      title: "Animation & Motion",
-      description: "Stylized animated content that explains complex ideas without needing live actors.",
+      id: 'event-management',
+      title: "Event Management",
+      description: "End-to-end coordination — from planning to wrap.",
       color: 'accent-blue',
       rotation: 'rotate-3',
-      image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=300&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&h=300&fit=crop&auto=format'
     },
     {
-      id: 'social',
-      title: "Social Content",
-      description: "Thumb-stopping vertical videos delivered in batches to keep your feed consistently engaging.",
+      id: 'on-ground-supervision',
+      title: "On-ground Supervision",
+      description: "Managers and supervisors to keep every moving part on cue.",
       color: 'accent-purple',
       rotation: '-rotate-1',
-      image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=400&h=300&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1515169067868-5387ec356754?w=400&h=300&fit=crop&auto=format'
     }
   ]
 
@@ -93,7 +93,7 @@ export function Services() {
           }`}>
             <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-amber-200/80">
-              Fresh from the Darkroom
+              Full-spectrum hospitality services
             </span>
             <div className="w-3 h-3 bg-amber-500 rounded-full animate-pulse" />
           </div>
@@ -101,13 +101,13 @@ export function Services() {
           <h2 className={`text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 text-amber-100 transform transition-all duration-1000 delay-200 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
           }`}>
-            What We Develop
+            Our Services
           </h2>
           
           <p className={`text-xl text-amber-200/90 leading-relaxed max-w-3xl mx-auto transform transition-all duration-1000 delay-400 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}>
-            Developed with precision, delivered with passion
+            Every role you need to run an event — under one trusted roof.
           </p>
         </div>
 
@@ -318,7 +318,7 @@ export function Services() {
                     
                     {/* Developer stamp */}
                     <div className="absolute bottom-2 right-2 text-xs text-gray-400 font-mono opacity-60">
-                      MOJJU LAB
+                      EVENZA CREW
                     </div>
                   </div>
                 </div>
@@ -521,7 +521,7 @@ export function Services() {
                     <div className="absolute bottom-8 left-3 w-2 h-8 bg-yellow-100/20 rounded-full transform rotate-15" />
                     
                     <div className="absolute bottom-2 right-2 text-xs text-gray-400 font-mono opacity-60">
-                      MOJJU LAB
+                      EVENZA CREW
                     </div>
                   </div>
                 </div>
@@ -532,7 +532,7 @@ export function Services() {
           {/* Darkroom atmosphere note */}
           <div className="mt-16 text-center">
             <p className="text-sm text-amber-200/70 leading-relaxed max-w-2xl mx-auto">
-              Each piece is carefully developed in our creative darkroom, ensuring every detail captures the essence of your vision with precision and artistic flair.
+              Every crew member is carefully vetted and trained to ensure every detail captures the essence of your vision with precision and grace.
             </p>
           </div>
         </div>
