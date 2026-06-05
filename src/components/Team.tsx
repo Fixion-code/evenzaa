@@ -1,256 +1,45 @@
-'use client'
+import { motion } from "framer-motion";
+import { SectionHeader } from "./SectionHeader";
+import { FOUNDERS } from "@/lib/constants";
 
-import { ImageWithFallback } from './figma/ImageWithFallback'
-import marcusPhoto from '../assets/team-member-1.png'
-import sofiaPhoto from '../assets/team-member-2.png'
-import jakePhoto from '../assets/team-member-3.png'
-import mayaPhoto from '../assets/team-member-4.png'
-import connorPhoto from '../assets/team-member-5.png'
-import zaraPhoto from '../assets/team-member-6.png'
-import leoPhoto from '../assets/team-member-7.png'
-
-export function Team() {
-  const wantedCriminals = [
-    {
-      name: "Shlok Aggarwal",
-      crime: "FOUNDER",
-      bounty: "Priceless",
-      description: "Years on the ground in India's events industry, building Evenza into a trusted name for hospitality manpower.",
-      image: marcusPhoto,
-      rotation: 'rotate-3',
-      mustacheStyle: "none"
-    },
-    {
-      name: "Stuti Shukla",
-      crime: "CO-FOUNDER",
-      bounty: "Priceless",
-      description: "Operational backbone — training crew, building processes, and ensuring service standards are met on every event.",
-      image: sofiaPhoto,
-      rotation: '-rotate-2',
-      mustacheStyle: "none"
-    }
-  ]
-
-  const Mustache = ({ style, className }: { style: string, className?: string }) => {
-    const mustaches = {
-      handlebar: "M12 16c-2 0-3-1-4-1s-2 1-4 1c0-1 1-2 4-2s4 1 4 2z M12 16c2 0 3-1 4-1s2 1 4 1c0-1-1-2-4-2s-4 1-4 2z",
-      thick: "M6 16c0-1 2-2 6-2s6 1 6 2c0 1-2 1-6 1s-6 0-6-1z",
-      villainous: "M8 15c-1 0-2 1-2 2s1 1 2 0c1-1 2-1 4-1s3 0 4 1c1 1 2 0 2-1s-1-2-2-2c-2 0-4 1-8 1z",
-      curly: "M6 16c0-2 1-2 2-1s1 1 2 0 1-1 2 0 1-1 2 0 2-1 2 1c0 1-1 1-2 1s-2 0-4 0-4 0-4-1z",
-      artistic: "M7 15c-1 1-1 2 0 2s2-1 3-1h4c1 0 2 1 3 1s1-1 0-2c-1-1-2-1-5-1s-4 0-5 1z",
-      none: ""
-    }
-    
-    if (style === "none" || !mustaches[style as keyof typeof mustaches]) return null;
-
-    return (
-      <svg 
-        className={`absolute ${className}`}
-        width="24" 
-        height="24" 
-        viewBox="0 0 24 24" 
-        fill="none"
-      >
-        <path 
-          d={mustaches[style as keyof typeof mustaches]} 
-          fill="#2D1810" 
-          stroke="#1A0F08" 
-          strokeWidth="0.5"
-        />
-      </svg>
-    )
-  }
-
+export function Founders() {
   return (
-    <div className="relative py-32 bg-background w-full" style={{ 
-      overflow: 'visible', 
-      height: 'auto', 
-      minHeight: '0', 
-      maxHeight: 'none' 
-    }}>
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12" style={{ 
-        overflow: 'visible', 
-        height: 'auto', 
-        minHeight: '0', 
-        maxHeight: 'none' 
-      }}>
-        
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-3 h-3 bg-accent-emerald rounded-full animate-pulse" />
-            <span className="text-sm font-semibold text-muted-foreground">
-              Leadership
-            </span>
-            <div className="w-3 h-3 bg-accent-blue rounded-full animate-pulse" />
-          </div>
-          
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-8 text-foreground">
-            <span className="block mb-2">Founder-led,</span>
-            <span className="block text-foreground">ACCOUNTABLE</span>
-          </h2>
-          
-          <p className="text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            By design
-          </p>
-        </div>
+    <section className="section-padding bg-card">
+      <SectionHeader
+        kicker="Leadership"
+        title={
+          <>
+            Founder-led,{" "}
+            <span className="italic text-gold">accountable</span> by design
+          </>
+        }
+      />
 
-        {/* Framed Wanted Board */}
-        <div className="max-w-7xl mx-auto" style={{ 
-          overflow: 'visible', 
-          height: 'auto', 
-          minHeight: '0', 
-          maxHeight: 'none' 
-        }}>
-          <div className="relative" style={{ 
-            overflow: 'visible', 
-            height: 'auto', 
-            minHeight: '0', 
-            maxHeight: 'none' 
-          }}>
-            
-            {/* Black Frame */}
-            <div className="bg-gradient-to-br from-black via-gray-900 to-black p-8 rounded-2xl shadow-2xl relative border border-gray-800/50" style={{ 
-              overflow: 'visible', 
-              height: 'auto', 
-              minHeight: '0', 
-              maxHeight: 'none' 
-            }}>
-              
-              {/* Black frame texture */}
-              <div className="absolute inset-0 opacity-15"
-                   style={{
-                     backgroundImage: `
-                       linear-gradient(135deg, rgba(55, 65, 81, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.2) 100%),
-                       radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
-                       radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.15) 0%, transparent 50%)
-                     `,
-                     backgroundSize: '60px 60px, 100px 100px, 80px 80px'
-                   }} />
-              
-              {/* Modern Board Background */}
-              <div className="bg-gradient-to-br from-slate-100 via-gray-50 to-slate-200 rounded-xl p-8 relative border border-slate-300/50" style={{ 
-                overflow: 'visible', 
-                height: 'auto', 
-                minHeight: '0', 
-                maxHeight: 'none' 
-              }}>
-                
-                {/* Modern subtle texture */}
-                <div className="absolute inset-0 opacity-30"
-                     style={{
-                       backgroundImage: `
-                         radial-gradient(circle at 30% 30%, rgba(71, 85, 105, 0.03) 1px, transparent 1px),
-                         radial-gradient(circle at 70% 70%, rgba(148, 163, 184, 0.02) 1px, transparent 1px),
-                         linear-gradient(135deg, rgba(226, 232, 240, 0.1) 0%, transparent 50%, rgba(241, 245, 249, 0.1) 100%)
-                       `,
-                       backgroundSize: '30px 30px, 45px 45px, 100% 100%'
-                     }} />
-
-                {/* Wanted Posters Grid */}
-                <div className="relative z-10" style={{ 
-                  overflow: 'visible', 
-                  height: 'auto', 
-                  minHeight: '0', 
-                  maxHeight: 'none' 
-                }}>
-                  {/* Founders row - 2 posters */}
-                  <div className="flex flex-wrap justify-center gap-8 mb-8" style={{ 
-                    overflow: 'visible', 
-                    height: 'auto', 
-                    minHeight: '0', 
-                    maxHeight: 'none' 
-                  }}>
-                    {wantedCriminals.map((criminal, index) => (
-                      <div
-                        key={criminal.name}
-                        className={`group transform ${criminal.rotation} hover:rotate-0 transition-all duration-500 hover:scale-105 hover:z-20`}
-                        style={{
-                          filter: 'drop-shadow(4px 4px 8px rgba(0,0,0,0.3))',
-                          overflow: 'visible',
-                          height: 'auto',
-                          minHeight: '0',
-                          maxHeight: 'none'
-                        }}
-                      >
-                        
-                        {/* Black Framed Wanted Poster */}
-                        <div className="bg-gradient-to-b from-white to-gray-50 border-4 border-black relative shadow-lg" style={{ 
-                          overflow: 'visible', 
-                          height: 'auto', 
-                          minHeight: '0', 
-                          maxHeight: 'none' 
-                        }}>
-                          
-                          {/* Modern push pins */}
-                          <div className="absolute -top-2 left-4 w-4 h-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg border border-red-700" />
-                          <div className="absolute -top-2 right-4 w-4 h-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full shadow-lg border border-red-700" />
-                          
-                          {/* Subtle modern paper effect */}
-                          <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-transparent to-gray-100/20" />
-                          <div className="absolute top-4 right-4 w-6 h-6 bg-slate-200/40 rounded-full" />
-                          <div className="absolute bottom-6 left-4 w-4 h-4 bg-gray-300/30 rounded-full" />
-
-                          <div className="p-6 text-center relative z-10">
-                            
-                            {/* WANTED Header */}
-                            <div className="mb-4">
-                              <h3 className="text-3xl font-black text-black mb-2"
-                                  style={{ 
-                                    fontFamily: 'serif',
-                                    letterSpacing: '0.1em'
-                                  }}>
-                                WANTED
-                              </h3>
-                              <div className="w-full h-0.5 bg-black mb-2" />
-                            </div>
-
-                            {/* Photo */}
-                            <div className="relative mb-4 mx-auto w-32 h-32 border-2 border-black bg-gray-100 rounded-sm" style={{ 
-                              overflow: 'visible' 
-                            }}>
-                              <ImageWithFallback
-                                src={criminal.image}
-                                alt={criminal.name}
-                                className="w-full h-full object-cover rounded-sm"
-                                style={{
-                                  filter: 'sepia(20%) contrast(105%) brightness(100%) hue-rotate(5deg) saturate(90%)'
-                                }}
-                              />
-                              
-                              {/* Subtle modern overlay */}
-                              <div className="absolute inset-0 bg-gradient-to-t from-slate-100/10 to-transparent rounded-sm" />
-                              
-                              {/* Mustache */}
-                              <Mustache 
-                                style={criminal.mustacheStyle} 
-                                className="bottom-4 left-1/2 -translate-x-1/2 opacity-80" 
-                              />
-                            </div>
-
-                            {/* Details */}
-                            <div className="text-left space-y-2" style={{ fontFamily: 'serif' }}>
-                              <div className="font-black text-lg text-black">{criminal.name}</div>
-                              <div className="font-bold text-red-600 text-base">{criminal.crime}</div>
-                              <div className="text-sm text-gray-800 leading-relaxed bg-gray-50/50 p-3 border-l-2 border-black">
-                                {criminal.description}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+        {FOUNDERS.map((p, i) => (
+          <motion.div
+            key={p.name}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6, delay: i * 0.15 }}
+            className="p-8 rounded-lg border gold-border bg-card shadow-soft hover:shadow-gold transition-all duration-300 group"
+          >
+            {/* Monogram avatar */}
+            <div className="w-16 h-16 rounded-full bg-gold-gradient flex items-center justify-center font-display text-2xl text-coffee mb-5 group-hover:scale-105 transition-transform duration-300 shadow-gold">
+              {p.name
+                .split(" ")
+                .map((s) => s[0])
+                .join("")}
             </div>
-            
-            {/* Black frame shadow */}
-            <div className="absolute -inset-4 bg-black/30 rounded-2xl -z-10 blur-xl" />
-          </div>
-        </div>
-
+            <h3 className="font-display text-2xl text-cream">{p.name}</h3>
+            <div className="text-gold text-sm uppercase tracking-widest mt-1 mb-4">
+              {p.role}
+            </div>
+            <p className="text-cream/70 leading-relaxed">{p.bio}</p>
+          </motion.div>
+        ))}
       </div>
-    </div>
-  )
+    </section>
+  );
 }

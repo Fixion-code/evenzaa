@@ -1,328 +1,210 @@
-'use client'
+import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { Sparkles, MessageCircle, ArrowRight } from "lucide-react";
+import { WHATSAPP, STATS } from "@/lib/constants";
 
-import { motion } from 'framer-motion'
-import { Volume2, VolumeX, Menu, X } from 'lucide-react'
-import { useState, useRef, useEffect } from 'react'
+// Animated counter hook
+function useCountUp(target: string, duration: number = 2000) {
+  const [count, setCount] = useState("0");
+  const ref = useRef<HTMLDivElement>(null);
+  const hasAnimated = useRef(false);
 
-export function Hero() {
-  const [isMuted, setIsMuted] = useState(true)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  // Scroll detection
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY
-      setIsScrolled(scrollTop > 50) // Show background after 50px scroll
-    }
+    const el = ref.current;
+    if (!el) return;
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
 
-  // Ensure video is muted immediately on load to prevent any audio
-  useEffect(() => {
-    if (videoRef.current) {
-      console.log('Video element found, setting up...')
-      videoRef.current.volume = 0
-      videoRef.current.muted = true
-      videoRef.current.defaultMuted = true
-      
-      // Add event listeners for debugging
-      videoRef.current.addEventListener('loadstart', () => console.log('Video: loadstart'))
-      videoRef.current.addEventListener('loadedmetadata', () => console.log('Video: loadedmetadata'))
-      videoRef.current.addEventListener('canplay', () => console.log('Video: canplay'))
-      videoRef.current.addEventListener('playing', () => console.log('Video: playing'))
-      videoRef.current.addEventListener('error', (e) => console.error('Video error:', e))
-      
-      // Force mute on play
-      videoRef.current.addEventListener('play', () => {
-        if (videoRef.current) {
-          console.log('Video play event fired')
-          videoRef.current.muted = isMuted
-          videoRef.current.volume = isMuted ? 0 : 0.7
+          // Extract numeric part
+          const numericMatch = target.match(/(\d+)/);
+          if (!numericMatch) {
+            setCount(target);
+            return;
+          }
+
+          const endNum = parseInt(numericMatch[1], 10);
+          const suffix = target.replace(/\d+/, "");
+          const startTime = performance.now();
+
+          const animate = (currentTime: number) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease-out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const currentNum = Math.floor(eased * endNum);
+            setCount(`${currentNum}${suffix}`);
+
+            if (progress < 1) {
+              requestAnimationFrame(animate);
+            }
+          };
+
+          requestAnimationFrame(animate);
         }
-      })
-      
-      // Try to play the video
-      const playPromise = videoRef.current.play()
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => console.log('Video autoplay successful'))
-          .catch(error => console.error('Video autoplay failed:', error))
-      }
-    }
-  }, [])
+      },
+      { threshold: 0.5 }
+    );
 
-  // Update video mute state when isMuted changes
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.muted = isMuted
-      videoRef.current.volume = isMuted ? 0 : 0.7
-    }
-  }, [isMuted])
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [target, duration]);
 
-  // Handle body scroll lock when mobile menu is open
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'unset'
-    }
+  return { count, ref };
+}
 
-    // Cleanup on unmount
-    return () => {
-      document.body.style.overflow = 'unset'
-    }
-  }, [isMobileMenuOpen])
-
-  // Close mobile menu on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      if (isMobileMenuOpen) {
-        setIsMobileMenuOpen(false)
-      }
-    }
-
-    if (isMobileMenuOpen) {
-      window.addEventListener('scroll', handleScroll)
-    }
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [isMobileMenuOpen])
-
-
+function StatItem({ number, label }: { number: string; label: string }) {
+  const { count, ref } = useCountUp(number);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-black">
-      {/* MASSIVE VIDEO - Takes up 95% of space */}
-      <video
-        ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover scale-110"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src="https://mojli.s3.us-east-2.amazonaws.com/Mojli+Website+upscaled+(12mb).webm" type="video/webm" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Full-Width Navbar */}
-      <motion.nav
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="fixed top-0 left-0 right-0 w-full z-[110]"
-      >
-        <div 
-          className={`w-full px-6 sm:px-8 lg:px-12 py-4 transition-all duration-300 ease-out ${
-            isScrolled 
-              ? 'bg-black/80 backdrop-blur-xl border-b border-white/10' 
-              : 'bg-transparent'
-          }`}
-        >
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center cursor-pointer"
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: 'smooth' })
-              }}
-            >
-              <span className="font-bagel text-white text-xl tracking-wider">Evenza</span>
-            </motion.div>
-
-            {/* Navigation Menu */}
-            <div className="hidden md:flex items-center space-x-8">
-              <a 
-                href="#services" 
-                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
-              >
-                Services
-              </a>
-              <a 
-                href="#roles" 
-                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
-              >
-                Roles
-              </a>
-              <a 
-                href="#events" 
-                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
-              >
-                Events
-              </a>
-              <a 
-                href="#coverage" 
-                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
-              >
-                Coverage
-              </a>
-              <a 
-                href="#contact" 
-                className="text-white hover:text-white/80 font-medium gentle-animation hover:scale-105"
-              >
-                Contact
-              </a>
-            </div>
-
-            {/* Right Side - Video Controls + CTA + Mobile Menu */}
-            <div className="flex items-center space-x-3 relative">
-              {/* Video Controls with Sound On indicator */}
-              <div className="relative">
-                <button
-                  onClick={() => setIsMuted(!isMuted)}
-                  className="glass-effect p-3 rounded-full text-white hover:bg-white/20 gentle-animation cursor-pointer"
-                >
-                  {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                </button>
-                
-                {/* Sound On indicator - only show when muted */}
-                {isMuted && (
-                  <div className="absolute -bottom-10 right-0 flex items-center text-white/80">
-                    <span className="whitespace-nowrap font-medium text-sm mr-2">Sound On</span>
-                    <span className="text-lg">↗</span>
-                  </div>
-                )}
-              </div>
-              
-              {/* CTA Button - Hidden on mobile */}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => {
-                  const contactSection = document.getElementById('contact')
-                  contactSection?.scrollIntoView({ behavior: 'smooth' })
-                }}
-                className="hidden sm:block bg-red-600 backdrop-blur-sm text-white font-semibold px-6 py-3 rounded-md hover:bg-red-700 gentle-animation ml-4 cursor-pointer"
-              >
-                Book a Call
-              </motion.button>
-
-              {/* Mobile Hamburger Menu Button */}
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden glass-effect p-3 rounded-full text-white hover:bg-white/20 active:bg-white/30 gentle-animation cursor-pointer z-[120] relative"
-              >
-                {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-              </button>
-            </div>
-          </div>
-        </div>
-      </motion.nav>
-
-      {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-md z-[80] cursor-pointer"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-      )}
-
-      {/* Mobile Menu Panel */}
-      <motion.div
-        initial={{ x: '100%' }}
-        animate={{ x: isMobileMenuOpen ? '0%' : '100%' }}
-        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-        className="md:hidden fixed top-0 right-0 h-full w-72 max-w-[85vw] bg-black/90 backdrop-blur-xl border-l border-white/10 z-[90] mobile-menu-panel pointer-events-auto"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="flex flex-col h-full">
-          {/* Close Button at the top */}
-          <div className="flex justify-end p-4">
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="glass-effect p-3 rounded-full text-white hover:bg-white/20 active:bg-white/30 gentle-animation cursor-pointer"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-          
-          <div className="flex flex-col px-6 pb-6 h-full">
-            {/* Mobile Navigation Links */}
-            <div className="flex flex-col space-y-4 text-white">
-              <a 
-                href="#services" 
-                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Services
-              </a>
-              <a 
-                href="#roles" 
-                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Roles
-              </a>
-              <a 
-                href="#events" 
-                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Events
-              </a>
-              <a 
-                href="#coverage" 
-                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Coverage
-              </a>
-              <a 
-                href="#contact" 
-                className="mobile-menu-link px-4 py-3 hover:text-white/80 hover:bg-white/10 rounded-lg gentle-animation font-medium text-lg active:bg-white/20"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact
-              </a>
-            </div>
-
-            {/* Mobile CTA Button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                const contactSection = document.getElementById('contact')
-                contactSection?.scrollIntoView({ behavior: 'smooth' })
-                setIsMobileMenuOpen(false)
-              }}
-              className="bg-red-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-red-700 active:bg-red-800 gentle-animation mt-8 cursor-pointer"
-            >
-              Book a Call
-            </motion.button>
-          </div>
-        </div>
-      </motion.div>
-
-
-
-      {/* Big Studio Title - Lower Left */}
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-12 left-6 sm:left-8 lg:left-12 z-40"
-      >
-        <div className="max-w-2xl">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight text-white">
-            <span className="block">INDIA'S PREMIER</span>
-            <span className="block">EVENT MANPOWER &</span>
-            <span className="block">HOSPITALITY PARTNER</span>
-          </h1>
-        </div>
-      </motion.div>
-
-
+    <div ref={ref} className="text-center">
+      <div className="font-display text-3xl md:text-4xl stats-number">{count}</div>
+      <div className="text-xs uppercase tracking-widest stats-label mt-1">
+        {label}
+      </div>
     </div>
-  )
+  );
+}
+
+export function Hero() {
+  return (
+    <header
+      id="top"
+      className="relative min-h-screen flex items-center overflow-hidden pt-24"
+    >
+      {/* Decorative background */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-[#F7F5F1]" />
+        {/* Dot grid pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage:
+              "radial-gradient(#c89a42 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+          }}
+        />
+      </div>
+
+      {/* Floating particles */}
+      <div className="particles-container">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <div key={i} className="particle" />
+        ))}
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-12 gap-12 items-center">
+        {/* Left content */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+          className="lg:col-span-8"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border gold-border text-gold text-xs tracking-widest uppercase mb-8"
+          >
+            <Sparkles className="w-3 h-3" /> Jaipur · Pan-India
+          </motion.div>
+
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl leading-[1.02] hero-title">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="block"
+            >
+              India's Premier
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+              className="block highlight"
+            >
+              Event Manpower
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.7 }}
+              className="block"
+            >
+              & Hospitality Partner.
+            </motion.span>
+          </h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="mt-8 text-lg text-cream/75 max-w-2xl leading-relaxed"
+          >
+            From intimate weddings in the Pink City to large-scale corporate
+            summits and concerts across India — Evenza delivers trained crews,
+            zero mediators, and flawless on-ground execution.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
+            className="mt-10 flex flex-wrap gap-4"
+          >
+            <a
+              href="#contact"
+              className="btn-primary shadow-soft"
+            >
+              Request a Quote <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href={`https://wa.me/${WHATSAPP}`}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-secondary"
+            >
+              <MessageCircle className="w-4 h-4" /> WhatsApp Us
+            </a>
+          </motion.div>
+        </motion.div>
+
+        {/* Right decorative card */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="lg:col-span-4 hidden lg:block"
+        >
+          <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-[rgba(86,98,56,0.15)] shadow-deep group">
+            <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #7a8450, #586237, #394126)" }} />
+            {/* Shimmer overlay */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
+            <div className="absolute inset-0 flex flex-col justify-end p-8">
+              <div className="font-display text-7xl text-gold italic leading-none">
+                E
+              </div>
+              <div className="gold-divider my-4" />
+              <p className="text-white/80 text-sm">
+                A brand of Shree Ji Company Pvt. Ltd.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Stats strip */}
+      <div className="absolute bottom-0 left-0 right-0 stats">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+          {STATS.map((s) => (
+            <StatItem key={s.label} number={s.number} label={s.label} />
+          ))}
+        </div>
+      </div>
+    </header>
+  );
 }
