@@ -1,9 +1,11 @@
-import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import { Sparkles, CheckCircle, ArrowRight, MessageCircle } from "lucide-react";
 import { WHATSAPP } from "@/lib/constants";
 
 interface ServicePageProps {
+  path?: string;
   seoTitle: string;
   metaDescription: string;
   keyword: string;
@@ -11,6 +13,8 @@ interface ServicePageProps {
   description: string;
   features: string[];
 }
+
+const SITE = "https://evenzaa.lovable.app";
 
 export function ServicePageTemplate({
   seoTitle,
@@ -20,18 +24,21 @@ export function ServicePageTemplate({
   description,
   features,
 }: ServicePageProps) {
-  useEffect(() => {
-    document.title = seoTitle;
-    const metaTag = document.querySelector('meta[name="description"]');
-    if (metaTag) {
-      metaTag.setAttribute("content", metaDescription);
-    } else {
-      const newMeta = document.createElement("meta");
-      newMeta.name = "description";
-      newMeta.content = metaDescription;
-      document.head.appendChild(newMeta);
-    }
-  }, [seoTitle, metaDescription]);
+  const { pathname } = useLocation();
+  const url = `${SITE}${pathname}`;
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: keyword,
+    description: metaDescription,
+    provider: {
+      "@type": "Organization",
+      name: "Evenza Hospitality Services",
+      url: SITE,
+    },
+    areaServed: keyword.split(" ").slice(-1)[0],
+    url,
+  };
 
   return (
     <main className="pt-24 min-h-screen">
