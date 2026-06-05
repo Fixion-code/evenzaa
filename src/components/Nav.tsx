@@ -29,7 +29,7 @@ export function Nav() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/85 backdrop-blur-xl border-b gold-border"
+          ? "bg-[#F7F5F1]/95 backdrop-blur-md border-b border-[#e7e0d6]"
           : "bg-transparent"
       }`}
     >
@@ -50,7 +50,7 @@ export function Nav() {
             <a
               key={n.href}
               href={n.href}
-              className="relative text-sm text-cream/85 hover:text-gold transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
+              className="relative text-sm text-foreground hover:text-gold transition-colors duration-300 after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
             >
               {n.label}
             </a>
@@ -59,7 +59,7 @@ export function Nav() {
             href={`https://wa.me/${WHATSAPP}`}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 bg-gold text-coffee font-medium px-5 py-2.5 rounded-md hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+            className="btn-secondary"
           >
             <MessageCircle className="w-4 h-4" /> Book a Call
           </a>
@@ -67,7 +67,7 @@ export function Nav() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-cream hover:text-gold transition-colors p-1"
+          className="md:hidden text-foreground hover:text-gold transition-colors p-1"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Close menu" : "Open menu"}
         >
@@ -105,7 +105,7 @@ export function Nav() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-            className="md:hidden overflow-hidden bg-background/95 backdrop-blur-xl border-t gold-border"
+            className="md:hidden overflow-hidden bg-[#F7F5F1]/95 backdrop-blur-xl border-t border-[#e7e0d6]"
           >
             <div className="px-6 py-6 flex flex-col gap-1">
               {NAV.map((n, i) => (
@@ -116,7 +116,7 @@ export function Nav() {
                   initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.06, duration: 0.3 }}
-                  className="text-cream/90 hover:text-gold py-3 px-2 rounded-md hover:bg-gold/5 transition-all text-lg"
+                  className="text-foreground hover:text-gold py-3 px-2 rounded-md hover:bg-[#e7e0d6]/50 transition-all text-lg"
                 >
                   {n.label}
                 </motion.a>
@@ -128,7 +128,7 @@ export function Nav() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.3 }}
-                className="inline-flex items-center justify-center gap-2 bg-gold text-coffee font-medium px-5 py-3.5 rounded-md mt-3 hover:opacity-90 transition"
+                className="btn-primary w-full justify-center mt-4"
               >
                 <MessageCircle className="w-4 h-4" /> Book a Call
               </motion.a>

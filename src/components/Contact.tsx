@@ -145,26 +145,30 @@ export function Contact() {
               href={c.href}
               target={c.external ? "_blank" : undefined}
               rel={c.external ? "noreferrer" : undefined}
-              className="flex items-start gap-4 p-5 rounded-lg border gold-border bg-card shadow-soft hover:shadow-gold hover:-translate-y-0.5 transition-all duration-300 group"
+              className="card p-5 group flex items-start gap-4 transition-all hover:-translate-y-1"
             >
-              <c.icon className="w-5 h-5 text-gold mt-1 group-hover:scale-110 transition-transform duration-300" />
+              <div className="w-10 h-10 rounded-full bg-[#c89a42]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <c.icon className="w-4 h-4 text-gold" />
+              </div>
               <div>
-                <div className="text-xs uppercase tracking-widest text-cream/60">
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">
                   {c.label}
                 </div>
-                <div className="text-cream font-medium mt-1">{c.value}</div>
+                <div className="text-foreground font-medium mt-1">{c.value}</div>
               </div>
             </a>
           ))}
 
           {/* Address (non-link) */}
-          <div className="flex items-start gap-4 p-5 rounded-lg border gold-border bg-card shadow-soft">
-            <MapPin className="w-5 h-5 text-gold mt-1" />
+          <div className="card p-5 flex items-start gap-4">
+            <div className="w-10 h-10 rounded-full bg-[#c89a42]/10 flex items-center justify-center shrink-0">
+              <MapPin className="w-4 h-4 text-gold" />
+            </div>
             <div>
-              <div className="text-xs uppercase tracking-widest text-cream/60">
-                HQ
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">
+                Headquarters
               </div>
-              <div className="text-cream font-medium mt-1">{ADDRESS}</div>
+              <div className="text-foreground font-medium mt-1">{ADDRESS}</div>
             </div>
           </div>
         </motion.div>
@@ -176,11 +180,11 @@ export function Contact() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="lg:col-span-3 p-8 rounded-lg border gold-border bg-card shadow-soft space-y-5"
+          className="lg:col-span-3 card p-5 md:p-8 space-y-5"
         >
           <div className="grid sm:grid-cols-2 gap-5">
             <div>
-              <Label htmlFor="name" className="text-cream/80">
+              <Label htmlFor="name" className="text-muted-foreground">
                 Name *
               </Label>
               <Input
@@ -191,7 +195,7 @@ export function Contact() {
               />
             </div>
             <div>
-              <Label htmlFor="phone" className="text-cream/80">
+              <Label htmlFor="phone" className="text-muted-foreground">
                 Phone *
               </Label>
               <Input
@@ -206,7 +210,7 @@ export function Contact() {
 
           <div className="grid sm:grid-cols-2 gap-5">
             <div>
-              <Label htmlFor="email" className="text-cream/80">
+              <Label htmlFor="email" className="text-muted-foreground">
                 Email
               </Label>
               <Input
@@ -217,7 +221,7 @@ export function Contact() {
               />
             </div>
             <div>
-              <Label htmlFor="city" className="text-cream/80">
+              <Label htmlFor="city" className="text-muted-foreground">
                 City
               </Label>
               <Input
@@ -230,7 +234,7 @@ export function Contact() {
 
           <div className="grid sm:grid-cols-3 gap-5">
             <div>
-              <Label htmlFor="event_type" className="text-cream/80">
+              <Label htmlFor="event_type" className="text-muted-foreground">
                 Event Type
               </Label>
               <Input
@@ -241,7 +245,7 @@ export function Contact() {
               />
             </div>
             <div>
-              <Label htmlFor="event_date" className="text-cream/80">
+              <Label htmlFor="event_date" className="text-muted-foreground">
                 Date
               </Label>
               <Input
@@ -252,7 +256,7 @@ export function Contact() {
               />
             </div>
             <div>
-              <Label htmlFor="headcount" className="text-cream/80">
+              <Label htmlFor="headcount" className="text-muted-foreground">
                 Crew needed
               </Label>
               <Input
@@ -266,7 +270,7 @@ export function Contact() {
           </div>
 
           <div>
-            <Label htmlFor="roles" className="text-cream/80">
+            <Label htmlFor="roles" className="text-muted-foreground">
               Roles required
             </Label>
             <Input
@@ -278,7 +282,7 @@ export function Contact() {
           </div>
 
           <div>
-            <Label htmlFor="message" className="text-cream/80">
+            <Label htmlFor="message" className="text-muted-foreground">
               Tell us more
             </Label>
             <Textarea
@@ -292,7 +296,7 @@ export function Contact() {
           <Button
             type="submit"
             disabled={submitting}
-            className="w-full bg-gold text-coffee hover:opacity-90 hover:scale-[1.01] active:scale-[0.99] font-medium py-6 text-base transition-all duration-200"
+            className="btn-primary w-full justify-center py-6 text-base"
           >
             {submitting ? (
               <span className="flex items-center gap-2">

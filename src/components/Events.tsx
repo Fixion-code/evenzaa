@@ -15,7 +15,7 @@ export function Events() {
         }
       />
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-4 md:gap-8 relative z-10">
         {EVENTS.map((e, i) => (
           <motion.div
             key={e.title}
@@ -23,13 +23,13 @@ export function Events() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5, delay: i * 0.07 }}
-            className="p-8 rounded-lg border gold-border bg-card shadow-soft hover:shadow-gold hover:-translate-y-1 transition-all duration-300 group"
+            className="card p-6 md:p-8 group"
           >
             <e.icon className="w-7 h-7 text-gold mb-4 group-hover:scale-110 transition-transform duration-300" />
-            <h3 className="font-display text-xl text-cream mb-2">
+            <h3 className="font-display text-xl text-foreground mb-2">
               {e.title}
             </h3>
-            <p className="text-cream/65 text-sm leading-relaxed">{e.desc}</p>
+            <p className="text-muted-foreground text-sm leading-relaxed">{e.desc}</p>
           </motion.div>
         ))}
       </div>

@@ -15,7 +15,7 @@ export function Founders() {
         }
       />
 
-      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+      <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-4 md:gap-8">
         {FOUNDERS.map((p, i) => (
           <motion.div
             key={p.name}
@@ -23,20 +23,20 @@ export function Founders() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
-            className="p-8 rounded-lg border gold-border bg-card shadow-soft hover:shadow-gold transition-all duration-300 group"
+            className="card p-6 md:p-8 group"
           >
             {/* Monogram avatar */}
-            <div className="w-16 h-16 rounded-full bg-gold-gradient flex items-center justify-center font-display text-2xl text-coffee mb-5 group-hover:scale-105 transition-transform duration-300 shadow-gold">
+            <div className="w-16 h-16 rounded-full bg-[#c89a42]/10 flex items-center justify-center font-display text-2xl text-[#c89a42] mb-4 md:mb-5 group-hover:scale-105 transition-transform duration-300">
               {p.name
                 .split(" ")
                 .map((s) => s[0])
                 .join("")}
             </div>
-            <h3 className="font-display text-2xl text-cream">{p.name}</h3>
-            <div className="text-gold text-sm uppercase tracking-widest mt-1 mb-4">
+            <h3 className="font-display text-2xl text-foreground">{p.name}</h3>
+            <div className="text-gold text-sm tracking-widest uppercase mt-1 mb-4">
               {p.role}
             </div>
-            <p className="text-cream/70 leading-relaxed">{p.bio}</p>
+            <p className="text-muted-foreground leading-relaxed">{p.bio}</p>
           </motion.div>
         ))}
       </div>

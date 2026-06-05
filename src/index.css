@@ -155,7 +155,7 @@ nav {
 
 /* Statistics Section */
 .stats {
-  background: #fbfaf8;
+  background: rgba(251, 250, 248, 0.85);
   border-top: 1px solid #e7e0d6;
 }
 
@@ -192,16 +192,25 @@ nav {
 
 /* Section padding */
 .section-padding {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .section-padding {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 

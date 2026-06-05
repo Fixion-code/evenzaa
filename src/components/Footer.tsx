@@ -2,15 +2,19 @@ import { NAV, PHONE, PHONE_SHLOK, EMAIL, ADDRESS, INSTAGRAM } from "@/lib/consta
 
 export function Footer() {
   return (
-    <footer className="border-t gold-border bg-card py-12 px-6">
+    <footer className="border-t border-border bg-card py-12 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-start">
         {/* Brand */}
         <div>
-          <div className="font-display text-2xl text-gold">Evenza</div>
-          <div className="text-cream/60 text-sm mt-1">
+          <a href="#top" className="flex items-baseline gap-2 group">
+            <span className="font-display text-2xl text-primary tracking-wide group-hover:opacity-80 transition-opacity">
+              Evenza
+            </span>
+          </a>
+          <div className="text-muted-foreground text-sm mt-1">
             Hospitality Services
           </div>
-          <p className="text-cream/50 text-sm mt-4 max-w-xs">
+          <p className="text-muted-foreground/80 text-sm mt-4 max-w-xs">
             A brand of Shree Ji Company Pvt. Ltd. — Jaipur, India.
           </p>
         </div>
@@ -25,7 +29,7 @@ export function Footer() {
               <li key={n.href}>
                 <a
                   href={n.href}
-                  className="text-cream/70 hover:text-gold transition-colors duration-300"
+                  className="text-muted-foreground hover:text-gold transition-colors duration-300"
                 >
                   {n.label}
                 </a>
@@ -39,7 +43,7 @@ export function Footer() {
           <div className="text-xs uppercase tracking-widest text-gold mb-3">
             Reach Us
           </div>
-          <ul className="space-y-2 text-sm text-cream/70">
+          <ul className="space-y-2 text-sm text-muted-foreground">
             <li>Stuti · {PHONE}</li>
             <li>Shlok · {PHONE_SHLOK}</li>
             <li>{EMAIL}</li>
@@ -60,7 +64,7 @@ export function Footer() {
 
       <div className="gold-divider my-8 max-w-7xl mx-auto" />
 
-      <div className="max-w-7xl mx-auto text-center text-cream/50 text-xs">
+      <div className="max-w-7xl mx-auto text-center text-muted-foreground/80 text-xs">
         © {new Date().getFullYear()} Shree Ji Company Pvt. Ltd. All rights
         reserved.
       </div>

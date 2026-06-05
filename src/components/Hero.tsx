@@ -72,11 +72,30 @@ export function Hero() {
   return (
     <header
       id="top"
-      className="relative min-h-screen flex items-center overflow-hidden pt-24"
+      className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-24"
     >
       {/* Decorative background */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-[#F7F5F1]" />
+        {/* Animated Glow Orbs */}
+        <motion.div 
+          animate={{ x: [0, 80, -80, 0], y: [0, -80, 80, 0], scale: [1, 1.15, 0.85, 1] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] md:w-[800px] md:h-[800px] rounded-full blur-[80px] pointer-events-none" 
+          style={{ background: 'rgba(200, 154, 66, 0.4)' }} 
+        />
+        <motion.div 
+          animate={{ x: [0, -100, 100, 0], y: [0, 100, -100, 0], scale: [1, 1.25, 0.75, 1] }}
+          transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/3 left-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full blur-[80px] pointer-events-none" 
+          style={{ background: 'rgba(200, 154, 66, 0.3)' }} 
+        />
+        <motion.div 
+          animate={{ x: [0, 100, -100, 0], y: [0, -100, 100, 0], scale: [1, 0.8, 1.2, 1] }}
+          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/2 right-0 w-[400px] h-[400px] md:w-[500px] md:h-[500px] rounded-full blur-[80px] pointer-events-none" 
+          style={{ background: 'rgba(200, 154, 66, 0.25)' }} 
+        />
         {/* Dot grid pattern */}
         <div
           className="absolute inset-0 opacity-[0.04]"
@@ -95,7 +114,8 @@ export function Hero() {
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-12 gap-12 items-center">
+      <div className="flex-1 flex items-center w-full py-12 lg:py-0">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-12 gap-12 items-center w-full">
         {/* Left content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -112,7 +132,7 @@ export function Hero() {
             <Sparkles className="w-3 h-3" /> Jaipur · Pan-India
           </motion.div>
 
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl leading-[1.02] hero-title">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-8xl leading-[1.05] hero-title">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -154,11 +174,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-8 flex flex-col sm:flex-row flex-wrap gap-4"
           >
             <a
               href="#contact"
-              className="btn-primary shadow-soft"
+              className="btn-primary shadow-soft w-full sm:w-auto justify-center"
             >
               Request a Quote <ArrowRight className="w-4 h-4" />
             </a>
@@ -166,7 +186,7 @@ export function Hero() {
               href={`https://wa.me/${WHATSAPP}`}
               target="_blank"
               rel="noreferrer"
-              className="btn-secondary"
+              className="btn-secondary w-full sm:w-auto justify-center"
             >
               <MessageCircle className="w-4 h-4" /> WhatsApp Us
             </a>
@@ -196,10 +216,11 @@ export function Hero() {
           </div>
         </motion.div>
       </div>
+      </div>
 
       {/* Stats strip */}
-      <div className="absolute bottom-0 left-0 right-0 stats">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="w-full relative z-10 stats backdrop-blur-md">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {STATS.map((s) => (
             <StatItem key={s.label} number={s.number} label={s.label} />
           ))}

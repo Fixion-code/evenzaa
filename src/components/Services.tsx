@@ -16,7 +16,7 @@ export function Services() {
         sub="Every role you need to run an event — under one trusted roof."
       />
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {SERVICES.map((s, i) => (
           <motion.div
             key={s.title}
@@ -24,16 +24,16 @@ export function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, delay: i * 0.08 }}
-            className="group p-8 rounded-lg border gold-border bg-card shadow-soft hover:shadow-gold hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
+            className="card p-6 md:p-8 relative overflow-hidden group"
           >
             {/* Hover gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative">
-              <s.icon className="w-8 h-8 text-gold mb-5 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-display text-2xl text-cream mb-3">
+              <s.icon className="w-8 h-8 text-gold mb-4 md:mb-5 group-hover:scale-110 transition-transform duration-300" />
+              <h3 className="font-display text-2xl text-foreground mb-3">
                 {s.title}
               </h3>
-              <p className="text-cream/65 leading-relaxed">{s.desc}</p>
+              <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
             </div>
           </motion.div>
         ))}
