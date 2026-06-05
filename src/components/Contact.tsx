@@ -175,7 +175,7 @@ export function Contact() {
                 rel={c.external ? "noreferrer" : undefined}
                 className="card p-5 group flex items-start gap-4 transition-all hover:-translate-y-1 cursor-pointer"
               >
-                <div className="w-10 h-10 rounded-full bg-[#c89a42]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <c.icon className="w-4 h-4 text-gold" />
                 </div>
                 <div>
@@ -190,7 +190,7 @@ export function Contact() {
 
           {/* Address (non-link) */}
           <div className="card p-5 flex items-start gap-4">
-            <div className="w-10 h-10 rounded-full bg-[#c89a42]/10 flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
               <MapPin className="w-4 h-4 text-gold" />
             </div>
             <div>

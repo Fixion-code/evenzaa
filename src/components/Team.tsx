@@ -26,7 +26,7 @@ export function Founders() {
             className="card p-6 md:p-8 group"
           >
             {/* Monogram avatar */}
-            <div className="w-16 h-16 rounded-full bg-[#c89a42]/10 flex items-center justify-center font-display text-2xl text-[#c89a42] mb-4 md:mb-5 group-hover:scale-105 transition-transform duration-300">
+            <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center font-display text-2xl text-gold mb-4 md:mb-5 group-hover:scale-105 transition-transform duration-300">
               {p.name
                 .split(" ")
                 .map((s) => s[0])

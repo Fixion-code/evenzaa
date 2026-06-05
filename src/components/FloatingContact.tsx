@@ -59,7 +59,7 @@ export function FloatingContact() {
               whileTap={{ scale: 0.95 }}
               onClick={handleWhatsAppRedirect}
               disabled={isRedirecting}
-              className="flex items-center gap-3 bg-white text-zinc-900 px-4 py-3 rounded-full shadow-lg border border-zinc-200 hover:border-green-500 hover:text-green-600 transition-colors group relative overflow-hidden"
+              className="flex items-center gap-3 bg-card text-foreground px-4 py-3 rounded-full shadow-lg border border-border hover:border-green-500 hover:text-green-600 transition-colors group relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-green-500/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
               <div className="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center relative z-10 shrink-0">
@@ -77,7 +77,7 @@ export function FloatingContact() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleCallRedirect}
-              className="flex items-center gap-3 bg-white text-zinc-900 px-4 py-3 rounded-full shadow-lg border border-zinc-200 hover:border-blue-500 hover:text-blue-600 transition-colors group relative overflow-hidden"
+              className="flex items-center gap-3 bg-card text-foreground px-4 py-3 rounded-full shadow-lg border border-border hover:border-blue-500 hover:text-blue-600 transition-colors group relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-blue-500/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
               <div className="w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center relative z-10 shrink-0">

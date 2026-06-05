@@ -6,7 +6,7 @@ export function Roles() {
   return (
     <section
       id="roles"
-      className="section-padding bg-[#F7F5F1]"
+      className="section-padding bg-background"
     >
       <SectionHeader
         kicker="Our Crew"
@@ -19,7 +19,7 @@ export function Roles() {
         sub="Mix and match the team you need — from a single runner to a 200-person crew."
       />
 
-      <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#c89a42]/20 rounded-lg overflow-hidden border border-[#e7e0d6]">
+      <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gold/20 rounded-lg overflow-hidden border border-border">
         {ROLES.map((r, i) => (
           <motion.div
             key={r.title}

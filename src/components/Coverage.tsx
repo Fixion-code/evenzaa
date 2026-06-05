@@ -25,7 +25,7 @@ export function Coverage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.4, delay: i * 0.03 }}
-              className="px-5 py-2.5 border border-[#e7e0d6] rounded-full text-foreground hover:bg-[#c89a42]/10 hover:text-foreground hover:border-[#c89a42]/40 hover:scale-105 transition-all duration-300 cursor-default"
+              className="px-5 py-2.5 border border-border rounded-full text-foreground hover:bg-gold/10 hover:text-foreground hover:border-gold/40 hover:scale-105 transition-all duration-300 cursor-default"
             >
               {c}
             </motion.span>

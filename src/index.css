@@ -35,6 +35,34 @@
   --radius: 0.5rem;
 }
 
+.dark {
+  /* Background */
+  --background: 92 18% 12%;
+  --card: 92 18% 14%;
+  --foreground: 40 20% 96%;
+
+  /* Brand Colors */
+  --primary: 85 30% 40%;
+  --primary-dark: 85 35% 30%;
+  --primary-light: 85 25% 55%;
+
+  /* Accent */
+  --gold: 38 55% 52%;
+  --gold-soft: 40 35% 20%;
+
+  /* Neutral */
+  --border: 92 18% 25%;
+  --muted: 92 18% 18%;
+  --muted-foreground: 40 10% 60%;
+
+  /* Text */
+  --cream: 40 20% 96%;
+  --coffee: 40 20% 96%;
+
+  /* Shadows */
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.4);
+}
+
 @theme inline {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -58,8 +86,7 @@
   }
 
   body {
-    background: #f7f5f1;
-    color: #2f3828;
+    @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     -webkit-font-smoothing: antialiased;
@@ -79,14 +106,14 @@
 
 /* Navbar */
 nav {
-  background: rgba(247,245,241,0.95);
+  background: hsl(var(--background) / 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #e7e0d6;
+  border-bottom: 1px solid hsl(var(--border));
 }
 
 /* Logo */
 .logo {
-  color: #566238;
+  color: hsl(var(--primary));
 }
 
 .logo span {
@@ -95,7 +122,7 @@ nav {
 
 /* Hero Heading */
 .hero-title {
-  color: #2f3828;
+  color: hsl(var(--foreground));
 }
 
 .hero-title .highlight {
@@ -141,8 +168,8 @@ nav {
 
 /* Cards */
 .card {
-  background: white;
-  border: 1px solid #ebe5da;
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
   box-shadow: 0 8px 30px rgba(0,0,0,0.04);
   transition: all 0.3s ease;
   border-radius: var(--radius);
@@ -155,16 +182,16 @@ nav {
 
 /* Statistics Section */
 .stats {
-  background: rgba(251, 250, 248, 0.85);
-  border-top: 1px solid #e7e0d6;
+  background: hsl(var(--background) / 0.85);
+  border-top: 1px solid hsl(var(--border));
 }
 
 .stats-number {
-  color: #566238;
+  color: hsl(var(--primary));
 }
 
 .stats-label {
-  color: #8a8a8a;
+  color: hsl(var(--muted-foreground));
 }
 
 /* Gold Divider */
@@ -243,6 +270,6 @@ nav {
 .particle:nth-child(4) { left: 55%; animation-duration: 14s; animation-delay: 1s; }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #f7f5f1; }
-::-webkit-scrollbar-thumb { background: #566238; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #394126; }
+::-webkit-scrollbar-track { background: hsl(var(--background)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--primary)); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--primary-dark)); }

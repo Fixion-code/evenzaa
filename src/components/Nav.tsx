@@ -134,7 +134,7 @@ export function Nav() {
                   initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.06, duration: 0.3 }}
-                  className="text-foreground hover:text-gold py-3 px-2 rounded-md hover:bg-[#e7e0d6]/50 transition-all text-lg"
+                  className="text-foreground hover:text-gold py-3 px-2 rounded-md hover:bg-muted/50 transition-all text-lg"
                 >
                   {n.label}
                 </motion.a>
