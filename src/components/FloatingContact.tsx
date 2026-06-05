@@ -94,6 +94,8 @@ export function FloatingContact() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Close contact options" : "Open contact options"}
+        aria-expanded={isOpen}
         className="w-14 h-14 rounded-full bg-gold text-white shadow-xl shadow-gold/20 flex items-center justify-center relative z-10 hover:shadow-gold/40 transition-shadow duration-300"
       >
         <AnimatePresence mode="wait">
