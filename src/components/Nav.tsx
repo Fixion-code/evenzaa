@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NAV, WHATSAPP } from "@/lib/constants";
+import { useTheme } from "./theme-provider";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -29,7 +31,7 @@ export function Nav() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#F7F5F1]/95 backdrop-blur-md border-b border-[#e7e0d6]"
+          ? "bg-background/95 backdrop-blur-md border-b border-border"
           : "bg-transparent"
       }`}
     >
@@ -55,6 +57,13 @@ export function Nav() {
               {n.label}
             </a>
           ))}
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="p-2 rounded-full text-foreground hover:text-gold transition-colors"
+            aria-label="Toggle dark mode"
+          >
+            {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </button>
           <a
             href={`https://wa.me/${WHATSAPP}`}
             target="_blank"
@@ -65,12 +74,20 @@ export function Nav() {
           </a>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden text-foreground hover:text-gold transition-colors p-1"
-          onClick={() => setOpen(!open)}
-          aria-label={open ? "Close menu" : "Open menu"}
-        >
+        {/* Mobile actions */}
+        <div className="flex md:hidden items-center gap-4">
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="p-2 rounded-full text-foreground hover:text-gold transition-colors"
+            aria-label="Toggle dark mode"
+          >
+            {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </button>
+          <button
+            className="text-foreground hover:text-gold transition-colors p-1"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? "Close menu" : "Open menu"}
+          >
           <AnimatePresence mode="wait">
             {open ? (
               <motion.div
@@ -94,7 +111,8 @@ export function Nav() {
               </motion.div>
             )}
           </AnimatePresence>
-        </button>
+          </button>
+        </div>
       </div>
 
       {/* Mobile drawer */}
@@ -105,7 +123,7 @@ export function Nav() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
-            className="md:hidden overflow-hidden bg-[#F7F5F1]/95 backdrop-blur-xl border-t border-[#e7e0d6]"
+            className="md:hidden overflow-hidden bg-background/95 backdrop-blur-xl border-t border-border"
           >
             <div className="px-6 py-6 flex flex-col gap-1">
               {NAV.map((n, i) => (

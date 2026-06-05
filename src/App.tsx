@@ -6,26 +6,29 @@ import { FloatingContact } from "./components/FloatingContact";
 import { Home } from "./pages/Home";
 import { ServicePageTemplate } from "./pages/ServicePageTemplate";
 import { SEO_PAGES } from "./lib/seo-pages";
+import { ThemeProvider } from "./components/theme-provider";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-background text-foreground">
-        <Toaster theme="dark" position="top-center" />
-        <FloatingContact />
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {SEO_PAGES.map((page) => (
-            <Route
-              key={page.path}
-              path={page.path}
-              element={<ServicePageTemplate {...page} />}
-            />
-          ))}
-        </Routes>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <ThemeProvider defaultTheme="dark" storageKey="evenza-theme">
+      <BrowserRouter>
+        <div className="min-h-screen bg-background text-foreground">
+          <Toaster theme="dark" position="top-center" />
+          <FloatingContact />
+          <Nav />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {SEO_PAGES.map((page) => (
+              <Route
+                key={page.path}
+                path={page.path}
+                element={<ServicePageTemplate {...page} />}
+              />
+            ))}
+          </Routes>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }

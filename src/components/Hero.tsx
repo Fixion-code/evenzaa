@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Sparkles, MessageCircle, ArrowRight } from "lucide-react";
 import { WHATSAPP, STATS } from "@/lib/constants";
 
@@ -69,14 +69,18 @@ function StatItem({ number, label }: { number: string; label: string }) {
 }
 
 export function Hero() {
+  const { scrollY } = useScroll();
+  const yBg = useTransform(scrollY, [0, 1000], [0, 300]);
+  const yContent = useTransform(scrollY, [0, 1000], [0, -100]);
+
   return (
     <header
       id="top"
       className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-24"
     >
-      {/* Decorative background */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-[#F7F5F1]" />
+      {/* Decorative background with parallax */}
+      <motion.div style={{ y: yBg }} className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-[#F7F5F1] dark:to-background" />
         {/* Animated Glow Orbs */}
         <motion.div
           animate={{ x: [0, 80, -80, 0], y: [0, -80, 80, 0], scale: [1, 1.15, 0.85, 1] }}
@@ -105,7 +109,7 @@ export function Hero() {
             backgroundSize: "32px 32px",
           }}
         />
-      </div>
+      </motion.div>
 
       {/* Floating particles */}
       <div className="particles-container">
@@ -198,14 +202,15 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right decorative card */}
+          {/* Right decorative card with parallax */}
           <motion.div
+            style={{ y: yContent }}
             initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
             className="lg:col-span-4 hidden lg:block"
           >
-            <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-[rgba(86,98,56,0.15)] shadow-deep group">
+            <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-[rgba(86,98,56,0.15)] shadow-deep group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
               <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #7a8450, #586237, #394126)" }} />
               {/* Shimmer overlay */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
