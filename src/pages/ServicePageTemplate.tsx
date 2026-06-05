@@ -1,9 +1,11 @@
-import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import { Sparkles, CheckCircle, ArrowRight, MessageCircle } from "lucide-react";
 import { WHATSAPP } from "@/lib/constants";
 
 interface ServicePageProps {
+  path?: string;
   seoTitle: string;
   metaDescription: string;
   keyword: string;
@@ -11,6 +13,8 @@ interface ServicePageProps {
   description: string;
   features: string[];
 }
+
+const SITE = "https://evenzaa.lovable.app";
 
 export function ServicePageTemplate({
   seoTitle,
@@ -20,21 +24,37 @@ export function ServicePageTemplate({
   description,
   features,
 }: ServicePageProps) {
-  useEffect(() => {
-    document.title = seoTitle;
-    const metaTag = document.querySelector('meta[name="description"]');
-    if (metaTag) {
-      metaTag.setAttribute("content", metaDescription);
-    } else {
-      const newMeta = document.createElement("meta");
-      newMeta.name = "description";
-      newMeta.content = metaDescription;
-      document.head.appendChild(newMeta);
-    }
-  }, [seoTitle, metaDescription]);
+  const { pathname } = useLocation();
+  const url = `${SITE}${pathname}`;
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: keyword,
+    description: metaDescription,
+    provider: {
+      "@type": "Organization",
+      name: "Evenza Hospitality Services",
+      url: SITE,
+    },
+    areaServed: keyword.split(" ").slice(-1)[0],
+    url,
+  };
 
   return (
     <main className="pt-24 min-h-screen">
+      <Helmet>
+        <title>{seoTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="canonical" href={url} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content={seoTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-[#F7F5F1] -z-10" />
