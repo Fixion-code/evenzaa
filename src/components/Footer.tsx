@@ -1,4 +1,5 @@
 import { NAV, PHONE, PHONE_SHLOK, EMAIL, ADDRESS, INSTAGRAM } from "@/lib/constants";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -43,19 +44,32 @@ export function Footer() {
           <div className="text-xs uppercase tracking-widest text-gold mb-3">
             Reach Us
           </div>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>Stuti · {PHONE}</li>
-            <li>Shlok · {PHONE_SHLOK}</li>
-            <li>{EMAIL}</li>
-            <li>{ADDRESS}</li>
+          <ul className="space-y-3 text-sm text-muted-foreground">
+            <li className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-gold shrink-0" />
+              <span>Stuti · {PHONE}</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-gold shrink-0" />
+              <span>Shlok · {PHONE_SHLOK}</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail className="w-4 h-4 text-gold shrink-0" />
+              <span>{EMAIL}</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" />
+              <span>{ADDRESS}</span>
+            </li>
             <li>
               <a
                 href={INSTAGRAM}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-gold transition-colors duration-300"
+                className="flex items-center gap-2 hover:text-gold transition-colors duration-300"
               >
-                Instagram · @EvenzaEvent
+                <Instagram className="w-4 h-4 text-gold shrink-0" />
+                <span>Instagram · @EvenzaEvent</span>
               </a>
             </li>
           </ul>

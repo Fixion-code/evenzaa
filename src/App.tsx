@@ -1,33 +1,31 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
 import { Nav } from "./components/Nav";
-import { Hero } from "./components/Hero";
-import { About } from "./components/About";
-import { Services } from "./components/Services";
-import { Roles } from "./components/Roles";
-import { Events } from "./components/Events";
-import { Coverage } from "./components/Coverage";
-import { Extras } from "./components/AdditionalServices";
-import { Founders } from "./components/Team";
-import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { FloatingContact } from "./components/FloatingContact";
+import { Home } from "./pages/Home";
+import { ServicePageTemplate } from "./pages/ServicePageTemplate";
+import { SEO_PAGES } from "./lib/seo-pages";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Toaster theme="dark" position="top-center" />
-      <Nav />
-      <main>
-        <Hero />
-        <About />
-        <Services />
-        <Roles />
-        <Events />
-        <Coverage />
-        <Extras />
-        <Founders />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-background text-foreground">
+        <Toaster theme="dark" position="top-center" />
+        <FloatingContact />
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {SEO_PAGES.map((page) => (
+            <Route
+              key={page.path}
+              path={page.path}
+              element={<ServicePageTemplate {...page} />}
+            />
+          ))}
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }

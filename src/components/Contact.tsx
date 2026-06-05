@@ -79,9 +79,8 @@ export function Contact() {
     });
 
     // Open WhatsApp with pre-filled message
-    setTimeout(() => {
-      window.open(waUrl, "_blank");
-    }, 500);
+    // Using window.location.href is more reliable on mobile devices and avoids popup blockers
+    window.location.href = waUrl;
 
     (e.target as HTMLFormElement).reset();
   };
@@ -139,25 +138,55 @@ export function Contact() {
           transition={{ duration: 0.6 }}
           className="lg:col-span-2 space-y-4"
         >
-          {contactCards.map((c) => (
-            <a
-              key={c.label}
-              href={c.href}
-              target={c.external ? "_blank" : undefined}
-              rel={c.external ? "noreferrer" : undefined}
-              className="card p-5 group flex items-start gap-4 transition-all hover:-translate-y-1"
-            >
-              <div className="w-10 h-10 rounded-full bg-[#c89a42]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                <c.icon className="w-4 h-4 text-gold" />
-              </div>
-              <div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground">
-                  {c.label}
+          {contactCards.map((c) => {
+            const isWhatsApp = c.label === "WhatsApp";
+            const isCall = c.label.includes("Call");
+            
+            const handleClick = (e: React.MouseEvent) => {
+              if (isWhatsApp) {
+                e.preventDefault();
+                import("sonner").then(({ toast }) => {
+                  toast.success("Connecting to WhatsApp...", {
+                    description: "Redirecting you to our chat securely.",
+                  });
+                  setTimeout(() => {
+                    window.open(c.href, "_blank");
+                  }, 1000);
+                });
+              } else if (isCall) {
+                e.preventDefault();
+                import("sonner").then(({ toast }) => {
+                  toast.info("Initiating call...", {
+                    description: "Opening your phone dialer.",
+                  });
+                  setTimeout(() => {
+                    window.location.href = c.href;
+                  }, 800);
+                });
+              }
+            };
+
+            return (
+              <a
+                key={c.label}
+                href={c.href}
+                onClick={handleClick}
+                target={c.external && !isWhatsApp ? "_blank" : undefined}
+                rel={c.external ? "noreferrer" : undefined}
+                className="card p-5 group flex items-start gap-4 transition-all hover:-translate-y-1 cursor-pointer"
+              >
+                <div className="w-10 h-10 rounded-full bg-[#c89a42]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <c.icon className="w-4 h-4 text-gold" />
                 </div>
-                <div className="text-foreground font-medium mt-1">{c.value}</div>
-              </div>
-            </a>
-          ))}
+                <div>
+                  <div className="text-xs uppercase tracking-widest text-muted-foreground">
+                    {c.label}
+                  </div>
+                  <div className="text-foreground font-medium mt-1">{c.value}</div>
+                </div>
+              </a>
+            );
+          })}
 
           {/* Address (non-link) */}
           <div className="card p-5 flex items-start gap-4">
