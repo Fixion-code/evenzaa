@@ -137,6 +137,8 @@ export function ServicePageTemplate({
     ],
   };
 
+  const isVolunteer = props.type === "volunteer";
+
   return (
     <main className="pt-24 min-h-screen">
       <Helmet>
@@ -323,32 +325,37 @@ export function ServicePageTemplate({
       <section id="contact" className="py-16 md:py-24 border-t border-white/5">
         <div className="max-w-2xl mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border gold-border text-gold text-xs tracking-widest uppercase mb-6">
-            <Sparkles className="w-3 h-3" /> Ready to Book?
+            <Sparkles className="w-3 h-3" /> {isVolunteer ? "Ready to Join?" : "Ready to Book?"}
           </div>
           <h2 className="font-display text-3xl md:text-4xl mb-4">
-            Hire <span className="text-gold">{keyword}</span> Today
+            {isVolunteer ? "Start Working in " : "Hire "}<span className="text-gold">{keyword}</span>
           </h2>
           <p className="text-cream/60 mb-10 leading-relaxed">
-            Contact Evenza now and get a detailed staffing proposal within a few hours.
-            No middlemen, transparent pricing, and a supervisor on every deployment.
+            {isVolunteer 
+              ? "Join our WhatsApp community today to get instant updates on upcoming paid event jobs and volunteering opportunities across Rajasthan."
+              : "Contact Evenza now and get a detailed staffing proposal within a few hours. No middlemen, transparent pricing, and a supervisor on every deployment."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <button
               onClick={() => window.open(`https://wa.me/${WHATSAPP}`, "_blank")}
               className="btn-primary justify-center"
             >
-              <MessageCircle className="w-4 h-4 mr-2" /> WhatsApp Us Now
+              <MessageCircle className="w-4 h-4 mr-2" /> {isVolunteer ? "Join WhatsApp Group" : "WhatsApp Us Now"}
             </button>
-            <a href={`tel:${PHONE_TEL}`} className="btn-secondary justify-center">
-              <Phone className="w-4 h-4 mr-2" /> Call {PHONE}
-            </a>
+            {!isVolunteer && (
+              <a href={`tel:${PHONE_TEL}`} className="btn-secondary justify-center">
+                <Phone className="w-4 h-4 mr-2" /> Call {PHONE}
+              </a>
+            )}
           </div>
-          <p className="text-cream/40 text-xs">
-            Or email us at{" "}
-            <a href={`mailto:${EMAIL}`} className="text-gold hover:underline">
-              {EMAIL}
-            </a>
-          </p>
+          {!isVolunteer && (
+            <p className="text-cream/40 text-xs">
+              Or email us at{" "}
+              <a href={`mailto:${EMAIL}`} className="text-gold hover:underline">
+                {EMAIL}
+              </a>
+            </p>
+          )}
           <div className="mt-10 pt-8 border-t border-white/5">
             <Link to="/" className="text-sm text-cream/50 hover:text-gold transition-colors">
               ← Back to Evenza Home

@@ -18,6 +18,7 @@ export interface SEOPage {
   features: string[];
   faqs: FAQ[];
   relatedPages?: RelatedPage[];
+  type?: "client" | "volunteer";
 }
 
 export const SEO_PAGES: SEOPage[] = [
@@ -2058,6 +2059,110 @@ export const SEO_PAGES: SEOPage[] = [
       { label: "Event Staffing Rajasthan", path: "/event-staffing-rajasthan" },
       { label: "Manpower Agency Jaipur", path: "/manpower-agency-jaipur" },
       { label: "Manpower Agency Rajasthan", path: "/manpower-agency-rajasthan" },
+    ],
+  },
+  {
+    path: "/volunteering-jaipur",
+    seoTitle: "Volunteering Jobs in Jaipur | Event Work for Students | Evenza",
+    metaDescription: "Stop doing unpaid NGO work. Get paid part-time working real events, concerts, and weddings in Jaipur with Evenza. No registration fees.",
+    keyword: "Volunteering Jaipur",
+    subtitle: "Paid Event Volunteering for Freshers & Students in Jaipur",
+    description: "Are you a college student or fresher in Jaipur looking for part-time work? At Evenza, we don't do unpaid NGO work. We hire paid event volunteers and crew for high-profile weddings, concerts, and corporate summits across Jaipur.",
+    type: "volunteer",
+    features: [
+      "Paid, real-world event experience (concerts, hospitality, RSVP).",
+      "100% Genuine — No scams, no registration fees, no fake forms.",
+      "Flexible weekend and project-based shifts that fit your college schedule.",
+      "Direct communication through our active WhatsApp Community.",
+    ],
+    faqs: [
+      {
+        q: "Is this paid volunteering?",
+        a: "Yes! Unlike NGO volunteering, all our event crew and volunteers are paid for their shifts.",
+      },
+      {
+        q: "Do I have to pay a registration fee?",
+        a: "Absolutely not. Evenza never asks for registration fees. If someone asks you for money to join Evenza, it is a scam.",
+      },
+      {
+        q: "What kind of events will I work on in Jaipur?",
+        a: "You will work on live concerts, royal destination weddings, corporate summits, and RSVP management projects in Jaipur.",
+      },
+    ],
+  },
+  {
+    path: "/event-jobs-students",
+    seoTitle: "Part-Time Event Jobs for Students | Earn While You Learn | Evenza",
+    metaDescription: "Flexible weekend and part-time event jobs perfect for college students in Jaipur and Rajasthan. Earn while you learn with Evenza.",
+    keyword: "Event Jobs for Students",
+    subtitle: "Flexible Part-Time Event Jobs for College Students",
+    description: "Looking to earn part-time while studying? Evenza offers flexible, project-based event jobs tailored for students in Jaipur and across Rajasthan. Gain real hospitality, technical, and management experience while getting paid.",
+    type: "volunteer",
+    features: [
+      "Work weekends or on short-term projects that don't disrupt your studies.",
+      "Roles include RSVP management, Excel/Tech work, hospitality, and running.",
+      "A safe, professional environment managed by experienced Evenza supervisors.",
+      "Build your resume with hands-on on-ground management experience.",
+    ],
+    faqs: [
+      {
+        q: "Do I need prior experience to join?",
+        a: "No prior experience is required for volunteer roles. We provide on-ground briefing and training before every event.",
+      },
+      {
+        q: "How do I get notified about upcoming jobs?",
+        a: "Simply join our WhatsApp Community. We post all upcoming event requirements directly in the group.",
+      },
+    ],
+  },
+  {
+    path: "/part-time-event-work",
+    seoTitle: "Part-Time Event Work & Freelance Crew | Rajasthan | Evenza",
+    metaDescription: "Freelance and project-based event work for hospitality, RSVP, and technical event crew across Rajasthan.",
+    keyword: "Part-time Event Work",
+    subtitle: "Project-Based Event Work for Freelancers & Crew",
+    description: "Whether you are looking for Excel/tech work, RSVP calling, or on-ground event management, Evenza is always looking for trusted, sharp individuals for part-time and freelance event work across Rajasthan.",
+    type: "volunteer",
+    features: [
+      "Join a trusted network of the best event freelancers in Rajasthan.",
+      "Opportunities in tech support, RSVP calling, hospitality, and crowd control.",
+      "Transparent pay structure with fast payouts post-event.",
+      "Work on massive international concerts and high-profile corporate summits.",
+    ],
+    faqs: [
+      {
+        q: "What is RSVP and tech event work?",
+        a: "This involves managing guest lists, making confirmation calls, handling QR code check-ins, and managing basic Excel data on-ground at the event.",
+      },
+      {
+        q: "Can I choose which events I work?",
+        a: "Yes. All projects are posted in our WhatsApp community, and you can opt-in for the ones that fit your schedule.",
+      },
+    ],
+  },
+  {
+    path: "/volunteering-rajasthan",
+    seoTitle: "Event Volunteering Jobs Across Rajasthan | Paid Work | Evenza",
+    metaDescription: "Join the largest community of paid event volunteers in Rajasthan. We have projects across Jaipur, Udaipur, Jodhpur, and more.",
+    keyword: "Volunteering Rajasthan",
+    subtitle: "Join Rajasthan's Largest Paid Event Volunteer Network",
+    description: "Based anywhere in Rajasthan? Evenza operates across Jaipur, Udaipur, Jodhpur, and beyond. We are constantly seeking active, responsible volunteers and event crew for destination weddings and corporate expos.",
+    type: "volunteer",
+    features: [
+      "Opportunities in major cities: Jaipur, Udaipur, Jodhpur, Pushkar.",
+      "Travel and stay provided for select out-station destination weddings.",
+      "A massive network of students and freshers working together.",
+      "Direct entry into the events industry with a reputed agency.",
+    ],
+    faqs: [
+      {
+        q: "Does Evenza cover travel for outstation events?",
+        a: "For large destination weddings outside your home city, Evenza typically arranges logistics, stay, and food.",
+      },
+      {
+        q: "Is it safe for female students?",
+        a: "100%. Safety is our top priority. Our teams are always led by trusted supervisors, and we ensure secure travel and safe working environments for all our crew.",
+      },
     ],
   },
 ];
