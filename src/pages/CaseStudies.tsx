@@ -33,7 +33,7 @@ export function CaseStudies() {
   };
 
   return (
-    <main className="pt-24 min-h-screen bg-background">
+    <main className="pt-24 min-h-screen-dvh bg-background">
       <Helmet>
         <title>Our Work & Case Studies | Evenza Event Manpower</title>
         <meta

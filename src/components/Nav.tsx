@@ -78,13 +78,13 @@ export function Nav() {
         <div className="flex md:hidden items-center gap-4">
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-full text-foreground hover:text-gold transition-colors"
+            className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-foreground hover:text-gold transition-colors"
             aria-label="Toggle dark mode"
           >
             {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
           <button
-            className="text-foreground hover:text-gold transition-colors p-1"
+            className="text-foreground hover:text-gold transition-colors p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
             onClick={() => setOpen(!open)}
             aria-label={open ? "Close menu" : "Open menu"}
           >

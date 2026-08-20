@@ -49,7 +49,7 @@ export function CaseStudyTemplate() {
   };
 
   return (
-    <main className="pt-24 min-h-screen bg-background">
+    <main className="pt-24 min-h-screen-dvh bg-background">
       <Helmet>
         <title>{study.seoTitle}</title>
         <meta name="description" content={study.metaDescription} />

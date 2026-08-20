@@ -61,7 +61,7 @@ const SOCIAL_LINKS = [
 export function Footer() {
   return (
     <footer className="border-t border-border bg-card py-12 px-6">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-10 items-start">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-10 items-start">
 
         {/* Brand */}
         <div className="lg:col-span-1">
@@ -132,12 +132,12 @@ export function Footer() {
           <div className="text-xs uppercase tracking-widest text-gold mb-4">
             Quick Links
           </div>
-          <ul className="space-y-2.5 text-sm">
+          <ul className="space-y-3 text-sm">
             {NAV.map((n) => (
               <li key={n.href}>
                 <a
                   href={n.href}
-                  className="text-muted-foreground hover:text-gold transition-colors duration-300"
+                  className="text-muted-foreground hover:text-gold transition-colors duration-300 py-1 inline-block"
                 >
                   {n.label}
                 </a>
@@ -151,12 +151,12 @@ export function Footer() {
           <div className="text-xs uppercase tracking-widest text-gold mb-4">
             Our Services
           </div>
-          <ul className="space-y-2.5 text-sm">
+          <ul className="space-y-3 text-sm">
             {SEO_LINKS.map((link) => (
               <li key={link.path}>
                 <Link
                   to={link.path}
-                  className="text-muted-foreground hover:text-gold transition-colors duration-300"
+                  className="text-muted-foreground hover:text-gold transition-colors duration-300 py-1 inline-block"
                 >
                   {link.label}
                 </Link>
@@ -170,12 +170,12 @@ export function Footer() {
           <div className="text-xs uppercase tracking-widest text-gold mb-4">
             Volunteer With Us
           </div>
-          <ul className="space-y-2.5 text-sm">
+          <ul className="space-y-3 text-sm">
             {VOLUNTEER_LINKS.map((link) => (
               <li key={link.path}>
                 <Link
                   to={link.path}
-                  className="text-muted-foreground hover:text-gold transition-colors duration-300"
+                  className="text-muted-foreground hover:text-gold transition-colors duration-300 py-1 inline-block"
                 >
                   {link.label}
                 </Link>
@@ -226,7 +226,7 @@ export function Footer() {
                 href={`https://wa.me/919161710849`}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 hover:text-gold transition-colors duration-300"
+                className="flex items-center gap-2 hover:text-gold transition-colors duration-300 py-1"
               >
                 {/* WhatsApp icon via SVG */}
                 <svg className="w-4 h-4 text-gold shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

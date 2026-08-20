@@ -16,7 +16,7 @@ export default function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="evenza-theme">
       <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-        <div className="min-h-screen bg-background text-foreground">
+        <div className="min-h-screen-dvh bg-background text-foreground">
           <Toaster position="top-center" />
           <FloatingContact />
           <Nav />

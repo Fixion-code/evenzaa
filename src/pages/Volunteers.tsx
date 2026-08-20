@@ -212,7 +212,7 @@ export function Volunteers() {
   };
 
   return (
-    <main className="pt-24 min-h-screen">
+    <main className="pt-24 min-h-screen-dvh">
       <Helmet>
         <title>Volunteer with Evenza | Genuine Event Volunteering Jobs in India</title>
         <meta

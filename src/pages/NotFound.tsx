@@ -7,7 +7,7 @@ export default function NotFound() {
   const { pathname } = useLocation();
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-background px-6">
+    <main className="min-h-screen-dvh flex items-center justify-center bg-background px-6">
       <Helmet>
         <title>Page Not Found | Evenza Hospitality Services</title>
         <meta name="robots" content="noindex, follow" />

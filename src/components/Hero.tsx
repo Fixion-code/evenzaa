@@ -77,7 +77,7 @@ export function Hero() {
   return (
     <header
       id="top"
-      className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-24"
+      className="relative min-h-screen-dvh flex flex-col justify-between overflow-hidden pt-24"
     >
       {/* Decorative background with parallax */}
       <motion.div style={{ y: yBg }} className="absolute inset-0 -z-10 overflow-hidden">

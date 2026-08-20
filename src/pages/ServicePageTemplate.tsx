@@ -140,7 +140,7 @@ export function ServicePageTemplate({
   const isVolunteer = props.type === "volunteer";
 
   return (
-    <main className="pt-24 min-h-screen">
+    <main className="pt-24 min-h-screen-dvh">
       <Helmet>
         <title>{seoTitle}</title>
         <meta name="description" content={metaDescription} />
