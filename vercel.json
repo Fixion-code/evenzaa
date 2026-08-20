@@ -3,13 +3,12 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options",   "value": "nosniff" },
-        { "key": "X-Frame-Options",           "value": "SAMEORIGIN" },
-        { "key": "X-XSS-Protection",          "value": "1; mode=block" },
-        { "key": "Referrer-Policy",           "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy",        "value": "camera=(), microphone=(), geolocation=(), payment=()" },
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "Content-Security-Policy",   "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://*.supabase.co https://www.google-analytics.com https://vitals.vercel-insights.com; frame-src 'none'; object-src 'none'; base-uri 'self';" }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" }
       ]
     },
     {
@@ -19,28 +18,13 @@
       ]
     },
     {
-      "source": "/og-image.jpg",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=2592000, s-maxage=2592000" }
-      ]
-    },
-    {
-      "source": "/(robots\\.txt|sitemap\\.xml|llms\\.txt|manifest\\.webmanifest|humans\\.txt)",
+      "source": "/(robots.txt|sitemap.xml|llms.txt|manifest.webmanifest|humans.txt)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400, s-maxage=86400" }
-      ]
-    },
-    {
-      "source": "/",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, s-maxage=86400, stale-while-revalidate=86400" }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/((?!api|assets|_next|favicon\.ico|robots\.txt|sitemap\.xml|llms\.txt|manifest\.webmanifest|humans\.txt|placeholder\.svg|og-image\.jpg).*)", "destination": "/index.html" }
-  ],
-  "redirects": [
-    { "source": "/:path+/", "destination": "/:path+", "permanent": true }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
