@@ -37,13 +37,18 @@ export function Nav() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#top" className="flex items-baseline gap-2 group">
-          <span className="font-display text-2xl text-gold tracking-wide group-hover:opacity-80 transition-opacity">
-            Evenza
-          </span>
-          <span className="text-xs text-muted-foreground hidden sm:inline">
-            Hospitality Services
-          </span>
+        <a href="#top" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 rounded-full overflow-hidden border border-gold/30 bg-card shadow-sm shrink-0">
+            <img src="/evenza-profile.png" alt="Evenza Logo" className="w-full h-full object-cover" />
+          </div>
+          <div className="flex items-baseline gap-2">
+            <span className="font-display text-2xl text-gold tracking-wide group-hover:opacity-80 transition-opacity">
+              Evenza
+            </span>
+            <span className="text-xs text-muted-foreground hidden sm:inline">
+              Hospitality Services
+            </span>
+          </div>
         </a>
 
         {/* Desktop nav */}

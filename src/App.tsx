@@ -12,6 +12,8 @@ import { CaseStudyTemplate } from "./pages/CaseStudyTemplate";
 import { ThemeProvider } from "./components/theme-provider";
 import NotFound from "./pages/NotFound";
 import { Links } from "./pages/Links";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function AppContent() {
   const location = useLocation();
@@ -47,6 +49,8 @@ export default function App() {
     <ThemeProvider defaultTheme="light" storageKey="evenza-theme">
       <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <AppContent />
+        <Analytics />
+        <SpeedInsights />
       </BrowserRouter>
     </ThemeProvider>
   );
