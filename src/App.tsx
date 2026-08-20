@@ -7,6 +7,7 @@ import { Home } from "./pages/Home";
 import { ServicePageTemplate } from "./pages/ServicePageTemplate";
 import { SEO_PAGES } from "./lib/seo-pages";
 import { ThemeProvider } from "./components/theme-provider";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
                 element={<ServicePageTemplate {...page} />}
               />
             ))}
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </div>

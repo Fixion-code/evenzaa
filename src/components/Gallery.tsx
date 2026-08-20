@@ -4,12 +4,12 @@ import { X, ZoomIn } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
 
 const GALLERY_IMAGES = [
-  { id: 1, src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800&auto=format&fit=crop", alt: "Wedding Event", category: "Weddings" },
-  { id: 2, src: "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=800&auto=format&fit=crop", alt: "Corporate Event", category: "Corporate" },
-  { id: 3, src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800&auto=format&fit=crop", alt: "Music Festival", category: "Concerts" },
-  { id: 4, src: "https://images.unsplash.com/photo-1519167758481-83f5c12047ce?q=80&w=800&auto=format&fit=crop", alt: "Exhibition", category: "Exhibitions" },
-  { id: 5, src: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=800&auto=format&fit=crop", alt: "Party Setup", category: "Private Parties" },
-  { id: 6, src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop", alt: "Conference", category: "Corporate" },
+  { id: 1, src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800&auto=format&fit=crop", alt: "Evenza hospitality team managing a destination wedding in Jaipur", category: "Weddings" },
+  { id: 2, src: "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=800&auto=format&fit=crop", alt: "Evenza volunteers and registration staff at a corporate conference", category: "Corporate" },
+  { id: 3, src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800&auto=format&fit=crop", alt: "Evenza event manpower team supporting a live music concert", category: "Concerts" },
+  { id: 4, src: "https://images.unsplash.com/photo-1519167758481-83f5c12047ce?q=80&w=800&auto=format&fit=crop", alt: "Evenza exhibition staff managing a trade fair booth in Jaipur", category: "Exhibitions" },
+  { id: 5, src: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=800&auto=format&fit=crop", alt: "Evenza crew setting up a private party event in Rajasthan", category: "Private Parties" },
+  { id: 6, src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop", alt: "Evenza event staff managing delegates at a corporate conference", category: "Corporate" },
 ];
 
 export function Gallery() {

@@ -16,7 +16,13 @@ import {
   WHATSAPP,
   EMAIL,
   ADDRESS,
+  INSTAGRAM,
+  FACEBOOK,
+  THREADS,
+  LINKEDIN,
+  TELEGRAM,
 } from "@/lib/constants";
+import { Instagram, Facebook, Linkedin, Send } from "lucide-react";
 
 const leadSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(120),
@@ -198,6 +204,62 @@ export function Contact() {
                 Headquarters
               </div>
               <div className="text-foreground font-medium mt-1">{ADDRESS}</div>
+            </div>
+          </div>
+
+          {/* Social Channels */}
+          <div className="card p-5">
+            <div className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
+              Official Social Media
+            </div>
+            <div className="grid grid-cols-2 gap-2.5">
+              <a
+                href={INSTAGRAM}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 p-2 rounded-lg bg-background/50 hover:bg-gold/10 hover:text-gold border border-border text-xs text-muted-foreground transition-all duration-300"
+              >
+                <Instagram className="w-4 h-4 text-gold shrink-0" />
+                <span className="truncate">@evenzaevent</span>
+              </a>
+              <a
+                href={FACEBOOK}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 p-2 rounded-lg bg-background/50 hover:bg-gold/10 hover:text-gold border border-border text-xs text-muted-foreground transition-all duration-300"
+              >
+                <Facebook className="w-4 h-4 text-gold shrink-0" />
+                <span className="truncate">Evenza India</span>
+              </a>
+              <a
+                href={THREADS}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 p-2 rounded-lg bg-background/50 hover:bg-gold/10 hover:text-gold border border-border text-xs text-muted-foreground transition-all duration-300"
+              >
+                <span className="w-4 h-4 rounded-full bg-gold/20 text-gold flex items-center justify-center font-bold text-[10px] shrink-0">
+                  @
+                </span>
+                <span className="truncate">Threads</span>
+              </a>
+              <a
+                href={LINKEDIN}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 p-2 rounded-lg bg-background/50 hover:bg-gold/10 hover:text-gold border border-border text-xs text-muted-foreground transition-all duration-300"
+              >
+                <Linkedin className="w-4 h-4 text-gold shrink-0" />
+                <span className="truncate">LinkedIn</span>
+              </a>
+              <a
+                href={TELEGRAM}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 p-2 rounded-lg bg-background/50 hover:bg-gold/10 hover:text-gold border border-border text-xs text-muted-foreground transition-all duration-300 col-span-2"
+              >
+                <Send className="w-4 h-4 text-gold shrink-0" />
+                <span className="truncate">Join our Telegram Channel</span>
+              </a>
             </div>
           </div>
         </motion.div>

@@ -1,19 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://evenzaa.lovable.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://evenzaa.lovable.app/event-manpower-jaipur</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://evenzaa.lovable.app/event-volunteers-jaipur</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://evenzaa.lovable.app/hospitality-team-jaipur</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://evenzaa.lovable.app/wedding-staff-jaipur</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://evenzaa.lovable.app/corporate-event-staffing-jaipur</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://evenzaa.lovable.app/exhibition-staff-jaipur</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://evenzaa.lovable.app/event-manpower-udaipur</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://evenzaa.lovable.app/event-manpower-jodhpur</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://evenzaa.lovable.app/event-manpower-ajmer</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://evenzaa.lovable.app/event-manpower-kota</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://evenzaa.lovable.app/event-manpower-delhi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://evenzaa.lovable.app/event-manpower-gurgaon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://evenzaa.lovable.app/event-manpower-noida</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://evenzaa.lovable.app/event-manpower-mumbai</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://evenzaa.lovable.app/event-manpower-ahmedabad</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Homepage -->
+  <url><loc>https://evenzaa-sable.vercel.app/</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+  <!-- Jaipur Core Service Pages (Priority Tier 1) -->
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-jaipur</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/hospitality-team-jaipur</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/wedding-staff-jaipur</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/corporate-event-staffing-jaipur</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-volunteers-jaipur</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/exhibition-staff-jaipur</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- New Jaipur & Rajasthan Service Pages (Priority Tier 2) -->
+  <url><loc>https://evenzaa-sable.vercel.app/hospitality-manpower-jaipur</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/wedding-hospitality-jaipur</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-staffing-rajasthan</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-rajasthan</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/manpower-agency-jaipur</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Rajasthan City Pages (Priority Tier 3) -->
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-udaipur</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-jodhpur</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-ajmer</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-kota</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Major Metro City Pages (Priority Tier 3) -->
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-delhi</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-gurgaon</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-noida</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-mumbai</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-ahmedabad</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-lucknow</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-pune</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-bengaluru</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-hyderabad</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-chennai</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-chandigarh</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-goa</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-indore</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-surat</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-kolkata</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+
 </urlset>

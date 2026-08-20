@@ -20,9 +20,15 @@ export const PHONE_TEL = "+919161710849";
 export const PHONE_SHLOK = "+91 80819 45789";
 export const PHONE_SHLOK_TEL = "+918081945789";
 export const WHATSAPP = "919161710849";
-export const EMAIL = "evenzaindia@gmail.com";
-export const INSTAGRAM = "https://instagram.com/EvenzaEvent";
+export const EMAIL = "indiaevenza@gmail.com";
 export const ADDRESS = "Choti Chaupad, Jaipur, Rajasthan, India";
+
+// ===== SOCIAL MEDIA =====
+export const INSTAGRAM = "https://instagram.com/evenzaevent";
+export const FACEBOOK = "https://www.facebook.com/people/Evenza-India/61591730651713/";
+export const THREADS = "https://www.threads.com/@evenzaevent";
+export const LINKEDIN = "https://www.linkedin.com/in/evenza-india-1345b2422/";
+export const TELEGRAM = "https://t.me/+78a-D_drgro2MTk1";
 
 // ===== NAVIGATION =====
 export const NAV = [

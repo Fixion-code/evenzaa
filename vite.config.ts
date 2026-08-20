@@ -15,4 +15,32 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Increase the warning threshold so the dev console is clean
+    chunkSizeWarningLimit: 600,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Core React runtime
+          "vendor-react": ["react", "react-dom", "react-router-dom"],
+          // Animation library (large)
+          "vendor-framer": ["framer-motion"],
+          // Form validation
+          "vendor-zod": ["zod"],
+          // UI primitives
+          "vendor-ui": [
+            "@radix-ui/react-accordion",
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-label",
+            "@radix-ui/react-slot",
+            "@radix-ui/react-toast",
+          ],
+          // Lucide icons (large)
+          "vendor-icons": ["lucide-react"],
+          // Helmet for SEO
+          "vendor-helmet": ["react-helmet-async"],
+        },
+      },
+    },
+  },
 }));

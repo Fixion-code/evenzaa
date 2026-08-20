@@ -1,0 +1,41 @@
+/* TEAM */
+
+Team: Shlok Aggarwal
+Role: Founder
+From: Jaipur, Rajasthan, India
+
+Team: Stuti Shukla
+Role: Co-founder
+From: Jaipur, Rajasthan, India
+
+/* SITE */
+
+Name: Evenza Hospitality Services
+Description: Event manpower, hospitality teams, volunteers & on-ground event support across India.
+Domain: https://evenzaa-sable.vercel.app/
+Email: indiaevenza@gmail.com
+Last update: 2026/08/20
+Language: English
+Doctype: HTML5
+IDE: VS Code / Antigravity AI
+Technology: Vite, React, TypeScript, Tailwind CSS, Framer Motion
+Hosting: Vercel
+
+/* SOCIAL */
+
+Instagram: https://instagram.com/evenzaevent
+Facebook: https://www.facebook.com/people/Evenza-India/61591730651713/
+Threads: https://www.threads.com/@evenzaevent
+LinkedIn: https://www.linkedin.com/in/evenza-india-1345b2422/
+Telegram: https://t.me/+78a-D_drgro2MTk1
+
+/* FOR HUMANS */
+
+Thank you for visiting Evenza! We're a Jaipur-based team building
+India's most reliable event manpower network.
+
+If you need hospitality staff, event volunteers, or an on-ground
+manpower team for your next event — get in touch:
+
+WhatsApp/Call: +91 91617 10849
+Email: indiaevenza@gmail.com

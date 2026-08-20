@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://evenzaa.lovable.app/sitemap.xml
+Sitemap: https://evenzaa-sable.vercel.app/sitemap.xml
