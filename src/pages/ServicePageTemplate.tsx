@@ -155,14 +155,23 @@ export function ServicePageTemplate({
       <Helmet>
         <title>{seoTitle}</title>
         <meta name="description" content={metaDescription} />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href={url} />
         <meta property="og:title" content={seoTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:site_name" content="Evenza" />
+        <meta property="og:image" content={`${SITE}/og-image.jpg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={`${keyword} — Evenza Event Staffing India`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@evenzaevent" />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={`${SITE}/og-image.jpg`} />
         <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
         {faqJsonLd && (
