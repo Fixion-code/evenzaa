@@ -211,16 +211,6 @@ export function Volunteers() {
     ],
   };
 
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: FAQS.map((faq) => ({
-      "@type": "Question",
-      name: faq.q,
-      acceptedAnswer: { "@type": "Answer", text: faq.a },
-    })),
-  };
-
   return (
     <main className="pt-24 min-h-screen">
       <Helmet>
@@ -245,7 +235,6 @@ export function Volunteers() {
         />
         <script type="application/ld+json">{JSON.stringify(pageJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
 
       {/* ── Breadcrumb ── */}
