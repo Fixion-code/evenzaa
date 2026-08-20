@@ -3,6 +3,7 @@
 
   <!-- Homepage -->
   <url><loc>https://evenzaa-sable.vercel.app/</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteers</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
 
   <!-- Jaipur Core Service Pages (Priority Tier 1) -->
   <url><loc>https://evenzaa-sable.vercel.app/event-manpower-jaipur</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -41,5 +42,43 @@
   <url><loc>https://evenzaa-sable.vercel.app/event-manpower-indore</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://evenzaa-sable.vercel.app/event-manpower-surat</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://evenzaa-sable.vercel.app/event-manpower-kolkata</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority></url>
+
+  <!-- Volunteer City Pages — supply side, targets "volunteering [city]" -->
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-jaipur</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-delhi</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-mumbai</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-bengaluru</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-hyderabad</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-chennai</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-kolkata</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-pune</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-ahmedabad</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-chandigarh</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-lucknow</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-goa</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+
+  <!-- Volunteer State Pages — broad state-level coverage -->
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-india</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.92</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-rajasthan</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-uttar-pradesh</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-maharashtra</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-karnataka</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-tamil-nadu</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-west-bengal</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-gujarat</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-punjab</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.82</priority></url>
+
+  <!-- Student & Fresher Intent Pages -->
+  <url><loc>https://evenzaa-sable.vercel.app/event-jobs-students</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/part-time-event-work</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/freelance-event-work-india</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-internship-jaipur</loc><lastmod>2026-08-20</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+
+  <!-- Manpower State Pages — demand side, for clients hiring -->
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-india</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/manpower-agency-rajasthan</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-uttar-pradesh</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-maharashtra</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-karnataka</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
 
 </urlset>

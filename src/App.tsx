@@ -5,6 +5,7 @@ import { Footer } from "./components/Footer";
 import { FloatingContact } from "./components/FloatingContact";
 import { Home } from "./pages/Home";
 import { ServicePageTemplate } from "./pages/ServicePageTemplate";
+import { Volunteers } from "./pages/Volunteers";
 import { SEO_PAGES } from "./lib/seo-pages";
 import { ThemeProvider } from "./components/theme-provider";
 import NotFound from "./pages/NotFound";
@@ -19,6 +20,7 @@ export default function App() {
           <Nav />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/volunteers" element={<Volunteers />} />
             {SEO_PAGES.map((page) => (
               <Route
                 key={page.path}

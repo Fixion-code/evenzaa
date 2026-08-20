@@ -8,9 +8,20 @@ const SEO_LINKS = [
   { label: "Wedding Staff Jaipur", path: "/wedding-staff-jaipur" },
   { label: "Corporate Event Staffing", path: "/corporate-event-staffing-jaipur" },
   { label: "Event Staffing Rajasthan", path: "/event-staffing-rajasthan" },
-  { label: "Event Volunteers Jaipur", path: "/event-volunteers-jaipur" },
   { label: "Exhibition Staff Jaipur", path: "/exhibition-staff-jaipur" },
   { label: "Manpower Agency Jaipur", path: "/manpower-agency-jaipur" },
+  { label: "Event Manpower India", path: "/event-manpower-india" },
+];
+
+const VOLUNTEER_LINKS = [
+  { label: "Volunteer with Evenza", path: "/volunteers" },
+  { label: "Volunteering in Jaipur", path: "/volunteering-jaipur" },
+  { label: "Volunteering in Delhi", path: "/volunteering-delhi" },
+  { label: "Volunteering in Mumbai", path: "/volunteering-mumbai" },
+  { label: "Volunteering in Bengaluru", path: "/volunteering-bengaluru" },
+  { label: "Volunteering in India", path: "/volunteering-india" },
+  { label: "Event Jobs for Students", path: "/event-jobs-students" },
+  { label: "Part-Time Event Work", path: "/part-time-event-work" },
 ];
 
 const SOCIAL_LINKS = [
@@ -50,7 +61,7 @@ const SOCIAL_LINKS = [
 export function Footer() {
   return (
     <footer className="border-t border-border bg-card py-12 px-6">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10 items-start">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-5 gap-10 items-start">
 
         {/* Brand */}
         <div className="lg:col-span-1">
@@ -142,6 +153,25 @@ export function Footer() {
           </div>
           <ul className="space-y-2.5 text-sm">
             {SEO_LINKS.map((link) => (
+              <li key={link.path}>
+                <Link
+                  to={link.path}
+                  className="text-muted-foreground hover:text-gold transition-colors duration-300"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Volunteer Links */}
+        <div>
+          <div className="text-xs uppercase tracking-widest text-gold mb-4">
+            Volunteer With Us
+          </div>
+          <ul className="space-y-2.5 text-sm">
+            {VOLUNTEER_LINKS.map((link) => (
               <li key={link.path}>
                 <Link
                   to={link.path}

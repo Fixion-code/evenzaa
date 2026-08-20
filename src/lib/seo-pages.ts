@@ -1061,4 +1061,1003 @@ export const SEO_PAGES: SEOPage[] = [
       { label: "Event Manpower Bengaluru", path: "/event-manpower-bengaluru" },
     ],
   },
+
+  // ============================================================
+  // VOLUNTEER CITY PAGES — targets "volunteering [city]" searches
+  // Supply-side: for freshers, students, freelancers looking for
+  // genuine paid event volunteering opportunities
+  // ============================================================
+  {
+    path: "/volunteering-jaipur",
+    seoTitle: "Volunteering in Jaipur | Paid Event Volunteer Jobs | Evenza",
+    metaDescription: "Looking for genuine volunteering in Jaipur? Join Evenza's paid event volunteer community. Real opportunities at JLF, Pink City Marathon, JECC expos & weddings. No registration fee. Students welcome.",
+    keyword: "Volunteering in Jaipur",
+    subtitle: "Jaipur's Only Paid Event Volunteer Community — Earn While You Learn",
+    description: "Searching for volunteering in Jaipur? Most search results lead to NGOs offering free work. Evenza is different — we are a registered event company that pays volunteers for every event they work. Jaipur hosts some of India's grandest events: the Jaipur Literature Festival, Pink City Half Marathon, trade expos at JECC, corporate summits at JW Marriott and Fairmont, and hundreds of destination weddings at palace venues like Rambagh and City Palace. Whether you're a student at BITS Pilani, Poornima University, Rajasthan University, Manipal Jaipur, or a fresh graduate looking for your first industry break — Evenza gives you genuine paid event experience, a real professional network, and the flexibility to work around your schedule. Join our WhatsApp community and get notified first when Jaipur events go live.",
+    features: [
+      "Paid volunteering — earn for every event, no unpaid labour",
+      "Access to Jaipur's biggest events: JLF, Pink City Marathon, JECC trade fairs, heritage weddings",
+      "Zero registration fee — Evenza never charges volunteers to join",
+      "Ideal for students at BITS Pilani, Poornima, Rajasthan University, Manipal Jaipur",
+      "Flexible — choose events that fit around your college timetable",
+      "WhatsApp community with real-time Jaipur event notifications",
+    ],
+    faqs: [
+      {
+        q: "Is there paid volunteering available for students in Jaipur?",
+        a: "Yes. Evenza provides paid event volunteering for students in Jaipur at events like the Jaipur Literature Festival, JECC trade expos, corporate summits, and destination weddings at palace venues. You are paid per event — there is no unpaid internship model.",
+      },
+      {
+        q: "Which Jaipur colleges can join Evenza as volunteers?",
+        a: "Any student from any Jaipur or Rajasthan college can apply — including BITS Pilani, Poornima University, Rajasthan University, Manipal University Jaipur, JECRC, Amity Jaipur, Apex University, and others. No college restrictions. Join through our WhatsApp community link on the Volunteers page.",
+      },
+      {
+        q: "What kinds of events can I volunteer at in Jaipur?",
+        a: "Jaipur events are extremely varied: Jaipur Literature Festival, Pink City Marathon, JECC trade expos, corporate conferences, MICE events, destination weddings at Rambagh Palace, Samode Haveli and City Palace, brand activations, product launches, and government events.",
+      },
+      {
+        q: "Can I volunteer in Jaipur even if I have zero event experience?",
+        a: "Yes — and most first-time Evenza volunteers have no prior experience. We brief every volunteer before each event. Your availability, reliability, and attitude matter more than a resume.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Volunteering in Rajasthan", path: "/volunteering-rajasthan" },
+      { label: "Event Volunteers Jaipur", path: "/event-volunteers-jaipur" },
+      { label: "Event Jobs for Students", path: "/event-jobs-students" },
+    ],
+  },
+  {
+    path: "/volunteering-delhi",
+    seoTitle: "Volunteering in Delhi | Paid Event Volunteer Jobs in Delhi NCR | Evenza",
+    metaDescription: "Find genuine paid volunteering opportunities in Delhi. Evenza connects freshers and students with real event volunteer work at trade fairs, corporate events & more. No fees. Join free.",
+    keyword: "Volunteering in Delhi",
+    subtitle: "Delhi's Biggest Events Need Energetic Volunteers — Join Evenza",
+    description: "Delhi is India's event capital — from the India International Trade Fair at Pragati Maidan and the Auto Expo at India Expo Mart, to corporate summits at The Leela Palace and ITC Maurya, to high-profile cultural events and NGO gatherings across the city. Finding genuine, paid volunteering in Delhi used to mean navigating a maze of free charity work or shady agencies. Evenza changes that. We are a registered event company that places paid volunteers at real events across Delhi and the entire NCR — Gurgaon, Noida, Faridabad, and Ghaziabad included. If you're a student at Delhi University, Jamia Millia, IP University, Amity Delhi, Guru Gobind Singh Indraprastha University, or any Delhi college, or a fresher trying to break into the events industry, the Evenza Volunteers community is your entry point. No fees. No scam. Just real events and real pay.",
+    features: [
+      "Access to Delhi's landmark events — IITF, Auto Expo, corporate summits, cultural events",
+      "Full NCR coverage — Delhi, Gurgaon, Noida, Faridabad, Ghaziabad",
+      "Open to students from DU, Jamia, IP University, Amity, GGSIPU and all Delhi colleges",
+      "Paid per event — not volunteer-for-free model",
+      "No registration fee, no deposits, no scams — Evenza is a registered company",
+      "WhatsApp community with Delhi NCR event alerts",
+    ],
+    faqs: [
+      {
+        q: "What events can I volunteer at in Delhi?",
+        a: "Delhi's event calendar includes the India International Trade Fair at Pragati Maidan, Auto Expo, India Expo Mart exhibitions in Greater Noida, corporate summits, product launches, fashion events, marathons, cultural festivals, and NGO events. NCR also includes major corporate events in Gurgaon's Cyber Hub and Noida's business districts.",
+      },
+      {
+        q: "Does Evenza cover Gurgaon and Noida for volunteers as well?",
+        a: "Yes. Our Delhi volunteer community covers all of NCR — Delhi, Gurgaon, Noida, Greater Noida, Faridabad, and Ghaziabad. You can apply for events anywhere in the NCR region.",
+      },
+      {
+        q: "How do I avoid getting scammed looking for volunteering in Delhi?",
+        a: "Only join through the official Evenza Volunteers WhatsApp community linked on our website. We never ask for money, documents, or any registration fee. Any person or agency asking for payment to 'register you as a volunteer' is running a scam.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Volunteering in India", path: "/volunteering-india" },
+      { label: "Event Manpower Delhi", path: "/event-manpower-delhi" },
+      { label: "Part-Time Event Work", path: "/part-time-event-work" },
+    ],
+  },
+  {
+    path: "/volunteering-mumbai",
+    seoTitle: "Volunteering in Mumbai | Paid Event Volunteer Jobs Mumbai | Evenza",
+    metaDescription: "Searching for volunteering in Mumbai? Join Evenza's paid event volunteer community. Work at Bollywood events, corporate summits, Lollapalooza & more. Students & freshers welcome. No fee.",
+    keyword: "Volunteering in Mumbai",
+    subtitle: "Mumbai's Fastest Events Need Mumbai's Most Energetic Volunteers",
+    description: "Mumbai never stops — and neither do its events. Film premieres at PVR Icon and BookMyShow Live venues, the Kala Ghoda Arts Festival, Lollapalooza India at Mahalaxmi Racecourse, NMACC galas, corporate summits at BKC's luxury hotels, brand activations in Bandra and Lower Parel, fashion weeks, and some of India's biggest weddings — Mumbai's event industry runs 365 days a year. Evenza places paid volunteers at these events across Mumbai, Navi Mumbai, and Thane. For students at Mumbai University, NMIMS, SP Jain, Tata Institute of Social Sciences, MICA, or any Mumbai college — and for freshers trying to break into Mumbai's entertainment and corporate event world — Evenza's volunteer community is the most direct entry point. Join the WhatsApp community and start getting real event calls.",
+    features: [
+      "Access to Bollywood events, fashion weeks, Lollapalooza, NMACC galas",
+      "Coverage across Mumbai, Bandra, BKC, Lower Parel, Navi Mumbai, Thane",
+      "Open to students from Mumbai University, NMIMS, SP Jain, TISS, and all Mumbai colleges",
+      "Paid event work — earn per event, no unpaid volunteering",
+      "No registration fee — join the community for free",
+      "Real networking with Mumbai's entertainment and corporate event industry",
+    ],
+    faqs: [
+      {
+        q: "What events can I volunteer at in Mumbai?",
+        a: "Mumbai events span film premieres, Lollapalooza India, Kala Ghoda Arts Festival, NMACC events, BKC corporate summits, fashion weeks (Lakme Fashion Week), weddings at Grand Hyatt and ITC Grand Central, brand activations, marathons, and international conferences.",
+      },
+      {
+        q: "Is Evenza available for events in Navi Mumbai and Thane?",
+        a: "Yes. Our Mumbai volunteer network covers the full Mumbai Metropolitan Region — Mumbai city, Navi Mumbai, Thane, and key satellite venues like Bombay Exhibition Centre.",
+      },
+      {
+        q: "Can college students in Mumbai work events as freelance volunteers?",
+        a: "Yes. The majority of Evenza's Mumbai volunteers are college students and recent graduates. Events typically happen on weekends and evenings, making it compatible with college schedules. You choose which events to apply for.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Volunteering in Maharashtra", path: "/volunteering-maharashtra" },
+      { label: "Event Manpower Mumbai", path: "/event-manpower-mumbai" },
+      { label: "Freelance Event Work India", path: "/freelance-event-work-india" },
+    ],
+  },
+  {
+    path: "/volunteering-bengaluru",
+    seoTitle: "Volunteering in Bengaluru | Paid Event Volunteer Jobs Bangalore | Evenza",
+    metaDescription: "Looking for volunteering in Bengaluru? Join Evenza's paid event volunteer community. Work at tech summits, startup events, concerts & corporate events. Free to join. Students welcome.",
+    keyword: "Volunteering in Bengaluru",
+    subtitle: "India's Silicon Valley Has the Events — Evenza Has the Volunteer Community",
+    description: "Bengaluru's event calendar reflects its identity — Bengaluru Tech Summit, Nasscom Leadership Forum, Startup India events, Great Backyard Bird Count, Palace Grounds concerts, BIEC trade fairs, and some of South India's most lavish corporate events. But it also has a massive student population hungry for real experience outside the classroom. Evenza places paid volunteers across all these events in Bengaluru. For students at IISc, Christ University, BMS College of Engineering, RV College, PES University, Jain University, Reva University — and for freshers navigating Bengaluru's competitive job market — the Evenza volunteer community gives you actual, paid event credits on your resume. Join free, no registration fee, get notified when Bengaluru events go live.",
+    features: [
+      "Access to Bengaluru Tech Summit, Nasscom, Palace Grounds concerts, BIEC fairs",
+      "Ideal for students at IISc, Christ University, BMS, RV College, PES, Jain University",
+      "Paid per event — Bengaluru's real-world event income for students",
+      "Builds industry credentials beyond coding — event management, hospitality, coordination",
+      "No fee to join — zero registration, zero deposit",
+      "WhatsApp community with live Bengaluru event notifications",
+    ],
+    faqs: [
+      {
+        q: "What types of events can I volunteer at in Bengaluru?",
+        a: "Bengaluru's events include Bengaluru Tech Summit, Nasscom Leadership Forum, startup demo days, BIEC (Bengaluru International Exhibition Centre) trade fairs, Palace Grounds concerts, corporate summits at ITC Gardenia and Leela Palace, film events, marathons, and cultural festivals.",
+      },
+      {
+        q: "Does volunteering with Evenza help with a career in event management in Bengaluru?",
+        a: "Yes. Event management is a growing sector in Bengaluru. Working real events as a volunteer builds hands-on experience, professional references, and industry contacts that academic certificates alone don't provide. Many of our Bengaluru volunteers have moved into full-time event and hospitality roles.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Volunteering in Karnataka", path: "/volunteering-karnataka" },
+      { label: "Event Jobs for Students", path: "/event-jobs-students" },
+      { label: "Freelance Event Work India", path: "/freelance-event-work-india" },
+    ],
+  },
+  {
+    path: "/volunteering-hyderabad",
+    seoTitle: "Volunteering in Hyderabad | Paid Event Volunteer Jobs | Evenza",
+    metaDescription: "Find genuine paid volunteering in Hyderabad. Join Evenza's event volunteer community. Work at HITEX, Hyderabad Literary Fest, pharma summits & IT events. Free to join. Students welcome.",
+    keyword: "Volunteering in Hyderabad",
+    subtitle: "The City of Pearls Has World-Class Events — And Evenza Has the Volunteer Community",
+    description: "Hyderabad is one of India's fastest-growing event cities — HITEX International Trade Exposition, Hyderabad International Convention Centre (HICC), the Hyderabad Literary Festival, IT and pharmaceutical industry summits, film events, and Telangana government events. Beyond corporate events, Hyderabad's cultural scene — from Bonalu celebrations to the HIFF — generates significant event manpower needs. Evenza places paid volunteers across all of Hyderabad's major events. If you're a student at Osmania University, JNTU, GITAM, NALSAR, IIIT Hyderabad, Mahindra University, or any Hyderabad college, or a fresher looking for real-world event exposure — Evenza's volunteer community is the safest, most genuine way to get started. No fees, no scam, real pay for real work.",
+    features: [
+      "Access to HITEX, HICC, Hyderabad Literary Fest, IT and pharma summits",
+      "Open to students from Osmania, JNTU, GITAM, IIIT Hyderabad, Mahindra University",
+      "Paid event work in Hyderabad's booming events sector",
+      "Both Telugu and English-speaking volunteer opportunities",
+      "Zero registration fee — join the community free",
+      "Covers Hyderabad, Secunderabad, and HITECH City events",
+    ],
+    faqs: [
+      {
+        q: "What events can I volunteer at in Hyderabad?",
+        a: "Hyderabad event opportunities include HITEX trade fairs, HICC corporate conferences, Hyderabad Literary Festival, IT summits in HITECH City, pharma industry events, Telangana government events, film premieres, marathons, and large-scale cultural celebrations like Bonalu.",
+      },
+      {
+        q: "Can students from Hyderabad's engineering colleges volunteer with Evenza?",
+        a: "Yes. Engineering, commerce, arts, and management students are all welcome. Event volunteering doesn't require a specific degree — it requires reliability, communication, and energy. We brief you before every event.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Volunteering in Telangana", path: "/volunteering-india" },
+      { label: "Event Manpower Hyderabad", path: "/event-manpower-hyderabad" },
+      { label: "Part-Time Event Work", path: "/part-time-event-work" },
+    ],
+  },
+  {
+    path: "/volunteering-chennai",
+    seoTitle: "Volunteering in Chennai | Paid Event Volunteer Jobs Tamil Nadu | Evenza",
+    metaDescription: "Looking for volunteering in Chennai? Evenza offers paid event volunteer opportunities at Chennai Trade Centre, cultural festivals, Madras Music Season events & corporate summits. Free to join.",
+    keyword: "Volunteering in Chennai",
+    subtitle: "Chennai's Rich Event Culture Needs Equally Passionate Volunteers",
+    description: "Chennai is both a corporate powerhouse and India's cultural capital. The Chennai Trade Centre hosts national trade fairs; the Madras Music Season — one of the world's largest music festivals — runs annually; the Tamil Nadu government hosts major state events; and a growing IT corridor in OMR and Sholinganallur generates constant corporate event demand. For students at Anna University, IIT Madras, SRM Institute, VIT Chennai, Loyola College, Madras University, or any Chennai college, and for freshers exploring event careers, Evenza's paid volunteer community in Chennai is your starting point. We place trained, briefed volunteers at real events. You gain experience, earn income, and build a network in Tamil Nadu's events industry — all without paying a single rupee to register.",
+    features: [
+      "Access to Chennai Trade Centre events, Madras Music Season, cultural festivals",
+      "IT sector and corporate events in OMR, Tidel Park, and Chennai city venues",
+      "Open to students from Anna University, IIT Madras, SRM, VIT Chennai, Loyola",
+      "Tamil and English-speaking volunteer opportunities",
+      "Paid event work — not free volunteering",
+      "Zero registration fee — genuinely free to join",
+    ],
+    faqs: [
+      {
+        q: "What events can I volunteer at in Chennai?",
+        a: "Chennai event opportunities include trade fairs at Chennai Trade Centre, Madras Music Season events, IT sector corporate events in OMR and Sholinganallur, Tamil Nadu government functions, product launches, marathons, film premieres, and private corporate conferences at ITC Grand Chola and Taj Coromandel.",
+      },
+      {
+        q: "Is Evenza available for events outside central Chennai?",
+        a: "Yes. We cover events across Chennai including OMR, Sholinganallur, Guindy, and the overall Chennai metropolitan area. For events in other Tamil Nadu cities like Coimbatore or Madurai, contact us directly.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Volunteering in Tamil Nadu", path: "/volunteering-tamil-nadu" },
+      { label: "Event Manpower Chennai", path: "/event-manpower-chennai" },
+      { label: "Event Jobs for Students", path: "/event-jobs-students" },
+    ],
+  },
+  {
+    path: "/volunteering-kolkata",
+    seoTitle: "Volunteering in Kolkata | Paid Event Volunteer Jobs West Bengal | Evenza",
+    metaDescription: "Find paid volunteering in Kolkata. Join Evenza's event volunteer community. Work at Durga Puja events, Kolkata Book Fair, Milan Mela trade fair & corporate events. Free to join.",
+    keyword: "Volunteering in Kolkata",
+    subtitle: "The City of Joy's Events Are World-Class — Volunteer at the Very Best",
+    description: "Kolkata is India's cultural capital in the truest sense. Durga Puja in Kolkata is a UNESCO-recognised cultural event attracting millions — and the event management behind it is enormous. The Kolkata Book Fair at Milan Mela is Asia's largest book fair. The Kolkata International Film Festival, trade fairs at ICCR, corporate events, and a growing startup ecosystem make Kolkata one of the most interesting event cities in India. Evenza places paid event volunteers across Kolkata's diverse event landscape. For students at Jadavpur University, Calcutta University, Presidency University, St. Xavier's, IIEST Shibpur, and West Bengal's colleges — and for freshers — Evenza's volunteer community is genuinely the best entry point into Bengal's events industry. No fees, no scam, real work at real events.",
+    features: [
+      "Access to Durga Puja, Kolkata Book Fair, KIFF, Milan Mela trade fairs",
+      "Open to students from Jadavpur University, Calcutta University, Presidency, IIEST",
+      "Paid event volunteering — earn for every event you work",
+      "Bengali and English-speaking volunteer opportunities",
+      "Zero registration fee — join the community free",
+      "WhatsApp community with Kolkata event alerts",
+    ],
+    faqs: [
+      {
+        q: "Can I volunteer at Durga Puja events in Kolkata?",
+        a: "Yes. The large-scale Durga Puja pandals and associated cultural events, competitions, and corporate-sponsored exhibitions require significant event support. Evenza deploys volunteers for these and associated events during the Puja season.",
+      },
+      {
+        q: "What other events are there for volunteers in Kolkata?",
+        a: "Beyond Durga Puja — Kolkata Book Fair (Asia's largest), Kolkata International Film Festival, Victoria Memorial cultural events, corporate events in Rajarhat New Town, trade fairs at Milan Mela, NASSCOM events, and private corporate conferences at ITC Royal Bengal and Taj Bengal.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Volunteering in West Bengal", path: "/volunteering-west-bengal" },
+      { label: "Event Manpower Kolkata", path: "/event-manpower-kolkata" },
+      { label: "Freelance Event Work India", path: "/freelance-event-work-india" },
+    ],
+  },
+  {
+    path: "/volunteering-pune",
+    seoTitle: "Volunteering in Pune | Paid Event Volunteer Jobs Pune | Evenza",
+    metaDescription: "Find paid volunteering opportunities in Pune. Join Evenza's event volunteer community. Work at Pune International Film Festival, corporate events, tech summits & more. Free to join.",
+    keyword: "Volunteering in Pune",
+    subtitle: "Pune's Growing Event Scene Needs Fresh Volunteer Energy — Join Evenza",
+    description: "Pune is one of India's most dynamic cities — a blend of a booming IT corridor, a centuries-old cultural identity, and one of India's largest student populations. The Pune International Film Festival, Sawai Gandharva Bhimsen Mahotsav (classical music), corporate events in Hinjewadi and Baner, MCCIA trade fairs, fashion shows, and a thriving wedding industry make Pune a great city for event volunteers. Evenza places paid volunteers at Pune events across all these categories. For students at Savitribai Phule Pune University, Symbiosis, MIT, VIT Pune, Fergusson College, SCMHRD, and other Pune colleges — and for freshers from the city's IT sector — Evenza is the only platform that offers genuine paid event volunteering without any registration fee.",
+    features: [
+      "Access to Pune International Film Festival, Sawai Gandharva, corporate events",
+      "IT corridor events in Hinjewadi, Baner, Kharadi covered",
+      "Open to students from Pune University, Symbiosis, MIT, VIT, Fergusson",
+      "Paid event volunteering — earn per event",
+      "Zero registration fee — free to join",
+      "WhatsApp community with live Pune event notifications",
+    ],
+    faqs: [
+      {
+        q: "What events are available for volunteers in Pune?",
+        a: "Pune event volunteer opportunities include the Pune International Film Festival, Sawai Gandharva Bhimsen Mahotsav, MCCIA trade fairs, corporate events in Hinjewadi and Baner tech parks, Pune marathons, weddings, product launches, cultural events, and NGO events.",
+      },
+      {
+        q: "Does Evenza cover events in Pimpri-Chinchwad and PCMC area?",
+        a: "Yes. Our Pune volunteer network covers Pune city, Pimpri-Chinchwad (PCMC), Hinjewadi, Kharadi, Viman Nagar, and all major Pune Metropolitan Region venues.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Volunteering in Maharashtra", path: "/volunteering-maharashtra" },
+      { label: "Event Manpower Pune", path: "/event-manpower-pune" },
+      { label: "Part-Time Event Work", path: "/part-time-event-work" },
+    ],
+  },
+  {
+    path: "/volunteering-ahmedabad",
+    seoTitle: "Volunteering in Ahmedabad | Paid Event Volunteer Jobs Gujarat | Evenza",
+    metaDescription: "Looking for volunteering in Ahmedabad? Join Evenza's paid event volunteer community. Work at Vibrant Gujarat, Kite Festival, trade fairs & corporate events. Free to join. No fee.",
+    keyword: "Volunteering in Ahmedabad",
+    subtitle: "Gujarat's Commercial Capital Has the Events — Evenza Has the Volunteer Network",
+    description: "Ahmedabad is one of India's fastest-growing metropolitan cities and a major event hub. The Vibrant Gujarat Global Summit draws international delegations; the International Kite Festival on Uttarayan transforms the city; Heritage Festival events celebrate the city's UNESCO World Heritage City status; trade fairs at Helipad Exhibition Ground and Gujarat University Convention Centre run year-round. Evenza places paid volunteers at corporate, cultural, and trade events across Ahmedabad and the greater Gujarat region. For students at IIM Ahmedabad, Gujarat University, PDPU, CEPT, MICA, Nirma University — and for freshers — Evenza's volunteer community is the most reliable and safest entry point into Gujarat's event industry. Join free, zero registration fee, get paid per event.",
+    features: [
+      "Access to Vibrant Gujarat, Kite Festival, Heritage Walk events, trade fairs",
+      "Open to students from IIM Ahmedabad, Gujarat University, PDPU, CEPT, Nirma",
+      "Gujarati and Hindi-speaking volunteer opportunities",
+      "Paid event volunteering — real income for real work",
+      "Zero registration fee — join the community free",
+      "WhatsApp community with live Ahmedabad and Gujarat event alerts",
+    ],
+    faqs: [
+      {
+        q: "What events can I volunteer at in Ahmedabad?",
+        a: "Ahmedabad event opportunities include Vibrant Gujarat Global Summit, International Kite Festival, Heritage Festival events, trade fairs at Helipad Exhibition Ground, corporate conferences, MSME events, Navratri celebrations at major venues, weddings, and product launches.",
+      },
+      {
+        q: "Does Evenza cover events in Gandhinagar and other Gujarat cities?",
+        a: "Yes. Our Ahmedabad network covers Ahmedabad city, Gandhinagar (seat of Vibrant Gujarat events), and can extend to Surat, Vadodara, and Rajkot for specific events. Contact us if you're looking for opportunities in other Gujarat cities.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Volunteering in Gujarat", path: "/volunteering-gujarat" },
+      { label: "Event Manpower Ahmedabad", path: "/event-manpower-ahmedabad" },
+      { label: "Event Jobs for Students", path: "/event-jobs-students" },
+    ],
+  },
+  {
+    path: "/volunteering-chandigarh",
+    seoTitle: "Volunteering in Chandigarh | Paid Event Volunteer Jobs Punjab Haryana | Evenza",
+    metaDescription: "Find paid volunteering in Chandigarh. Evenza connects freshers and students with real event volunteer jobs across Chandigarh, Mohali and Panchkula. Free to join. No registration fee.",
+    keyword: "Volunteering in Chandigarh",
+    subtitle: "India's Most Planned City — Evenza's Most Organised Volunteer Community",
+    description: "Chandigarh — India's planned city and shared capital of Punjab and Haryana — hosts the Rose Festival, Chandigarh Carnival, major government functions, corporate events for North India's agricultural and industrial sectors, healthcare industry summits, and cultural events celebrating the Punjabi and Haryanvi heritage. For volunteers, Chandigarh's geographic centrality in North India is a major advantage — Mohali and Panchkula are minutes away, and events in Punjab (Ludhiana, Amritsar) and Haryana (Ambala, Kurukshetra) are accessible. Evenza places paid volunteers across all of this. Students at Panjab University, UIET, PEC, GGDSD, Chitkara University, and Chandigarh University — and freshers from the tri-city area — can join the Evenza Volunteers WhatsApp community and access real, paid event work in North India.",
+    features: [
+      "Access to Rose Festival, Chandigarh Carnival, government events, trade fairs",
+      "Full tri-city coverage — Chandigarh, Mohali, Panchkula",
+      "Open to students from Panjab University, PEC, Chitkara, Chandigarh University",
+      "Punjabi and Hindi-speaking volunteer opportunities",
+      "Paid event work — earn for each event",
+      "Zero registration fee — genuinely free to join",
+    ],
+    faqs: [
+      {
+        q: "What events can I volunteer at in Chandigarh?",
+        a: "Chandigarh event opportunities include the Rose Festival at Zakir Hussain Rose Garden, Chandigarh Carnival, Punjab and Haryana government events, healthcare summits, corporate events, product launches, agricultural sector conferences, and trade fairs.",
+      },
+      {
+        q: "Does Evenza cover volunteer opportunities in Mohali and Panchkula too?",
+        a: "Yes. Our Chandigarh network covers the entire tri-city — Chandigarh UT, Mohali (Punjab), and Panchkula (Haryana). For Punjab events in Ludhiana or Amritsar, check our Punjab page.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Volunteering in Punjab", path: "/volunteering-punjab" },
+      { label: "Event Manpower Chandigarh", path: "/event-manpower-chandigarh" },
+      { label: "Part-Time Event Work", path: "/part-time-event-work" },
+    ],
+  },
+  {
+    path: "/volunteering-lucknow",
+    seoTitle: "Volunteering in Lucknow | Paid Event Volunteer Jobs UP | Evenza",
+    metaDescription: "Find genuine paid volunteering in Lucknow. Join Evenza's event volunteer community. Work at Lucknow Mahotsav, corporate events, cultural gatherings & government summits. Free to join.",
+    keyword: "Volunteering in Lucknow",
+    subtitle: "Lucknow's Nawabi Events Need Nawabi-Standard Volunteers — Join Evenza",
+    description: "Lucknow — the City of Nawabs — is the cultural and administrative capital of Uttar Pradesh and hosts one of North India's richest event calendars. The Lucknow Mahotsav, Awadhi cultural festivals, UP government summits at Indira Gandhi Pratishthan, corporate events, and the city's legendary wedding culture generate constant demand for event volunteers. As Uttar Pradesh's premier city for MICE and hospitality events, Lucknow is also a gateway to volunteering opportunities across UP. Evenza places paid volunteers across all these events. For students at Lucknow University, AKTU, BBAU, IIIT Lucknow, SGPGI, and Dr. Ram Manohar Lohia National Law University — and for freshers in Lucknow — joining the Evenza volunteer community is your genuine, zero-fee path to paid event experience.",
+    features: [
+      "Access to Lucknow Mahotsav, Awadhi cultural events, UP government summits",
+      "Corporate events at Taj Mahal Lucknow and Indira Gandhi Pratishthan",
+      "Open to students from Lucknow University, AKTU, BBAU, IIIT Lucknow",
+      "Hindi-speaking, culturally attuned volunteer opportunities",
+      "Paid per event — real income in Lucknow's growing event sector",
+      "Zero registration fee — join Evenza Volunteers community free",
+    ],
+    faqs: [
+      {
+        q: "What events can I volunteer at in Lucknow?",
+        a: "Lucknow event opportunities include the Lucknow Mahotsav at Gomti Riverfront, UP government events at Indira Gandhi Pratishthan, corporate conferences, weddings at Taj Hotel, agricultural and MSME events, cultural programmes, and NGO events.",
+      },
+      {
+        q: "Does Evenza cover other UP cities beyond Lucknow?",
+        a: "Yes. Through our Lucknow base we can access events in Kanpur, Agra, Prayagraj, Varanasi, Meerut, and other UP cities. Check our Uttar Pradesh state page for the complete coverage.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Volunteering in Uttar Pradesh", path: "/volunteering-uttar-pradesh" },
+      { label: "Event Manpower Lucknow", path: "/event-manpower-lucknow" },
+      { label: "Event Jobs for Students", path: "/event-jobs-students" },
+    ],
+  },
+  {
+    path: "/volunteering-goa",
+    seoTitle: "Volunteering in Goa | Paid Event Volunteer Jobs at Festivals & Events | Evenza",
+    metaDescription: "Find genuine paid volunteering in Goa. Evenza connects volunteers with real event work at music festivals, beach events, IFFI, corporate retreats & more in Goa. No registration fee.",
+    keyword: "Volunteering in Goa",
+    subtitle: "Goa's Festivals & Corporate Events — Join India's Most Exciting Volunteer Community",
+    description: "Goa has one of India's most unique event landscapes. The International Film Festival of India (IFFI) at Panaji — India's largest film festival — runs annually; Sunburn Festival; NH7 Weekender; corporate retreats at five-star beach resorts; incentive travel events; beach weddings; and the Goa Carnival create a year-round demand for trained event volunteers. For students at Goa University, IIT Goa, and Goa's hospitality and arts colleges — and for freelancers based in or visiting Goa — Evenza's volunteer community gives access to India's most glamorous event experiences. You earn per event, you build a unique portfolio, and you get genuine industry experience that generic internships simply cannot offer. Join free, no registration fee.",
+    features: [
+      "Access to IFFI, Sunburn Festival, beach corporate retreats, Goa Carnival events",
+      "Unique experience in entertainment, hospitality and experiential event formats",
+      "Open to students from Goa University, IIT Goa and local hospitality colleges",
+      "Ideal for freelancers spending time in Goa",
+      "Paid per event — earn from some of India's most premium event experiences",
+      "Zero registration fee — join the Evenza Volunteers community free",
+    ],
+    faqs: [
+      {
+        q: "Can I volunteer at music festivals in Goa like Sunburn?",
+        a: "Yes. Evenza places volunteers at music festivals, film festival events, beach corporate events, and entertainment events across Goa. These are paid roles — not unpaid 'volunteer' placements that give you a wristband in exchange for days of free work.",
+      },
+      {
+        q: "Can I volunteer in Goa even if I'm not a Goa resident?",
+        a: "Yes. Many volunteers travel to Goa specifically for events. If you're in Goa during an event period and want to work, you can join the WhatsApp community and apply for available roles. Accommodation logistics are your own responsibility for out-of-state events.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Event Manpower Goa", path: "/event-manpower-goa" },
+      { label: "Freelance Event Work India", path: "/freelance-event-work-india" },
+      { label: "Volunteering in India", path: "/volunteering-india" },
+    ],
+  },
+
+  // ============================================================
+  // VOLUNTEER STATE PAGES — covers entire states, all cities
+  // ============================================================
+  {
+    path: "/volunteering-india",
+    seoTitle: "Volunteering in India | Paid Event Volunteer Jobs Across India | Evenza",
+    metaDescription: "Find genuine paid volunteering opportunities across India. Evenza's event volunteer community covers Jaipur, Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, Kolkata, Pune & 20+ more cities. Free to join.",
+    keyword: "Volunteering in India",
+    subtitle: "India's Only Pan-India Paid Event Volunteer Community — 25+ Cities Covered",
+    description: "India hosts over one million events every year — from destination weddings in Rajasthan's palaces, to tech summits in Bengaluru, to Durga Puja in Kolkata, to Lollapalooza in Mumbai. The demand for trained, reliable, and professional event volunteers across India is enormous — and yet most people searching 'volunteering in India' find only free NGO work or charity drives. Evenza is India's only genuine platform that connects freshers, students, and freelancers with paid event volunteer work across 25+ cities and every major state. We are a registered company (Shree Ji Company Pvt. Ltd.) based in Jaipur. Our WhatsApp volunteer community gets real event updates from across India. Join free, no registration fee, no scam — just real events and real pay across the country.",
+    features: [
+      "25+ cities covered — Jaipur, Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Goa and more",
+      "All major states covered — Rajasthan, UP, Maharashtra, Karnataka, Tamil Nadu, West Bengal, Gujarat, Punjab and more",
+      "Paid event volunteering — the only national platform that pays its volunteers",
+      "Open to students, freshers, and freelancers from any Indian city or college",
+      "Zero registration fee — the Evenza Volunteers community is free to join",
+      "WhatsApp community with pan-India event notifications by region",
+    ],
+    faqs: [
+      {
+        q: "Does Evenza provide volunteering opportunities across all of India?",
+        a: "Yes. Our volunteer community is pan-India. We have the highest volume of events in Jaipur, Delhi, Mumbai, Bengaluru, and other metros, with growing activity across all states. When a new event comes up in your city, we post it in the community and you can apply.",
+      },
+      {
+        q: "I live in a smaller city — can I still join the Evenza volunteer community?",
+        a: "Yes. While our primary event volume is in major metros and Tier-1 cities, events happen everywhere. Join the community, tell us your city, and we'll notify you when something comes up near you. As Evenza grows, our city coverage grows with it.",
+      },
+      {
+        q: "Is Evenza a registered company or just a social media group?",
+        a: "Evenza is the brand of Shree Ji Company Pvt. Ltd., a registered private limited company based in Jaipur, Rajasthan. We operate professionally, provide GST-compliant invoices to clients, and maintain all legal compliance. Our volunteer community is part of our genuine business operation — not a social media group or scam.",
+      },
+      {
+        q: "How is Evenza different from other volunteering platforms in India?",
+        a: "Most volunteering platforms in India place you in free NGO or charity work. Evenza is the only platform specifically for paid event volunteering — where you earn per event, work professionally managed events, build a real portfolio, and access a genuine events industry network across India.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Volunteering in Jaipur", path: "/volunteering-jaipur" },
+      { label: "Volunteering in Delhi", path: "/volunteering-delhi" },
+      { label: "Event Jobs for Students", path: "/event-jobs-students" },
+    ],
+  },
+  {
+    path: "/volunteering-rajasthan",
+    seoTitle: "Volunteering in Rajasthan | Paid Event Volunteer Jobs Rajasthan | Evenza",
+    metaDescription: "Find paid volunteering in Rajasthan. Evenza covers Jaipur, Udaipur, Jodhpur, Ajmer, Kota, Pushkar & all of Rajasthan. Freshers and students welcome. Zero registration fee.",
+    keyword: "Volunteering in Rajasthan",
+    subtitle: "Rajasthan's Heritage Events Run on Passionate Volunteers — Be One of Them",
+    description: "Rajasthan is India's event destination — from the Jaipur Literature Festival and Pink City Marathon in Jaipur, to the Pushkar Camel Fair, to heritage weddings at Umaid Bhawan in Jodhpur and Taj Lake Palace in Udaipur, to the Desert Festival in Jaisalmer and state government MICE events across the state. No other Indian state packs as much event variety into its calendar. Evenza is headquartered in Jaipur and has the deepest volunteer network in Rajasthan. We place paid volunteers across all of Rajasthan's 10+ event cities — Jaipur, Udaipur, Jodhpur, Ajmer, Pushkar, Kota, Bikaner, Alwar, Sikar, Jhunjhunu, and beyond. Students and freshers from any Rajasthan college — BITS Pilani, Poornima, Rajasthan University, MDS University Ajmer, MLSU Udaipur — join the volunteer community free and get notified when events open near you.",
+    features: [
+      "Rajasthan's widest volunteer network — 10+ cities covered statewide",
+      "Access to JLF, Pink City Marathon, Pushkar Fair, Desert Festival, heritage weddings",
+      "Open to students from all Rajasthan colleges — BITS Pilani, Poornima, Rajasthan University, MLSU Udaipur, MDS Ajmer",
+      "Paid event volunteering — the only platform that pays Rajasthan volunteers",
+      "Evenza is Jaipur-based — local knowledge and fast deployment across Rajasthan",
+      "Zero registration fee — join the community free",
+    ],
+    faqs: [
+      {
+        q: "Which cities in Rajasthan does Evenza cover for volunteers?",
+        a: "We cover Jaipur, Udaipur, Jodhpur, Ajmer, Pushkar, Kota, Bikaner, Alwar, Sikar, Jhunjhunu, Nagaur, Churu, and smaller towns with event activity. Our base in Jaipur means fast deployment across the state.",
+      },
+      {
+        q: "Are there volunteering opportunities in smaller Rajasthan towns and heritage venues?",
+        a: "Yes. Rajasthan's heritage venues — Mehrangarh Fort, Umaid Bhawan, Rambagh Palace, Samode Haveli, RAAS Jodhpur — regularly host events that require trained volunteers. These are some of the most premium event experiences available for volunteers in India.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteering in Jaipur", path: "/volunteering-jaipur" },
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Event Staffing Rajasthan", path: "/event-staffing-rajasthan" },
+      { label: "Part-Time Event Work", path: "/part-time-event-work" },
+    ],
+  },
+  {
+    path: "/volunteering-uttar-pradesh",
+    seoTitle: "Volunteering in Uttar Pradesh | Paid Event Volunteer Jobs UP | Evenza",
+    metaDescription: "Find paid volunteering in Uttar Pradesh. Evenza covers Lucknow, Agra, Varanasi, Prayagraj, Kanpur, Meerut & all of UP. Students and freshers welcome. Zero registration fee.",
+    keyword: "Volunteering in Uttar Pradesh",
+    subtitle: "UP's Massive Event Calendar — From Mahakumbh to Corporate Summits — Needs You",
+    description: "Uttar Pradesh is India's most populous state and has one of the most diverse event calendars in the country. The Mahakumbh at Prayagraj is the world's largest human gathering — requiring thousands of event volunteers and support personnel. Lucknow Mahotsav, Agra's tourism events near the Taj Mahal, Varanasi's Ganga Aarti and cultural events, Mathura-Vrindavan festivals, corporate events in Noida and Greater Noida, government summits in Lucknow — UP hosts events at every scale, in every format. Evenza places paid volunteers across all major UP cities. For students at BHU (Banaras Hindu University), AMU (Aligarh Muslim University), AKTU, Lucknow University, BBAU, IIIT Allahabad, IIIT Lucknow, or any UP college — and for freshers across the state — Evenza's volunteer community is your zero-fee, genuine entry point.",
+    features: [
+      "Pan-UP coverage — Lucknow, Agra, Varanasi, Prayagraj, Kanpur, Meerut, Noida, Mathura",
+      "Access to Mahakumbh, Lucknow Mahotsav, Taj Mahal tourism events, Ganga Aarti events",
+      "Open to students from BHU, AMU, AKTU, Lucknow University, BBAU, IIIT Allahabad",
+      "Paid event volunteering — earn per event across UP",
+      "Hindi-speaking, culturally attuned volunteer opportunities throughout UP",
+      "Zero registration fee — Evenza never charges to join",
+    ],
+    faqs: [
+      {
+        q: "Can I volunteer at Mahakumbh events in Prayagraj?",
+        a: "Yes. Evenza deploys volunteers for events and exhibitions within and around the Mahakumbh Mela at Prayagraj. These are large-scale, high-profile deployments that provide exceptional experience for volunteers.",
+      },
+      {
+        q: "What volunteering opportunities exist in Agra and Varanasi?",
+        a: "Agra's event scene is heavily tourism-focused — cultural events near Taj Mahal, corporate retreats at Oberoi Amarvilas, and travel industry conferences. Varanasi hosts Ganga Aarti-associated events, cultural programmes, and government events. Both cities are covered by our UP volunteer network.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteering in Lucknow", path: "/volunteering-lucknow" },
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Event Manpower Lucknow", path: "/event-manpower-lucknow" },
+      { label: "Event Jobs for Students", path: "/event-jobs-students" },
+    ],
+  },
+  {
+    path: "/volunteering-maharashtra",
+    seoTitle: "Volunteering in Maharashtra | Paid Event Volunteer Jobs Mumbai Pune | Evenza",
+    metaDescription: "Find paid volunteering in Maharashtra. Evenza covers Mumbai, Pune, Nashik, Nagpur, Aurangabad & all of Maharashtra. Freshers and students welcome. Zero registration fee.",
+    keyword: "Volunteering in Maharashtra",
+    subtitle: "Maharashtra's Events Are India's Biggest — Evenza Has the Volunteer Network",
+    description: "Maharashtra is India's event powerhouse. Mumbai alone hosts film premieres, Lollapalooza, fashion weeks, and corporate summits. Pune's IT corridor and cultural events, Nashik's wine festivals and Kumbh Mela, Nagpur's political and corporate events, and Aurangabad's tourism-linked events make Maharashtra India's most diverse event state. Evenza's Maharashtra volunteer network spans all major cities — placing paid volunteers at events across the state. Whether you're a student at Mumbai University, Savitribai Phule Pune University, Nagpur University, RTMNU, or any Maharashtra college, or a fresher looking to enter the events industry in India's most commercially vibrant state — Evenza is the platform that gives you genuine, paid access. Zero registration fee, real events, real income.",
+    features: [
+      "Pan-Maharashtra coverage — Mumbai, Pune, Nashik, Nagpur, Aurangabad, Thane, Navi Mumbai",
+      "Access to Lollapalooza, fashion weeks, film events, Nashik wine festivals, Kumbh Mela events",
+      "Open to students from Mumbai University, Pune University, Nagpur University, and all Maharashtra colleges",
+      "Largest state volunteer network — most event volume in India",
+      "Paid event volunteering — earn across Maharashtra",
+      "Zero registration fee — join the community free",
+    ],
+    faqs: [
+      {
+        q: "Does Evenza cover volunteer opportunities in Nashik and Nagpur?",
+        a: "Yes. Our Maharashtra network covers Nashik (known for Trimbakeshwar Kumbh Mela events, wine festivals), Nagpur (political summits, MIHAN-related events), Aurangabad (Ajanta-Ellora Tourism Festival, AURIC events), and all major Maharashtra cities.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteering in Mumbai", path: "/volunteering-mumbai" },
+      { label: "Volunteering in Pune", path: "/volunteering-pune" },
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Freelance Event Work India", path: "/freelance-event-work-india" },
+    ],
+  },
+  {
+    path: "/volunteering-karnataka",
+    seoTitle: "Volunteering in Karnataka | Paid Event Volunteer Jobs Bengaluru Mysuru | Evenza",
+    metaDescription: "Find paid volunteering in Karnataka. Evenza covers Bengaluru, Mysuru, Mangaluru, Hubli & all of Karnataka. Freshers and students welcome. Zero registration fee. No scam.",
+    keyword: "Volunteering in Karnataka",
+    subtitle: "Karnataka's Tech, Heritage and Cultural Events — Join Evenza's Volunteer Community",
+    description: "Karnataka blends India's most advanced tech ecosystem with some of its most celebrated heritage and culture. Bengaluru is the tech event hub; Mysuru's Dasara festival is one of India's grandest royal celebrations; Mangaluru has a growing corporate and cultural event scene; and Karnataka's diverse landscape hosts sporting events, agricultural fairs, and government summits. Evenza's Karnataka volunteer network covers Bengaluru's corporate and startup events, Mysuru's Dasara and tourism events, and growing activity in Mangaluru, Hubli-Dharwad, and Belagavi. Students from IISc, PESIT, VTU colleges, Mysuru University, Mangalore University — and freshers from Karnataka — can join the Evenza volunteer community free of charge and access paid event work across the state.",
+    features: [
+      "Pan-Karnataka coverage — Bengaluru, Mysuru, Mangaluru, Hubli, Belagavi",
+      "Access to Bengaluru Tech Summit, Mysuru Dasara, Hampi festivals, BIEC trade fairs",
+      "Open to students from IISc, VTU colleges, Mysuru University, Mangalore University",
+      "Kannada and English-speaking volunteer opportunities",
+      "Paid event volunteering across Karnataka",
+      "Zero registration fee — join the community free",
+    ],
+    faqs: [
+      {
+        q: "Can I volunteer at Mysuru Dasara events?",
+        a: "Yes. Mysuru Dasara is one of India's grandest events and requires significant volunteer support for procession management, tourism guidance, event coordination, and hospitality at associated corporate events. Our Karnataka volunteers can access these opportunities.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteering in Bengaluru", path: "/volunteering-bengaluru" },
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Event Jobs for Students", path: "/event-jobs-students" },
+      { label: "Volunteering in India", path: "/volunteering-india" },
+    ],
+  },
+  {
+    path: "/volunteering-tamil-nadu",
+    seoTitle: "Volunteering in Tamil Nadu | Paid Event Volunteer Jobs Chennai Coimbatore | Evenza",
+    metaDescription: "Find paid volunteering in Tamil Nadu. Evenza covers Chennai, Coimbatore, Madurai, Salem, Trichy & all of Tamil Nadu. Freshers and students welcome. Zero registration fee.",
+    keyword: "Volunteering in Tamil Nadu",
+    subtitle: "Tamil Nadu's Rich Event Calendar — Classical, Corporate, and Cultural — Join Evenza",
+    description: "Tamil Nadu has one of India's richest and most varied event landscapes. Chennai hosts Madras Music Season — one of the world's largest classical music festivals — alongside Chennai Trade Centre expos and growing IT sector corporate events. Coimbatore's textile and manufacturing sector hosts industrial summits; Madurai's temple culture and tourism generates cultural events; Trichy, Salem, and Tirunelveli have their own event ecosystems. Evenza places paid volunteers across Tamil Nadu's diverse events — from classical cultural programmes to modern corporate conferences. Students from Anna University, IIT Madras, SRM, VIT, SASTRA, and PSG Tech — and freshers across the state — can join the Evenza volunteer community free and access genuine paid event work without any registration fee or advance payment.",
+    features: [
+      "Pan-Tamil Nadu coverage — Chennai, Coimbatore, Madurai, Salem, Trichy, Tirunelveli",
+      "Access to Madras Music Season, Chennai Trade Centre events, textile industry summits",
+      "Open to students from Anna University, IIT Madras, SRM, VIT, PSG Tech, SASTRA",
+      "Tamil and English-speaking volunteer opportunities",
+      "Paid event volunteering across Tamil Nadu's corporate and cultural events",
+      "Zero registration fee — join the community free",
+    ],
+    faqs: [
+      {
+        q: "Does Evenza cover events in Coimbatore and Madurai beyond Chennai?",
+        a: "Yes. Our Tamil Nadu network covers Chennai, Coimbatore (textile and manufacturing events), Madurai (cultural and temple tourism events), Salem, Trichy, and Tirunelveli. Events in other TN cities can be accommodated with advance notice.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteering in Chennai", path: "/volunteering-chennai" },
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Event Manpower Chennai", path: "/event-manpower-chennai" },
+      { label: "Volunteering in India", path: "/volunteering-india" },
+    ],
+  },
+  {
+    path: "/volunteering-west-bengal",
+    seoTitle: "Volunteering in West Bengal | Paid Event Volunteer Jobs Kolkata | Evenza",
+    metaDescription: "Find paid volunteering in West Bengal. Evenza covers Kolkata, Howrah, Siliguri & all of West Bengal. Work at Durga Puja events, book fair, film festival & corporate events. Free to join.",
+    keyword: "Volunteering in West Bengal",
+    subtitle: "West Bengal's Cultural Events Are Legendary — Be Part of the Team Behind Them",
+    description: "West Bengal's events are in a class of their own. Durga Puja is a UNESCO Cultural Heritage event attracting millions — the largest street festival in the world. The Kolkata Book Fair is Asia's biggest book fair. KIFF (Kolkata International Film Festival) is India's most prestigious film festival outside Goa. Add trade fairs at Milan Mela, corporate events in Rajarhat New Town's business district, Siliguri's tourism events, and Shantiniketan's cultural celebrations — and you have one of India's richest event calendars. Evenza places paid volunteers at West Bengal's events, from Kolkata city to the state's growing Tier-2 cities. Students from Jadavpur University, Calcutta University, Presidency, IIEST, Scottish Church, or any West Bengal college — and freshers — join the Evenza Volunteers community free and access paid event work across the state.",
+    features: [
+      "Access to Durga Puja, Kolkata Book Fair, KIFF, Milan Mela trade fairs",
+      "Coverage across Kolkata, Howrah, Rajarhat, Siliguri, and growing cities",
+      "Open to students from Jadavpur University, Calcutta University, Presidency, IIEST",
+      "Bengali and English-speaking volunteer opportunities",
+      "Paid event volunteering — earn across West Bengal's event calendar",
+      "Zero registration fee — join the community free",
+    ],
+    faqs: [
+      {
+        q: "Does Evenza cover events in Siliguri and North Bengal?",
+        a: "Yes. Events in Siliguri, Darjeeling, and North Bengal are covered. The tea industry, tourism sector, and government events in North Bengal create event opportunities outside Kolkata.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteering in Kolkata", path: "/volunteering-kolkata" },
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Event Manpower Kolkata", path: "/event-manpower-kolkata" },
+      { label: "Part-Time Event Work", path: "/part-time-event-work" },
+    ],
+  },
+  {
+    path: "/volunteering-gujarat",
+    seoTitle: "Volunteering in Gujarat | Paid Event Volunteer Jobs Ahmedabad Surat Vadodara | Evenza",
+    metaDescription: "Find paid volunteering in Gujarat. Evenza covers Ahmedabad, Surat, Vadodara, Rajkot, Gandhinagar & all of Gujarat. Students and freshers welcome. Zero registration fee.",
+    keyword: "Volunteering in Gujarat",
+    subtitle: "Gujarat's Trade, Culture and Business Events — Evenza's Volunteer Community Covers It All",
+    description: "Gujarat is one of India's most commercially vibrant states with an event calendar that reflects its prosperity. Vibrant Gujarat Global Summit in Gandhinagar draws global leaders. The International Kite Festival on Uttarayan transforms Ahmedabad. Surat's diamond industry hosts exclusive trade events; Vadodara's Navratri is one of India's grandest cultural festivals; Rajkot's growing IT and manufacturing sector generates corporate events. Evenza places paid volunteers across all of Gujarat's major events — Ahmedabad, Surat, Vadodara, Rajkot, Gandhinagar, Jamnagar, and beyond. Students from IIM Ahmedabad, Gujarat University, PDPU, CEPT, MICA, Nirma University, Veer Narmad South Gujarat University (Surat), and all Gujarat colleges — and freshers — can join the Evenza volunteer community free and earn from Gujarat's busy event sector.",
+    features: [
+      "Pan-Gujarat coverage — Ahmedabad, Surat, Vadodara, Rajkot, Gandhinagar, Jamnagar",
+      "Access to Vibrant Gujarat, International Kite Festival, Navratri events, diamond trade events",
+      "Open to students from IIM Ahmedabad, PDPU, Nirma, Veer Narmad South Gujarat University",
+      "Gujarati and Hindi-speaking volunteer opportunities",
+      "Paid event volunteering across Gujarat's commercial and cultural events",
+      "Zero registration fee — join free",
+    ],
+    faqs: [
+      {
+        q: "Does Evenza cover volunteer opportunities in Surat, Vadodara, and Rajkot?",
+        a: "Yes. Our Gujarat network covers Surat (diamond and textile trade events), Vadodara (Navratri, Baroda Museum events, corporate), Rajkot (manufacturing and government events), Gandhinagar (Vibrant Gujarat, government events), Jamnagar, and all Gujarat cities.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteering in Ahmedabad", path: "/volunteering-ahmedabad" },
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Event Manpower Ahmedabad", path: "/event-manpower-ahmedabad" },
+      { label: "Freelance Event Work India", path: "/freelance-event-work-india" },
+    ],
+  },
+  {
+    path: "/volunteering-punjab",
+    seoTitle: "Volunteering in Punjab | Paid Event Volunteer Jobs Ludhiana Amritsar | Evenza",
+    metaDescription: "Find paid volunteering in Punjab. Evenza covers Ludhiana, Amritsar, Jalandhar, Mohali, Patiala & all of Punjab. Freshers and students welcome. Zero registration fee.",
+    keyword: "Volunteering in Punjab",
+    subtitle: "Punjab's Events Reflect Its Energy — Join Evenza's Punjab Volunteer Community",
+    description: "Punjab is one of India's most vibrant states — culturally rich, economically thriving, and proud of its traditions. Ludhiana's hosiery and manufacturing trade events, Amritsar's Golden Temple tourism events and tourism summits, Jalandhar's sports goods industry trade fairs, Mohali's IT sector corporate events, Patiala's government events and cultural festivals, and Punjab's legendary wedding culture — create a robust event calendar across the state. Evenza places paid volunteers at events across Punjab. Students from Panjab University, PEC Chandigarh, LPU (Lovely Professional University), Chitkara University, GNDU, GGSIP and all Punjab colleges — and freshers — join the Evenza volunteer community free and access paid event work in Punjab's growing events sector. The Chandigarh tri-city (Mohali + Panchkula) is fully covered too.",
+    features: [
+      "Pan-Punjab coverage — Ludhiana, Amritsar, Jalandhar, Mohali, Patiala, Bathinda",
+      "Access to trade fairs, tourism events, cultural festivals, corporate events, weddings",
+      "Open to students from Panjab University, LPU, Chitkara, GNDU, PEC",
+      "Punjabi and Hindi-speaking volunteer opportunities",
+      "Paid event volunteering in Punjab's growing events sector",
+      "Zero registration fee — join free",
+    ],
+    faqs: [
+      {
+        q: "What events can I volunteer at in Punjab?",
+        a: "Punjab event opportunities include Ludhiana trade fairs, Amritsar tourism and government events, Jalandhar sports goods industry events, Mohali IT sector corporate events, Patiala cultural festivals, state government summits, wedding events, and agricultural fairs.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteering in Chandigarh", path: "/volunteering-chandigarh" },
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Event Manpower Chandigarh", path: "/event-manpower-chandigarh" },
+      { label: "Volunteering in India", path: "/volunteering-india" },
+    ],
+  },
+
+  // ============================================================
+  // STUDENT & FRESHER SPECIFIC PAGES
+  // Targets people searching by their situation, not just by city
+  // ============================================================
+  {
+    path: "/event-jobs-students",
+    seoTitle: "Event Jobs for Students in India | Part-Time Event Work | Evenza",
+    metaDescription: "Looking for event jobs for students? Evenza offers genuine paid event volunteer work for college students across India. Earn part-time, gain real experience, build your resume. No registration fee.",
+    keyword: "Event Jobs for Students",
+    subtitle: "Real Event Jobs That Fit Around College — Not After You Graduate",
+    description: "Most event jobs in India require 2–3 years of experience before you get in the door. Evenza breaks that cycle. We place college students directly into real, paid event work — not unpaid internships, not free volunteering, not 'certificate courses.' If you're a student in India looking for genuine part-time income from events, Evenza is the platform built specifically for you. You join the Evenza Volunteers WhatsApp community, receive notifications when events come up in your city, apply for roles that interest you, get briefed before the event, show up and work, and get paid after. No complex process, no interviews, no experience required for your first event. The experience you build working real events — weddings, corporate summits, trade fairs, concerts, marathons — is worth more on a resume than any college certificate.",
+    features: [
+      "Genuine part-time event income — paid per event, not monthly fixed commitment",
+      "Zero experience required for first event — we brief every volunteer before each event",
+      "Build a real event industry resume — weddings, corporate, concerts, expos",
+      "Flexible scheduling — events mostly on weekends, works around any college timetable",
+      "Network with event professionals, organizers, and fellow event workers",
+      "Zero registration fee — join the community free, no hidden charges",
+    ],
+    faqs: [
+      {
+        q: "Do I need any event experience to get event jobs as a student?",
+        a: "No. Evenza places students with zero event experience into their first events. We brief every volunteer before each event — covering what the role involves, how to handle common situations, dress code, and who to report to. Enthusiasm, punctuality, and communication are what matter most.",
+      },
+      {
+        q: "How much can I earn from event jobs as a student?",
+        a: "Pay varies by event type, duration, and role. We share all payment details upfront before you confirm your participation — no surprises. Events typically run for 8–12 hours, and rates are competitive with other forms of part-time student work. Over time, as you take on more events and build experience, your earning potential increases.",
+      },
+      {
+        q: "How do event jobs fit around a college schedule?",
+        a: "Most events — corporate conferences, trade fairs, weddings, concerts — happen on weekends, national holidays, or evenings. We share event dates well in advance through the WhatsApp community so you can choose events that don't conflict with exams or college commitments.",
+      },
+      {
+        q: "Can I add event work to my CV as a student?",
+        a: "Yes. Event volunteering experience counts as legitimate work experience on a resume. Companies and recruiters value candidates who show initiative and real-world work experience alongside their academic record. You can list your events, roles, and skills gained from Evenza work on your CV.",
+      },
+      {
+        q: "Which cities does Evenza have event jobs for students?",
+        a: "We have student event opportunities in Jaipur, Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, Kolkata, Pune, Ahmedabad, Chandigarh, Lucknow, and 15+ more cities. New cities are added as our network grows. Join the community and tell us your city.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Part-Time Event Work", path: "/part-time-event-work" },
+      { label: "Volunteering in India", path: "/volunteering-india" },
+      { label: "Event Internship Jaipur", path: "/event-internship-jaipur" },
+    ],
+  },
+  {
+    path: "/part-time-event-work",
+    seoTitle: "Part-Time Event Work in India | Earn from Events | Evenza",
+    metaDescription: "Looking for part-time event work in India? Join Evenza's volunteer community. Earn part-time at weddings, corporate events, trade fairs & concerts across India. No fees. Freshers welcome.",
+    keyword: "Part-Time Event Work",
+    subtitle: "The Best Part-Time Work You'll Find — Real Events, Real Pay, Real Flexibility",
+    description: "Part-time event work is one of the most rewarding and flexible ways to earn income in India. Unlike retail or food delivery, event work puts you inside the most exciting experiences happening in your city — backstage at concerts, at the registration desk of a major trade fair, welcoming guests at a destination wedding, or managing crowd flow at a city marathon. Evenza is India's only registered event company that actively recruits part-time volunteers across 25+ cities. You choose when you want to work. You pick events from our WhatsApp community that fit your schedule. You show up, work professionally, and earn. Whether you're a student, a professional between jobs, someone who wants to earn on weekends, or a freelancer building a portfolio — Evenza's part-time event work model is designed around your life, not a company schedule.",
+    features: [
+      "Work when you want — choose events that fit your schedule, no fixed commitment",
+      "Earn from events across 25+ cities — Jaipur, Delhi, Mumbai, Bengaluru, Hyderabad, and more",
+      "Work at India's best events — destination weddings, trade fairs, concerts, corporate summits",
+      "No experience needed to start — Evenza briefs every volunteer before every event",
+      "Zero registration fee — join the part-time volunteer community free",
+      "Build a side-income that grows with your event experience and reputation",
+    ],
+    faqs: [
+      {
+        q: "How does part-time event work with Evenza actually work?",
+        a: "You join the Evenza Volunteers WhatsApp community (link on our website). When an event comes up in your city, we post the details — date, location, role, and pay. You reply if you're interested. If selected, we brief you before the event. You work the event. You get paid after.",
+      },
+      {
+        q: "How many events can I work per month?",
+        a: "There's no minimum or maximum. Some months there are 3–4 events in your city, others more. It depends on the city and season. Peak event seasons are October–March (post-monsoon) and May–June. You always choose which events to apply for.",
+      },
+      {
+        q: "Is part-time event work in India legal and legitimate?",
+        a: "Yes. Evenza is a registered company — brand of Shree Ji Company Pvt. Ltd. — and all our event deployments are fully compliant. We do not ask for documents upfront or charge any registration fee. Anyone asking you to pay to do event work is running a scam.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Event Jobs for Students", path: "/event-jobs-students" },
+      { label: "Freelance Event Work India", path: "/freelance-event-work-india" },
+      { label: "Volunteering in India", path: "/volunteering-india" },
+    ],
+  },
+  {
+    path: "/freelance-event-work-india",
+    seoTitle: "Freelance Event Work in India | Event Freelancer Jobs | Evenza",
+    metaDescription: "Looking for freelance event work in India? Evenza connects event freelancers with paid work at weddings, corporate events, trade fairs & concerts across 25+ cities. No registration fee.",
+    keyword: "Freelance Event Work India",
+    subtitle: "Build Your Freelance Event Career With India's Most Active Event Network",
+    description: "Freelancing in the events industry in India is one of the most rewarding and underrated career paths available. But the hardest part has always been finding consistent, legitimate event work without going through traditional agencies that take large commissions or charge you upfront fees. Evenza solves this. We are a registered event company that works with India's top event clients — corporate brands, wedding planners, exhibition organisers, and government agencies — and we actively recruit freelance event workers across 25+ cities. As a freelancer in the Evenza community, you get first-access to event opportunities in your city. You work independently, build your own track record, and earn market rates. Over time, as you build a reputation within the community, you access larger events, senior roles, and a genuine career as an event industry professional.",
+    features: [
+      "Access to real freelance event work across 25+ Indian cities",
+      "Work directly with event clients — no agency middlemen taking your earnings",
+      "Event types: corporate summits, destination weddings, trade fairs, concerts, brand activations",
+      "Build a freelance portfolio with real, creditable event credits",
+      "Zero registration fee — the Evenza freelance community is free to join",
+      "Grow from volunteer to supervisor to event manager — the career path is real",
+    ],
+    faqs: [
+      {
+        q: "What kind of freelance event work is available through Evenza?",
+        a: "Freelance event roles include registration coordinator, guest relations executive, event usher, exhibition booth staff, show flow assistant, production support, logistics coordinator, hospitality staff, and event supervisor. Roles vary by event type and your experience level.",
+      },
+      {
+        q: "Can I build a full-time freelance event career through Evenza?",
+        a: "Yes — and many of our community members have done exactly that. Starting as a volunteer, performing consistently, and growing your reputation within the community leads to access to larger events, senior roles, and eventually a steady stream of freelance event income that can replace a traditional full-time salary.",
+      },
+      {
+        q: "Does Evenza take a commission from freelancers?",
+        a: "No. Evenza does not take a commission from the pay of our volunteer and freelance community members. Our revenue model is from our event clients, not from our people. You earn what you're promised.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Part-Time Event Work", path: "/part-time-event-work" },
+      { label: "Event Jobs for Students", path: "/event-jobs-students" },
+      { label: "Volunteering in India", path: "/volunteering-india" },
+    ],
+  },
+  {
+    path: "/event-internship-jaipur",
+    seoTitle: "Event Internship in Jaipur | Real Event Experience for Students | Evenza",
+    metaDescription: "Looking for an event management internship in Jaipur? Evenza offers paid, real-world event internship experience for students. Work at real events, not just shadow someone. No fee.",
+    keyword: "Event Internship Jaipur",
+    subtitle: "Not a Shadow Internship — Real Work, Real Events, Real Pay in Jaipur",
+    description: "Most event management internships in Jaipur mean sitting in an office, making chai, and getting a certificate at the end. Evenza's event internship model is completely different. As an Evenza event intern, you work at actual events — the Jaipur Literature Festival, JECC trade expos, corporate conferences at JW Marriott and Fairmont, and destination weddings at Rambagh Palace. You manage real responsibilities — registration desks, crowd management, guest coordination, logistics support. You interact with professional event managers, vendors, clients, and guests. You get paid for your time. And you graduate from the internship with a portfolio of actual events you worked — not just a certificate. For students at BITS Pilani, Poornima, Rajasthan University, Manipal Jaipur, IIS University, or any Jaipur college looking for a genuine event management internship, Evenza is the real thing.",
+    features: [
+      "Work at real events — not office internships or observation-only programmes",
+      "Events portfolio: JLF, JECC expos, weddings at Rambagh and City Palace, corporate summits",
+      "Paid internship — earn while you gain real event management experience",
+      "Learn from on-ground event managers and Evenza's core team",
+      "Open to students from any Jaipur college — BITS Pilani, Poornima, Rajasthan University, Manipal",
+      "Zero registration fee — join the Evenza community and apply for internship slots free",
+    ],
+    faqs: [
+      {
+        q: "Does Evenza provide a certificate for event internship?",
+        a: "Yes. Upon completing a defined number of events, Evenza provides an internship completion certificate that you can add to your resume and LinkedIn profile. More importantly, you'll have a portfolio of real events you worked — which carries far more weight with employers than any certificate.",
+      },
+      {
+        q: "How is an Evenza event internship different from other event internships in Jaipur?",
+        a: "Most internships are office-based or observational. Evenza interns work on-ground at real events — managing registration queues, coordinating guests, supporting show flow, and liaising with vendors and clients. You get hands-on experience that you can speak to confidently in any job interview.",
+      },
+      {
+        q: "Can I do an event internship with Evenza during my college semester?",
+        a: "Yes. Events mostly happen on weekends and during college holidays. You can complete a meaningful internship — working 5–10 events — without affecting your academic schedule. We are flexible because most of our interns are active students.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteer with Evenza", path: "/volunteers" },
+      { label: "Volunteering in Jaipur", path: "/volunteering-jaipur" },
+      { label: "Event Jobs for Students", path: "/event-jobs-students" },
+      { label: "Event Volunteers Jaipur", path: "/event-volunteers-jaipur" },
+    ],
+  },
+
+  // ============================================================
+  // MANPOWER STATE PAGES — demand side (clients/organisers hiring)
+  // ============================================================
+  {
+    path: "/event-manpower-uttar-pradesh",
+    seoTitle: "Event Manpower in Uttar Pradesh | Event Staff UP | Evenza",
+    metaDescription: "Need event manpower in Uttar Pradesh? Evenza provides trained event staff across Lucknow, Agra, Varanasi, Prayagraj, Kanpur, Noida and all UP cities. GST billing. Pan-UP coverage.",
+    keyword: "Event Manpower Uttar Pradesh",
+    subtitle: "Trusted Event Manpower Across All of Uttar Pradesh — From Mahakumbh to Corporate Summits",
+    description: "Uttar Pradesh is India's most populous state with one of its most diverse event calendars. The Mahakumbh at Prayagraj requires thousands of trained event personnel; Lucknow's government summits at Indira Gandhi Pratishthan demand professional staffing; Agra's tourism events near the Taj Mahal require hospitality-aware crews; Varanasi's Ganga Aarti events and cultural gatherings need sensitive and experienced staff; Noida and Greater Noida's corporate events and India Expo Mart exhibitions require trained exhibition and registration teams. Evenza provides trained, briefed, uniformed event manpower across all of UP. Our operations base in Jaipur gives us excellent access to the entire western, central, and eastern UP belt. We manage travel, accommodation, and food for our crews — so you receive the same quality of trained personnel regardless of where in UP your event is held.",
+    features: [
+      "Pan-UP coverage — Lucknow, Agra, Varanasi, Prayagraj, Kanpur, Noida, Meerut, Mathura",
+      "Trained event manpower for government, corporate, cultural, and religious events",
+      "Experience at Mahakumbh, Lucknow Mahotsav, Agra tourism events",
+      "Exhibition and registration staff for India Expo Mart and UP trade fairs",
+      "Travel and accommodation managed for inter-city UP deployments",
+      "GST-compliant billing from a registered company",
+    ],
+    faqs: [
+      {
+        q: "Which cities in UP does Evenza serve for event manpower?",
+        a: "We serve Lucknow, Agra, Varanasi, Prayagraj, Kanpur, Noida, Greater Noida, Meerut, Mathura, Vrindavan, Aligarh, Bareilly, Gorakhpur, and can deploy to smaller UP cities with advance notice.",
+      },
+      {
+        q: "Can Evenza provide event staff for Mahakumbh and religious gatherings in UP?",
+        a: "Yes. We provide event support staff for large gatherings in Prayagraj and across the UP pilgrimage circuit. Our team is briefed on cultural sensitivities and the specific crowd management requirements of large religious events.",
+      },
+    ],
+    relatedPages: [
+      { label: "Event Manpower Lucknow", path: "/event-manpower-lucknow" },
+      { label: "Event Manpower Delhi", path: "/event-manpower-delhi" },
+      { label: "Event Manpower Jaipur", path: "/event-manpower-jaipur" },
+      { label: "Event Staffing Rajasthan", path: "/event-staffing-rajasthan" },
+    ],
+  },
+  {
+    path: "/manpower-agency-rajasthan",
+    seoTitle: "Manpower Agency in Rajasthan | Event Staffing Statewide | Evenza",
+    metaDescription: "Looking for a manpower agency in Rajasthan? Evenza provides trained event staff across all 33 districts — Jaipur, Udaipur, Jodhpur, Ajmer, Kota, Bikaner, Pushkar and beyond. GST billing.",
+    keyword: "Manpower Agency Rajasthan",
+    subtitle: "Rajasthan's Most Trusted State-Wide Event Manpower Agency",
+    description: "Finding a reliable manpower agency in Rajasthan that can serve not just Jaipur but all of Rajasthan's event destinations — Udaipur's lakeside venues, Jodhpur's fortresses, Pushkar's spiritual sites, Kota's industrial facilities — is a genuine challenge. Most agencies have city-level capability at best. Evenza is headquartered in Jaipur and has proven operational reach across all 33 districts of Rajasthan. Our model — managing crew travel, accommodation, and food — means you get the same quality of trained, uniformed, briefed event staff whether your event is in Jaipur, the rural estates of Shekhawati, or the desert dunes of Jaisalmer. We have staffed events at Rajasthan's most iconic venues and understand the unique logistical and cultural requirements that each region demands. As the state's most trusted event manpower agency, Evenza provides GST-compliant billing, transparent pricing, and a supervisor on every deployment.",
+    features: [
+      "All 33 districts of Rajasthan covered — the widest state-wide reach of any agency",
+      "Experienced at Jaipur, Udaipur, Jodhpur, Ajmer, Kota, Pushkar, Jaisalmer, Bikaner venues",
+      "Travel and accommodation managed for every out-of-Jaipur deployment",
+      "Rajasthani-dialect-aware crew for heritage and cultural events",
+      "GST-compliant invoicing from a registered company",
+      "Supervisor on every deployment for on-ground accountability",
+    ],
+    faqs: [
+      {
+        q: "Can Evenza provide manpower for events in all of Rajasthan — not just Jaipur?",
+        a: "Yes. Evenza's operational model is specifically designed for statewide deployment. We manage our crew's travel, accommodation, and food for all non-Jaipur events in Rajasthan, ensuring you receive trained staff regardless of the event location.",
+      },
+      {
+        q: "What types of events does Evenza staff across Rajasthan?",
+        a: "Across Rajasthan we staff destination weddings (all venue types), corporate MICE events, government functions, trade fairs, cultural festivals (Pushkar Fair, Desert Festival), religious gatherings, and tourism-linked hospitality events.",
+      },
+    ],
+    relatedPages: [
+      { label: "Event Staffing Rajasthan", path: "/event-staffing-rajasthan" },
+      { label: "Manpower Agency Jaipur", path: "/manpower-agency-jaipur" },
+      { label: "Event Manpower Rajasthan", path: "/event-manpower-rajasthan" },
+      { label: "Event Manpower Jaipur", path: "/event-manpower-jaipur" },
+    ],
+  },
+  {
+    path: "/event-manpower-maharashtra",
+    seoTitle: "Event Manpower in Maharashtra | Event Staff Mumbai Pune Nashik Nagpur | Evenza",
+    metaDescription: "Need event manpower in Maharashtra? Evenza provides trained event staff across Mumbai, Pune, Nashik, Nagpur, Aurangabad and all Maharashtra. GST billing. Pan-Maharashtra coverage.",
+    keyword: "Event Manpower Maharashtra",
+    subtitle: "Maharashtra's Biggest Events Run on Evenza-Trained Manpower",
+    description: "Maharashtra is India's event powerhouse — home to the country's largest entertainment industry, fastest-growing corporate event sector, and some of its most lavish weddings. Managing event manpower across Maharashtra's geography — Mumbai's fast-paced entertainment events, Pune's IT corridor conferences, Nashik's wine festivals and Kumbh Mela, Nagpur's government summits, Aurangabad's tourism events — demands a staffing partner with genuine operational reach across the state. Evenza provides trained, supervised, and uniformed event manpower across all of Maharashtra. Our deployment model manages travel and accommodation for all out-of-Mumbai events within Maharashtra, ensuring consistent quality regardless of city. From NMACC galas in Mumbai to Nashik's massive Kumbh Mela to Pune's MCCIA corporate events — Evenza is Maharashtra's trusted statewide event staffing partner.",
+    features: [
+      "Pan-Maharashtra coverage — Mumbai, Pune, Nashik, Nagpur, Aurangabad, Thane, Navi Mumbai",
+      "Experience at NMACC, BOMBAY EXHIBITION CENTRE, MCCIA, and major Maharashtra venues",
+      "Entertainment, corporate, wedding, and government event staffing",
+      "Travel and accommodation managed for inter-Maharashtra deployments",
+      "Marathi-speaking staff available for regional events",
+      "GST-compliant billing from a registered company",
+    ],
+    faqs: [
+      {
+        q: "Does Evenza cover event manpower in Nashik, Nagpur, and Aurangabad?",
+        a: "Yes. We cover all major Maharashtra cities including Nashik (Kumbh Mela, wine festivals), Nagpur (MIHAN, government events, Nagpur Orange City events), Aurangabad (Ajanta-Ellora tourism events, AURIC industrial events), and Solapur, Kolhapur with advance notice.",
+      },
+    ],
+    relatedPages: [
+      { label: "Event Manpower Mumbai", path: "/event-manpower-mumbai" },
+      { label: "Event Manpower Pune", path: "/event-manpower-pune" },
+      { label: "Event Manpower Jaipur", path: "/event-manpower-jaipur" },
+      { label: "Event Staffing Rajasthan", path: "/event-staffing-rajasthan" },
+    ],
+  },
+  {
+    path: "/event-manpower-karnataka",
+    seoTitle: "Event Manpower in Karnataka | Event Staff Bengaluru Mysuru | Evenza",
+    metaDescription: "Need event manpower in Karnataka? Evenza provides trained event staff across Bengaluru, Mysuru, Mangaluru, Hubli and all Karnataka. Tech events, weddings, cultural events. GST billing.",
+    keyword: "Event Manpower Karnataka",
+    subtitle: "Karnataka's Tech, Heritage and Cultural Events — Powered by Evenza Event Manpower",
+    description: "Karnataka's events span two extremes of India's event industry — high-tech corporate summits in Bengaluru's ITPL and Manyata Tech Park, and the world-class cultural grandeur of Mysuru Dasara at the Mysore Palace. Between these extremes lie Mangaluru's coastal hospitality events, Hubli-Dharwad's commercial events, Hampi's heritage festivals, and Belagavi's growing corporate sector. Evenza provides trained event manpower across all of Karnataka for this diverse range of events. Our crew includes exhibition staff for BIEC, delegate management specialists for Bengaluru's tech conferences, and hospitality-aware teams for Mysuru's high-protocol royal events. Travel and accommodation is managed for all inter-city Karnataka deployments. Kannada-speaking staff is available on request.",
+    features: [
+      "Pan-Karnataka coverage — Bengaluru, Mysuru, Mangaluru, Hubli, Belagavi, Shimoga",
+      "Experience at BIEC, Mysore Palace events, Bengaluru's tech conference venues",
+      "Tech conference, corporate, cultural, and wedding event manpower",
+      "Kannada-speaking staff available for local-audience events",
+      "Travel and accommodation managed for inter-Karnataka deployments",
+      "GST-compliant billing from a registered company",
+    ],
+    faqs: [
+      {
+        q: "Does Evenza cover event staffing for Mysuru Dasara?",
+        a: "Yes. Mysuru Dasara at Mysore Palace is one of India's most high-protocol events. Our staff are briefed on royal event protocols, crowd management, and the specific requirements of this heritage celebration.",
+      },
+    ],
+    relatedPages: [
+      { label: "Event Manpower Bengaluru", path: "/event-manpower-bengaluru" },
+      { label: "Event Manpower Hyderabad", path: "/event-manpower-hyderabad" },
+      { label: "Event Manpower Jaipur", path: "/event-manpower-jaipur" },
+      { label: "Event Staffing Rajasthan", path: "/event-staffing-rajasthan" },
+    ],
+  },
+  {
+    path: "/event-manpower-india",
+    seoTitle: "Event Manpower Company India | Pan-India Event Staffing | Evenza",
+    metaDescription: "Looking for a pan-India event manpower company? Evenza provides trained event staff across 25+ cities in India — Jaipur, Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, Kolkata & more. GST billing.",
+    keyword: "Event Manpower Company India",
+    subtitle: "India's Pan-India Event Manpower Partner — 25+ Cities, One Company",
+    description: "When your event spans multiple cities or requires consistent staffing standards across India's diverse geography, you need a single manpower partner who can deliver nationally — not a different agency in every city with different quality, different billing practices, and different standards. Evenza is India's pan-India event manpower company. Headquartered in Jaipur, we have deployed trained event crews in 25+ cities across Rajasthan, Delhi NCR, Maharashtra, Karnataka, Telangana, Tamil Nadu, West Bengal, Gujarat, Uttar Pradesh, Punjab, Goa, and beyond. Our model — managing crew travel, accommodation, and food — means you get the same briefed, uniformed, supervised team regardless of which Indian city your event is in. One point of contact, one invoice, one quality standard across India.",
+    features: [
+      "25+ cities covered — single point of contact for all pan-India events",
+      "Consistent standards — same briefing, uniform, and supervision model nationwide",
+      "Travel and accommodation managed for all inter-city deployments",
+      "All event types — corporate, wedding, exhibition, concert, government, MICE",
+      "GST-compliant billing from a registered Indian company",
+      "Proven track record across Rajasthan, Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, Kolkata",
+    ],
+    faqs: [
+      {
+        q: "Can Evenza manage event staffing for a multi-city conference across India?",
+        a: "Yes. We regularly manage multi-city deployments for corporate clients running events in multiple Indian cities simultaneously or sequentially. Our project manager handles coordination across all cities, ensuring consistent quality and seamless communication with your team.",
+      },
+      {
+        q: "How does Evenza maintain quality standards across 25+ cities?",
+        a: "Our quality system is standardised — every crew member is selected through the same screening process, briefed using the same pre-event protocol, uniformed to the same standard, and supervised by an Evenza-trained supervisor. The briefing for your event is the same whether we deploy in Jaipur or Chennai.",
+      },
+      {
+        q: "Which cities does Evenza currently cover for pan-India event manpower?",
+        a: "We cover Jaipur, Udaipur, Jodhpur, Ajmer, Delhi NCR, Gurgaon, Noida, Mumbai, Pune, Nashik, Bengaluru, Hyderabad, Chennai, Kolkata, Ahmedabad, Surat, Lucknow, Chandigarh, Goa, Indore, Surat, and 10+ additional cities. Contact us for any city not listed.",
+      },
+    ],
+    relatedPages: [
+      { label: "Event Manpower Jaipur", path: "/event-manpower-jaipur" },
+      { label: "Event Staffing Rajasthan", path: "/event-staffing-rajasthan" },
+      { label: "Manpower Agency Jaipur", path: "/manpower-agency-jaipur" },
+      { label: "Manpower Agency Rajasthan", path: "/manpower-agency-rajasthan" },
+    ],
+  },
 ];
