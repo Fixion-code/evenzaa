@@ -72,6 +72,8 @@
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
   --color-gold: hsl(var(--gold));
+  --color-cream: hsl(var(--cream));
+  --color-coffee: hsl(var(--coffee));
 }
 
 /* ===== BASE LAYER ===== */
@@ -211,8 +213,8 @@ nav {
 }
 
 /* Legacy Utility Classes mapping to new values to prevent breakage */
-.text-cream { color: #2f3828; }
-.text-coffee { color: #2f3828; }
+.text-cream { color: hsl(var(--cream)); }
+.text-coffee { color: hsl(var(--coffee)); }
 .text-gold { color: #c89a42; }
 .bg-gold { background-color: #c89a42; }
 .gold-border { border-color: rgba(86,98,56,0.15); }
