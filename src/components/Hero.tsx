@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Sparkles, MessageCircle, ArrowRight } from "lucide-react";
+import { toast } from "sonner";
 import { WHATSAPP, STATS } from "@/lib/constants";
 
 // Animated counter hook
@@ -186,14 +187,12 @@ export function Hero() {
               </a>
               <button
                 onClick={() => {
-                  import("sonner").then(({ toast }) => {
-                    toast.success("Connecting to WhatsApp...", {
-                      description: "Redirecting you to our chat securely.",
-                    });
-                    setTimeout(() => {
-                      window.open(`https://wa.me/${WHATSAPP}`, "_blank");
-                    }, 1000);
+                  toast.success("Connecting to WhatsApp...", {
+                    description: "Redirecting you to our chat securely.",
                   });
+                  setTimeout(() => {
+                    window.open(`https://wa.me/${WHATSAPP}`, "_blank");
+                  }, 1000);
                 }}
                 className="btn-secondary w-full sm:w-auto justify-center"
               >

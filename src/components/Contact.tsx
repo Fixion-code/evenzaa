@@ -151,24 +151,20 @@ export function Contact() {
             const handleClick = (e: React.MouseEvent) => {
               if (isWhatsApp) {
                 e.preventDefault();
-                import("sonner").then(({ toast }) => {
-                  toast.success("Connecting to WhatsApp...", {
-                    description: "Redirecting you to our chat securely.",
-                  });
-                  setTimeout(() => {
-                    window.open(c.href, "_blank");
-                  }, 1000);
+                toast.success("Connecting to WhatsApp...", {
+                  description: "Redirecting you to our chat securely.",
                 });
+                setTimeout(() => {
+                  window.open(c.href, "_blank");
+                }, 1000);
               } else if (isCall) {
                 e.preventDefault();
-                import("sonner").then(({ toast }) => {
-                  toast.info("Initiating call...", {
-                    description: "Opening your phone dialer.",
-                  });
-                  setTimeout(() => {
-                    window.location.href = c.href;
-                  }, 800);
+                toast.info("Initiating call...", {
+                  description: "Opening your phone dialer.",
                 });
+                setTimeout(() => {
+                  window.location.href = c.href;
+                }, 800);
               }
             };
 
