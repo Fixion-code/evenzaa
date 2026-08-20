@@ -16,6 +16,8 @@ import {
   Handshake,
   Building2,
   Heart,
+  Phone,
+  Mail,
 } from "lucide-react";
 import { useState } from "react";
 import {
@@ -103,28 +105,41 @@ const WHATSAPP_OPTIONS = [
 
 export function Links() {
   const [showWaModal, setShowWaModal] = useState(false);
+  const [showContactModal, setShowContactModal] = useState(false);
 
-  const handleSaveContact = () => {
+  const handleDownloadVCard = () => {
+    // OS Identification for iOS specific handling if needed, though Blob works well mostly
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    
     const vcard = `BEGIN:VCARD
 VERSION:3.0
-FN:Evenza Hospitality Services
-ORG:Evenza (Shree Ji Company Pvt. Ltd.)
+FN:Evenza Manpower & Hospitality
+ORG:Evenza Manpower & Hospitality Company
 TITLE:Event Manpower & Hospitality Partner
-TEL;TYPE=WORK,VOICE:${PHONE_TEL}
+TEL;TYPE=WORK,VOICE:+919161710849
+TEL;TYPE=CELL,VOICE:+919219465819
 EMAIL;TYPE=WORK:${EMAIL}
 URL:${SITE_URL}
-NOTE:India's Premier Event Manpower & Hospitality Partner. Services: Event Manpower, Hospitality Crew, Volunteers, Production Team.
+NOTE:Services: Event Manpower, Hospitality Crew, Volunteers, Production Team. Let's elevate your next event!
 END:VCARD`;
 
     const blob = new Blob([vcard], { type: "text/vcard" });
     const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "Evenza_Contact.vcf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    
+    if (isIOS) {
+      // iOS sometimes prefers opening the vcard directly instead of downloading
+      window.location.href = url;
+    } else {
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Evenza_Contact.vcf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+    
+    // Clean up
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   return (
@@ -200,7 +215,7 @@ END:VCARD`;
           className="grid grid-cols-2 gap-4 mb-10"
         >
           <button
-            onClick={handleSaveContact}
+            onClick={() => setShowContactModal(true)}
             className="flex flex-col items-center justify-center py-4 px-2 rounded-2xl bg-foreground text-background hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl"
           >
             <UserPlus className="w-6 h-6 mb-2 text-gold" />
@@ -305,7 +320,7 @@ END:VCARD`;
 
       {/* Smart WhatsApp Modal */}
       {showWaModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -359,6 +374,78 @@ END:VCARD`;
                   </a>
                 ))}
               </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Advanced Contact Modal */}
+      {showContactModal && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowContactModal(false)}
+            className="absolute inset-0 bg-background/80 backdrop-blur-sm"
+          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            className="relative w-full max-w-sm bg-card border border-border rounded-3xl shadow-2xl overflow-hidden flex flex-col"
+          >
+            <div className="p-6 pb-4 border-b border-border/50 flex items-center justify-between shrink-0">
+              <div>
+                <h3 className="font-display text-xl font-bold text-foreground">Save Contact</h3>
+                <p className="text-xs text-muted-foreground mt-1">Download or save manually</p>
+              </div>
+              <button
+                onClick={() => setShowContactModal(false)}
+                className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/80 transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+            
+            <div className="p-6 flex flex-col gap-6">
+               <button onClick={handleDownloadVCard} className="btn-primary w-full justify-center py-3.5 text-sm rounded-xl shadow-soft">
+                  <UserPlus className="w-4 h-4" /> Download Contact Card
+               </button>
+
+               <div className="space-y-4">
+                  <div className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground mb-1">Manual Save Info</div>
+                  
+                  <div className="flex items-center gap-3">
+                     <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center shrink-0">
+                        <Phone className="w-4 h-4 text-foreground" />
+                     </div>
+                     <div>
+                        <div className="text-sm font-semibold tracking-wide">+91 91617 10849</div>
+                        <div className="text-xs text-muted-foreground">Primary Booking / Info</div>
+                     </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                     <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center shrink-0">
+                        <Phone className="w-4 h-4 text-foreground" />
+                     </div>
+                     <div>
+                        <div className="text-sm font-semibold tracking-wide">+91 92194 65819</div>
+                        <div className="text-xs text-muted-foreground">Secondary / Alternate</div>
+                     </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                     <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center shrink-0">
+                        <Mail className="w-4 h-4 text-foreground" />
+                     </div>
+                     <div className="overflow-hidden">
+                        <div className="text-sm font-semibold tracking-wide truncate">{EMAIL}</div>
+                        <div className="text-xs text-muted-foreground">Official Email</div>
+                     </div>
+                  </div>
+               </div>
             </div>
           </motion.div>
         </div>
