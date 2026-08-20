@@ -9,23 +9,34 @@ import {
   Globe,
   Users,
   Facebook,
+  UserPlus,
+  ArrowUpRight,
+  Briefcase,
+  X,
+  Handshake,
+  Building2,
+  Heart,
 } from "lucide-react";
+import { useState } from "react";
 import {
   INSTAGRAM,
   LINKEDIN,
   TELEGRAM,
   WHATSAPP,
   FACEBOOK,
+  PHONE_TEL,
+  EMAIL,
 } from "@/lib/constants";
 
 const WHATSAPP_COMMUNITY = "https://chat.whatsapp.com/HBcHsXhBeGbIS9yAbSwTP1";
+const SITE_URL = "https://evenzaa-sable.vercel.app";
 
-const LINKS = [
+const MAIN_LINKS = [
   {
     title: "Visit Our Website",
     href: "/",
     icon: Globe,
-    desc: "India's Premier Event Manpower Partner",
+    desc: "Explore our full range of event services",
     primary: true,
   },
   {
@@ -36,40 +47,88 @@ const LINKS = [
     primary: true,
   },
   {
-    title: "Chat on WhatsApp",
-    href: `https://wa.me/${WHATSAPP}`,
-    icon: MessageCircle,
-    desc: "Directly message us for quotes & queries",
+    title: "Our Work & Case Studies",
+    href: "/case-studies",
+    icon: Briefcase,
+    desc: "See the scale of events we've managed",
+    primary: false,
   },
   {
-    title: "Instagram",
-    href: INSTAGRAM,
-    icon: Instagram,
-    desc: "Follow our event highlights",
-  },
-  {
-    title: "LinkedIn",
-    href: LINKEDIN,
-    icon: Linkedin,
-    desc: "Connect with us professionally",
-  },
-  {
-    title: "Facebook",
-    href: FACEBOOK,
-    icon: Facebook,
-    desc: "Join our Facebook community",
-  },
-  {
-    title: "Telegram Channel",
+    title: "Telegram Updates",
     href: TELEGRAM,
     icon: Send,
-    desc: "Updates and alerts on Telegram",
+    desc: "Fast alerts for new opportunities",
+    primary: false,
   },
 ];
 
+const SOCIAL_LINKS = [
+  { icon: Instagram, href: INSTAGRAM, label: "Instagram" },
+  { icon: Facebook, href: FACEBOOK, label: "Facebook" },
+  { icon: Linkedin, href: LINKEDIN, label: "LinkedIn" },
+];
+
+const WHATSAPP_OPTIONS = [
+  {
+    role: "Client (Planning an Event)",
+    icon: Heart,
+    desc: "Weddings, Corporate, Private Events",
+    message: "Hi Evenza! I'm planning an event and need to hire professional event manpower & hospitality staff. Can we discuss?",
+  },
+  {
+    role: "Event Planner / Agency",
+    icon: Briefcase,
+    desc: "Looking for a reliable manpower partner",
+    message: "Hi Evenza, I'm an event planner/agency. I'm looking for a reliable pan-India manpower partner for my upcoming projects.",
+  },
+  {
+    role: "Vendor / Partner",
+    icon: Handshake,
+    desc: "Explore collaboration opportunities",
+    message: "Hi Evenza, I'm a vendor in the event industry. I'd love to connect and explore how we can collaborate.",
+  },
+  {
+    role: "Volunteer / Student",
+    icon: Users,
+    desc: "Join the team for paid event gigs",
+    message: "Hi Evenza! I'm interested in joining your volunteer community to gain experience and work at live events.",
+  },
+  {
+    role: "Other Inquiry",
+    icon: MessageCircle,
+    desc: "General questions or support",
+    message: "Hi Evenza, I have a general inquiry and would like to speak with your team.",
+  }
+];
+
 export function Links() {
+  const [showWaModal, setShowWaModal] = useState(false);
+
+  const handleSaveContact = () => {
+    const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Evenza Hospitality Services
+ORG:Evenza (Shree Ji Company Pvt. Ltd.)
+TITLE:Event Manpower & Hospitality Partner
+TEL;TYPE=WORK,VOICE:${PHONE_TEL}
+EMAIL;TYPE=WORK:${EMAIL}
+URL:${SITE_URL}
+NOTE:India's Premier Event Manpower & Hospitality Partner. Services: Event Manpower, Hospitality Crew, Volunteers, Production Team.
+END:VCARD`;
+
+    const blob = new Blob([vcard], { type: "text/vcard" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Evenza_Contact.vcf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <main className="min-h-screen-dvh relative overflow-x-hidden bg-background">
+    <main className="min-h-screen-dvh relative bg-background pb-12 overflow-x-hidden">
       <Helmet>
         <title>Connect with Evenza | Links & Socials</title>
         <meta name="robots" content="noindex, follow" />
@@ -79,48 +138,87 @@ export function Links() {
         />
       </Helmet>
 
-      {/* Background styling similar to Hero */}
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-[#F7F5F1] to-background dark:via-background" />
-        {/* Animated Glow Orbs */}
-        <motion.div
-          animate={{ x: [0, 50, -50, 0], y: [0, -50, 50, 0], scale: [1, 1.1, 0.9, 1] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full blur-[80px]"
-          style={{ background: 'rgba(200, 154, 66, 0.15)' }}
-        />
+      {/* Premium Cover Area */}
+      <div className="h-48 sm:h-56 w-full relative overflow-hidden">
+        {/* Deep rich background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#394126] to-[#1a1d11]" />
+        
+        {/* Decorative Grid & Shimmer */}
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-20"
           style={{
             backgroundImage: "radial-gradient(#c89a42 1px, transparent 1px)",
-            backgroundSize: "32px 32px",
+            backgroundSize: "24px 24px",
           }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
+
+        {/* Abstract shapes */}
+        <motion.div
+          animate={{ x: [0, 20, -20, 0], y: [0, -20, 20, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full blur-[60px] bg-gold/20"
+        />
+        <motion.div
+          animate={{ x: [0, -30, 30, 0], y: [0, 30, -30, 0] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -top-20 -right-20 w-64 h-64 rounded-full blur-[60px] bg-[#566238]/40"
         />
       </div>
 
-      <div className="max-w-xl mx-auto px-6 py-16 flex flex-col items-center min-h-screen-dvh">
-        {/* Profile / Header */}
+      <div className="max-w-xl mx-auto px-6 relative -mt-20">
+        {/* Profile Avatar */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center text-center mb-10"
+          className="flex flex-col items-center text-center mb-8"
         >
-          <div className="w-24 h-24 rounded-full border border-gold/30 shadow-gold bg-card flex items-center justify-center mb-5 overflow-hidden group">
+          <div className="w-32 h-32 rounded-full border-4 border-background bg-card flex items-center justify-center shadow-2xl overflow-hidden relative group">
             <div className="absolute inset-0 bg-gradient-to-tr from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-            <span className="font-display text-5xl text-gold italic">E</span>
+            <span className="font-display text-6xl text-gold italic drop-shadow-md">E</span>
           </div>
-          <h1 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
+          
+          <h1 className="font-display text-3xl font-bold text-foreground mt-4 mb-2 flex items-center gap-2">
             Evenza India
+            <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
+              <svg className="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+              </svg>
+            </div>
           </h1>
-          <p className="text-muted-foreground text-sm max-w-sm">
-            India's Premier Event Manpower & Hospitality Partner.
+          <p className="text-muted-foreground text-sm max-w-sm mx-auto leading-relaxed">
+            India's Premier Event Manpower & Hospitality Partner. Elevating experiences pan-India.
           </p>
         </motion.div>
 
+        {/* Primary Call to Actions (Save Contact & WhatsApp) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="grid grid-cols-2 gap-4 mb-10"
+        >
+          <button
+            onClick={handleSaveContact}
+            className="flex flex-col items-center justify-center py-4 px-2 rounded-2xl bg-foreground text-background hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl"
+          >
+            <UserPlus className="w-6 h-6 mb-2 text-gold" />
+            <span className="text-sm font-semibold tracking-wide">Save Contact</span>
+          </button>
+          
+          <button
+            onClick={() => setShowWaModal(true)}
+            className="flex flex-col items-center justify-center py-4 px-2 rounded-2xl bg-card border border-border hover:border-[#25D366]/50 hover:bg-[#25D366]/5 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-sm group w-full"
+          >
+            <MessageCircle className="w-6 h-6 mb-2 text-muted-foreground group-hover:text-[#25D366] transition-colors" />
+            <span className="text-sm font-semibold text-foreground tracking-wide">WhatsApp Us</span>
+          </button>
+        </motion.div>
+
         {/* Links List */}
-        <div className="w-full space-y-4">
-          {LINKS.map((link, index) => {
+        <div className="w-full space-y-4 mb-10">
+          {MAIN_LINKS.map((link, index) => {
             const isInternal = link.href.startsWith("/");
             const LinkWrapper = isInternal ? Link : "a";
             
@@ -129,55 +227,142 @@ export function Links() {
                 key={link.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 + index * 0.05 }}
+                transition={{ duration: 0.5, delay: 0.2 + index * 0.05 }}
               >
                 <LinkWrapper
                   to={isInternal ? link.href : undefined}
                   href={!isInternal ? link.href : undefined}
                   target={!isInternal ? "_blank" : undefined}
                   rel={!isInternal ? "noreferrer" : undefined}
-                  className={`relative overflow-hidden group flex items-center p-4 rounded-xl border transition-all duration-300 w-full min-h-[64px] ${
+                  className={`relative overflow-hidden group flex items-center p-4 rounded-2xl border transition-all duration-300 w-full min-h-[72px] ${
                     link.primary
                       ? "bg-gold/5 border-gold/30 hover:border-gold hover:bg-gold/10 shadow-soft"
-                      : "bg-card border-border hover:border-gold/50 hover:shadow-soft"
+                      : "bg-card border-border hover:border-gold/30 hover:shadow-soft"
                   }`}
                 >
                   {/* Shimmer Effect */}
                   <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/5 to-transparent" />
                   
-                  <div className={`flex items-center justify-center w-10 h-10 rounded-full shrink-0 mr-4 ${
+                  <div className={`flex items-center justify-center w-12 h-12 rounded-xl shrink-0 mr-4 shadow-sm ${
                     link.primary ? "bg-gold/20 text-gold" : "bg-muted text-muted-foreground group-hover:text-gold transition-colors"
                   }`}>
                     <link.icon className="w-5 h-5" />
                   </div>
                   
                   <div className="flex-1 text-left">
-                    <div className="font-semibold text-foreground text-sm sm:text-base group-hover:text-gold transition-colors">
+                    <div className="font-semibold text-foreground text-[15px] group-hover:text-gold transition-colors pr-2">
                       {link.title}
                     </div>
                     {link.desc && (
-                      <div className="text-xs text-muted-foreground mt-0.5 hidden sm:block">
+                      <div className="text-xs text-muted-foreground mt-1 line-clamp-1">
                         {link.desc}
                       </div>
                     )}
                   </div>
+
+                  <ArrowUpRight className={`w-5 h-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 ${
+                    link.primary ? "text-gold/50 group-hover:text-gold" : "text-border group-hover:text-gold/50"
+                  }`} />
                 </LinkWrapper>
               </motion.div>
             );
           })}
         </div>
 
-        {/* Footer */}
+        {/* Social Icons Row */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-16 text-xs text-muted-foreground/60 text-center"
+          className="flex justify-center items-center gap-6"
         >
+          {SOCIAL_LINKS.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={social.label}
+              className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-gold hover:border-gold/50 hover:scale-110 transition-all duration-300 shadow-sm"
+            >
+              <social.icon className="w-5 h-5" />
+            </a>
+          ))}
+        </motion.div>
+
+        {/* Footer */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          className="mt-12 pt-8 border-t border-border/50 text-xs text-muted-foreground/60 text-center"
+        >
+          <div className="font-display italic text-lg text-gold/40 mb-2">E</div>
           © {new Date().getFullYear()} Shree Ji Company Pvt. Ltd. <br />
           All rights reserved.
         </motion.div>
       </div>
+
+      {/* Smart WhatsApp Modal */}
+      {showWaModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setShowWaModal(false)}
+            className="absolute inset-0 bg-background/80 backdrop-blur-sm"
+          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            className="relative w-full max-w-md bg-card border border-border rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]"
+          >
+            {/* Modal Header */}
+            <div className="p-6 pb-4 border-b border-border/50 flex items-center justify-between shrink-0">
+              <div>
+                <h3 className="font-display text-xl font-bold text-foreground">How can we help?</h3>
+                <p className="text-xs text-muted-foreground mt-1">Select your profile to start chatting.</p>
+              </div>
+              <button
+                onClick={() => setShowWaModal(false)}
+                className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/80 transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Modal Options (Scrollable) */}
+            <div className="p-4 overflow-y-auto flex-1">
+              <div className="space-y-3">
+                {WHATSAPP_OPTIONS.map((opt) => (
+                  <a
+                    key={opt.role}
+                    href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(opt.message)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => setShowWaModal(false)}
+                    className="flex items-center p-4 rounded-2xl border border-border bg-card hover:bg-[#25D366]/5 hover:border-[#25D366]/30 transition-all group w-full text-left"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-muted group-hover:bg-[#25D366]/10 flex items-center justify-center shrink-0 mr-4 transition-colors">
+                      <opt.icon className="w-5 h-5 text-muted-foreground group-hover:text-[#25D366] transition-colors" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm text-foreground group-hover:text-[#25D366] transition-colors">
+                        {opt.role}
+                      </div>
+                      <div className="text-xs text-muted-foreground mt-0.5">
+                        {opt.desc}
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </main>
   );
 }
