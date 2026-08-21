@@ -108,38 +108,41 @@ export function Links() {
   const [showContactModal, setShowContactModal] = useState(false);
 
   const handleDownloadVCard = () => {
-    // OS Identification for iOS specific handling if needed, though Blob works well mostly
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    // Robust OS Identification
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.userAgent.includes("Mac") && "ontouchend" in document);
     
-    const vcard = `BEGIN:VCARD
-VERSION:3.0
-FN:Evenza Manpower & Hospitality
-ORG:Evenza Manpower & Hospitality Company
-TITLE:Event Manpower & Hospitality Partner
-TEL;TYPE=WORK,VOICE:+919161710849
-TEL;TYPE=CELL,VOICE:+919219465819
-EMAIL;TYPE=WORK:${EMAIL}
-URL:${SITE_URL}
-NOTE:Services: Event Manpower, Hospitality Crew, Volunteers, Production Team. Let's elevate your next event!
+    // vCard content ensuring correct line breaks (\r\n is standard for vCard)
+    const vcard = `BEGIN:VCARD\r
+VERSION:3.0\r
+FN:Evenza Manpower & Hospitality\r
+ORG:Evenza Manpower & Hospitality Company\r
+TITLE:Event Manpower & Hospitality Partner\r
+TEL;TYPE=WORK,VOICE:+919161710849\r
+TEL;TYPE=CELL,VOICE:+919219465819\r
+EMAIL;TYPE=WORK:${EMAIL}\r
+URL:${SITE_URL}\r
+NOTE:Services: Event Manpower, Hospitality Crew, Volunteers, Production Team. Let's elevate your next event!\r
 END:VCARD`;
 
-    const blob = new Blob([vcard], { type: "text/vcard" });
-    const url = URL.createObjectURL(blob);
-    
     if (isIOS) {
-      // iOS sometimes prefers opening the vcard directly instead of downloading
-      window.location.href = url;
+      // iOS Safari blocks direct navigation to blob URLs but supports opening data URIs directly to trigger the native Contacts app
+      const dataURI = `data:text/vcard;charset=utf-8,${encodeURIComponent(vcard)}`;
+      window.location.href = dataURI;
     } else {
+      // Standard Blob download for Android, Windows, Mac Desktop (Chrome, Edge, Firefox, etc.)
+      const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
       link.download = "Evenza_Contact.vcf";
+      link.style.display = "none";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+      
+      // Clean up the URL object after a short delay
+      setTimeout(() => URL.revokeObjectURL(url), 500);
     }
-    
-    // Clean up
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
   };
 
   return (
