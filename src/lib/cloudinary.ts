@@ -21,7 +21,7 @@
  */
 
 // ── Replace this with your Cloudinary cloud name ──────────────────────────────
-const CLOUD_NAME = "YOUR_CLOUD_NAME";
+const CLOUD_NAME = "deif3jvr";
 // ─────────────────────────────────────────────────────────────────────────────
 
 const BASE_URL = `https://res.cloudinary.com/${CLOUD_NAME}/image/upload`;
