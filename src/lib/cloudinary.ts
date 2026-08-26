@@ -68,7 +68,7 @@ export function cloudinaryUrl(
   const {
     width,
     height,
-    quality = "auto",
+    quality = "auto:eco",
     format = "auto",
     crop = "fill",
     gravity = "auto",

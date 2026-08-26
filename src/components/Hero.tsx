@@ -141,7 +141,7 @@ export function Hero() {
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.3 }}
+                transition={{ duration: 0.7, delay: 0 }}
                 className="block"
               >
                 India's Premier
@@ -149,7 +149,7 @@ export function Hero() {
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.5 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
                 className="block highlight"
               >
                 Event Manpower
@@ -157,7 +157,7 @@ export function Hero() {
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.7 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
                 className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-4 text-cream/90"
               >
                 & Hospitality Partner.
@@ -167,7 +167,7 @@ export function Hero() {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               className="mt-8 text-lg text-cream/80 max-w-2xl leading-relaxed"
             >
               Hire the best event staffing agency in Jaipur. From intimate wedding hospitality teams in the Pink City to large-scale corporate event staffing, exhibition staff, and trained event volunteers across India — Evenza delivers flawless on-ground execution.
@@ -176,7 +176,7 @@ export function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               className="mt-8 flex flex-col sm:flex-row flex-wrap gap-4"
             >
               <a

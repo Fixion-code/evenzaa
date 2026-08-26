@@ -194,7 +194,7 @@ END:VCARD`;
         >
           <div className="w-32 h-32 rounded-full border-4 border-background bg-card flex items-center justify-center shadow-2xl overflow-hidden relative group">
             <div className="absolute inset-0 bg-gradient-to-tr from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
-            <img src="/evenza-profile.png" alt="Evenza Logo" className="w-full h-full object-cover" />
+            <img src="/evenza-profile-small.webp" width="128" height="128" alt="Evenza Logo" className="w-full h-full object-cover" />
           </div>
           
           <h1 className="font-display text-3xl font-bold text-foreground mt-4 mb-2 flex items-center gap-2">

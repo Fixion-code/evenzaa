@@ -17,13 +17,13 @@
   --primary-light: 85 25% 45%;
 
   /* Accent */
-  --gold: 38 55% 52%;
+  --gold: 38 60% 40%;
   --gold-soft: 40 35% 90%;
 
   /* Neutral */
   --border: 40 12% 84%;
   --muted: 40 18% 92%;
-  --muted-foreground: 92 10% 45%;
+  --muted-foreground: 92 10% 38%;
 
   /* Text */
   --cream: 92 18% 18%;
@@ -218,8 +218,8 @@ nav {
 /* Legacy Utility Classes mapping to new values to prevent breakage */
 .text-cream { color: hsl(var(--cream)); }
 .text-coffee { color: hsl(var(--coffee)); }
-.text-gold { color: #c89a42; }
-.bg-gold { background-color: #c89a42; }
+.text-gold { color: hsl(var(--gold)); }
+.bg-gold { background-color: hsl(var(--gold)); }
 .gold-border { border-color: rgba(86,98,56,0.15); }
 
 /* Section padding */

@@ -54,7 +54,7 @@ export function Services() {
                     className="inline-flex items-center gap-1.5 mt-5 text-xs text-gold hover:text-gold/80 transition-colors duration-200 font-medium tracking-wide uppercase"
                     aria-label={`Learn more about ${s.title}`}
                   >
-                    Learn more <ArrowRight className="w-3 h-3" />
+                    Learn more <span className="sr-only">about {s.title}</span> <ArrowRight className="w-3 h-3" />
                   </Link>
                 )}
               </div>

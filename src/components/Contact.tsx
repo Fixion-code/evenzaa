@@ -357,11 +357,11 @@ export function Contact() {
           </div>
 
           <div>
-            <Label htmlFor="roles" className="text-muted-foreground">
+            <Label htmlFor="roles_required" className="text-muted-foreground">
               Roles required
             </Label>
             <Input
-              id="roles"
+              id="roles_required"
               name="roles"
               placeholder="Runners, F&B, supervisors…"
               className="mt-2 bg-card border-border"
