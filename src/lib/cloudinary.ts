@@ -79,6 +79,7 @@ export function cloudinaryUrl(
     `f_${format}`,
     `c_${crop}`,
     `g_${gravity}`,
+    `a_exif`,
   ];
 
   if (width) transforms.push(`w_${width}`);
