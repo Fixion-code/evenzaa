@@ -1,78 +1,103 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ZoomIn } from "lucide-react";
+import { X, ZoomIn, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { SectionHeader } from "./SectionHeader";
+import { HOMEPAGE_GALLERY } from "@/lib/portfolio-images";
+import { cloudinaryUrl } from "@/lib/cloudinary";
 
-const GALLERY_IMAGES = [
-  { id: 1, src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800&auto=format&fit=crop", alt: "Evenza hospitality team managing a destination wedding in Jaipur", category: "Weddings" },
-  { id: 2, src: "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=800&auto=format&fit=crop", alt: "Evenza volunteers and registration staff at a corporate conference", category: "Corporate" },
-  { id: 3, src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800&auto=format&fit=crop", alt: "Evenza event manpower team supporting a live music concert", category: "Concerts" },
-  { id: 4, src: "https://images.unsplash.com/photo-1519167758481-83f5c12047ce?q=80&w=800&auto=format&fit=crop", alt: "Evenza exhibition staff managing a trade fair booth in Jaipur", category: "Exhibitions" },
-  { id: 5, src: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=800&auto=format&fit=crop", alt: "Evenza crew setting up a private party event in Rajasthan", category: "Private Parties" },
-  { id: 6, src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop", alt: "Evenza event staff managing delegates at a corporate conference", category: "Corporate" },
-];
-
+/**
+ * Homepage Gallery — Shows 8 featured images (one per event category).
+ * Links to the full /portfolio page for all 50 images with category filters.
+ *
+ * SEO highlights:
+ * - Each img has unique alt text with event + team + location keywords
+ * - <figure>/<figcaption> semantic structure for Google crawling
+ * - Explicit width/height prevents CLS (Core Web Vitals)
+ * - First 3 images load eagerly (LCP), rest lazy-load
+ */
 export function Gallery() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<(typeof HOMEPAGE_GALLERY)[0] | null>(null);
 
-  // Lock body scroll when modal is open
+  // Lock body scroll when lightbox is open
   useEffect(() => {
-    if (selectedImage) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = selectedImage ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [selectedImage]);
 
   return (
-    <section id="gallery" className="section-padding bg-section-bg">
+    <section
+      id="gallery"
+      aria-label="Evenza event portfolio highlights"
+      className="section-padding bg-section-bg"
+    >
       <SectionHeader
-        kicker="Our Work"
+        kicker="Proof of Work"
         title={
           <>
-            Moments we've <span className="italic text-gold">crafted</span>
+            Moments we&apos;ve <span className="italic text-gold">crafted</span>
           </>
         }
-        sub="A glimpse into the diverse events and experiences brought to life by Evenza's dedicated hospitality and manpower teams."
+        sub="Real events. Real teams. Real results — from concerts and destination weddings to corporate summits and political rallies across Rajasthan and India."
       />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 px-4 sm:px-6">
-        {GALLERY_IMAGES.map((img, idx) => (
-          <motion.div
+      {/* ── Featured Image Grid (8 images, one per category) ── */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 px-4 sm:px-6">
+        {HOMEPAGE_GALLERY.map((img, idx) => (
+          <motion.figure
             key={img.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="group relative aspect-[4/3] overflow-hidden rounded-xl cursor-pointer bg-muted"
-            onClick={() => setSelectedImage(img.src)}
+            transition={{ duration: 0.5, delay: idx * 0.08 }}
+            className="group relative aspect-[4/3] overflow-hidden rounded-xl cursor-pointer bg-muted m-0"
+            onClick={() => setSelectedImage(img)}
+            aria-label={`View ${img.eventName} — ${img.location}`}
           >
             <img
-              src={img.src}
+              src={cloudinaryUrl(img.publicId, { width: 600, height: 400 })}
               alt={img.alt}
+              title={`${img.eventName} — ${img.location}`}
+              width={600}
+              height={400}
+              loading={idx < 4 ? "eager" : "lazy"}
+              decoding="async"
               className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
-              loading="lazy"
             />
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-              <ZoomIn className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white w-8 h-8 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 delay-100" />
+            {/* Hidden figcaption crawled by Google */}
+            <figcaption className="sr-only">{img.caption}</figcaption>
+
+            {/* Hover Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+              <ZoomIn className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white w-7 h-7 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 delay-100" />
               <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                 <span className="text-gold text-xs font-semibold tracking-wider uppercase mb-1 block">
                   {img.category}
                 </span>
-                <h3 className="text-white text-lg font-medium">
-                  {img.alt}
-                </h3>
+                <p className="text-white text-sm font-medium leading-snug">
+                  {img.eventName}
+                </p>
+                <p className="text-white/60 text-xs mt-0.5">{img.location}</p>
               </div>
             </div>
-          </motion.div>
+          </motion.figure>
         ))}
       </div>
 
-      {/* Lightbox Modal */}
+      {/* ── View Full Portfolio CTA ── */}
+      <div className="flex justify-center mt-10 px-4">
+        <Link
+          to="/portfolio"
+          className="group inline-flex items-center gap-2.5 px-8 py-3.5 bg-transparent border-2 border-gold/60 text-gold font-semibold rounded-full hover:bg-gold hover:text-black transition-all duration-300 text-sm tracking-wide uppercase"
+        >
+          View Our Full Portfolio
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+        </Link>
+      </div>
+
+      {/* ── Lightbox Modal ── */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
@@ -81,24 +106,41 @@ export function Gallery() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 md:p-8"
             onClick={() => setSelectedImage(null)}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Enlarged view: ${selectedImage.eventName}`}
           >
             <button
-              className="absolute top-4 right-4 md:top-8 md:right-8 text-white/70 hover:text-white transition-colors z-50 p-2"
+              className="absolute top-4 right-4 md:top-8 md:right-8 text-white/70 hover:text-white transition-colors z-50 p-2 rounded-full hover:bg-white/10"
               onClick={() => setSelectedImage(null)}
               aria-label="Close lightbox"
             >
               <X className="w-8 h-8" />
             </button>
-            <motion.img
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              src={selectedImage}
-              alt="Enlarged view"
-              className="max-w-full max-h-full object-contain rounded-md shadow-2xl"
+
+            <figure
+              className="max-w-4xl w-full"
               onClick={(e) => e.stopPropagation()}
-            />
+            >
+              <motion.img
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                src={cloudinaryUrl(selectedImage.publicId, { width: 1200, height: 800 })}
+                alt={selectedImage.alt}
+                width={1200}
+                height={800}
+                loading="eager"
+                className="max-w-full max-h-[72vh] object-contain rounded-md shadow-2xl mx-auto block"
+              />
+              <figcaption className="text-center mt-4 text-cream/80 text-sm px-4 leading-relaxed">
+                <strong className="text-gold">
+                  {selectedImage.eventName}, {selectedImage.location}:
+                </strong>{" "}
+                {selectedImage.caption}
+              </figcaption>
+            </figure>
           </motion.div>
         )}
       </AnimatePresence>

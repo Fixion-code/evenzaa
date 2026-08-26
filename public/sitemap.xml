@@ -1,9 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <!-- Homepage -->
-  <url><loc>https://evenzaa-sable.vercel.app/</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteers</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/</loc><lastmod>2026-08-26</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteers</loc><lastmod>2026-08-26</lastmod></url>
+
+  <!-- Portfolio — Proof of Work (image-heavy, high SEO priority) -->
+  <url>
+    <loc>https://evenzaa-sable.vercel.app/portfolio</loc>
+    <lastmod>2026-08-26</lastmod>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/q_auto,f_auto,w_1200/v1/evenza/concerts/concert-event-manpower-jaipur</image:loc>
+      <image:caption>Evenza concert event manpower team managing full-scale live music event operations in Jaipur, Rajasthan</image:caption>
+      <image:title>Concert Event Manpower — Jaipur</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/q_auto,f_auto,w_1200/v1/evenza/weddings/destination-wedding-hospitality-rajasthan</image:loc>
+      <image:caption>Evenza destination wedding hospitality team managing VIP services at a royal heritage wedding in Rajasthan</image:caption>
+      <image:title>Destination Wedding Hospitality — Rajasthan</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/q_auto,f_auto,w_1200/v1/evenza/corporate/corporate-event-hospitality-jaipur</image:loc>
+      <image:caption>Evenza corporate event hospitality team managing a large-scale business summit in Jaipur</image:caption>
+      <image:title>Corporate Event Hospitality — Jaipur</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/q_auto,f_auto,w_1200/v1/evenza/exhibitions/exhibition-manpower-jaipur</image:loc>
+      <image:caption>Evenza exhibition manpower team managing visitor flow and booth coordination at a trade fair in Jaipur</image:caption>
+      <image:title>Exhibition Manpower — Jaipur</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/q_auto,f_auto,w_1200/v1/evenza/festivals/festival-hospitality-team-jaipur</image:loc>
+      <image:caption>Evenza festival hospitality team managing guest services at a large public festival in Jaipur</image:caption>
+      <image:title>Festival Hospitality — Jaipur</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/q_auto,f_auto,w_1200/v1/evenza/political/political-rally-crowd-management-jaipur</image:loc>
+      <image:caption>Evenza political rally crowd management team handling large-scale public gathering logistics in Jaipur</image:caption>
+      <image:title>Political Rally Crowd Management — Jaipur</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/q_auto,f_auto,w_1200/v1/evenza/sports/sports-event-manpower-jaipur</image:loc>
+      <image:caption>Evenza sports event manpower team managing ground operations and spectator management in Jaipur</image:caption>
+      <image:title>Sports Event Manpower — Jaipur</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/q_auto,f_auto,w_1200/v1/evenza/college/college-fest-manpower-jaipur</image:loc>
+      <image:caption>Evenza college fest manpower team managing stage events and crowd control at a cultural festival in Jaipur</image:caption>
+      <image:title>College Fest Manpower — Jaipur</image:title>
+    </image:image>
+  </url>
 
   <!-- Jaipur Core Service Pages (Priority Tier 1) -->
   <url><loc>https://evenzaa-sable.vercel.app/event-manpower-jaipur</loc><lastmod>2026-08-20</lastmod></url>

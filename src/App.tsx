@@ -8,6 +8,7 @@ import { ServicePageTemplate } from "./pages/ServicePageTemplate";
 import { Volunteers } from "./pages/Volunteers";
 import { SEO_PAGES } from "./lib/seo-pages";
 import { CaseStudies } from "./pages/CaseStudies";
+import { Portfolio } from "./pages/Portfolio";
 import { CaseStudyTemplate } from "./pages/CaseStudyTemplate";
 import { ThemeProvider } from "./components/theme-provider";
 import NotFound from "./pages/NotFound";
@@ -27,6 +28,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/volunteers" element={<Volunteers />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/case-studies/:slug" element={<CaseStudyTemplate />} />
         <Route path="/links" element={<Links />} />

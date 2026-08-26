@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ChevronRight, ArrowRight, MapPin, Calendar, Users } from "lucide-react";
 import { CASE_STUDIES } from "@/lib/case-studies";
+import { cloudinaryUrl } from "@/lib/cloudinary";
 
 const SITE = "https://evenzaa-sable.vercel.app";
 
@@ -95,8 +96,12 @@ export function CaseStudies() {
                 <Link to={`/case-studies/${study.slug}`} className="block relative aspect-video overflow-hidden bg-white/5">
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent z-10" />
                   <img
-                    src={study.thumbnail}
+                    src={cloudinaryUrl(study.thumbnail, { width: 600, height: 400 })}
                     alt={study.title}
+                    width={600}
+                    height={400}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute top-4 left-4 z-20">
