@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Toaster } from "@/components/ui/sonner";
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
@@ -22,6 +23,9 @@ function AppContent() {
 
   return (
     <div className="min-h-screen-dvh bg-background text-foreground">
+      <Helmet>
+        <link rel="canonical" href={`https://evenzaa-sable.vercel.app${location.pathname}`} />
+      </Helmet>
       <Toaster position="top-center" />
       {!isLinksPage && <FloatingContact />}
       {!isLinksPage && <Nav />}
