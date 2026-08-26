@@ -314,9 +314,9 @@ export function Portfolio() {
                   {selectedImage.eventName}, {selectedImage.location}
                 </strong>
                 {selectedImage.teamSize && (
-                  <span className="text-cream/50 text-sm"> · {selectedImage.teamSize}</span>
+                  <span className="text-white/70 text-sm"> · {selectedImage.teamSize}</span>
                 )}
-                <p className="text-cream/70 text-sm mt-2">{selectedImage.caption}</p>
+                <p className="text-white/90 text-sm mt-2">{selectedImage.caption}</p>
               </figcaption>
             </figure>
           </motion.div>
