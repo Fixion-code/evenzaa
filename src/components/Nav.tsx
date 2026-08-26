@@ -39,7 +39,7 @@ export function Nav() {
         {/* Logo */}
         <a href="#top" className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-full overflow-hidden border border-gold/30 bg-card shadow-sm shrink-0">
-            <img src="/evenza-profile-small.webp" width="40" height="40" alt="Evenza Logo" className="w-full h-full object-cover" />
+            <img src="/evenza-profile-small.webp" width="40" height="40" alt="Evenza Logo" fetchpriority="high" loading="eager" className="w-full h-full object-cover" />
           </div>
           <div className="flex items-baseline gap-2">
             <span className="font-display text-2xl text-gold tracking-wide group-hover:opacity-80 transition-opacity">

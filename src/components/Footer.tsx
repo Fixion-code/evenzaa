@@ -73,7 +73,7 @@ export function Footer() {
           <div className="text-muted-foreground text-sm mt-1">
             Hospitality Services
           </div>
-          <p className="text-muted-foreground/80 text-sm mt-4 leading-relaxed max-w-xs">
+          <p className="text-muted-foreground text-sm mt-4 leading-relaxed max-w-xs">
             A brand of Shree Ji Company Pvt. Ltd. — Jaipur's trusted event manpower and hospitality staffing partner.
           </p>
 
@@ -241,7 +241,7 @@ export function Footer() {
 
       <div className="gold-divider my-8 max-w-7xl mx-auto" />
 
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-muted-foreground/60 text-xs">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-muted-foreground text-xs">
         <span>© {new Date().getFullYear()} Shree Ji Company Pvt. Ltd. All rights reserved.</span>
         <span>Jaipur · Rajasthan · India</span>
       </div>

@@ -158,7 +158,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-4 text-cream/90"
+                className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-4 text-cream"
               >
                 & Hospitality Partner.
               </motion.span>
@@ -168,7 +168,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="mt-8 text-lg text-cream/80 max-w-2xl leading-relaxed"
+              className="mt-8 text-lg text-cream max-w-2xl leading-relaxed"
             >
               Hire the best event staffing agency in Jaipur. From intimate wedding hospitality teams in the Pink City to large-scale corporate event staffing, exhibition staff, and trained event volunteers across India — Evenza delivers flawless on-ground execution.
             </motion.p>
