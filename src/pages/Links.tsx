@@ -26,6 +26,9 @@ import {
   CheckCircle2,
   Zap,
   ExternalLink,
+  GraduationCap,
+  Plane,
+  Compass,
 } from "lucide-react";
 import { useState } from "react";
 import {
@@ -54,7 +57,7 @@ const MAIN_LINKS = [
     title: "Join Volunteer Community",
     href: WHATSAPP_COMMUNITY,
     icon: Users,
-    desc: "Get notified about paid event gigs in your city",
+    desc: "Part-time gigs, student network & travel events",
     primary: true,
   },
   {
@@ -81,33 +84,69 @@ const SOCIAL_LINKS = [
 
 const WHATSAPP_OPTIONS = [
   {
-    role: "Client (Planning an Event)",
-    icon: Heart,
-    desc: "Weddings, Corporate, Private Events",
-    message: "Hi Evenza! I'm planning an event and need to hire professional event manpower & hospitality staff. Can we discuss?",
+    role: "Fresher & Student",
+    icon: GraduationCap,
+    desc: "Earn while studying, travel free & get certificates",
+    message: "Hi Evenza! I'm a student/fresher looking to join your volunteer community, earn part-time, and gain live event experience.",
   },
   {
-    role: "Event Planner / Agency",
+    role: "Experienced Freelancer",
+    icon: Award,
+    desc: "Team leads, supervisors & high-responsibility gigs",
+    message: "Hi Evenza! I'm an experienced event freelancer / crew lead interested in leading on-ground operations for upcoming events.",
+  },
+  {
+    role: "Event Planner & Agency",
     icon: Briefcase,
-    desc: "Looking for a reliable manpower partner",
-    message: "Hi Evenza, I'm an event planner/agency. I'm looking for a reliable pan-India manpower partner for my upcoming projects.",
+    desc: "Reliable, vetted on-ground manpower pan-India",
+    message: "Hi Evenza, I'm an event planner/agency looking for a reliable manpower and hospitality partner for my upcoming events.",
   },
   {
-    role: "Vendor / Partner",
-    icon: Handshake,
-    desc: "Explore collaboration opportunities",
-    message: "Hi Evenza, I'm a vendor in the event industry. I'd love to connect and explore how we can collaborate.",
+    role: "Corporate Company",
+    icon: Building2,
+    desc: "Annual days, brand launches & employee summits",
+    message: "Hi Evenza! We represent a corporate company and need professional manpower and coordinators for our upcoming corporate event.",
   },
   {
-    role: "Volunteer / Student",
+    role: "MICE Company",
+    icon: Globe,
+    desc: "Conferences, exhibitions & multi-thousand delegate care",
+    message: "Hi Evenza! We are a MICE agency looking for large-scale registration desk management, crowd ushers, and conference crew.",
+  },
+  {
+    role: "Tour Manager",
+    icon: Compass,
+    desc: "Airport transfers, guest welcome & luggage logistics",
+    message: "Hi Evenza! I'm a tour manager / travel coordinator looking for on-ground hospitality staff and guest coordination.",
+  },
+  {
+    role: "Wedding Company & Host",
+    icon: Heart,
+    desc: "Royal welcoming girls, banquet hospitality & shadow crew",
+    message: "Hi Evenza! We are a wedding company / hosts looking for professional hospitality staff, shadow coordinators, and guest management.",
+  },
+  {
+    role: "Event Organizer",
+    icon: Zap,
+    desc: "Concerts, marathons & sports arena ground crew",
+    message: "Hi Evenza! I'm organizing a concert/sports event and need experienced ground operations, crowd marshals, and backstage crew.",
+  },
+  {
+    role: "Hospitality Team",
     icon: Users,
-    desc: "Join the team for paid event gigs",
-    message: "Hi Evenza! I'm interested in joining your volunteer community to gain experience and work at live events.",
+    desc: "VIP lounge hostesses, banquet staff & ushering",
+    message: "Hi Evenza! I'm interested in joining your VIP hospitality and hostess team for luxury events and high-profile summits.",
   },
   {
-    role: "Other Inquiry",
+    role: "Mediator & Partner",
+    icon: Handshake,
+    desc: "Vendor collaboration, cross-agency liaisons & referrals",
+    message: "Hi Evenza! I'm an event mediator / vendor interested in exploring collaboration and partnership opportunities with Evenza.",
+  },
+  {
+    role: "General Support",
     icon: MessageCircle,
-    desc: "General questions or support",
+    desc: "General inquiries or custom requirements",
     message: "Hi Evenza, I have a general inquiry and would like to speak with your team.",
   }
 ];
@@ -202,7 +241,7 @@ END:VCARD`;
             India's Premier Event Manpower & Hospitality Partner. Elevating experiences pan-India.
           </p>
 
-          {/* Student & Volunteer Dynamic Earning & Shift Breakdown */}
+          {/* Join Evenza Volunteer & Manpower Network (Poster-Inspired Value Pillars) */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -212,67 +251,123 @@ END:VCARD`;
             <div className="flex items-center justify-between gap-2 mb-2.5 px-0.5">
               <div className="flex items-center gap-1.5 text-xs font-bold text-foreground">
                 <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
-                <span>Student & Volunteer Opportunities</span>
+                <span>Join Evenza • Be Part of Bigger Events</span>
               </div>
               <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20 shrink-0">
-                Active Gigs
+                Pan-India
               </span>
             </div>
 
-            {/* Dynamic Event Pricing & Shift Grid */}
+            {/* 4 Core Value Pillars (No Pricing, Pure Opportunity & Growth) */}
             <div className="grid grid-cols-2 gap-2 text-left mb-2.5">
-              {/* Corporate Events */}
-              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
-                <div className="flex items-center justify-between gap-1 mb-1">
-                  <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide">Corporate</span>
-                  <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400">12h Full Day</span>
+              {/* Earn While You Study */}
+              <div className="p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
+                <div className="flex items-center gap-1.5 mb-1 text-gold font-bold text-xs">
+                  <GraduationCap className="w-3.5 h-3.5 text-gold shrink-0" />
+                  <span className="text-foreground text-[11px] font-bold">Earn While You Study</span>
                 </div>
-                <div className="text-xs font-bold text-foreground">₹500 – ₹1,000 / day</div>
-                <div className="text-[10px] text-muted-foreground mt-0.5">Registration, Kits & Ushers</div>
+                <div className="text-[10px] text-muted-foreground leading-snug">
+                  Part-time event gigs for students from all states. Flexible around college.
+                </div>
               </div>
 
-              {/* Wedding Events */}
-              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
-                <div className="flex items-center justify-between gap-1 mb-1">
-                  <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide">Weddings</span>
-                  <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">Stay & Food</span>
+              {/* Travel & Explore */}
+              <div className="p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
+                <div className="flex items-center gap-1.5 mb-1 text-blue-600 font-bold text-xs">
+                  <Plane className="w-3.5 h-3.5 text-blue-500 shrink-0" />
+                  <span className="text-foreground text-[11px] font-bold">Travel & Explore Free</span>
                 </div>
-                <div className="text-xs font-bold text-foreground">₹1,300 – ₹2,500 / day</div>
-                <div className="text-[10px] text-muted-foreground mt-0.5">Stay + Travel + Food From Us</div>
+                <div className="text-[10px] text-muted-foreground leading-snug">
+                  Free stay, food & travel covered on destination weddings & tours.
+                </div>
               </div>
 
-              {/* Concert Events */}
-              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
-                <div className="flex items-center justify-between gap-1 mb-1">
-                  <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide">Concerts</span>
-                  <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400">Half Day</span>
+              {/* Build Connections */}
+              <div className="p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
+                <div className="flex items-center gap-1.5 mb-1 text-emerald-600 font-bold text-xs">
+                  <Users className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                  <span className="text-foreground text-[11px] font-bold">Build Connections</span>
                 </div>
-                <div className="text-xs font-bold text-foreground">₹600 – ₹1,200 / gig</div>
-                <div className="text-[10px] text-muted-foreground mt-0.5">Passes + Meals + Fast Pay</div>
+                <div className="text-[10px] text-muted-foreground leading-snug">
+                  Meet event planners, tour managers, MICE teams & industry experts.
+                </div>
               </div>
 
-              {/* Project Based */}
-              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
-                <div className="flex items-center justify-between gap-1 mb-1">
-                  <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide">Project Based</span>
-                  <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400">Flexible</span>
+              {/* Certificate & Growth */}
+              <div className="p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
+                <div className="flex items-center gap-1.5 mb-1 text-purple-600 font-bold text-xs">
+                  <Award className="w-3.5 h-3.5 text-purple-500 shrink-0" />
+                  <span className="text-foreground text-[11px] font-bold">Certificate & Growth</span>
                 </div>
-                <div className="text-xs font-bold text-foreground">As Per Profile & Exp</div>
-                <div className="text-[10px] text-muted-foreground mt-0.5">Based on your capabilities</div>
+                <div className="text-[10px] text-muted-foreground leading-snug">
+                  Official certificates & promotion to event supervisors & crew leads.
+                </div>
               </div>
             </div>
 
-            {/* Inclusions Banner: Certificate Provided + 100% Free Guarantee */}
-            <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-between gap-2 text-[10px] sm:text-[11px] text-foreground">
-              <div className="flex items-center gap-1.5 font-semibold text-emerald-700 dark:text-emerald-300">
-                <Award className="w-3.5 h-3.5 shrink-0" />
-                <span>Official Certificate Provided For All Events</span>
+            {/* Live Event Categories Strip */}
+            <div className="p-2 rounded-xl bg-card border border-border/70 flex items-center justify-between gap-1.5 text-[9px] sm:text-[10px] text-muted-foreground overflow-hidden">
+              <span className="font-semibold text-foreground shrink-0">Live Events:</span>
+              <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar font-medium text-muted-foreground">
+                <span className="px-1.5 py-0.5 rounded bg-muted/60">Conferences</span>
+                <span>•</span>
+                <span className="px-1.5 py-0.5 rounded bg-muted/60">Concerts</span>
+                <span>•</span>
+                <span className="px-1.5 py-0.5 rounded bg-muted/60">Sports & Gaming</span>
+                <span>•</span>
+                <span className="px-1.5 py-0.5 rounded bg-muted/60">Exhibitions</span>
+                <span>•</span>
+                <span className="px-1.5 py-0.5 rounded bg-muted/60">Weddings</span>
               </div>
-              <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-card border border-border/80 text-muted-foreground shrink-0">
-                Zero Fees
-              </span>
             </div>
           </motion.div>
+        </motion.div>
+
+        {/* Evenza for Everyone - Interactive Role Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.18 }}
+          className="w-full mb-6 text-left"
+        >
+          <div className="flex items-center justify-between mb-2.5 px-0.5">
+            <div>
+              <h2 className="text-xs font-bold uppercase tracking-wider text-foreground flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
+                Evenza For Everyone
+              </h2>
+              <p className="text-[11px] text-muted-foreground mt-0.5">
+                Tap your role to connect instantly with our team
+              </p>
+            </div>
+            <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2.5 py-0.5 rounded-full border border-gold/25 shrink-0">
+              10 Ecosystem Roles
+            </span>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-2">
+            {WHATSAPP_OPTIONS.slice(0, 10).map((item) => (
+              <a
+                key={item.role}
+                href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(item.message)}`}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-start gap-2 p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 hover:border-gold/50 hover:bg-gold/5 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-2xs group"
+              >
+                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-gold/10 text-gold flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-gold/20 transition-colors">
+                  <item.icon className="w-3.5 h-3.5" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="text-[11px] font-bold text-foreground truncate group-hover:text-gold transition-colors">
+                    {item.role}
+                  </div>
+                  <div className="text-[9px] text-muted-foreground line-clamp-1 mt-0.5">
+                    {item.desc}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
         </motion.div>
 
         {/* Primary Call to Actions (Save Contact & WhatsApp) */}
@@ -577,54 +672,54 @@ END:VCARD`;
                   <MapPin className="w-3.5 h-3.5 text-gold" />
                   <span>{selectedProof.location}</span>
                   <span className="text-white/40">•</span>
-                  <span className="text-emerald-400 font-semibold">{selectedProof.crewCount}</span>
+                  <span className="text-emerald-400 font-semibold">{selectedProof.scale}</span>
                 </div>
               </div>
             </div>
 
             {/* Modal Body */}
             <div className="p-4 sm:p-6 overflow-y-auto flex-1 space-y-4 text-left">
-              {/* Pay & Shift Highlight */}
-              <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex flex-col gap-2">
+              {/* Event Scope & Stakeholders Highlight */}
+              <div className="p-3.5 rounded-2xl bg-gold/10 border border-gold/25 flex flex-col gap-2">
                 <div className="flex items-center justify-between gap-3">
                   <div>
                     <div className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
-                      Event Pay & Shift
+                      Event Scope & Operations
                     </div>
-                    <div className="text-lg sm:text-xl font-bold text-foreground flex items-center gap-1">
-                      <span className="text-amber-600 dark:text-amber-400">{selectedProof.pay}</span>
+                    <div className="text-sm sm:text-base font-bold text-foreground flex items-center gap-1.5">
+                      <span>{selectedProof.scale}</span>
                     </div>
                   </div>
                   <div className="text-right">
                     <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
                       <Zap className="w-3 h-3" />
-                      {selectedProof.shift}
+                      {selectedProof.badge}
                     </span>
                   </div>
                 </div>
 
-                {/* Dynamic Pricing Note */}
-                <div className="text-[11px] text-amber-700 dark:text-amber-300/90 font-medium bg-amber-500/5 px-2.5 py-1.5 rounded-xl border border-amber-500/15">
-                  💡 <strong>Dynamic Pay:</strong> {selectedProof.pricingNote}
+                {/* Stakeholder Relevance Note */}
+                <div className="text-[11px] text-muted-foreground font-medium bg-card/60 px-2.5 py-1.5 rounded-xl border border-border/60">
+                  👥 <strong>Designed For:</strong> {selectedProof.audience}
                 </div>
               </div>
 
-              {/* What Student Volunteers Did */}
+              {/* Role & On-Ground Operations */}
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1.5 flex items-center gap-1.5">
                   <Briefcase className="w-3.5 h-3.5 text-gold" />
-                  Role & On-Ground Work
+                  Role & On-Ground Operations
                 </h4>
                 <p className="text-xs sm:text-sm text-foreground/90 leading-relaxed bg-muted/30 p-3 rounded-xl border border-border/50">
                   {selectedProof.proofText}
                 </p>
               </div>
 
-              {/* Perks & Benefits Checklist */}
+              {/* Included Perks & Value Checklist */}
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2 flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5 text-gold" />
-                  Included For Students & Volunteers
+                  Included Perks & Opportunities
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {selectedProof.perks.map((perk, i) => (
@@ -643,12 +738,12 @@ END:VCARD`;
               <div className="p-3 rounded-xl bg-muted/40 border border-border/60 flex items-start gap-2.5 text-xs text-muted-foreground">
                 <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-foreground">Official Certificate & 100% Genuine:</strong> Evenza provides an official experience certificate for every event. Zero registration fees or deposits — work verified gigs and get paid directly.
+                  <strong className="text-foreground">Official Certificate & 100% Genuine:</strong> Evenza provides an official experience certificate and recognition for every event. Zero registration fees or deposits.
                 </div>
               </div>
             </div>
 
-            {/* Modal Actions */}
+            {/* Modal Actions for Planners & Volunteers */}
             <div className="p-4 sm:p-5 border-t border-border/50 bg-card shrink-0 flex flex-col sm:flex-row gap-2.5">
               <a
                 href={WHATSAPP_COMMUNITY}
@@ -657,19 +752,19 @@ END:VCARD`;
                 className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm shadow-md transition-all active:scale-[0.98]"
               >
                 <Users className="w-4 h-4" />
-                Join Volunteer Community For Gigs
+                Join Volunteer Network
               </a>
 
               <a
                 href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-                  `Hi Evenza! I saw the event proof for "${selectedProof.title}" on your links page. I'm a student/volunteer interested in upcoming paid event gigs in my city.`
+                  `Hi Evenza! I saw your work on "${selectedProof.title}". I'm an event planner / organizer interested in hiring professional manpower for an upcoming event.`
                 )}`}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-1.5 py-3 px-4 rounded-xl border border-border hover:bg-muted/50 text-foreground font-semibold text-xs sm:text-sm transition-all"
               >
-                <MessageCircle className="w-4 h-4 text-[#25D366]" />
-                Ask On WhatsApp
+                <Briefcase className="w-4 h-4 text-gold" />
+                Hire Manpower
               </a>
             </div>
           </motion.div>
