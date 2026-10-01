@@ -237,14 +237,14 @@ export function TopProofSlider({ onSelectProof }: TopProofSliderProps) {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             <span className="text-[11px] sm:text-xs font-bold tracking-wide uppercase text-white/90 truncate flex items-center gap-1.5">
-              Evenza For Everyone
-              <span className="hidden sm:inline-block text-gold/80 font-normal">| Live Manpower & Volunteer Network</span>
+              Live Event Working Proofs
+              <span className="hidden sm:inline-block text-gold/80 font-normal">| Pan-India Crew</span>
             </span>
           </div>
 
           <div className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-semibold text-gold bg-gold/10 px-2.5 py-0.5 rounded-full border border-gold/30 shrink-0">
             <Sparkles className="w-3 h-3 text-gold shrink-0" />
-            <span>Pan-India • 10+ Event Roles</span>
+            <span>Pan-India Gigs</span>
           </div>
         </div>
 

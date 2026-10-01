@@ -47,32 +47,28 @@ const SITE_URL = "https://evenzaa-sable.vercel.app";
 
 const MAIN_LINKS = [
   {
-    title: "Visit Our Website",
+    title: "Visit Our Official Website",
     href: "/",
     icon: Globe,
-    desc: "Explore our full range of event services",
-    primary: true,
+    desc: "Explore full event manpower & hospitality services",
   },
   {
-    title: "Join Volunteer Community",
-    href: WHATSAPP_COMMUNITY,
-    icon: Users,
-    desc: "Part-time gigs, student network & travel events",
-    primary: true,
-  },
-  {
-    title: "Our Work & Case Studies",
+    title: "Our Work & Event Highlights",
     href: "/case-studies",
-    icon: Briefcase,
-    desc: "See the scale of events we've managed",
-    primary: false,
+    icon: Award,
+    desc: "See photos and scale from 100+ past events",
   },
   {
-    title: "Telegram Updates",
+    title: "Volunteer Program Details",
+    href: "/volunteers",
+    icon: GraduationCap,
+    desc: "How it works, eligibility, perks & growth stages",
+  },
+  {
+    title: "Telegram Channel Updates",
     href: TELEGRAM,
     icon: Send,
-    desc: "Fast alerts for new opportunities",
-    primary: false,
+    desc: "Fast alerts for upcoming event opportunities",
   },
 ];
 
@@ -208,16 +204,15 @@ END:VCARD`;
       {/* Top Sliding Event & Manpower Working Proofs Showcase */}
       <TopProofSlider onSelectProof={(proof) => setSelectedProof(proof)} />
 
-      <div className="max-w-xl mx-auto px-4 sm:px-6 relative z-20 -mt-16 sm:-mt-20">
-        {/* Profile Avatar */}
+      <div className="max-w-md mx-auto px-4 relative z-20 -mt-16 sm:-mt-20">
+        {/* Profile Avatar & Bio */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col items-center text-center mb-6"
+          transition={{ duration: 0.4 }}
+          className="flex flex-col items-center text-center mb-5"
         >
-          <div className="w-32 h-32 rounded-full border-4 border-background bg-[#191e10] shadow-[0_16px_40px_rgba(0,0,0,0.35)] ring-2 ring-gold/50 flex items-center justify-center overflow-hidden relative group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-gold/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none" />
+          <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-background bg-[#191e10] shadow-[0_16px_40px_rgba(0,0,0,0.35)] ring-2 ring-gold/50 flex items-center justify-center overflow-hidden relative group">
             <img
               src="/evenza-profile.png"
               width="128"
@@ -229,7 +224,7 @@ END:VCARD`;
             />
           </div>
           
-          <h1 className="font-display text-2xl sm:text-3xl font-bold text-foreground mt-3 mb-1.5 flex items-center gap-2">
+          <h1 className="font-display text-2xl sm:text-3xl font-bold text-foreground mt-3 mb-1 flex items-center justify-center gap-2">
             Evenza India
             <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
               <svg className="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
@@ -237,165 +232,112 @@ END:VCARD`;
               </svg>
             </div>
           </h1>
-          <p className="text-muted-foreground text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
-            India's Premier Event Manpower & Hospitality Partner. Elevating experiences pan-India.
+          <p className="text-muted-foreground text-xs sm:text-sm max-w-xs mx-auto leading-relaxed">
+            India's Premier Event Manpower & Hospitality Partner
           </p>
 
-          {/* Join Evenza Volunteer & Manpower Network (Poster-Inspired Value Pillars) */}
-          <motion.div
+          {/* Simple, clear value pill - zero jargon, instant student clarity */}
+          <div className="mt-3 inline-flex flex-wrap items-center justify-center gap-1.5 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-[11px] font-medium text-foreground">
+            <span className="flex items-center gap-1 text-gold font-bold">
+              <Sparkles className="w-3 h-3 text-gold" />
+              Earn While Studying
+            </span>
+            <span className="text-muted-foreground/40">•</span>
+            <span>Free Travel</span>
+            <span className="text-muted-foreground/40">•</span>
+            <span className="text-emerald-600 dark:text-emerald-400 font-semibold">Certificate Provided</span>
+          </div>
+        </motion.div>
+
+        {/* PRIMARY HERO ACTIONS (Focused 100% on Volunteers/Students & Clients) */}
+        <div className="flex flex-col gap-3 mb-4">
+          {/* Action 1: For Freshers & Students (Direct WhatsApp Group Access) */}
+          <motion.a
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.15 }}
-            className="w-full mt-4 p-3.5 rounded-2xl bg-gold/5 border border-gold/25 shadow-sm text-left"
+            transition={{ duration: 0.4, delay: 0.1 }}
+            href={WHATSAPP_COMMUNITY}
+            target="_blank"
+            rel="noreferrer"
+            className="relative overflow-hidden group flex items-center p-3.5 sm:p-4 rounded-2xl bg-[#25D366] hover:bg-[#20ba59] text-white transition-all duration-300 shadow-lg hover:shadow-[#25D366]/30 hover:scale-[1.02] active:scale-[0.98] text-left"
           >
-            <div className="flex items-center justify-between gap-2 mb-2.5 px-0.5">
-              <div className="flex items-center gap-1.5 text-xs font-bold text-foreground">
-                <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
-                <span>Join Evenza • Be Part of Bigger Events</span>
-              </div>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20 shrink-0">
-                Pan-India
-              </span>
+            <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm text-white flex items-center justify-center shrink-0 mr-3.5 shadow-sm group-hover:scale-105 transition-transform">
+              <Users className="w-6 h-6 text-white" />
             </div>
-
-            {/* 4 Core Value Pillars (No Pricing, Pure Opportunity & Growth) */}
-            <div className="grid grid-cols-2 gap-2 text-left mb-2.5">
-              {/* Earn While You Study */}
-              <div className="p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
-                <div className="flex items-center gap-1.5 mb-1 text-gold font-bold text-xs">
-                  <GraduationCap className="w-3.5 h-3.5 text-gold shrink-0" />
-                  <span className="text-foreground text-[11px] font-bold">Earn While You Study</span>
-                </div>
-                <div className="text-[10px] text-muted-foreground leading-snug">
-                  Part-time event gigs for students from all states. Flexible around college.
-                </div>
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-1.5 mb-0.5">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-950 bg-white/30 px-2 py-0.5 rounded-full">
+                  Students & Freshers
+                </span>
               </div>
-
-              {/* Travel & Explore */}
-              <div className="p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
-                <div className="flex items-center gap-1.5 mb-1 text-blue-600 font-bold text-xs">
-                  <Plane className="w-3.5 h-3.5 text-blue-500 shrink-0" />
-                  <span className="text-foreground text-[11px] font-bold">Travel & Explore Free</span>
-                </div>
-                <div className="text-[10px] text-muted-foreground leading-snug">
-                  Free stay, food & travel covered on destination weddings & tours.
-                </div>
+              <div className="font-bold text-base sm:text-lg text-white group-hover:underline underline-offset-2 transition-colors truncate">
+                Join Volunteer WhatsApp Group
               </div>
-
-              {/* Build Connections */}
-              <div className="p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
-                <div className="flex items-center gap-1.5 mb-1 text-emerald-600 font-bold text-xs">
-                  <Users className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                  <span className="text-foreground text-[11px] font-bold">Build Connections</span>
-                </div>
-                <div className="text-[10px] text-muted-foreground leading-snug">
-                  Meet event planners, tour managers, MICE teams & industry experts.
-                </div>
-              </div>
-
-              {/* Certificate & Growth */}
-              <div className="p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
-                <div className="flex items-center gap-1.5 mb-1 text-purple-600 font-bold text-xs">
-                  <Award className="w-3.5 h-3.5 text-purple-500 shrink-0" />
-                  <span className="text-foreground text-[11px] font-bold">Certificate & Growth</span>
-                </div>
-                <div className="text-[10px] text-muted-foreground leading-snug">
-                  Official certificates & promotion to event supervisors & crew leads.
-                </div>
+              <div className="text-[11px] sm:text-xs text-white/90 truncate">
+                Part-time event gigs • Free travel & food • Certificate
               </div>
             </div>
+            <ArrowUpRight className="w-5 h-5 text-white/90 shrink-0 ml-1.5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+          </motion.a>
 
-            {/* Live Event Categories Strip */}
-            <div className="p-2 rounded-xl bg-card border border-border/70 flex items-center justify-between gap-1.5 text-[9px] sm:text-[10px] text-muted-foreground overflow-hidden">
-              <span className="font-semibold text-foreground shrink-0">Live Events:</span>
-              <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar font-medium text-muted-foreground">
-                <span className="px-1.5 py-0.5 rounded bg-muted/60">Conferences</span>
-                <span>•</span>
-                <span className="px-1.5 py-0.5 rounded bg-muted/60">Concerts</span>
-                <span>•</span>
-                <span className="px-1.5 py-0.5 rounded bg-muted/60">Sports & Gaming</span>
-                <span>•</span>
-                <span className="px-1.5 py-0.5 rounded bg-muted/60">Exhibitions</span>
-                <span>•</span>
-                <span className="px-1.5 py-0.5 rounded bg-muted/60">Weddings</span>
+          {/* Action 2: For Event Planners & Clients (Direct WhatsApp Inquiry / Hire) */}
+          <motion.a
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.15 }}
+            href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+              "Hi Evenza! I'm an event planner / client looking to hire professional manpower & hospitality crew for an upcoming event or project. Can we discuss?"
+            )}`}
+            target="_blank"
+            rel="noreferrer"
+            className="relative overflow-hidden group flex items-center p-3.5 sm:p-4 rounded-2xl bg-card border-2 border-gold/40 hover:border-gold hover:bg-gold/5 transition-all duration-300 shadow-md hover:scale-[1.02] active:scale-[0.98] text-left"
+          >
+            <div className="w-12 h-12 rounded-xl bg-gold/15 text-gold flex items-center justify-center shrink-0 mr-3.5 shadow-sm group-hover:scale-105 transition-transform">
+              <Briefcase className="w-6 h-6 text-gold" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-1.5 mb-0.5">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-gold bg-gold/15 px-2 py-0.5 rounded-full">
+                  Planners & Clients
+                </span>
+              </div>
+              <div className="font-bold text-base sm:text-lg text-foreground group-hover:text-gold transition-colors truncate">
+                WhatsApp for New Project
+              </div>
+              <div className="text-[11px] sm:text-xs text-muted-foreground truncate">
+                Hire manpower, ushers & event crew pan-India
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+            <ArrowUpRight className="w-5 h-5 text-gold/80 shrink-0 ml-1.5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+          </motion.a>
+        </div>
 
-        {/* Evenza for Everyone - Interactive Role Grid */}
+        {/* Quick Utility Actions: Save Contact & Specific Roles */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.18 }}
-          className="w-full mb-6 text-left"
-        >
-          <div className="flex items-center justify-between mb-2.5 px-0.5">
-            <div>
-              <h2 className="text-xs font-bold uppercase tracking-wider text-foreground flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
-                Evenza For Everyone
-              </h2>
-              <p className="text-[11px] text-muted-foreground mt-0.5">
-                Tap your role to connect instantly with our team
-              </p>
-            </div>
-            <span className="text-[10px] font-semibold text-gold bg-gold/10 px-2.5 py-0.5 rounded-full border border-gold/25 shrink-0">
-              10 Ecosystem Roles
-            </span>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-2 gap-2">
-            {WHATSAPP_OPTIONS.slice(0, 10).map((item) => (
-              <a
-                key={item.role}
-                href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(item.message)}`}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-start gap-2 p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 hover:border-gold/50 hover:bg-gold/5 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-2xs group"
-              >
-                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-gold/10 text-gold flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-gold/20 transition-colors">
-                  <item.icon className="w-3.5 h-3.5" />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="text-[11px] font-bold text-foreground truncate group-hover:text-gold transition-colors">
-                    {item.role}
-                  </div>
-                  <div className="text-[9px] text-muted-foreground line-clamp-1 mt-0.5">
-                    {item.desc}
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Primary Call to Actions (Save Contact & WhatsApp) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="grid grid-cols-2 gap-3 sm:gap-4 mb-8"
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="grid grid-cols-2 gap-2.5 mb-6"
         >
           <button
             onClick={() => setShowContactModal(true)}
-            className="flex flex-col items-center justify-center py-3.5 sm:py-4 px-2 rounded-2xl bg-foreground text-background hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl"
+            className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-muted/60 hover:bg-muted border border-border/60 text-xs font-semibold text-foreground transition-all hover:scale-[1.01] active:scale-[0.99]"
           >
-            <UserPlus className="w-5 h-5 sm:w-6 sm:h-6 mb-1.5 sm:mb-2 text-gold" />
-            <span className="text-xs sm:text-sm font-semibold tracking-wide">Save Contact</span>
+            <UserPlus className="w-4 h-4 text-gold" />
+            <span>Save Contact Card</span>
           </button>
-          
+
           <button
             onClick={() => setShowWaModal(true)}
-            className="flex flex-col items-center justify-center py-3.5 sm:py-4 px-2 rounded-2xl bg-card border border-border hover:border-[#25D366]/50 hover:bg-[#25D366]/5 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-sm group w-full"
+            className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-muted/60 hover:bg-muted border border-border/60 text-xs font-semibold text-foreground transition-all hover:scale-[1.01] active:scale-[0.99]"
           >
-            <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 mb-1.5 sm:mb-2 text-muted-foreground group-hover:text-[#25D366] transition-colors" />
-            <span className="text-xs sm:text-sm font-semibold text-foreground tracking-wide">WhatsApp Us</span>
+            <MessageCircle className="w-4 h-4 text-[#25D366]" />
+            <span>Specific Role Chat</span>
           </button>
         </motion.div>
 
         {/* Links List */}
-        <div className="w-full space-y-4 mb-10">
+        <div className="w-full space-y-3 mb-8">
           {MAIN_LINKS.map((link, index) => {
             const isInternal = link.href.startsWith("/");
             const LinkWrapper = isInternal ? Link : "a";
@@ -403,44 +345,36 @@ END:VCARD`;
             return (
               <motion.div
                 key={link.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 + index * 0.05 }}
+                transition={{ duration: 0.4, delay: 0.25 + index * 0.05 }}
               >
                 <LinkWrapper
                   to={isInternal ? link.href : undefined}
                   href={!isInternal ? link.href : undefined}
                   target={!isInternal ? "_blank" : undefined}
                   rel={!isInternal ? "noreferrer" : undefined}
-                  className={`relative overflow-hidden group flex items-center p-4 rounded-2xl border transition-all duration-300 w-full min-h-[72px] ${
-                    link.primary
-                      ? "bg-gold/5 border-gold/30 hover:border-gold hover:bg-gold/10 shadow-soft"
-                      : "bg-card border-border hover:border-gold/30 hover:shadow-soft"
-                  }`}
+                  className="relative overflow-hidden group flex items-center p-3.5 sm:p-4 rounded-2xl border border-border/80 bg-card hover:border-gold/50 hover:bg-gold/5 hover:shadow-md transition-all duration-300 w-full min-h-[64px]"
                 >
-                  {/* Shimmer Effect */}
+                  {/* Subtle Shimmer Effect on Hover */}
                   <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/5 to-transparent" />
                   
-                  <div className={`flex items-center justify-center w-12 h-12 rounded-xl shrink-0 mr-4 shadow-sm ${
-                    link.primary ? "bg-gold/20 text-gold" : "bg-muted text-muted-foreground group-hover:text-gold transition-colors"
-                  }`}>
+                  <div className="flex items-center justify-center w-11 h-11 rounded-xl shrink-0 mr-3.5 bg-muted text-muted-foreground group-hover:text-gold group-hover:bg-gold/10 transition-colors shadow-2xs">
                     <link.icon className="w-5 h-5" />
                   </div>
                   
-                  <div className="flex-1 text-left">
-                    <div className="font-semibold text-foreground text-[15px] group-hover:text-gold transition-colors pr-2">
+                  <div className="flex-1 text-left min-w-0">
+                    <div className="font-semibold text-foreground text-sm sm:text-[15px] group-hover:text-gold transition-colors pr-2 truncate">
                       {link.title}
                     </div>
                     {link.desc && (
-                      <div className="text-xs text-muted-foreground mt-1 line-clamp-1">
+                      <div className="text-[11px] sm:text-xs text-muted-foreground mt-0.5 line-clamp-1">
                         {link.desc}
                       </div>
                     )}
                   </div>
 
-                  <ArrowUpRight className={`w-5 h-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 ${
-                    link.primary ? "text-gold/50 group-hover:text-gold" : "text-border group-hover:text-gold/50"
-                  }`} />
+                  <ArrowUpRight className="w-4 h-4 shrink-0 text-muted-foreground group-hover:text-gold transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </LinkWrapper>
               </motion.div>
             );
