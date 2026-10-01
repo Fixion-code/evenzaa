@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   Instagram,
@@ -18,6 +18,14 @@ import {
   Heart,
   Phone,
   Mail,
+  Sparkles,
+  ShieldCheck,
+  Award,
+  CalendarCheck,
+  MapPin,
+  CheckCircle2,
+  Zap,
+  ExternalLink,
 } from "lucide-react";
 import { useState } from "react";
 import {
@@ -29,8 +37,9 @@ import {
   PHONE_TEL,
   EMAIL,
 } from "@/lib/constants";
+import { TopProofSlider, EventProofItem } from "@/components/TopProofSlider";
 
-const WHATSAPP_COMMUNITY = "https://chat.whatsapp.com/HBcHsXhBeGbIS9yAbSwTP1";
+const WHATSAPP_COMMUNITY = "https://chat.whatsapp.com/EGyArsmV7TrA9MEFfCGt8V";
 const SITE_URL = "https://evenzaa-sable.vercel.app";
 
 const MAIN_LINKS = [
@@ -106,11 +115,12 @@ const WHATSAPP_OPTIONS = [
 export function Links() {
   const [showWaModal, setShowWaModal] = useState(false);
   const [showContactModal, setShowContactModal] = useState(false);
+  const [selectedProof, setSelectedProof] = useState<EventProofItem | null>(null);
 
   const handleDownloadVCard = () => {
     // Robust OS Identification
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.userAgent.includes("Mac") && "ontouchend" in document);
-    
+
     // vCard content ensuring correct line breaks (\r\n is standard for vCard)
     const vcard = `BEGIN:VCARD\r
 VERSION:3.0\r
@@ -152,52 +162,27 @@ END:VCARD`;
         <meta name="robots" content="noindex, follow" />
         <meta
           name="description"
-          content="Connect with Evenza Hospitality Services. Find all our official links, social media, and contact channels in one place."
+          content="Connect with Evenza Hospitality Services. Find all our official links, event manpower proofs, volunteer gigs, and contact channels in one place."
         />
       </Helmet>
 
-      {/* Premium Cover Area */}
-      <div className="h-48 sm:h-56 w-full relative overflow-hidden">
-        {/* Deep rich background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#394126] to-[#1a1d11]" />
-        
-        {/* Decorative Grid & Shimmer */}
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: "radial-gradient(#c89a42 1px, transparent 1px)",
-            backgroundSize: "24px 24px",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer" />
+      {/* Top Sliding Event & Manpower Working Proofs Showcase */}
+      <TopProofSlider onSelectProof={(proof) => setSelectedProof(proof)} />
 
-        {/* Abstract shapes */}
-        <motion.div
-          animate={{ x: [0, 20, -20, 0], y: [0, -20, 20, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full blur-[60px] bg-gold/20"
-        />
-        <motion.div
-          animate={{ x: [0, -30, 30, 0], y: [0, 30, -30, 0] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-20 -right-20 w-64 h-64 rounded-full blur-[60px] bg-[#566238]/40"
-        />
-      </div>
-
-      <div className="max-w-xl mx-auto px-6 relative -mt-20">
+      <div className="max-w-xl mx-auto px-4 sm:px-6 relative -mt-12 sm:-mt-14">
         {/* Profile Avatar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center text-center mb-8"
+          className="flex flex-col items-center text-center mb-6"
         >
-          <div className="w-32 h-32 rounded-full border-4 border-background bg-card flex items-center justify-center shadow-2xl overflow-hidden relative group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
+          <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-background bg-card flex items-center justify-center shadow-2xl overflow-hidden relative group">
+            <div className="absolute inset-0 bg-gradient-to-tr from-gold/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
             <img src="/evenza-profile-small.webp" width="128" height="128" alt="Evenza Logo" fetchpriority="high" loading="eager" className="w-full h-full object-cover" />
           </div>
           
-          <h1 className="font-display text-3xl font-bold text-foreground mt-4 mb-2 flex items-center gap-2">
+          <h1 className="font-display text-2xl sm:text-3xl font-bold text-foreground mt-3 mb-1.5 flex items-center gap-2">
             Evenza India
             <div className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center">
               <svg className="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
@@ -205,9 +190,69 @@ END:VCARD`;
               </svg>
             </div>
           </h1>
-          <p className="text-muted-foreground text-sm max-w-sm mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
             India's Premier Event Manpower & Hospitality Partner. Elevating experiences pan-India.
           </p>
+
+          {/* Student & Volunteer "Earn While You Learn" Proof Highlights */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="w-full mt-4 p-3 rounded-2xl bg-gold/5 border border-gold/25 shadow-sm text-left"
+          >
+            <div className="flex items-center justify-between gap-2 mb-2 px-0.5">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-foreground">
+                <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
+                <span>Student & Volunteer Opportunities</span>
+              </div>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20 shrink-0">
+                Paid Gigs
+              </span>
+            </div>
+
+            <div className="grid grid-cols-2 gap-2 text-left">
+              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex items-center gap-2">
+                <div className="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 font-bold text-xs">
+                  ₹
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs font-bold text-foreground truncate">₹1,000–₹2,500/day</div>
+                  <div className="text-[10px] text-muted-foreground truncate">Spot & Fast Payouts</div>
+                </div>
+              </div>
+
+              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex items-center gap-2">
+                <div className="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-3.5 h-3.5" />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs font-bold text-foreground truncate">100% Free to Join</div>
+                  <div className="text-[10px] text-muted-foreground truncate">Zero Fees • Real Company</div>
+                </div>
+              </div>
+
+              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex items-center gap-2">
+                <div className="w-7 h-7 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
+                  <Award className="w-3.5 h-3.5" />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs font-bold text-foreground truncate">Certificates & Food</div>
+                  <div className="text-[10px] text-muted-foreground truncate">Add to College Resume</div>
+                </div>
+              </div>
+
+              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex items-center gap-2">
+                <div className="w-7 h-7 rounded-lg bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0">
+                  <CalendarCheck className="w-3.5 h-3.5" />
+                </div>
+                <div className="min-w-0">
+                  <div className="text-xs font-bold text-foreground truncate">Flexible Weekend Gigs</div>
+                  <div className="text-[10px] text-muted-foreground truncate">Fits College Timetables</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
 
         {/* Primary Call to Actions (Save Contact & WhatsApp) */}
@@ -215,22 +260,22 @@ END:VCARD`;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="grid grid-cols-2 gap-4 mb-10"
+          className="grid grid-cols-2 gap-3 sm:gap-4 mb-8"
         >
           <button
             onClick={() => setShowContactModal(true)}
-            className="flex flex-col items-center justify-center py-4 px-2 rounded-2xl bg-foreground text-background hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl"
+            className="flex flex-col items-center justify-center py-3.5 sm:py-4 px-2 rounded-2xl bg-foreground text-background hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl"
           >
-            <UserPlus className="w-6 h-6 mb-2 text-gold" />
-            <span className="text-sm font-semibold tracking-wide">Save Contact</span>
+            <UserPlus className="w-5 h-5 sm:w-6 sm:h-6 mb-1.5 sm:mb-2 text-gold" />
+            <span className="text-xs sm:text-sm font-semibold tracking-wide">Save Contact</span>
           </button>
           
           <button
             onClick={() => setShowWaModal(true)}
-            className="flex flex-col items-center justify-center py-4 px-2 rounded-2xl bg-card border border-border hover:border-[#25D366]/50 hover:bg-[#25D366]/5 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-sm group w-full"
+            className="flex flex-col items-center justify-center py-3.5 sm:py-4 px-2 rounded-2xl bg-card border border-border hover:border-[#25D366]/50 hover:bg-[#25D366]/5 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-sm group w-full"
           >
-            <MessageCircle className="w-6 h-6 mb-2 text-muted-foreground group-hover:text-[#25D366] transition-colors" />
-            <span className="text-sm font-semibold text-foreground tracking-wide">WhatsApp Us</span>
+            <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 mb-1.5 sm:mb-2 text-muted-foreground group-hover:text-[#25D366] transition-colors" />
+            <span className="text-xs sm:text-sm font-semibold text-foreground tracking-wide">WhatsApp Us</span>
           </button>
         </motion.div>
 
@@ -449,6 +494,156 @@ END:VCARD`;
                      </div>
                   </div>
                </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
+
+      {/* Event Proof & Earning Breakdown Modal */}
+      {selectedProof && (
+        <div className="fixed inset-0 z-[70] flex items-center justify-center p-3 sm:p-6">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedProof(null)}
+            className="absolute inset-0 bg-background/80 backdrop-blur-md"
+          />
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            className="relative w-full max-w-lg bg-card border border-border rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh] z-10"
+          >
+            {/* Modal Image Header */}
+            <div className="relative h-48 sm:h-56 w-full shrink-0 overflow-hidden bg-black/30">
+              <img
+                src={selectedProof.image}
+                alt={selectedProof.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/40" />
+
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedProof(null)}
+                aria-label="Close modal"
+                className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/60 backdrop-blur-md flex items-center justify-center text-white/90 hover:text-white hover:bg-black/80 transition-colors z-20"
+              >
+                <X className="w-4 h-4" />
+              </button>
+
+              {/* Badges on Image */}
+              <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 z-20">
+                <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/90 text-white backdrop-blur-md flex items-center gap-1 shadow-sm">
+                  <CheckCircle2 className="w-3 h-3" />
+                  Verified Event Proof
+                </span>
+                <span className="text-[10px] font-bold px-2 py-1 rounded-full bg-black/60 text-amber-300 border border-amber-400/30 backdrop-blur-md">
+                  {selectedProof.tag}
+                </span>
+              </div>
+
+              {/* Title on Image */}
+              <div className="absolute bottom-3 left-4 right-4 z-20 text-left">
+                <div className="text-xs text-amber-300 font-semibold uppercase tracking-wider mb-0.5">
+                  {selectedProof.category}
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-white leading-tight">
+                  {selectedProof.title}
+                </h3>
+                <div className="flex items-center gap-1.5 text-xs text-white/80 mt-1">
+                  <MapPin className="w-3.5 h-3.5 text-gold" />
+                  <span>{selectedProof.location}</span>
+                  <span className="text-white/40">•</span>
+                  <span className="text-emerald-400 font-semibold">{selectedProof.crewCount}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Modal Body */}
+            <div className="p-4 sm:p-6 overflow-y-auto flex-1 space-y-4 text-left">
+              {/* Pay & Role Highlight */}
+              <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-between gap-3">
+                <div>
+                  <div className="text-[11px] font-medium text-muted-foreground uppercase tracking-wider">
+                    Volunteer / Crew Daily Pay
+                  </div>
+                  <div className="text-lg sm:text-xl font-bold text-foreground flex items-center gap-1">
+                    <span className="text-amber-600 dark:text-amber-400">{selectedProof.pay}</span>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                    <Zap className="w-3 h-3" />
+                    Spot / Fast Payout
+                  </span>
+                </div>
+              </div>
+
+              {/* What Student Volunteers Did */}
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-1.5 flex items-center gap-1.5">
+                  <Briefcase className="w-3.5 h-3.5 text-gold" />
+                  Role & On-Ground Work
+                </h4>
+                <p className="text-xs sm:text-sm text-foreground/90 leading-relaxed bg-muted/30 p-3 rounded-xl border border-border/50">
+                  {selectedProof.proofText}
+                </p>
+              </div>
+
+              {/* Perks & Benefits Checklist */}
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2 flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-gold" />
+                  Included For Students & Volunteers
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {selectedProof.perks.map((perk, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-2 p-2 rounded-xl bg-card border border-border/60 text-xs text-foreground"
+                    >
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                      <span>{perk}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Zero Fee Guarantee Note */}
+              <div className="p-3 rounded-xl bg-muted/40 border border-border/60 flex items-start gap-2.5 text-xs text-muted-foreground">
+                <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-foreground">100% Genuine Guarantee:</strong> Evenza never charges any registration fees or deposits from students. Work legitimate gigs and get paid directly.
+                </div>
+              </div>
+            </div>
+
+            {/* Modal Actions */}
+            <div className="p-4 sm:p-5 border-t border-border/50 bg-card shrink-0 flex flex-col sm:flex-row gap-2.5">
+              <a
+                href={WHATSAPP_COMMUNITY}
+                target="_blank"
+                rel="noreferrer"
+                className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm shadow-md transition-all active:scale-[0.98]"
+              >
+                <Users className="w-4 h-4" />
+                Join Volunteer Community For Gigs
+              </a>
+
+              <a
+                href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+                  `Hi Evenza! I saw the event proof for "${selectedProof.title}" on your links page. I'm a student/volunteer interested in upcoming paid event gigs in my city.`
+                )}`}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-1.5 py-3 px-4 rounded-xl border border-border hover:bg-muted/50 text-foreground font-semibold text-xs sm:text-sm transition-all"
+              >
+                <MessageCircle className="w-4 h-4 text-[#25D366]" />
+                Ask On WhatsApp
+              </a>
             </div>
           </motion.div>
         </div>

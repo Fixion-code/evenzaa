@@ -15,8 +15,10 @@ import {
 } from "lucide-react";
 
 // ===== CONTACT CONFIG =====
-export const PHONE = "+91 91617 10849";
-export const PHONE_TEL = "+919161710849";
+export const PHONE = "+91 92194 65819";
+export const PHONE_TEL = "+919219465819";
+export const PHONE_STUTI = "+91 91617 10849";
+export const PHONE_STUTI_TEL = "+918081945789";
 export const PHONE_SHLOK = "+91 80819 45789";
 export const PHONE_SHLOK_TEL = "+918081945789";
 export const WHATSAPP = "919161710849";
@@ -27,7 +29,7 @@ export const ADDRESS = "Choti Chaupad, Jaipur, Rajasthan, India";
 export const INSTAGRAM = "https://instagram.com/evenzaevent";
 export const FACEBOOK = "https://www.facebook.com/people/Evenza-India/61591730651713/";
 export const THREADS = "https://www.threads.com/@evenzaevent";
-export const LINKEDIN = "https://www.linkedin.com/in/evenza-india-1345b2422/";
+export const LINKEDIN = "https://www.linkedin.com/in/evenza-india";
 export const TELEGRAM = "https://t.me/+78a-D_drgro2MTk1";
 
 // ===== NAVIGATION =====

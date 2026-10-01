@@ -283,3 +283,25 @@ nav {
   min-height: 100vh;
   min-height: 100dvh;
 }
+
+/* Infinite Marquee Animation for Event Proofs Sliding */
+@keyframes proof-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-proof-marquee {
+  display: flex;
+  width: max-content;
+  animation: proof-marquee 38s linear infinite;
+  will-change: transform;
+}
+
+.animate-proof-marquee:hover,
+.animate-proof-marquee:active {
+  animation-play-state: paused;
+}

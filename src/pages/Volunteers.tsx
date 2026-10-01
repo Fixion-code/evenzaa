@@ -24,7 +24,7 @@ import {
 import { PHONE, PHONE_TEL, WHATSAPP, EMAIL } from "@/lib/constants";
 
 const SITE = "https://evenzaa-sable.vercel.app";
-const WHATSAPP_COMMUNITY = "https://chat.whatsapp.com/HBcHsXhBeGbIS9yAbSwTP1";
+const WHATSAPP_COMMUNITY = "https://chat.whatsapp.com/EGyArsmV7TrA9MEFfCGt8V";
 
 // ──────────────────── DATA ────────────────────
 
