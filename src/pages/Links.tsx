@@ -169,7 +169,7 @@ END:VCARD`;
       {/* Top Sliding Event & Manpower Working Proofs Showcase */}
       <TopProofSlider onSelectProof={(proof) => setSelectedProof(proof)} />
 
-      <div className="max-w-xl mx-auto px-4 sm:px-6 relative -mt-12 sm:-mt-14">
+      <div className="max-w-xl mx-auto px-4 sm:px-6 relative z-20 -mt-16 sm:-mt-20">
         {/* Profile Avatar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -177,9 +177,17 @@ END:VCARD`;
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center mb-6"
         >
-          <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-background bg-card flex items-center justify-center shadow-2xl overflow-hidden relative group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-gold/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
-            <img src="/evenza-profile-small.webp" width="128" height="128" alt="Evenza Logo" fetchpriority="high" loading="eager" className="w-full h-full object-cover" />
+          <div className="w-32 h-32 rounded-full border-4 border-background bg-[#191e10] shadow-[0_16px_40px_rgba(0,0,0,0.35)] ring-2 ring-gold/50 flex items-center justify-center overflow-hidden relative group">
+            <div className="absolute inset-0 bg-gradient-to-tr from-gold/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none" />
+            <img
+              src="/evenza-profile.png"
+              width="128"
+              height="128"
+              alt="Evenza Logo"
+              fetchpriority="high"
+              loading="eager"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
           </div>
           
           <h1 className="font-display text-2xl sm:text-3xl font-bold text-foreground mt-3 mb-1.5 flex items-center gap-2">
@@ -194,63 +202,75 @@ END:VCARD`;
             India's Premier Event Manpower & Hospitality Partner. Elevating experiences pan-India.
           </p>
 
-          {/* Student & Volunteer "Earn While You Learn" Proof Highlights */}
+          {/* Student & Volunteer Dynamic Earning & Shift Breakdown */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="w-full mt-4 p-3 rounded-2xl bg-gold/5 border border-gold/25 shadow-sm text-left"
+            className="w-full mt-4 p-3.5 rounded-2xl bg-gold/5 border border-gold/25 shadow-sm text-left"
           >
-            <div className="flex items-center justify-between gap-2 mb-2 px-0.5">
+            <div className="flex items-center justify-between gap-2 mb-2.5 px-0.5">
               <div className="flex items-center gap-1.5 text-xs font-bold text-foreground">
                 <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
                 <span>Student & Volunteer Opportunities</span>
               </div>
               <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20 shrink-0">
-                Paid Gigs
+                Active Gigs
               </span>
             </div>
 
-            <div className="grid grid-cols-2 gap-2 text-left">
-              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex items-center gap-2">
-                <div className="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 font-bold text-xs">
-                  ₹
+            {/* Dynamic Event Pricing & Shift Grid */}
+            <div className="grid grid-cols-2 gap-2 text-left mb-2.5">
+              {/* Corporate Events */}
+              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
+                <div className="flex items-center justify-between gap-1 mb-1">
+                  <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide">Corporate</span>
+                  <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400">12h Full Day</span>
                 </div>
-                <div className="min-w-0">
-                  <div className="text-xs font-bold text-foreground truncate">₹1,000–₹2,500/day</div>
-                  <div className="text-[10px] text-muted-foreground truncate">Spot & Fast Payouts</div>
-                </div>
+                <div className="text-xs font-bold text-foreground">₹500 – ₹1,000 / day</div>
+                <div className="text-[10px] text-muted-foreground mt-0.5">Registration, Kits & Ushers</div>
               </div>
 
-              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex items-center gap-2">
-                <div className="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
-                  <ShieldCheck className="w-3.5 h-3.5" />
+              {/* Wedding Events */}
+              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
+                <div className="flex items-center justify-between gap-1 mb-1">
+                  <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide">Weddings</span>
+                  <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">Stay & Food</span>
                 </div>
-                <div className="min-w-0">
-                  <div className="text-xs font-bold text-foreground truncate">100% Free to Join</div>
-                  <div className="text-[10px] text-muted-foreground truncate">Zero Fees • Real Company</div>
-                </div>
+                <div className="text-xs font-bold text-foreground">₹1,300 – ₹2,500 / day</div>
+                <div className="text-[10px] text-muted-foreground mt-0.5">Stay + Travel + Food From Us</div>
               </div>
 
-              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex items-center gap-2">
-                <div className="w-7 h-7 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
-                  <Award className="w-3.5 h-3.5" />
+              {/* Concert Events */}
+              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
+                <div className="flex items-center justify-between gap-1 mb-1">
+                  <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide">Concerts</span>
+                  <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400">Half Day</span>
                 </div>
-                <div className="min-w-0">
-                  <div className="text-xs font-bold text-foreground truncate">Certificates & Food</div>
-                  <div className="text-[10px] text-muted-foreground truncate">Add to College Resume</div>
-                </div>
+                <div className="text-xs font-bold text-foreground">₹600 – ₹1,200 / gig</div>
+                <div className="text-[10px] text-muted-foreground mt-0.5">Passes + Meals + Fast Pay</div>
               </div>
 
-              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex items-center gap-2">
-                <div className="w-7 h-7 rounded-lg bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0">
-                  <CalendarCheck className="w-3.5 h-3.5" />
+              {/* Project Based */}
+              <div className="p-2 sm:p-2.5 rounded-xl bg-card border border-border/70 flex flex-col justify-between">
+                <div className="flex items-center justify-between gap-1 mb-1">
+                  <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wide">Project Based</span>
+                  <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-purple-500/10 text-purple-600 dark:text-purple-400">Flexible</span>
                 </div>
-                <div className="min-w-0">
-                  <div className="text-xs font-bold text-foreground truncate">Flexible Weekend Gigs</div>
-                  <div className="text-[10px] text-muted-foreground truncate">Fits College Timetables</div>
-                </div>
+                <div className="text-xs font-bold text-foreground">As Per Profile & Exp</div>
+                <div className="text-[10px] text-muted-foreground mt-0.5">Based on your capabilities</div>
               </div>
+            </div>
+
+            {/* Inclusions Banner: Certificate Provided + 100% Free Guarantee */}
+            <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-between gap-2 text-[10px] sm:text-[11px] text-foreground">
+              <div className="flex items-center gap-1.5 font-semibold text-emerald-700 dark:text-emerald-300">
+                <Award className="w-3.5 h-3.5 shrink-0" />
+                <span>Official Certificate Provided For All Events</span>
+              </div>
+              <span className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-card border border-border/80 text-muted-foreground shrink-0">
+                Zero Fees
+              </span>
             </div>
           </motion.div>
         </motion.div>
@@ -564,21 +584,28 @@ END:VCARD`;
 
             {/* Modal Body */}
             <div className="p-4 sm:p-6 overflow-y-auto flex-1 space-y-4 text-left">
-              {/* Pay & Role Highlight */}
-              <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-between gap-3">
-                <div>
-                  <div className="text-[11px] font-medium text-muted-foreground uppercase tracking-wider">
-                    Volunteer / Crew Daily Pay
+              {/* Pay & Shift Highlight */}
+              <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex flex-col gap-2">
+                <div className="flex items-center justify-between gap-3">
+                  <div>
+                    <div className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
+                      Event Pay & Shift
+                    </div>
+                    <div className="text-lg sm:text-xl font-bold text-foreground flex items-center gap-1">
+                      <span className="text-amber-600 dark:text-amber-400">{selectedProof.pay}</span>
+                    </div>
                   </div>
-                  <div className="text-lg sm:text-xl font-bold text-foreground flex items-center gap-1">
-                    <span className="text-amber-600 dark:text-amber-400">{selectedProof.pay}</span>
+                  <div className="text-right">
+                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                      <Zap className="w-3 h-3" />
+                      {selectedProof.shift}
+                    </span>
                   </div>
                 </div>
-                <div className="text-right">
-                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
-                    <Zap className="w-3 h-3" />
-                    Spot / Fast Payout
-                  </span>
+
+                {/* Dynamic Pricing Note */}
+                <div className="text-[11px] text-amber-700 dark:text-amber-300/90 font-medium bg-amber-500/5 px-2.5 py-1.5 rounded-xl border border-amber-500/15">
+                  💡 <strong>Dynamic Pay:</strong> {selectedProof.pricingNote}
                 </div>
               </div>
 
@@ -612,11 +639,11 @@ END:VCARD`;
                 </div>
               </div>
 
-              {/* Zero Fee Guarantee Note */}
+              {/* Certificate & Zero Fee Guarantee Note */}
               <div className="p-3 rounded-xl bg-muted/40 border border-border/60 flex items-start gap-2.5 text-xs text-muted-foreground">
                 <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-foreground">100% Genuine Guarantee:</strong> Evenza never charges any registration fees or deposits from students. Work legitimate gigs and get paid directly.
+                  <strong className="text-foreground">Official Certificate & 100% Genuine:</strong> Evenza provides an official experience certificate for every event. Zero registration fees or deposits — work verified gigs and get paid directly.
                 </div>
               </div>
             </div>

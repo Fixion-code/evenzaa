@@ -1,13 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Sparkles, MapPin, CheckCircle2, Eye, ShieldCheck, Zap } from "lucide-react";
+import { Sparkles, MapPin, CheckCircle2, Eye, ShieldCheck, Zap, Clock, Award, Coffee, Plane } from "lucide-react";
 
 export interface EventProofItem {
   id: string;
   title: string;
   role: string;
-  category: string;
+  category: "Corporate Event" | "Wedding Event" | "Concert Event" | "Project-Based Work" | "Sports Event";
   pay: string;
+  shift: string;
   tag: string;
   image: string;
   location: string;
@@ -15,120 +16,185 @@ export interface EventProofItem {
   proofText: string;
   crewCount: string;
   highlights: string;
+  pricingNote: string;
 }
 
 export const EVENT_PROOFS: EventProofItem[] = [
   {
-    id: "concert-crew",
-    title: "Sunburn Arena & Live Concerts",
-    role: "Artist Hospitality & Stage Crew",
-    category: "Live Concerts & Festivals",
-    pay: "₹1,500 – ₹2,500 / Day",
-    tag: "🔥 Live Concert Crew",
-    image: "/assets/img/portfolio/optimized/concert-backstage-crew-jaipur.webp",
-    location: "Jaipur, Rajasthan",
-    perks: ["Spot UPI / Cash Payout", "Free Artist Passes & Meals", "Official Crew ID Badge", "Celebrity Event Exposure"],
-    proofText: "Over 50 college students worked backstage coordination, greenroom assistance, and VIP entry management. Payouts cleared on the spot.",
-    crewCount: "50+ Students Hired",
-    highlights: "High Energy • Direct Music Industry Experience",
+    id: "destination-wedding",
+    title: "Royal Destination Palace Wedding",
+    role: "Guest Welcome & Coordination Crew",
+    category: "Wedding Event",
+    pay: "₹1,300 – ₹2,500 / Day",
+    shift: "Wedding Event (Multi-Day / Coordination)",
+    tag: "👑 Royal Wedding",
+    image: "/assets/img/portfolio/optimized/destination-wedding-hospitality-rajasthan.webp",
+    location: "Udaipur & Jaipur Palaces",
+    perks: [
+      "Stay Covered (From Our Side)",
+      "Travel Covered (From Our Side)",
+      "Food Provided (From Our Side)",
+      "Official Certificate Provided",
+      "Dynamic Pay Based on Profile & Experience",
+    ],
+    proofText: "Hospitality crew welcomed luxury wedding guests, coordinated banquet arrangements, and managed royal decor operations. Full stay, travel, and food provided by Evenza.",
+    crewCount: "75+ Hospitality Crew",
+    highlights: "Stay + Travel + Food From Evenza • Royal Palace Experience",
+    pricingNote: "₹1,300 to ₹2,500/day depending on profile and experience. Stay, travel & food 100% from our side.",
   },
   {
     id: "corporate-conference",
     title: "Rajasthan Tech Leadership Summit",
     role: "Delegate Registration & Help Desk",
-    category: "Corporate Summits & Expos",
-    pay: "₹1,200 – ₹1,800 / Day",
-    tag: "💼 Corporate Desk",
+    category: "Corporate Event",
+    pay: "₹500 – ₹1,000 / Day",
+    shift: "Corporate 12h Shift (Full Day)",
+    tag: "💼 Corporate 12h Shift",
     image: "/assets/img/portfolio/optimized/corporate-conference-team-jaipur.webp",
     location: "JECC Sitapura, Jaipur",
-    perks: ["Official Experience Certificate", "Buffet Lunch & High Tea", "AC Venue Operations", "Valuable Corporate Networking"],
-    proofText: "Managed 2,500+ corporate delegate check-ins, VIP ushering, and QR badge scanning. Perfect for college students looking for corporate resume credentials.",
+    perks: [
+      "Corporate 12h Full Day Shift",
+      "Official Experience Certificate Provided",
+      "Buffet Lunch & High Tea Included",
+      "Corporate Resume & LinkedIn Boost",
+      "Dynamic Pay Based on Experience",
+    ],
+    proofText: "Managed 2,500+ corporate delegate check-ins, kit distribution, and VIP attendee escorts at Jaipur Exhibition Centre. 12h full day shift with official certificate.",
     crewCount: "40+ Students Placed",
-    highlights: "Resume Booster • Certificate Provided",
+    highlights: "12h Full Day Shift • Certificate Provided • Top Corporate Networking",
+    pricingNote: "₹500 to ₹1,000/day for 12h full day shift. Pricing is dynamic based on your profile & experience.",
   },
   {
-    id: "destination-wedding",
-    title: "Royal Destination Palace Wedding",
-    role: "Guest Welcome & Coordination Crew",
-    category: "Luxury Destination Weddings",
-    pay: "₹1,800 – ₹3,000 / Day",
-    tag: "👑 Royal Hospitality",
-    image: "/assets/img/portfolio/optimized/destination-wedding-hospitality-rajasthan.webp",
-    location: "Udaipur & Jaipur Palaces",
-    perks: ["5-Star Palace Stay & Food", "Travel / Cab Allowance", "Designer Attire / Uniform", "High Earning Multi-Day Gig"],
-    proofText: "Evenza student hospitality crew welcomed domestic & NRI guests, luggage coordination, and royal banquet management across 3 days.",
-    crewCount: "75+ Hospitality Staff",
-    highlights: "Palace Venues • 3-Day Earning ₹5,000-₹9,000",
-  },
-  {
-    id: "sports-tournament",
-    title: "National Cricket & Sports League",
-    role: "Ground Operations & Dugout Crew",
-    category: "Live Sports Events",
-    pay: "₹1,200 – ₹2,000 / Day",
-    tag: "🏆 Live Sports Gigs",
-    image: "/assets/img/portfolio/optimized/sports-tournament-event-crew-jaipur.webp",
-    location: "SMS Stadium, Jaipur",
-    perks: ["Stadium Match Passes", "Official Crew Jersey & Cap", "Energy Drinks & Meals", "Evening Same-Day Payout"],
-    proofText: "College sports enthusiasts and volunteers managed player dugouts, boundary lines, ticket turnstiles, and stadium logistics.",
-    crewCount: "60+ Ground Staff",
-    highlights: "Watch the Game Live While Earning • Fast Pay",
-  },
-  {
-    id: "trade-expo",
-    title: "International Trade & Auto Expo",
-    role: "Brand Promoters & Stall Coordinators",
-    category: "Trade Shows & Exhibitions",
-    pay: "₹1,200 – ₹2,000 / Day",
-    tag: "🚀 Trade Expo Promoters",
-    image: "/assets/img/portfolio/optimized/exhibition-promoter-team-rajasthan.webp",
-    location: "JECC Jaipur",
-    perks: ["Direct Corporate Interaction", "Flexible Shift Timings", "Experience Certificate", "Meals & Refreshments"],
-    proofText: "Student promoters managed brand pavilions, attendee lead generation, product demonstrations, and catalog distribution.",
-    crewCount: "35+ Promoters Placed",
-    highlights: "Communication Skills • Top Brand Connections",
-  },
-  {
-    id: "crowd-management",
-    title: "Mega Arena Marathon & Run",
-    role: "Gate & Crowd Management Crew",
-    category: "Sports & Arena Events",
-    pay: "₹1,000 – ₹1,800 / Day",
-    tag: "⚡ Instant Payout",
-    image: "/assets/img/portfolio/optimized/sports-event-crowd-management-jaipur.webp",
-    location: "Jaipur City Circuit",
-    perks: ["Early Half-Day Shifts", "Breakfast & Energy Kits", "Medal Ceremony Assist", "Same-Day Instant UPI Transfer"],
-    proofText: "Volunteers manned water stations, marathon guidance routes, finish line medals, and crowd safety. Work completed in 4-6 hours with instant UPI payment.",
-    crewCount: "80+ Volunteers",
-    highlights: "Half-Day Gig • Instant UPI Transfer",
-  },
-  {
-    id: "medical-conclave",
-    title: "Pan-India Medical Doctors Conclave",
-    role: "Delegate Registration & Kits Desk",
-    category: "Medical & Academic Summits",
-    pay: "₹1,200 – ₹1,600 / Day",
-    tag: "🤝 Verified Safe Gigs",
-    image: "/assets/img/portfolio/optimized/corporate-event-kit-distribution-staff-jaipur.webp",
-    location: "Birla Auditorium, Jaipur",
-    perks: ["Buffet Lunch Included", "Formal Working Environment", "Zero Registration Cost", "Verified Genuine Work"],
-    proofText: "Coordinated distribution of welcome conference bags, badges, and guest guidance. 100% genuine company, zero joining fee.",
-    crewCount: "30+ Students",
-    highlights: "Professional Atmosphere • Great For First-Timers",
+    id: "concert-crew",
+    title: "Sunburn Arena & Live Concerts",
+    role: "Artist Hospitality & Stage Crew",
+    category: "Concert Event",
+    pay: "₹600 – ₹1,200 / Gig",
+    shift: "Concert: Half Day Shift",
+    tag: "🔥 Concert Half Day",
+    image: "/assets/img/portfolio/optimized/concert-backstage-crew-jaipur.webp",
+    location: "Jaipur, Rajasthan",
+    perks: [
+      "Concert: Half Day Shift",
+      "Official Certificate Provided",
+      "Free Artist Passes & Crew Meals",
+      "Direct Backstage Music Industry Access",
+      "Spot Cash / Fast UPI Transfer",
+    ],
+    proofText: "Fast-paced half-day shift managing artist greenrooms, backline support, and VIP entry. Flexible college timing with official certificate and passes.",
+    crewCount: "50+ Students Hired",
+    highlights: "Half Day Shift • Official Certificate • Spot Fast Payout",
+    pricingNote: "Half day shift for live concerts. Fast payout with passes & certificate provided.",
   },
   {
     id: "volunteer-leads",
     title: "Evenza Youth Volunteer Network",
-    role: "On-Ground Team Leads & Supervisors",
-    category: "Youth Leadership & Career",
-    pay: "₹1,800 – ₹2,800 / Day",
-    tag: "⭐ Team Lead Role",
+    role: "On-Ground Team Leads & Operations",
+    category: "Project-Based Work",
+    pay: "Project-Based (As Per Exp)",
+    shift: "Project-Based Work (Flexible)",
+    tag: "⭐ Project-Based Work",
     image: "/assets/img/portfolio/optimized/event-volunteer-management-team-jaipur.webp",
     location: "Pan-India / Rajasthan",
-    perks: ["Promotion from Volunteer to Lead", "Higher Daily Stipends", "Management Credential", "Long-Term Freelance Network"],
-    proofText: "Top performing student volunteers are promoted to Team Supervisors to lead crews of 10-20 volunteers at major festivals.",
+    perks: [
+      "Project-Based Work As Per Capabilities",
+      "Pricing Based on Profile & Experience",
+      "Official Experience Certificate Provided",
+      "Team Leadership & Freelance Career",
+      "Pan-India Travel Gigs",
+    ],
+    proofText: "Dedicated project coordinators and supervisor roles. Compensation is project-based, tailored directly to your proven capabilities, leadership skills, and track record.",
     crewCount: "25+ Team Leads",
-    highlights: "Career Growth • Lead Your Own Event Crew",
+    highlights: "Dynamic Project-Based Pricing • Tailored to Experience & Profile",
+    pricingNote: "Project-based work: pricing is decided as per your experience, profile, and capabilities.",
+  },
+  {
+    id: "sports-tournament",
+    title: "Jaipur Premier Sports Tournament",
+    role: "Ground Operations & Dugout Crew",
+    category: "Sports Event",
+    pay: "₹600 – ₹1,200 / Day",
+    shift: "Match Day Shift (Full / Half)",
+    tag: "🏆 Live Sports Crew",
+    image: "/assets/img/portfolio/optimized/sports-tournament-event-crew-jaipur.webp",
+    location: "SMS Stadium, Jaipur",
+    perks: [
+      "Match Day Shifts",
+      "Official Certificate Provided",
+      "Official Crew Jersey & Cap",
+      "Energy Drinks & Meals Included",
+      "Watch the Game Live While Earning",
+    ],
+    proofText: "Managed player dugouts, boundary lines, ticket turnstiles, and stadium logistics at live sports matches. Official certificate and same-day payout.",
+    crewCount: "60+ Ground Staff",
+    highlights: "Official Certificate Provided • Stadium Access • Fast Payout",
+    pricingNote: "Dynamic pay based on role and experience. Certificate & refreshments provided.",
+  },
+  {
+    id: "corporate-kits",
+    title: "Pan-India Medical & Leadership Conclave",
+    role: "Registration & Kit Distribution Staff",
+    category: "Corporate Event",
+    pay: "₹500 – ₹1,000 / Day",
+    shift: "Corporate 12h Shift (Full Day)",
+    tag: "🤝 Corporate 12h Shift",
+    image: "/assets/img/portfolio/optimized/corporate-event-kit-distribution-staff-jaipur.webp",
+    location: "Birla Auditorium, Jaipur",
+    perks: [
+      "Corporate 12h Full Day Shift",
+      "Official Certificate Provided",
+      "Buffet Lunch & Tea Included",
+      "Professional Working Environment",
+      "100% Genuine — Zero Registration Fees",
+    ],
+    proofText: "Coordinated registration desk, kit handovers, and delegate guidance. 12h corporate full day shift with official certificate and verified safe environment.",
+    crewCount: "30+ Students Placed",
+    highlights: "12h Full Day Shift • Certificate Included • 100% Genuine",
+    pricingNote: "₹500 to ₹1,000/day for 12h shift. Dynamic pricing based on your profile & experience.",
+  },
+  {
+    id: "trade-expo",
+    title: "JECC International Trade & Auto Expo",
+    role: "Brand Promoters & Stall Coordinators",
+    category: "Corporate Event",
+    pay: "₹600 – ₹1,000 / Day",
+    shift: "Corporate 12h Shift (Full Day)",
+    tag: "🚀 Expo 12h Shift",
+    image: "/assets/img/portfolio/optimized/exhibition-promoter-team-rajasthan.webp",
+    location: "JECC Jaipur",
+    perks: [
+      "Corporate 12h Full Day Shift",
+      "Official Certificate Provided",
+      "Direct Client Networking",
+      "Meals & Tea Included",
+      "Communication Skills Practice",
+    ],
+    proofText: "Student promoters managed brand pavilions, attendee lead generation, product demonstrations, and catalog distribution across 3-day expos.",
+    crewCount: "35+ Promoters Placed",
+    highlights: "12h Full Day Shift • Certificate Included • Great For BBA/MBA",
+    pricingNote: "₹500 to ₹1,000/day for corporate 12h shift based on profile & communication.",
+  },
+  {
+    id: "wedding-welcome",
+    title: "Luxury Heritage Wedding Hospitality",
+    role: "Guest Welcome & VIP Ushering",
+    category: "Wedding Event",
+    pay: "₹1,300 – ₹2,500 / Day",
+    shift: "Wedding Event (Multi-Day)",
+    tag: "👑 Royal Wedding",
+    image: "/assets/img/portfolio/optimized/wedding-hospitality-team-jaipur.webp",
+    location: "Jaipur Heritage Palaces",
+    perks: [
+      "Stay Covered (From Our Side)",
+      "Travel Covered (From Our Side)",
+      "Food Provided (From Our Side)",
+      "Official Certificate Provided",
+      "Earn ₹3,900–₹7,500 Across 3 Days",
+    ],
+    proofText: "Welcoming international and VIP wedding guests, coordinating luggage, and managing hospitality counters. Evenza takes care of stay, travel, and food.",
+    crewCount: "50+ Hospitality Crew",
+    highlights: "Stay, Travel & Food From Evenza • Official Certificate",
+    pricingNote: "₹1,300 to ₹2,500/day. Stay, travel, and food provided from our side.",
   },
 ];
 
@@ -141,9 +207,9 @@ export function TopProofSlider({ onSelectProof }: TopProofSliderProps) {
   const marqueeItems = [...EVENT_PROOFS, ...EVENT_PROOFS];
 
   return (
-    <div className="w-full relative overflow-hidden bg-[#161a0f] border-b border-border/40 select-none">
+    <div className="w-full relative overflow-hidden bg-gradient-to-b from-[#2a3219] via-[#1c2211] to-[#12160b] select-none">
       {/* Background Ambience & Lighting */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#2a3219] via-[#1c2211] to-[#13160c] opacity-95" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#2a3219] via-[#1c2211] to-[#12160b] opacity-95" />
 
       {/* Decorative Gold Grid */}
       <div
@@ -173,21 +239,22 @@ export function TopProofSlider({ onSelectProof }: TopProofSliderProps) {
       {/* Container Content */}
       <div className="relative z-10 pt-3 pb-14 sm:pb-16 flex flex-col justify-between">
         {/* Top Micro-Header / Live Ticker Strip */}
-        <div className="px-4 mb-2.5 flex items-center justify-between max-w-5xl mx-auto w-full">
-          <div className="flex items-center gap-2">
-            <span className="relative flex h-2 w-2">
+        <div className="px-4 mb-2.5 flex items-center justify-between max-w-5xl mx-auto w-full gap-2">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="relative flex h-2 w-2 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            <span className="text-[11px] sm:text-xs font-bold tracking-wide uppercase text-white/90 flex items-center gap-1.5">
+            <span className="text-[11px] sm:text-xs font-bold tracking-wide uppercase text-white/90 truncate flex items-center gap-1.5">
               Live Working Manpower Proofs
               <span className="hidden sm:inline-block text-gold/80 font-normal">| Pan-India Gigs</span>
             </span>
           </div>
 
-          <div className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-semibold text-gold bg-gold/10 px-2.5 py-0.5 rounded-full border border-gold/30">
-            <Zap className="w-3 h-3 text-gold" />
-            <span>Earn ₹1,000–₹2,500/day</span>
+          <div className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-semibold text-gold bg-gold/10 px-2.5 py-0.5 rounded-full border border-gold/30 shrink-0">
+            <Award className="w-3 h-3 text-gold shrink-0" />
+            <span className="hidden xs:inline">Dynamic Pay • </span>
+            <span>Certificate Provided</span>
           </div>
         </div>
 
@@ -209,29 +276,31 @@ export function TopProofSlider({ onSelectProof }: TopProofSliderProps) {
                 />
 
                 {/* Dark Gradient Overlay for Contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-black/25" />
 
-                {/* Top Badge: Earning / Proof */}
+                {/* Top Badge: Earning & Shift */}
                 <div className="absolute top-2 left-2 right-2 flex items-center justify-between gap-1 z-10">
-                  <span className="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-amber-300 border border-amber-400/30 flex items-center gap-1 shadow-sm">
+                  <span className="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full bg-black/70 backdrop-blur-md text-amber-300 border border-amber-400/30 flex items-center gap-1 shadow-sm truncate">
                     <span>{item.pay}</span>
                   </span>
-                  <span className="text-[8px] sm:text-[9px] font-medium px-1.5 py-0.5 rounded-md bg-emerald-500/80 backdrop-blur-md text-white shadow-sm flex items-center gap-0.5">
+                  <span className="text-[8px] sm:text-[9px] font-medium px-1.5 py-0.5 rounded-md bg-emerald-500/85 backdrop-blur-md text-white shadow-sm flex items-center gap-0.5 shrink-0">
                     <CheckCircle2 className="w-2.5 h-2.5" />
                     <span>Verified</span>
                   </span>
                 </div>
 
-                {/* Bottom Info: Title & Tag */}
+                {/* Bottom Info: Title & Shift Tag */}
                 <div className="absolute bottom-2 left-2 right-2 z-10 text-left">
                   <div className="text-[10px] sm:text-[11px] font-bold text-white line-clamp-1 group-hover/card:text-gold transition-colors flex items-center gap-1">
                     {item.title}
                   </div>
-                  <div className="flex items-center justify-between text-[9px] sm:text-[10px] text-white/75 mt-0.5">
-                    <span className="truncate max-w-[130px] text-amber-200/90">{item.role}</span>
+                  <div className="flex items-center justify-between text-[9px] sm:text-[10px] text-white/80 mt-0.5">
+                    <span className="truncate max-w-[125px] text-amber-200/90 font-medium">
+                      {item.shift}
+                    </span>
                     <span className="flex items-center gap-0.5 text-white/60 shrink-0">
                       <Eye className="w-2.5 h-2.5 text-gold/80" />
-                      Proof
+                      Details
                     </span>
                   </div>
                 </div>
@@ -245,12 +314,9 @@ export function TopProofSlider({ onSelectProof }: TopProofSliderProps) {
 
         {/* Bottom Subtitle / Tap Hint */}
         <div className="px-4 mt-2 flex items-center justify-center gap-2 text-center text-[10px] sm:text-[11px] text-white/60">
-          <span>👆 Tap any proof card for event details, earnings & roles</span>
+          <span>👆 Tap any proof for shift timing, stay/food perks & pay details</span>
         </div>
       </div>
-
-      {/* Bottom Gradient Fade to Page Background */}
-      <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
     </div>
   );
 }
