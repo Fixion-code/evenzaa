@@ -17,6 +17,9 @@ import { Links } from "./pages/Links";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
+import { PrivacyPolicy } from "./pages/PrivacyPolicy";
+import { Terms } from "./pages/Terms";
+
 function AppContent() {
   const location = useLocation();
   const isLinksPage = location.pathname === "/links" || location.pathname === "/links/";
@@ -36,6 +39,9 @@ function AppContent() {
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/case-studies/:slug" element={<CaseStudyTemplate />} />
         <Route path="/links" element={<Links />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<Terms />} />
         {SEO_PAGES.map((page) => (
           <Route
             key={page.path}

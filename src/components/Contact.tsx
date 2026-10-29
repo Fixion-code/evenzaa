@@ -260,14 +260,19 @@ export function Contact() {
           </div>
         </motion.div>
 
-        {/* Right form */}
+        {/* Right form with WebMCP Declarative Agent Tool attributes */}
         <motion.form
+          id="enquiry-form"
           onSubmit={onSubmit}
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, delay: 0.15 }}
           className="lg:col-span-3 card p-5 md:p-8 space-y-5"
+          {...({
+            toolname: "bookEventManpower",
+            tooldescription: "Submit an enquiry to book event manpower, volunteers, or hospitality teams in Jaipur and India",
+          } as any)}
         >
           <div className="grid sm:grid-cols-2 gap-5">
             <div>
@@ -277,8 +282,10 @@ export function Contact() {
               <Input
                 id="name"
                 name="name"
+                type="text"
                 required
                 className="mt-2 bg-card border-border"
+                {...({ toolparamdescription: "Full name of client or organization" } as any)}
               />
             </div>
             <div>
@@ -291,6 +298,7 @@ export function Contact() {
                 type="tel"
                 required
                 className="mt-2 bg-card border-border"
+                {...({ toolparamdescription: "Contact phone number with country code" } as any)}
               />
             </div>
           </div>
@@ -305,6 +313,7 @@ export function Contact() {
                 name="email"
                 type="email"
                 className="mt-2 bg-card border-border"
+                {...({ toolparamdescription: "Client email address for official proposals" } as any)}
               />
             </div>
             <div>
@@ -314,7 +323,9 @@ export function Contact() {
               <Input
                 id="city"
                 name="city"
+                type="text"
                 className="mt-2 bg-card border-border"
+                {...({ toolparamdescription: "City where the event will take place" } as any)}
               />
             </div>
           </div>
@@ -327,8 +338,10 @@ export function Contact() {
               <Input
                 id="event_type"
                 name="event_type"
+                type="text"
                 placeholder="Wedding / Corporate…"
                 className="mt-2 bg-card border-border"
+                {...({ toolparamdescription: "Category of event: Wedding, Corporate, Concert, Exhibition, etc." } as any)}
               />
             </div>
             <div>
@@ -340,6 +353,7 @@ export function Contact() {
                 name="event_date"
                 type="date"
                 className="mt-2 bg-card border-border"
+                {...({ toolparamdescription: "Event start date" } as any)}
               />
             </div>
             <div>
@@ -352,6 +366,7 @@ export function Contact() {
                 type="number"
                 min="1"
                 className="mt-2 bg-card border-border"
+                {...({ toolparamdescription: "Estimated number of event crew or staff needed" } as any)}
               />
             </div>
           </div>
@@ -363,8 +378,10 @@ export function Contact() {
             <Input
               id="roles_required"
               name="roles"
+              type="text"
               placeholder="Runners, F&B, supervisors…"
               className="mt-2 bg-card border-border"
+              {...({ toolparamdescription: "Specific roles: runners, ushers, F&B service, supervisors, shadow staff" } as any)}
             />
           </div>
 
@@ -377,6 +394,7 @@ export function Contact() {
               name="message"
               rows={4}
               className="mt-2 bg-card border-border"
+              {...({ toolparamdescription: "Additional instructions, event timings, or specific venue requirements" } as any)}
             />
           </div>
 

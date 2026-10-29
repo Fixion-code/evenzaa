@@ -3,13 +3,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <!-- Homepage -->
-  <url><loc>https://evenzaa-sable.vercel.app/</loc><lastmod>2026-08-26</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteers</loc><lastmod>2026-08-26</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteers</loc><lastmod>2026-10-29</lastmod></url>
 
   <!-- Portfolio — Proof of Work (image-heavy, high SEO priority) -->
   <url>
     <loc>https://evenzaa-sable.vercel.app/portfolio</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <image:image>
       <image:loc>https://res.cloudinary.com/deif3jvr/image/upload/q_auto,f_auto,w_1200/v1/evenza/concerts/concert-event-manpower-jaipur</image:loc>
       <image:caption>Evenza concert event manpower team managing full-scale live music event operations in Jaipur, Rajasthan</image:caption>
@@ -53,79 +53,89 @@
   </url>
 
   <!-- Jaipur Core Service Pages (Priority Tier 1) -->
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-jaipur</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/hospitality-team-jaipur</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/wedding-staff-jaipur</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/corporate-event-staffing-jaipur</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-volunteers-jaipur</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/exhibition-staff-jaipur</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-jaipur</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/hospitality-team-jaipur</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/wedding-staff-jaipur</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/corporate-event-staffing-jaipur</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-volunteers-jaipur</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/exhibition-staff-jaipur</loc><lastmod>2026-10-29</lastmod></url>
 
   <!-- New Jaipur & Rajasthan Service Pages (Priority Tier 2) -->
-  <url><loc>https://evenzaa-sable.vercel.app/hospitality-manpower-jaipur</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/wedding-hospitality-jaipur</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-staffing-rajasthan</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-rajasthan</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/manpower-agency-jaipur</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/hospitality-manpower-jaipur</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/wedding-hospitality-jaipur</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-staffing-rajasthan</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-rajasthan</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/manpower-agency-jaipur</loc><lastmod>2026-10-29</lastmod></url>
 
   <!-- Rajasthan City Pages (Priority Tier 3) -->
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-udaipur</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-jodhpur</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-ajmer</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-kota</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-udaipur</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-jodhpur</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-ajmer</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-kota</loc><lastmod>2026-10-29</lastmod></url>
 
   <!-- Major Metro City Pages (Priority Tier 3) -->
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-delhi</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-gurgaon</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-noida</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-mumbai</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-ahmedabad</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-lucknow</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-pune</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-bengaluru</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-hyderabad</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-chennai</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-chandigarh</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-goa</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-indore</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-surat</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-kolkata</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-delhi</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-gurgaon</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-noida</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-mumbai</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-ahmedabad</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-lucknow</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-pune</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-bengaluru</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-hyderabad</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-chennai</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-chandigarh</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-goa</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-indore</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-surat</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-kolkata</loc><lastmod>2026-10-29</lastmod></url>
 
   <!-- Volunteer City Pages — supply side, targets "volunteering [city]" -->
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-jaipur</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-delhi</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-mumbai</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-bengaluru</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-hyderabad</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-chennai</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-kolkata</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-pune</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-ahmedabad</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-chandigarh</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-lucknow</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-goa</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-jaipur</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-delhi</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-mumbai</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-bengaluru</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-hyderabad</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-chennai</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-kolkata</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-pune</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-ahmedabad</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-chandigarh</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-lucknow</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-goa</loc><lastmod>2026-10-29</lastmod></url>
 
   <!-- Volunteer State Pages — broad state-level coverage -->
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-india</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-rajasthan</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-uttar-pradesh</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-maharashtra</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-karnataka</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-tamil-nadu</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-west-bengal</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-gujarat</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/volunteering-punjab</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-india</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-rajasthan</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-uttar-pradesh</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-maharashtra</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-karnataka</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-tamil-nadu</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-west-bengal</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-gujarat</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/volunteering-punjab</loc><lastmod>2026-10-29</lastmod></url>
 
   <!-- Student & Fresher Intent Pages -->
-  <url><loc>https://evenzaa-sable.vercel.app/event-jobs-students</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/part-time-event-work</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/freelance-event-work-india</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-internship-jaipur</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-jobs-students</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/part-time-event-work</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/freelance-event-work-india</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-internship-jaipur</loc><lastmod>2026-10-29</lastmod></url>
 
   <!-- Manpower State Pages — demand side, for clients hiring -->
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-india</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/manpower-agency-rajasthan</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-uttar-pradesh</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-maharashtra</loc><lastmod>2026-08-20</lastmod></url>
-  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-karnataka</loc><lastmod>2026-08-20</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-india</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/manpower-agency-rajasthan</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-uttar-pradesh</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-maharashtra</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/event-manpower-karnataka</loc><lastmod>2026-10-29</lastmod></url>
+
+  <!-- Case Studies & Proof of Work -->
+  <url><loc>https://evenzaa-sable.vercel.app/case-studies</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/case-studies/royal-destination-wedding-jaipur</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/case-studies/corporate-tech-summit-jecc</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/case-studies/live-music-concert-crew</loc><lastmod>2026-10-29</lastmod></url>
+
+  <!-- Legal & Trust Pages -->
+  <url><loc>https://evenzaa-sable.vercel.app/privacy-policy</loc><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://evenzaa-sable.vercel.app/terms</loc><lastmod>2026-10-29</lastmod></url>
 
 </urlset>

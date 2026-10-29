@@ -43,10 +43,15 @@ export function Portfolio() {
     description:
       "Browse 50+ real event photographs from Evenza — concert manpower, destination wedding hospitality, corporate event staffing, exhibition crew, and sports event management across Rajasthan and India.",
     url,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["#portfolio-title", "#portfolio-overview", "#faq-heading"],
+    },
     publisher: {
       "@type": "Organization",
       name: "Evenza Hospitality Services",
       url: SITE,
+      logo: `${SITE}/og-image.jpg`,
     },
   };
 
@@ -78,12 +83,87 @@ export function Portfolio() {
       creator: {
         "@type": "Organization",
         name: "Evenza Hospitality Services",
+        url: SITE,
+        logo: `${SITE}/og-image.jpg`,
       },
     })),
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What event types does Evenza staff across Rajasthan and India?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Evenza provides vetted event manpower and hospitality crews for luxury destination weddings, corporate summits, trade exhibitions, live music concerts, college festivals, and sports events across Jaipur, Rajasthan, and 30+ Indian cities.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are all portfolio photographs verified proof of work?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Every photograph in our portfolio captures real on-ground staff deployments managed directly by Evenza supervisors without external subcontracting.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How quickly can Evenza deploy event manpower for an upcoming event?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We provide comprehensive staffing proposals within hours. For local Jaipur events, rapid crew deployments can be mobilized in as little as 24 to 48 hours.",
+        },
+      },
+    ],
+  };
+
+  const PORTFOLIO_FAQS = [
+    {
+      q: "What event types does Evenza staff across Rajasthan and India?",
+      a: "Evenza provides vetted event manpower and hospitality crews for luxury destination weddings, corporate summits, trade exhibitions, live music concerts, college festivals, and sports events across Jaipur, Rajasthan, and 30+ Indian cities.",
+    },
+    {
+      q: "Are all portfolio photographs verified proof of work?",
+      a: "Yes. Every photograph in our portfolio captures real on-ground staff deployments managed directly by Evenza supervisors without external subcontracting.",
+    },
+    {
+      q: "How quickly can Evenza deploy event manpower for an upcoming event?",
+      a: "We provide comprehensive staffing proposals within hours. For local Jaipur events, rapid crew deployments can be mobilized in as little as 24 to 48 hours.",
+    },
+  ];
+
+  const DEPLOYMENT_TABLE = [
+    {
+      category: "Destination Weddings",
+      roles: "Shadow staff, luggage handlers, guest welcoming hostesses, F&B service crew",
+      scale: "20 to 120+ staff per wedding",
+      venues: "Rambagh Palace, Fairmont, City Palace Jaipur, Lake Pichola Udaipur",
+    },
+    {
+      category: "Corporate Summits & Expos",
+      roles: "QR registration desk, badge distribution, session ushers, help desk associates",
+      scale: "15 to 80+ crew per summit",
+      venues: "JECC Jaipur, Marriott, Clarks Amer, Novotel",
+    },
+    {
+      category: "Concerts & Festivals",
+      roles: "Backstage operations, artist liaisons, ticket scanners, gate marshals",
+      scale: "30 to 200+ crew per show",
+      venues: "SMS Stadium, Diggi Palace, Exhibition grounds",
+    },
+    {
+      category: "Sports & Marathons",
+      roles: "Route marshals, finish line medal crew, athlete kit counters, turnstile stewards",
+      scale: "25 to 150+ marshals",
+      venues: "JLN Marg, city circuits, sports complexes",
+    },
+  ];
+
   return (
-    <main className="pt-24 min-h-screen-dvh bg-background">
+    <main id="main-content" className="pt-24 min-h-screen-dvh bg-background">
       <Helmet>
         <title>Event Portfolio & Proof of Work | Evenza Hospitality Services Jaipur</title>
         <meta
@@ -91,6 +171,8 @@ export function Portfolio() {
           content="See real proof of work — 50+ photographs from events managed by Evenza across Rajasthan. Concert manpower, wedding hospitality teams, corporate staffing, exhibition crews, and more."
         />
         <meta name="robots" content="index, follow" />
+        <meta name="date" content="2024-01-15" />
+        <meta name="last-modified" content="2026-10-29" />
         <link rel="canonical" href={url} />
         <meta property="og:title" content="Event Portfolio | Evenza Hospitality Services" />
         <meta property="og:description" content="50+ real event photos — concerts, weddings, corporate events, exhibitions. See how Evenza delivers on-ground excellence across Rajasthan and India." />
@@ -99,6 +181,7 @@ export function Portfolio() {
         <script type="application/ld+json">{JSON.stringify(pageJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(imageGalleryJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
 
       {/* ── Breadcrumb ── */}
@@ -121,12 +204,15 @@ export function Portfolio() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl text-foreground mb-6 leading-tight">
+            <h1 id="portfolio-title" className="font-display text-4xl sm:text-5xl md:text-6xl text-foreground mb-4 leading-tight">
               Our <span className="text-gold italic">Portfolio</span>
             </h1>
-            <p className="text-lg md:text-xl text-cream/70 leading-relaxed mb-8">
-              Every image is a real deployment. Real teams. Real events. Real results.
-              From intimate destination weddings to 10,000-person political rallies — see how
+            <p className="text-xs text-muted-foreground mb-4">
+              <time dateTime="2026-10-29">Updated October 2026</time> · Verified On-Ground Deliveries
+            </p>
+            <p id="portfolio-overview" className="text-lg md:text-xl text-cream/70 leading-relaxed mb-8">
+              Every photograph is a real deployment. Real teams. Real events. Real results.
+              From intimate destination weddings to 10,000-person public conclaves — see how
               Evenza delivers on-ground excellence across Rajasthan and India.
             </p>
 
@@ -150,8 +236,12 @@ export function Portfolio() {
       </section>
 
       {/* ── Portfolio Grid Section ── */}
-      <section className="py-16 md:py-20">
+      <section id="gallery" className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          {/* Logical H2 heading maintaining correct heading nesting */}
+          <h2 id="gallery-heading" className="font-display text-2xl sm:text-3xl text-center text-foreground mb-8">
+            Event Deployments & <span className="text-gold italic">Visual Proof</span>
+          </h2>
 
           {/* Category Filter Buttons */}
           <div
@@ -204,7 +294,7 @@ export function Portfolio() {
                     title={`${img.eventName} — ${img.location}`}
                     width={600}
                     height={400}
-                    loading={idx < 6 ? "eager" : "lazy"}
+                    loading={idx < 2 ? "eager" : "lazy"}
                     decoding="async"
                     className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
                   />
@@ -245,10 +335,66 @@ export function Portfolio() {
         </div>
       </section>
 
+      {/* ── Structured Data Table: Deployment Scale by Sector ── */}
+      <section id="deployment-matrix" className="py-16 md:py-20 border-t border-white/5 bg-card/30">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 id="matrix-heading" className="font-display text-2xl md:text-3xl text-center text-foreground mb-4">
+            Event Staffing <span className="text-gold italic">Deployment Scale</span>
+          </h2>
+          <p className="text-center text-muted-foreground text-sm max-w-2xl mx-auto mb-10">
+            A comprehensive breakdown of Evenza's crew specializations, typical staffing ratios, and premier venue deployments.
+          </p>
+
+          <div className="overflow-x-auto rounded-xl border border-border">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-card border-b border-border text-left">
+                  <th className="p-4 font-display text-gold">Sector</th>
+                  <th className="p-4 font-display text-foreground">Core Crew Roles</th>
+                  <th className="p-4 font-display text-foreground">Typical Scale</th>
+                  <th className="p-4 font-display text-muted-foreground">Premier Venue Deployments</th>
+                </tr>
+              </thead>
+              <tbody>
+                {DEPLOYMENT_TABLE.map((row, idx) => (
+                  <tr key={idx} className="border-b border-border/50 hover:bg-muted/30 transition-colors">
+                    <td className="p-4 font-medium text-gold whitespace-nowrap">{row.category}</td>
+                    <td className="p-4 text-muted-foreground">{row.roles}</td>
+                    <td className="p-4 text-foreground whitespace-nowrap">{row.scale}</td>
+                    <td className="p-4 text-muted-foreground">{row.venues}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Portfolio Q&A Section (Targeting PAA & Featured Snippets) ── */}
+      <section id="portfolio-faq" className="py-16 md:py-20 border-t border-white/5">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 id="faq-heading" className="font-display text-2xl md:text-3xl text-center text-foreground mb-4">
+            Frequently Asked <span className="text-gold italic">Questions</span>
+          </h2>
+          <p className="text-center text-muted-foreground text-sm max-w-xl mx-auto mb-10">
+            Common questions regarding our past event deployments, verification, and booking process.
+          </p>
+
+          <div className="space-y-4">
+            {PORTFOLIO_FAQS.map((item, idx) => (
+              <div key={idx} className="card p-6 border border-border rounded-xl">
+                <h3 className="font-display text-lg text-foreground mb-2">{item.q}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA Section ── */}
       <section className="py-16 md:py-20 border-t border-white/5">
         <div className="max-w-3xl mx-auto text-center px-6">
-          <h2 className="font-display text-2xl md:text-3xl text-foreground mb-4">
+          <h2 id="cta-heading" className="font-display text-2xl md:text-3xl text-foreground mb-4">
             Need a team for your <span className="text-gold italic">next event</span>?
           </h2>
           <p className="text-cream/60 text-base mb-8 leading-relaxed">

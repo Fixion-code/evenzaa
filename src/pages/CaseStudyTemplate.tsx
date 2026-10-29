@@ -30,9 +30,10 @@ export function CaseStudyTemplate() {
     publisher: {
       "@type": "Organization",
       name: "Evenza Hospitality Services",
+      url: SITE,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE}/placeholder.svg`,
+        url: `${SITE}/og-image.jpg`,
       },
     },
     datePublished: new Date().toISOString(), // In a real app, this should be the actual publish date

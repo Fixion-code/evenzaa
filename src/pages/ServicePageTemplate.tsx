@@ -102,6 +102,7 @@ export function ServicePageTemplate({
   features,
   faqs = [],
   relatedPages = [],
+  type,
 }: ServicePageProps) {
   const { pathname } = useLocation();
   const url = `${SITE}${pathname}`;
@@ -137,7 +138,21 @@ export function ServicePageTemplate({
     ],
   };
 
-  const isVolunteer = props.type === "volunteer";
+  const isVolunteer = type === "volunteer";
+
+  // FAQPage schema for Google People Also Ask and voice assistants
+  const faqJsonLd = faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a,
+      },
+    })),
+  } : null;
 
   return (
     <main className="pt-24 min-h-screen-dvh">
@@ -163,6 +178,7 @@ export function ServicePageTemplate({
         <meta name="twitter:image" content={`${SITE}/og-image.jpg`} />
         <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+        {faqJsonLd && <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>}
       </Helmet>
 
       {/* ── Breadcrumb ── */}

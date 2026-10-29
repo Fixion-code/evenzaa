@@ -144,7 +144,7 @@ export function Hero() {
                 transition={{ duration: 0.7, delay: 0 }}
                 className="block"
               >
-                India's Premier
+                Event Manpower & Crew in Jaipur
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
@@ -152,7 +152,7 @@ export function Hero() {
                 transition={{ duration: 0.7, delay: 0.1 }}
                 className="block highlight"
               >
-                Event Manpower
+                Hospitality Team
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
@@ -160,7 +160,7 @@ export function Hero() {
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-4 text-cream"
               >
-                & Hospitality Partner.
+                & Event Partner Across India
               </motion.span>
             </h1>
 

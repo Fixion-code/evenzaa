@@ -261,6 +261,8 @@ export function TopProofSlider({ onSelectProof }: TopProofSliderProps) {
                 <img
                   src={item.image}
                   alt={item.title}
+                  width={240}
+                  height={144}
                   loading={index < 4 ? "eager" : "lazy"}
                   className="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
                 />

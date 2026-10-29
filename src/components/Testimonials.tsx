@@ -68,8 +68,10 @@ export function Testimonials() {
               <div className="flex items-center gap-4 mt-auto">
                 <img
                   src={testimonial.avatar}
-                  alt={testimonial.name}
+                  alt={`${testimonial.name} — ${testimonial.role} review of Evenza Hospitality Services`}
                   className="w-12 h-12 rounded-full object-cover border-2 border-gold/20"
+                  width={48}
+                  height={48}
                   loading="lazy"
                 />
                 <div>

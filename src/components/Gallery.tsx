@@ -62,7 +62,7 @@ export function Gallery() {
               title={`${img.eventName} — ${img.location}`}
               width={600}
               height={400}
-              loading={idx < 4 ? "eager" : "lazy"}
+              loading="lazy"
               decoding="async"
               className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
             />

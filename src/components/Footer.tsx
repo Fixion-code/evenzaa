@@ -243,6 +243,12 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-muted-foreground text-xs">
         <span>© {new Date().getFullYear()} Shree Ji Company Pvt. Ltd. All rights reserved.</span>
+        <div className="flex items-center gap-4">
+          <a href="#about" className="hover:text-gold transition-colors duration-300">About</a>
+          <a href="#contact" className="hover:text-gold transition-colors duration-300">Contact</a>
+          <Link to="/privacy-policy" className="hover:text-gold transition-colors duration-300">Privacy Policy</Link>
+          <Link to="/terms" className="hover:text-gold transition-colors duration-300">Terms of Service</Link>
+        </div>
         <span>Jaipur · Rajasthan · India</span>
       </div>
     </footer>
