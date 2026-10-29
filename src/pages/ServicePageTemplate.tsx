@@ -29,7 +29,9 @@ interface ServicePageProps {
   relatedPages?: RelatedPage[];
 }
 
-const SITE = "https://evenzaa-sable.vercel.app";
+import { SITE_CONFIG } from "@/lib/siteConfig";
+
+const SITE = SITE_CONFIG.url;
 
 const HOW_IT_WORKS = [
   {
@@ -110,21 +112,22 @@ export function ServicePageTemplate({
   const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${url}#service`,
     name: keyword,
     description: metaDescription,
+    serviceType: keyword,
+    areaServed: [
+      { "@type": "City", name: "Jaipur" },
+      { "@type": "State", name: "Rajasthan" },
+      { "@type": "Country", name: "India" },
+    ],
     provider: {
       "@type": "Organization",
-      name: "Evenza Hospitality Services",
-      url: SITE,
-      telephone: "+91-91617-10849",
-      email: EMAIL,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Choti Chaupad",
-        addressLocality: "Jaipur",
-        addressRegion: "Rajasthan",
-        addressCountry: "IN",
-      },
+      "@id": `${SITE_CONFIG.url}/#organization`,
+      name: SITE_CONFIG.businessName,
+      url: SITE_CONFIG.url,
+      telephone: SITE_CONFIG.phone,
+      email: SITE_CONFIG.email,
     },
     url,
   };
@@ -132,8 +135,9 @@ export function ServicePageTemplate({
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": `${url}#breadcrumb`,
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+      { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_CONFIG.url}/` },
       { "@type": "ListItem", position: 2, name: keyword, item: url },
     ],
   };
@@ -240,7 +244,7 @@ export function ServicePageTemplate({
       {/* ── Features / Why Choose ── */}
       <section className="py-16 md:py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h2 className="font-display text-3xl md:text-4xl text-center mb-4">
+          <h2 id="why-choose" className="font-display text-3xl md:text-4xl text-center mb-4">
             Why Choose Our <span className="text-gold">{keyword}</span>?
           </h2>
           <p className="text-center text-cream/60 mb-14 max-w-2xl mx-auto">
@@ -268,7 +272,7 @@ export function ServicePageTemplate({
       {/* ── How It Works ── */}
       <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h2 className="font-display text-3xl md:text-4xl text-center mb-4">
+          <h2 id="how-it-works" className="font-display text-3xl md:text-4xl text-center mb-4">
             How It <span className="text-gold">Works</span>
           </h2>
           <p className="text-center text-cream/60 mb-14 max-w-xl mx-auto">
@@ -300,7 +304,7 @@ export function ServicePageTemplate({
       {faqs.length > 0 && (
         <section className="py-16 md:py-20 bg-muted/30" aria-label="Frequently Asked Questions">
           <div className="max-w-3xl mx-auto px-6 lg:px-12">
-            <h2 className="font-display text-3xl md:text-4xl text-center mb-4">
+            <h2 id="faqs" className="font-display text-3xl md:text-4xl text-center mb-4">
               Frequently Asked <span className="text-gold">Questions</span>
             </h2>
             <p className="text-center text-cream/60 mb-12">
@@ -319,7 +323,7 @@ export function ServicePageTemplate({
       {relatedPages.length > 0 && (
         <section className="py-12 md:py-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
-            <h2 className="font-display text-2xl md:text-3xl text-center mb-10">
+            <h2 id="related-services" className="font-display text-2xl md:text-3xl text-center mb-10">
               Explore Related <span className="text-gold">Services</span>
             </h2>
             <div className="flex flex-wrap justify-center gap-3">
@@ -343,7 +347,7 @@ export function ServicePageTemplate({
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border gold-border text-gold text-xs tracking-widest uppercase mb-6">
             <Sparkles className="w-3 h-3" /> {isVolunteer ? "Ready to Join?" : "Ready to Book?"}
           </div>
-          <h2 className="font-display text-3xl md:text-4xl mb-4">
+          <h2 id="get-started" className="font-display text-3xl md:text-4xl mb-4">
             {isVolunteer ? "Start Working in " : "Hire "}<span className="text-gold">{keyword}</span>
           </h2>
           <p className="text-cream/60 mb-10 leading-relaxed">

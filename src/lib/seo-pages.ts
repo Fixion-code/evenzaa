@@ -2165,4 +2165,408 @@ export const SEO_PAGES: SEOPage[] = [
       },
     ],
   },
+
+  // ============================================================
+  // MASTER PROMPT SECTION 3A BUYER & TALENT SPECIALIZED PAGES
+  // ============================================================
+  {
+    path: "/hospitality-staff-jaipur",
+    seoTitle: "Hospitality Staff in Jaipur | Hire Ushers & Hostesses | Evenza",
+    metaDescription: "Hire polished hospitality staff in Jaipur for luxury weddings and corporate summits. Groomed hostesses, ushers, guest relations, and VIP welcome teams.",
+    keyword: "Hospitality Staff Jaipur",
+    subtitle: "Groomed, Professional Hospitality Teams for Jaipur's Finest Events",
+    description: "Hospitality staff in Jaipur refers to trained, groomed, and courteous guest relations personnel deployed across luxury weddings, corporate galas, and VIP exhibitions. Evenza provides dedicated hospitality teams including female and male hostesses, ushers, welcome desk managers, and VIP guest escorts across Jaipur and heritage Rajasthan venues. Every team member undergoes thorough grooming, etiquette training, and on-site briefing to represent your brand with warmth, professionalism, and poise.",
+    features: [
+      "Strict grooming standards, formal attire, and polite communication",
+      "Bilingual teams fluent in English, Hindi, and regional languages",
+      "Experienced at heritage hotels: Rambagh Palace, Fairmont, Leela Palace",
+      "Dedicated hospitality team lead on-site for seamless guest handling",
+      "Airport and railway station welcome desk coordination",
+      "VIP lounge management and personalised guest concierge service",
+    ],
+    faqs: [
+      {
+        q: "What roles are covered under hospitality staff in Jaipur?",
+        a: "Our hospitality staff covers guest welcoming (tikka and garland welcome), registration desk check-ins, VIP lounge management, seating assistance, food & beverage coordination, and escorting dignitaries.",
+      },
+      {
+        q: "What are the uniform and grooming standards of Evenza hospitality staff?",
+        a: "All staff follow strict grooming guidelines: formal Western suits or traditional Indian attire (sarees/sherwanis) tailored to your event theme, polished shoes, clean hairstyles, and professional name badges.",
+      },
+      {
+        q: "How many hospitality hostesses do I need for a 300-guest event in Jaipur?",
+        a: "For a 300-guest wedding or corporate gala, we recommend 6 to 10 hospitality staff: 2 at registration/welcome, 4 for guest seating and hall ushering, and 1 dedicated on-ground supervisor.",
+      },
+      {
+        q: "Can Evenza deploy hospitality teams outside Jaipur in Rajasthan?",
+        a: "Yes. Evenza regularly deploys hospitality teams to Udaipur, Jodhpur, Jaisalmer, Pushkar, and Kumbhalgarh with managed transport, accommodation, and meals.",
+      },
+    ],
+    relatedPages: [
+      { label: "Wedding Event Staff Jaipur", path: "/wedding-event-staff-jaipur" },
+      { label: "Event Manpower Jaipur", path: "/event-manpower-jaipur" },
+      { label: "Corporate Event Staff Jaipur", path: "/corporate-event-staff-jaipur" },
+      { label: "Event Staff Pricing Jaipur", path: "/event-staff-pricing-jaipur" },
+    ],
+  },
+  {
+    path: "/wedding-event-staff-jaipur",
+    seoTitle: "Wedding Event Staff Jaipur | Destination Wedding Crew | Evenza",
+    metaDescription: "Hire professional wedding event staff in Jaipur and Rajasthan. Guest hospitality, shadow managers, luggage coordinators, and sangeet crew on hire.",
+    keyword: "Wedding Event Staff Jaipur",
+    subtitle: "Flawless Guest Hospitality for Royal Destination Weddings in Rajasthan",
+    description: "Wedding event staff in Jaipur encompasses trained hospitality professionals who manage guest logistics, airport reception, hotel check-ins, hospitality desks, and event flow across multi-day destination weddings. Evenza deploys seasoned wedding crews across Jaipur, Udaipur, Jodhpur, and Pushkar. From welcoming guests with traditional royal hospitality to coordinating luggage transfers and sangeet backstage movements, our dedicated wedding crew ensures a calm, memorable experience for families and planners.",
+    features: [
+      "Airport & hotel hospitality desk setup and luggage tag management",
+      "Personal shadow managers for bride, groom, and immediate families",
+      "Room hamper distribution and guest itinerary coordination",
+      "Varaat management, sangeet entry cueing, and stage assistance",
+      "24/7 on-ground supervisor keeping wedding planners stress-free",
+      "Experience handling 200 to 2,000+ guest royal destination weddings",
+    ],
+    faqs: [
+      {
+        q: "What does wedding event staff do at a destination wedding?",
+        a: "Wedding staff handle airport arrivals, hotel check-in desks, welcome kits, luggage delivery to rooms, guest navigation between venues, sangeet prop distribution, and dining ushering.",
+      },
+      {
+        q: "Do you provide family shadow managers for weddings?",
+        a: "Yes. Evenza provides dedicated family shadows who stay with the bride, groom, or key elders throughout the celebrations to attend to immediate needs, timings, and comfort.",
+      },
+      {
+        q: "Can Evenza manage 3 to 4 days of wedding functions across Rajasthan?",
+        a: "Yes. We regularly handle multi-day wedding schedules in Jaipur, Udaipur, and Jodhpur with staff rotations, consistent uniforms, and comprehensive shift handovers.",
+      },
+      {
+        q: "How many wedding staff are required for a 400-guest wedding?",
+        a: "A 400-guest destination wedding typically requires 15 to 22 hospitality staff, 4 luggage runners, and 2 senior supervisors across mehendi, sangeet, and reception days.",
+      },
+    ],
+    relatedPages: [
+      { label: "Hospitality Staff Jaipur", path: "/hospitality-staff-jaipur" },
+      { label: "Event Manpower Jaipur", path: "/event-manpower-jaipur" },
+      { label: "Tour Managers Rajasthan", path: "/tour-managers-rajasthan" },
+      { label: "Event Staff Pricing Jaipur", path: "/event-staff-pricing-jaipur" },
+    ],
+  },
+  {
+    path: "/event-crew-backstage-crew-jaipur",
+    seoTitle: "Event Crew & Backstage Crew in Jaipur | Concert Staff | Evenza",
+    metaDescription: "Hire reliable event crew and backstage crew in Jaipur. Stage hands, concert crew, artist management helpers, sound & light runners, and production staff.",
+    keyword: "Event Crew & Backstage Crew Jaipur",
+    subtitle: "Trained Technical Runners, Stagehands, and Production Crew for Jaipur Shows",
+    description: "Event crew and backstage crew in Jaipur refers to hands-on production helpers, stage hands, artist logistics coordinators, and technical runners who keep live concerts, award shows, and fashion galas running on cue. Evenza provides punctual, physically capable, and disciplined backstage crew members who understand show-flow discipline, stage safety, fast equipment turnaround, and artist privacy.",
+    features: [
+      "Stage setup, prop changeovers, and quick-turnaround production crew",
+      "Green room hospitality and VIP artist hospitality coordinators",
+      "Sound, light, and AV cable runners working under technical directors",
+      "Queue management and pit barricade crowd controllers",
+      "Night shift and 24-hour technical load-in / load-out staffing",
+      "Direct radio communication (walkie-talkie) with stage managers",
+    ],
+    faqs: [
+      {
+        q: "What is the difference between event hospitality staff and backstage crew?",
+        a: "Hospitality staff focus on guest comfort, ushering, and customer service. Backstage crew focus on technical production, stage props, artist green rooms, and load-in/load-out logistics.",
+      },
+      {
+        q: "Can Evenza provide crew for live concerts and music festivals in Jaipur?",
+        a: "Yes. Evenza has staffed major music festivals, college concerts, and public cultural shows across Jaipur with energetic stagehands and backstage managers.",
+      },
+      {
+        q: "Do backstage crew members know technical safety guidelines?",
+        a: "Yes. Our production runners receive safety briefings regarding electrical cables, stage edges, heavy load lifting, and backstage access security passes.",
+      },
+      {
+        q: "What notice period is required to book a 30-person concert crew?",
+        a: "We recommend booking 4 to 7 days before large concerts to review production call sheets and allocate walkie-talkie supervisors.",
+      },
+    ],
+    relatedPages: [
+      { label: "Event Manpower Jaipur", path: "/event-manpower-jaipur" },
+      { label: "Crowd Security Management Jaipur", path: "/crowd-security-management-jaipur" },
+      { label: "Event Volunteers Jaipur", path: "/event-volunteers-jaipur" },
+      { label: "Rally & Sports Event Staffing", path: "/rally-sports-event-staffing-rajasthan" },
+    ],
+  },
+  {
+    path: "/tour-managers-rajasthan",
+    seoTitle: "Tour Managers in Rajasthan | Group & MICE Escorts | Evenza",
+    metaDescription: "Hire experienced tour managers in Rajasthan for corporate MICE groups, luxury charters, and heritage tours. Bilingual, logistical experts across Rajasthan.",
+    keyword: "Tour Managers Rajasthan",
+    subtitle: "Experienced Tour Escorts and MICE Logistical Managers Across Rajasthan",
+    description: "Tour managers in Rajasthan are bilingual logistical professionals who escort corporate MICE delegations, luxury travel groups, and destination wedding parties across Rajasthan heritage circuits (Jaipur, Udaipur, Jodhpur, Jaisalmer, Bikaner, and Ranthambore). Evenza tour managers handle coach transfers, hotel room block allocations, monument entry logistics, dining reservations, and 24/7 guest assistance with poise and local expertise.",
+    features: [
+      "Bilingual tour managers fluent in English, Hindi, and regional dialects",
+      "Complete coach, luxury tempo traveler, and charter transfer supervision",
+      "MICE conference delegate handling and off-site dinner coordination",
+      "Crisis management, local liaison, and medical assistance coordination",
+      "In-depth knowledge of Rajasthan monument timings, tickets, and routes",
+      "Detailed daily briefing and digital check-ins with event organizers",
+    ],
+    faqs: [
+      {
+        q: "What is the difference between a tour guide and a tour manager?",
+        a: "A tour guide focuses on historical storytelling at monuments. A tour manager handles the entire operational journey: hotel check-ins, coach logistics, luggage, meal coordination, timings, and overall group safety.",
+      },
+      {
+        q: "Can Evenza provide tour managers for 5 to 7 day Rajasthan itineraries?",
+        a: "Yes. Our tour managers travel alongside your group across Rajasthan cities, ensuring seamless hotel transitions and transport coordination every day.",
+      },
+      {
+        q: "Do your tour managers have experience with corporate MICE groups?",
+        a: "Yes. We have escorted corporate leadership retreats, dealer incentive trips, and international delegations across Jaipur, Udaipur, and Jaisalmer.",
+      },
+    ],
+    relatedPages: [
+      { label: "Hospitality Staff Jaipur", path: "/hospitality-staff-jaipur" },
+      { label: "Corporate Event Staff Jaipur", path: "/corporate-event-staff-jaipur" },
+      { label: "Wedding Event Staff Jaipur", path: "/wedding-event-staff-jaipur" },
+      { label: "Event Manpower Jaipur", path: "/event-manpower-jaipur" },
+    ],
+  },
+  {
+    path: "/corporate-event-staff-jaipur",
+    seoTitle: "Corporate Event Staff Jaipur | Conference & Expo Manpower | Evenza",
+    metaDescription: "Hire polished corporate event staff in Jaipur. Registration desk executives, exhibition promoters, conference ushers, and AGM coordinators on hire.",
+    keyword: "Corporate Event Staff Jaipur",
+    subtitle: "Punctual, Articulate Staff for Conferences, Expos, and Corporate Summits",
+    description: "Corporate event staff in Jaipur refers to professional, tech-literate personnel deployed at business conferences, trade exhibitions, annual general meetings (AGMs), and dealer meets. Evenza provides corporate hosts, badge printing executives, session runners, mic runners, and product demonstrators at Jaipur's premier business venues like JECC Sitapura, Birla Auditorium, and top 5-star convention hotels.",
+    features: [
+      "Tech-savvy crew experienced with QR registration systems and RFID scanners",
+      "Polite, articulate communication fitting high-stakes corporate environments",
+      "Session hall coordinators, mic runners, and speaker gift presenters",
+      "Exhibition booth promoters and lead capture personnel",
+      "Strict punctuality with mandatory 45-minute pre-event call times",
+      "Daily consolidated attendance and performance reports for organisers",
+    ],
+    faqs: [
+      {
+        q: "Can Evenza staff manage digital registration systems and badge printers?",
+        a: "Yes. Our corporate staff are quick learners who regularly operate event check-in software, QR barcode scanners, and on-demand thermal badge printers.",
+      },
+      {
+        q: "What dress code do corporate event staff adhere to?",
+        a: "Corporate staff wear crisp business formals: blazers, formal trousers, collared shirts, and polished formal shoes, or branded client attire as requested.",
+      },
+      {
+        q: "Can you provide exhibition promoters for trade shows at JECC Jaipur?",
+        a: "Yes. We regularly supply bilingual booth hosts and promoters for exhibitions at JECC Sitapura who engage visitors and gather qualified sales leads.",
+      },
+    ],
+    relatedPages: [
+      { label: "Event Manpower Jaipur", path: "/event-manpower-jaipur" },
+      { label: "Hospitality Staff Jaipur", path: "/hospitality-staff-jaipur" },
+      { label: "Event Volunteers Jaipur", path: "/event-volunteers-jaipur" },
+      { label: "Event Staff Pricing Jaipur", path: "/event-staff-pricing-jaipur" },
+    ],
+  },
+  {
+    path: "/crowd-security-management-jaipur",
+    seoTitle: "Event Security & Crowd Management Jaipur | Bouncers & Crew | Evenza",
+    metaDescription: "Reliable event security and crowd management in Jaipur. Trained event bouncers, crowd marshals, gate control teams, and VIP safety coordinators.",
+    keyword: "Crowd Security Management Jaipur",
+    subtitle: "Disciplined Crowd Marshals and Event Bouncers for Safe Gatherings",
+    description: "Event security and crowd management in Jaipur involves disciplined crowd marshals, bouncers, and gate access controllers who ensure orderly movement, guest safety, and VIP protection during large gatherings, celebrity shows, exhibitions, and weddings. Evenza supplies vetted, physically imposing yet polite crowd safety personnel who maintain control without escalating tensions.",
+    features: [
+      "Disciplined crowd marshals for barricade control and queue zoning",
+      "Professional, vetted event bouncers for stage and backstage VIP security",
+      "Gate access screening, frisking coordination, and wristband checking",
+      "Emergency exit routing and fire hazard awareness training",
+      "Clear coordination with local police and licensed security authorities",
+      "Strict anti-roughing code of conduct focused on polite de-escalation",
+    ],
+    faqs: [
+      {
+        q: "Are Evenza crowd marshals trained in de-escalation?",
+        a: "Yes. Our crowd marshals prioritize calm communication, courteous queue guidance, and structured barrier checks to prevent commotion.",
+      },
+      {
+        q: "Do you supply female bouncers and security marshals in Jaipur?",
+        a: "Yes. We provide female security marshals specifically for female frisking booths, VIP dressing rooms, and women's lounge areas.",
+      },
+      {
+        q: "What events require professional crowd management?",
+        a: "Public music concerts, celebrity store launches, large college fests, trade expos with heavy footfall, and high-profile wedding receptions.",
+      },
+    ],
+    relatedPages: [
+      { label: "Event Crew & Backstage Crew", path: "/event-crew-backstage-crew-jaipur" },
+      { label: "Rally & Sports Event Staffing", path: "/rally-sports-event-staffing-rajasthan" },
+      { label: "Event Manpower Jaipur", path: "/event-manpower-jaipur" },
+    ],
+  },
+  {
+    path: "/rally-sports-event-staffing-rajasthan",
+    seoTitle: "Large Event & Sports Staffing Rajasthan | Rally Manpower | Evenza",
+    metaDescription: "Large-scale event manpower in Rajasthan for 5,000+ attendee rallies, marathons, and stadium events. Route marshals, water stations, and logistics crew.",
+    keyword: "Rally & Sports Event Staffing Rajasthan",
+    subtitle: "High-Volume Manpower Deployment for Rallies, Marathons, and Stadiums",
+    description: "Large event and sports event staffing in Rajasthan refers to high-volume manpower deployments (from 50 to 500+ staff) capable of managing massive physical footprints. Evenza coordinates route marshals, hydration station helpers, medal distribution teams, spectator ushers, and logistics runners for marathons, cyclothons, political rallies, and stadium sports across Rajasthan.",
+    features: [
+      "Capability to deploy 50 to 500+ vetted staff with hierarchical supervision",
+      "Route marshaling and junction direction for marathons and cycling rallies",
+      "Spectator grandstand ushering and stadium gate ticket verification",
+      "Water station, breakfast box, and finisher medal distribution logistics",
+      "Centralized briefing zones and walkie-talkie supervisory hierarchy",
+      "Full logistics coordination including early morning muster at 4:00 AM",
+    ],
+    faqs: [
+      {
+        q: "How many crew members can Evenza deploy for a single large event?",
+        a: "Evenza has successfully organized and deployed teams of over 200+ crew members across multi-zone venues and 21 km marathon routes in Rajasthan.",
+      },
+      {
+        q: "How do you ensure accountability across large crews?",
+        a: "We operate a 1-to-15 supervisory ratio: one senior zone supervisor for every 15 crew members, reporting up to an on-ground operations lead.",
+      },
+    ],
+    relatedPages: [
+      { label: "Event Volunteers Jaipur", path: "/event-volunteers-jaipur" },
+      { label: "Crowd Security Management Jaipur", path: "/crowd-security-management-jaipur" },
+      { label: "Event Manpower Jaipur", path: "/event-manpower-jaipur" },
+    ],
+  },
+  {
+    path: "/event-staff-pricing-jaipur",
+    seoTitle: "Event Staff Cost in Jaipur | Manpower Pricing Guide | Evenza",
+    metaDescription: "Transparent event staff cost in Jaipur. View price ranges for hospitality hostesses, volunteers, bouncers, and supervisors. Request custom quotes.",
+    keyword: "Event Staff Cost in Jaipur",
+    subtitle: "Transparent, Direct Pricing for Event Manpower in Jaipur & Rajasthan",
+    description: "Event staff cost in Jaipur depends on role specialty, shift duration (half-day 4–6 hrs vs full-day 8–12 hrs), uniform requirements, and event scale. Evenza operates on direct, transparent pricing with no middlemen commissions. We offer itemized proposals for corporate conferences, luxury destination weddings, concerts, and brand activations so planners can budget with complete confidence.",
+    features: [
+      "Clear, line-item quotations with no hidden agency markups",
+      "Flexible pricing for single-shift, multi-day, or multi-week campaigns",
+      "Dedicated supervisor included complimentary for teams of 8+ staff",
+      "GST-compliant invoicing available for corporate clients and agencies",
+      "Rapid quotation turnaround within 2 to 4 hours of requirement submission",
+      "Special partner rates for registered event management companies",
+    ],
+    faqs: [
+      {
+        q: "How is event staff cost calculated in Jaipur?",
+        a: "Costs are based on staff role (hospitality hostess, general volunteer, technical crew, or supervisor), shift length (standard 8-hour shift), timing (day vs night load-out), and venue location.",
+      },
+      {
+        q: "Is there a minimum staff booking requirement?",
+        a: "We accommodate bookings from as few as 2 staff up to 200+ members. Contact us with your dates and venue for exact custom pricing.",
+      },
+      {
+        q: "Are travel and meals included in the quote?",
+        a: "For events within Jaipur city limits, staff commute independently. For destination weddings or remote venues (e.g., Kukas, Jamwaramgarh, Pushkar), local client transport and staff meals are arranged or billed transparently.",
+      },
+    ],
+    relatedPages: [
+      { label: "Event Manpower Jaipur", path: "/event-manpower-jaipur" },
+      { label: "Hospitality Staff Jaipur", path: "/hospitality-staff-jaipur" },
+      { label: "Wedding Event Staff Jaipur", path: "/wedding-event-staff-jaipur" },
+      { label: "Contact Evenza", path: "/contact" },
+    ],
+  },
+  {
+    path: "/volunteer-in-jaipur",
+    seoTitle: "Volunteering in Jaipur | Student Event Jobs & Certificates | Evenza",
+    metaDescription: "Looking for volunteering opportunities in Jaipur? Join Evenza's youth event network. Work on lit fests, concerts, expos, and earn verified certificates.",
+    keyword: "Volunteering in Jaipur",
+    subtitle: "Gain Live Event Experience, Network, and Earn Verified Certificates",
+    description: "Volunteering in Jaipur offers students and young professionals hands-on exposure to India's most exciting festivals, literature summits, corporate expos, and concerts. Evenza's volunteer programme gives you behind-the-scenes access to large events, team leadership training, travel opportunities, and verified work experience certificates to kickstart your career.",
+    type: "volunteer",
+    features: [
+      "Zero registration fees — 100% genuine, ethical opportunities",
+      "Official Evenza work experience certificate for your CV",
+      "Daily food, branded event t-shirts, and travel stipends for select events",
+      "Direct exposure to event planners, celebrities, and corporate leaders",
+      "Flexible weekend opportunities tailored around college exams",
+      "Fast-track promotion to paid supervisory and junior manager roles",
+    ],
+    faqs: [
+      {
+        q: "Do I have to pay any fee to volunteer with Evenza?",
+        a: "No! Evenza never charges any registration, kit, or deposit fee. Any agency asking for money to volunteer is a red flag.",
+      },
+      {
+        q: "Will I receive an official certificate after volunteering?",
+        a: "Yes. All volunteers who complete their assigned shifts with good conduct receive an official Evenza certificate highlighting their role and hours.",
+      },
+      {
+        q: "How do I register for volunteering in Jaipur?",
+        a: "Visit our Join Our Team page or join our official WhatsApp Community to see open event calls and apply directly.",
+      },
+    ],
+    relatedPages: [
+      { label: "Part-Time Event Jobs Jaipur", path: "/part-time-event-jobs-jaipur" },
+      { label: "Join Our Team", path: "/join-our-team" },
+      { label: "Freelance Event Work Rajasthan", path: "/freelance-event-work-rajasthan" },
+    ],
+  },
+  {
+    path: "/part-time-event-jobs-jaipur",
+    seoTitle: "Part Time Event Jobs in Jaipur | Student Weekend Work | Evenza",
+    metaDescription: "Find flexible part time event jobs in Jaipur. Weekend event crew, hospitality work, registration staff. Earn per event with prompt payouts.",
+    keyword: "Part Time Event Jobs Jaipur",
+    subtitle: "Flexible Weekend Work and Punctual Pay for College Students & Freshers",
+    description: "Part time event jobs in Jaipur allow college students and young freelancers to earn competitive daily stipends while working on destination weddings, brand launches, and exhibitions. With Evenza, you choose the dates you want to work, gain practical customer-facing skills, and receive reliable payouts after every successful event.",
+    type: "volunteer",
+    features: [
+      "Flexible schedule — work only on weekends or days you are free",
+      "Prompt payments processed directly after event completion",
+      "Variety of roles: guest hospitality, ushering, ticketing, backstage crew",
+      "Work at iconic Jaipur heritage palaces and modern convention centres",
+      "Safe, respectful working environment with dedicated team captains",
+      "Ideal resume builder for careers in PR, hospitality, and management",
+    ],
+    faqs: [
+      {
+        q: "How much can I earn doing part-time event jobs in Jaipur?",
+        a: "Earnings vary from ₹800 to ₹2,500+ per day depending on role complexity, shift length, and event scale. Payouts are transparently communicated before you accept any shift.",
+      },
+      {
+        q: "Can I do part-time event work alongside college classes?",
+        a: "Yes! Most events take place on Friday evenings, Saturdays, and Sundays, making it easy to balance with weekday college schedules.",
+      },
+      {
+        q: "What documents are required to apply?",
+        a: "You need a valid Government ID (Aadhaar or Voter ID), college ID (if studying), and a clean background record.",
+      },
+    ],
+    relatedPages: [
+      { label: "Volunteering in Jaipur", path: "/volunteer-in-jaipur" },
+      { label: "Join Our Team", path: "/join-our-team" },
+      { label: "Freelance Event Work Rajasthan", path: "/freelance-event-work-rajasthan" },
+    ],
+  },
+  {
+    path: "/freelance-event-work-rajasthan",
+    seoTitle: "Freelancing in Events Rajasthan | Event Crew Network | Evenza",
+    metaDescription: "Join Evenza's freelance event crew network in Rajasthan. Consistent gigs for tour managers, supervisors, hostesses, and stage crew across Rajasthan.",
+    keyword: "Freelance Event Work Rajasthan",
+    subtitle: "Consistent Event Projects and Direct Bookings Across Rajasthan",
+    description: "Freelancing in events across Rajasthan offers experienced event crew, stage managers, tour escorts, and hospitality leads access to high-end destination weddings, luxury corporate retreats, and international festivals. Evenza acts as your reliable project pipeline across Jaipur, Udaipur, Jodhpur, and Jaisalmer, providing transparent contracts, safe logistics, and on-time compensation.",
+    type: "volunteer",
+    features: [
+      "Regular event bookings during Rajasthan's busy wedding and expo season",
+      "Travel, lodging, and meals covered for outstation Rajasthan projects",
+      "Professional reputation management and client coordination",
+      "Higher pay grades for bilingual and experienced supervisory crew",
+      "Zero registration fees or platform commissions deducted from your pay",
+      "Supportive team community with peer networking and career mentorship",
+    ],
+    faqs: [
+      {
+        q: "Who is eligible for freelance event work with Evenza?",
+        a: "We welcome experienced hospitality staff, tour escorts, stage technicians, sound runners, and bilingual supervisors residing anywhere in Rajasthan or Delhi NCR.",
+      },
+      {
+        q: "How are outstation travel and stay handled for destination weddings?",
+        a: "Evenza organizes group transport (sleeper/train/tempo traveler) and clean, verified hotel stay along with meals for all outstation crew deployments.",
+      },
+    ],
+    relatedPages: [
+      { label: "Tour Managers Rajasthan", path: "/tour-managers-rajasthan" },
+      { label: "Wedding Event Staff Jaipur", path: "/wedding-event-staff-jaipur" },
+      { label: "Join Our Team", path: "/join-our-team" },
+      { label: "Part Time Event Jobs Jaipur", path: "/part-time-event-jobs-jaipur" },
+    ],
+  },
+
 ];

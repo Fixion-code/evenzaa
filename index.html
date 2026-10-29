@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
 
 <head>
   <meta charset="UTF-8" />
@@ -53,99 +53,114 @@
   <meta name="twitter:description"
     content="Hire trained event manpower, volunteers, and hospitality staff in Jaipur and pan-India.">
 
-  <!-- WebSite schema (enables Google Sitelinks Search Box eligibility) -->
+  <!-- Unified Knowledge Graph JSON-LD Schema (WebSite, Organization, LocalBusiness, Founders) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Evenza",
-    "url": "https://evenzaa-sable.vercel.app/",
-    "description": "India's event manpower, hospitality staffing, and volunteer platform.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Evenza Hospitality Services",
-      "url": "https://evenzaa-sable.vercel.app/"
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://evenzaa-sable.vercel.app/?q={search_term_string}"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://evenzaa-sable.vercel.app/#website",
+        "url": "https://evenzaa-sable.vercel.app/",
+        "name": "Evenza Hospitality Services",
+        "inLanguage": "en-IN",
+        "publisher": { "@id": "https://evenzaa-sable.vercel.app/#organization" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["h1", ".hero-title", "#about", "#faq"]
+        }
       },
-      "query-input": "required name=search_term_string"
-    },
-    "speakable": {
-      "@type": "SpeakableSpecification",
-      "cssSelector": ["h1", ".hero-title", "[id='about']"]
-    }
-  }
-  </script>
-
-  <!-- Organization JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Evenza Hospitality Services",
-    "alternateName": "Evenza",
-    "url": "https://evenzaa-sable.vercel.app/",
-    "logo": "https://evenzaa-sable.vercel.app/og-image.jpg",
-    "description": "Event manpower, volunteers, and hospitality staff for weddings, corporate events, and expos across India.",
-    "foundingDate": "2024",
-    "parentOrganization": {
-      "@type": "Organization",
-      "name": "Shree Ji Company Pvt. Ltd.",
-      "url": "https://evenzaa-sable.vercel.app/",
-      "description": "Parent company of Evenza Hospitality Services, based in Jaipur, Rajasthan."
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Choti Chaupad",
-      "addressLocality": "Jaipur",
-      "addressRegion": "Rajasthan",
-      "postalCode": "302002",
-      "addressCountry": "IN"
-    },
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+91-91617-10849",
-      "contactType": "customer service",
-      "email": "indiaevenza@gmail.com",
-      "areaServed": "IN",
-      "availableLanguage": ["Hindi", "English"]
-    }],
-    "sameAs": [
-      "https://instagram.com/evenzaevent",
-      "https://www.facebook.com/people/Evenza-India/61591730651713/",
-      "https://www.threads.com/@evenzaevent",
-      "https://www.linkedin.com/in/evenza-india"
-    ],
-    "founder": [
+      {
+        "@type": ["Organization", "LocalBusiness"],
+        "@id": "https://evenzaa-sable.vercel.app/#organization",
+        "name": "Evenza Hospitality Services",
+        "alternateName": "Evenza",
+        "legalName": "Shree Ji Company Pvt. Ltd.",
+        "url": "https://evenzaa-sable.vercel.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://evenzaa-sable.vercel.app/og-image.jpg",
+          "width": 1200,
+          "height": 630
+        },
+        "image": "https://evenzaa-sable.vercel.app/og-image.jpg",
+        "description": "Trained event manpower, hospitality staff, volunteers and event crew in Jaipur, Rajasthan and across India.",
+        "telephone": "+91-91617-10849",
+        "email": "indiaevenza@gmail.com",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Choti Chaupad",
+          "addressLocality": "Jaipur",
+          "addressRegion": "Rajasthan",
+          "postalCode": "302002",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 26.9124,
+          "longitude": 75.7873
+        },
+        "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 09:00-21:00",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "09:00",
+            "closes": "21:00"
+          }
+        ],
+        "areaServed": [
+          { "@type": "City", "name": "Jaipur" },
+          { "@type": "State", "name": "Rajasthan" },
+          { "@type": "Country", "name": "India" }
+        ],
+        "founder": [
+          { "@id": "https://evenzaa-sable.vercel.app/about#shlok" },
+          { "@id": "https://evenzaa-sable.vercel.app/about#stuti" }
+        ],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+91-91617-10849",
+          "contactType": "customer service",
+          "email": "indiaevenza@gmail.com",
+          "areaServed": "IN",
+          "availableLanguage": ["Hindi", "English"]
+        }],
+        "sameAs": [
+          "https://instagram.com/evenzaevent",
+          "https://www.facebook.com/people/Evenza-India/61591730651713/",
+          "https://www.threads.com/@evenzaevent",
+          "https://www.linkedin.com/in/evenza-india"
+        ],
+        "knowsAbout": [
+          "event manpower",
+          "hospitality staffing",
+          "event volunteers",
+          "wedding event staff",
+          "event crew",
+          "tour management"
+        ]
+      },
       {
         "@type": "Person",
+        "@id": "https://evenzaa-sable.vercel.app/about#shlok",
         "name": "Shlok Aggarwal",
-        "jobTitle": "Founder",
-        "url": "https://www.linkedin.com/in/evenza-india",
-        "sameAs": ["https://www.linkedin.com/in/evenza-india"],
+        "jobTitle": "Founder & Director",
+        "url": "https://evenzaa-sable.vercel.app/about",
         "image": "https://evenzaa-sable.vercel.app/og-image.jpg",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Evenza Hospitality Services",
-          "url": "https://evenzaa-sable.vercel.app/"
-        }
+        "sameAs": ["https://www.linkedin.com/in/evenza-india"],
+        "worksFor": { "@id": "https://evenzaa-sable.vercel.app/#organization" }
       },
       {
         "@type": "Person",
+        "@id": "https://evenzaa-sable.vercel.app/about#stuti",
         "name": "Stuti Shukla",
-        "jobTitle": "Co-founder",
-        "url": "https://instagram.com/evenzaevent",
-        "sameAs": ["https://instagram.com/evenzaevent"],
+        "jobTitle": "Co-Founder & Operations Lead",
+        "url": "https://evenzaa-sable.vercel.app/about",
         "image": "https://evenzaa-sable.vercel.app/og-image.jpg",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Evenza Hospitality Services",
-          "url": "https://evenzaa-sable.vercel.app/"
-        }
+        "sameAs": ["https://instagram.com/evenzaevent"],
+        "worksFor": { "@id": "https://evenzaa-sable.vercel.app/#organization" }
       }
     ]
   }
@@ -167,63 +182,6 @@
   <!-- Publication date for E-E-A-T -->
   <meta name="date" content="2024-01-15" />
   <meta name="last-modified" content="2026-10-29" />
-
-  <!-- LocalBusiness JSON-LD (local SEO) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://evenzaa-sable.vercel.app/#localbusiness",
-    "name": "Evenza Hospitality Services",
-    "alternateName": "Evenza",
-    "description": "Event manpower, hospitality teams, volunteers and on-ground event support for weddings, corporate events, exhibitions and concerts across Jaipur and India.",
-    "url": "https://evenzaa-sable.vercel.app/",
-    "telephone": "+91-91617-10849",
-    "email": "indiaevenza@gmail.com",
-    "priceRange": "₹₹",
-    "image": "https://evenzaa-sable.vercel.app/og-image.jpg",
-    "logo": "https://evenzaa-sable.vercel.app/og-image.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Choti Chaupad",
-      "addressLocality": "Jaipur",
-      "addressRegion": "Rajasthan",
-      "postalCode": "302002",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 26.9124,
-      "longitude": 75.7873
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Jaipur" },
-      { "@type": "State", "name": "Rajasthan" },
-      { "@type": "Country", "name": "India" }
-    ],
-    "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 09:00-21:00",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "09:00",
-        "closes": "21:00"
-      }
-    ],
-    "sameAs": [
-      "https://instagram.com/evenzaevent",
-      "https://www.facebook.com/people/Evenza-India/61591730651713/",
-      "https://www.threads.com/@evenzaevent",
-      "https://www.linkedin.com/in/evenza-india"
-    ],
-    "parentOrganization": {
-      "@type": "Organization",
-      "name": "Shree Ji Company Pvt. Ltd.",
-      "url": "https://evenzaa-sable.vercel.app/",
-      "description": "Parent company of Evenza Hospitality Services."
-    }
-  }
-  </script>
 
   <!-- WebMCP (Model Context Protocol for Web Agents) Polyfill & Declarative/Imperative Tools -->
   <script>
@@ -287,7 +245,59 @@
   <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-gold focus:text-background focus:rounded-md focus:text-sm focus:font-medium" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.position='fixed';this.style.left='8px';this.style.top='8px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">
     Skip to main content
   </a>
-  <div id="root"></div>
+
+  <!-- Progressive Enhancement / SSR Fallback for AI Bots and Web Crawlers that do not run JavaScript -->
+  <div id="root">
+    <header>
+      <h1>Event Manpower &amp; Crew in Jaipur – Hospitality Team &amp; Event Partner Across India</h1>
+      <p>Evenza Hospitality Services provides vetted, uniformed event manpower, trained volunteers, and hospitality teams for destination weddings, corporate summits, exhibitions, concerts, and sports events in Jaipur, Rajasthan, and pan-India.</p>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/contact">Contact &amp; Enquiry</a></li>
+          <li><a href="/faq">Frequently Asked Questions</a></li>
+          <li><a href="/portfolio">Event Staffing Portfolio</a></li>
+          <li><a href="/case-studies">Real Case Studies</a></li>
+          <li><a href="/volunteers">Volunteer With Evenza</a></li>
+          <li><a href="/event-manpower-jaipur">Event Manpower Jaipur</a></li>
+          <li><a href="/hospitality-team-jaipur">Hospitality Team Jaipur</a></li>
+          <li><a href="/wedding-staff-jaipur">Wedding Event Staff Jaipur</a></li>
+          <li><a href="/event-volunteers-jaipur">Event Volunteers Jaipur</a></li>
+          <li><a href="/corporate-event-staffing-jaipur">Corporate Staffing Jaipur</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="about">
+        <h2>About Evenza Hospitality Services (Shree Ji Company Pvt. Ltd.)</h2>
+        <p>Founded by Shlok Aggarwal and Stuti Shukla, Evenza is a Jaipur-based event staffing agency operating under Shree Ji Company Pvt. Ltd. We provide background-checked, uniformed event runners, shadow staff, registration executives, porters, and supervisors without middlemen.</p>
+        <p>Headquarters: Choti Chaupad, Jaipur, Rajasthan 302002. Direct Call: +91 91617 10849 / +91 92194 65819. Official Email: indiaevenza@gmail.com.</p>
+      </section>
+
+      <section id="services">
+        <h2>Our Core Event Staffing Services</h2>
+        <dl>
+          <dt>Event Manpower in Jaipur</dt>
+          <dd>Skilled, vetted operational crew for concerts, marathons, trade expos, and large-scale public gatherings across Rajasthan.</dd>
+          <dt>Hospitality Teams &amp; Shadow Staff</dt>
+          <dd>Refined guest relations staff, airport meet-and-greet hostesses, and personal shadow assistants for luxury destination weddings in Jaipur and Udaipur.</dd>
+          <dt>Event Volunteers</dt>
+          <dd>Bilingual, tech-savvy college volunteers for registration desks, badge distribution, and hall coordination.</dd>
+          <dt>Concert &amp; Production Crew</dt>
+          <dd>Backstage runners, artist liaison handlers, barricade marshals, and stage technicians.</dd>
+        </dl>
+      </section>
+
+      <section id="faq">
+        <h2>Common Questions About Hiring Event Staff in Jaipur</h2>
+        <h3>How to hire event manpower in Jaipur?</h3>
+        <p>Submit your event requirements via our contact form or WhatsApp (+91 91617 10849). Evenza prepares a customized crew proposal and transparent quote within 2 hours.</p>
+        <h3>Does Evenza deploy crew outside Jaipur?</h3>
+        <p>Yes. Evenza provides pan-India deployments across Rajasthan, Delhi NCR, Mumbai, Bengaluru, Goa, and 30+ cities with all travel and lodging managed.</p>
+      </section>
+    </main>
+  </div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 

@@ -19,6 +19,13 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 import { Terms } from "./pages/Terms";
+import { AboutPage } from "./pages/AboutPage";
+import { ContactPage } from "./pages/ContactPage";
+import { FAQPage } from "./pages/FAQPage";
+import { JoinOurTeam } from "./pages/JoinOurTeam";
+import { BlogIndex } from "./pages/BlogIndex";
+import { BlogPostPage } from "./pages/BlogPostPage";
+import { SITE_CONFIG } from "./lib/siteConfig";
 
 function AppContent() {
   const location = useLocation();
@@ -27,13 +34,19 @@ function AppContent() {
   return (
     <div className="min-h-screen-dvh bg-background text-foreground">
       <Helmet>
-        <link rel="canonical" href={`https://evenzaa-sable.vercel.app${location.pathname}`} />
+        <link rel="canonical" href={`${SITE_CONFIG.url}${location.pathname}`} />
       </Helmet>
       <Toaster position="top-center" />
       {!isLinksPage && <FloatingContact />}
       {!isLinksPage && <Nav />}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/faq" element={<FAQPage />} />
+        <Route path="/join-our-team" element={<JoinOurTeam />} />
+        <Route path="/blog" element={<BlogIndex />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/volunteers" element={<Volunteers />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/case-studies" element={<CaseStudies />} />

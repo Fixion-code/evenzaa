@@ -14,11 +14,11 @@ const SEO_LINKS = [
 ];
 
 const VOLUNTEER_LINKS = [
+  { label: "Join Our Team (Register)", path: "/join-our-team" },
   { label: "Volunteer with Evenza", path: "/volunteers" },
-  { label: "Volunteering in Jaipur", path: "/volunteering-jaipur" },
-  { label: "Volunteering in Delhi", path: "/volunteering-delhi" },
-  { label: "Volunteering in Mumbai", path: "/volunteering-mumbai" },
-  { label: "Volunteering in Bengaluru", path: "/volunteering-bengaluru" },
+  { label: "Volunteering in Jaipur", path: "/volunteer-in-jaipur" },
+  { label: "Part-Time Event Jobs Jaipur", path: "/part-time-event-jobs-jaipur" },
+  { label: "Freelance Event Work Rajasthan", path: "/freelance-event-work-rajasthan" },
   { label: "Volunteering in India", path: "/volunteering-india" },
   { label: "Event Jobs for Students", path: "/event-jobs-students" },
   { label: "Part-Time Event Work", path: "/part-time-event-work" },
@@ -243,9 +243,12 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-muted-foreground text-xs">
         <span>© {new Date().getFullYear()} Shree Ji Company Pvt. Ltd. All rights reserved.</span>
-        <div className="flex items-center gap-4">
-          <a href="#about" className="hover:text-gold transition-colors duration-300">About</a>
-          <a href="#contact" className="hover:text-gold transition-colors duration-300">Contact</a>
+        <div className="flex flex-wrap items-center gap-4">
+          <Link to="/about" className="hover:text-gold transition-colors duration-300">About Us</Link>
+          <Link to="/contact" className="hover:text-gold transition-colors duration-300">Contact</Link>
+          <Link to="/blog" className="hover:text-gold transition-colors duration-300">Blog</Link>
+          <Link to="/join-our-team" className="hover:text-gold transition-colors duration-300">Join Crew</Link>
+          <Link to="/faq" className="hover:text-gold transition-colors duration-300">FAQ</Link>
           <Link to="/privacy-policy" className="hover:text-gold transition-colors duration-300">Privacy Policy</Link>
           <Link to="/terms" className="hover:text-gold transition-colors duration-300">Terms of Service</Link>
         </div>

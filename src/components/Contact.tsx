@@ -23,6 +23,7 @@ import {
   TELEGRAM,
 } from "@/lib/constants";
 import { Instagram, Facebook, Linkedin, Send } from "lucide-react";
+import { Analytics } from "@/lib/analytics";
 
 const leadSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(120),
@@ -75,6 +76,13 @@ export function Contact() {
 
     const waText = encodeURIComponent(parts.join("\n"));
     const waUrl = `https://wa.me/${WHATSAPP}?text=${waText}`;
+
+    Analytics.formSubmit("contact_quote_form", {
+      event_type: d.event_type || "unspecified",
+      city: d.city || "unspecified",
+      headcount: d.headcount || "unspecified",
+    });
+    Analytics.clickWhatsApp("contact_quote_form");
 
     // Simulate brief delay for UX
     await new Promise((r) => setTimeout(r, 600));
