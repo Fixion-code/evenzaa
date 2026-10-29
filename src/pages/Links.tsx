@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+﻿import { Helmet } from "react-helmet-async";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -195,6 +195,7 @@ END:VCARD`;
       <Helmet>
         <title>Connect with Evenza | Links & Socials</title>
         <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://evenzaa-sable.vercel.app/links" />
         <meta
           name="description"
           content="Connect with Evenza Hospitality Services. Find all our official links, event manpower proofs, volunteer gigs, and contact channels in one place."

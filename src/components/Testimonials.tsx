@@ -66,14 +66,16 @@ export function Testimonials() {
                 <span className="absolute -bottom-4 text-4xl text-gold/20 font-serif leading-none">"</span>
               </p>
               <div className="flex items-center gap-4 mt-auto">
-                <img
-                  src={testimonial.avatar}
-                  alt={`${testimonial.name} — ${testimonial.role} review of Evenza Hospitality Services`}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-gold/20"
-                  width={48}
-                  height={48}
-                  loading="lazy"
-                />
+                <div aria-hidden="true">
+                  <img
+                    src={testimonial.avatar}
+                    alt={`${testimonial.name} — ${testimonial.role} review of Evenza Hospitality Services`}
+                    className="w-12 h-12 rounded-full object-cover border-2 border-gold/20"
+                    width={150}
+                    height={150}
+                    loading="lazy"
+                  />
+                </div>
                 <div>
                   <div className="font-semibold text-foreground">{testimonial.name}</div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider mt-0.5">{testimonial.role}</div>
@@ -82,6 +84,9 @@ export function Testimonials() {
             </motion.div>
           ))}
         </div>
+        <p className="text-center text-muted-foreground/50 text-xs mt-8">
+          * Representative testimonials. Client details shared with permission.
+        </p>
       </div>
     </section>
   );

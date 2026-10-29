@@ -34,8 +34,8 @@ export function ContactPage() {
         "@type": "ContactPage",
         "@id": `${url}#webpage`,
         "url": url,
-        "name": "Contact Evenza Hospitality Services | Event Manpower Jaipur",
-        "description": "Get in touch with Evenza Hospitality Services in Jaipur. Hire event manpower, request quotation, or inquire about event staffing services across Rajasthan and India.",
+        "name": "Contact Evenza — Hire Event Manpower in Jaipur",
+        "description": "Contact Evenza Hospitality Services to hire trained event staff, volunteers, and hospitality teams in Jaipur and across India. Get a quote within 2 hours.",
         "isPartOf": { "@id": `${siteConfig.SITE_URL}/#website` },
         "about": { "@id": `${siteConfig.SITE_URL}/#organization` },
         "datePublished": "2024-01-15",
@@ -93,10 +93,10 @@ export function ContactPage() {
   return (
     <main id="main-content" className="pt-24 min-h-screen-dvh bg-background">
       <Helmet>
-        <title>Contact Evenza | Hire Event Manpower in Jaipur &amp; Rajasthan</title>
+        <title>Contact Evenza — Hire Event Staff in Jaipur | Get a Quote</title>
         <meta
           name="description"
-          content="Contact Evenza Hospitality Services in Jaipur for event manpower, wedding staff, and event crew hire. Instant quotes via WhatsApp or call +91 91617 10849."
+          content="Contact Evenza to hire trained event manpower, hospitality staff, and volunteers in Jaipur. Get a quote within 2 hours. Call +91-91617-10849 or WhatsApp us."
         />
         <meta name="robots" content="index, follow" />
         <meta name="date" content="2024-01-15" />

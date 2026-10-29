@@ -43,16 +43,7 @@ export function Portfolio() {
     description:
       "Browse 50+ real event photographs from Evenza — concert manpower, destination wedding hospitality, corporate event staffing, exhibition crew, and sports event management across Rajasthan and India.",
     url,
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: ["#portfolio-title", "#portfolio-overview", "#faq-heading"],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Evenza Hospitality Services",
-      url: SITE,
-      logo: `${SITE}/og-image.jpg`,
-    },
+    publisher: { "@id": `${SITE}/#organization` },
   };
 
   const breadcrumbJsonLd = {
@@ -80,12 +71,7 @@ export function Portfolio() {
       description: img.caption,
       width: { "@type": "QuantitativeValue", value: 1200 },
       height: { "@type": "QuantitativeValue", value: 800 },
-      creator: {
-        "@type": "Organization",
-        name: "Evenza Hospitality Services",
-        url: SITE,
-        logo: `${SITE}/og-image.jpg`,
-      },
+      creator: { "@id": `${SITE}/#organization` },
     })),
   };
 
@@ -118,6 +104,24 @@ export function Portfolio() {
         },
       },
     ],
+  };
+
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: "Event Staffing Portfolio & Proof of Work | Evenza Jaipur",
+    description: "Browse 50+ real event photographs from Evenza — concert manpower, destination wedding hospitality, corporate event staffing, exhibition crew, and sports event management across Rajasthan and India.",
+    isPartOf: { "@id": `${SITE}/#website` },
+    about: { "@id": `${SITE}/#organization` },
+    datePublished: "2024-01-15",
+    dateModified: "2026-10-29",
+    breadcrumb: { "@id": `${url}#breadcrumb` },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["#portfolio-title", "#portfolio-overview", "#faq-heading"],
+    },
   };
 
   const PORTFOLIO_FAQS = [
@@ -165,7 +169,7 @@ export function Portfolio() {
   return (
     <main id="main-content" className="pt-24 min-h-screen-dvh bg-background">
       <Helmet>
-        <title>Event Portfolio & Proof of Work | Evenza Hospitality Services Jaipur</title>
+        <title>Event Staffing Portfolio & Proof of Work | Evenza Jaipur</title>
         <meta
           name="description"
           content="See real proof of work — 50+ photographs from events managed by Evenza across Rajasthan. Concert manpower, wedding hospitality teams, corporate staffing, exhibition crews, and more."
@@ -182,6 +186,7 @@ export function Portfolio() {
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(imageGalleryJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(webPageJsonLd)}</script>
       </Helmet>
 
       {/* ── Breadcrumb ── */}
@@ -205,7 +210,8 @@ export function Portfolio() {
             className="text-center max-w-3xl mx-auto"
           >
             <h1 id="portfolio-title" className="font-display text-4xl sm:text-5xl md:text-6xl text-foreground mb-4 leading-tight">
-              Our <span className="text-gold italic">Portfolio</span>
+              Event Staffing <span className="text-gold italic">Portfolio</span>
+              <span className="block text-2xl sm:text-3xl md:text-4xl mt-2 text-cream/70 not-italic font-normal">Weddings, Concerts & Corporate Events Across Jaipur & India</span>
             </h1>
             <p className="text-xs text-muted-foreground mb-4">
               <time dateTime="2026-10-29">Updated October 2026</time> · Verified On-Ground Deliveries

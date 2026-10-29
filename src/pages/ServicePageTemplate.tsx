@@ -121,14 +121,7 @@ export function ServicePageTemplate({
       { "@type": "State", name: "Rajasthan" },
       { "@type": "Country", name: "India" },
     ],
-    provider: {
-      "@type": "Organization",
-      "@id": `${SITE_CONFIG.url}/#organization`,
-      name: SITE_CONFIG.businessName,
-      url: SITE_CONFIG.url,
-      telephone: SITE_CONFIG.phone,
-      email: SITE_CONFIG.email,
-    },
+    provider: { "@id": `${SITE_CONFIG.url}/#organization` },
     url,
   };
 

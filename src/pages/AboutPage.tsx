@@ -14,8 +14,8 @@ export function AboutPage() {
         "@type": "AboutPage",
         "@id": `${url}#webpage`,
         "url": url,
-        "name": `About Evenza Hospitality Services | Shree Ji Company Pvt. Ltd.`,
-        "description": "Learn about Evenza Hospitality Services, a venture of Shree Ji Company Pvt. Ltd. Founded by Shlok Aggarwal and Stuti Shukla in Jaipur, Rajasthan.",
+        "name": "About Evenza Hospitality Services — Jaipur's Event Manpower Company",
+        "description": "Evenza Hospitality Services, a brand of Shree Ji Company Pvt. Ltd., founded by Shlok Aggarwal and Stuti Shukla. Providing trained event manpower, hospitality staff, and event crew across Jaipur, Rajasthan, and India.",
         "isPartOf": { "@id": `${siteConfig.SITE_URL}/#website` },
         "about": { "@id": `${siteConfig.SITE_URL}/#organization` },
         "datePublished": "2024-01-15",
@@ -56,10 +56,10 @@ export function AboutPage() {
   return (
     <main id="main-content" className="pt-24 min-h-screen-dvh bg-background">
       <Helmet>
-        <title>About Evenza | Event Manpower & Hospitality Agency Jaipur</title>
+        <title>About Evenza — Event Manpower Company in Jaipur | Shree Ji Company</title>
         <meta
           name="description"
-          content="Evenza Hospitality Services is a brand of Shree Ji Company Pvt. Ltd., founded by Shlok Aggarwal and Stuti Shukla. Professional on-ground event manpower in Jaipur & pan-India."
+          content="Learn about Evenza Hospitality Services — Jaipur's trusted event staffing company, founded by Shlok Aggarwal and Stuti Shukla under Shree Ji Company Pvt. Ltd."
         />
         <meta name="robots" content="index, follow" />
         <meta name="date" content="2024-01-15" />
