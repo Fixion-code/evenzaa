@@ -8,21 +8,21 @@ const TESTIMONIALS = [
     name: "Priya Sharma",
     role: "Wedding Client",
     content: "Evenza's team was absolutely incredible for our destination wedding in Jaipur. The hospitality staff were so courteous and handled everything flawlessly. We didn't have to worry about a thing!",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop"
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop&fm=webp"
   },
   {
     id: 2,
     name: "Rahul Verma",
     role: "Corporate Event Manager",
     content: "We hired 50+ volunteers and registration staff for our tech summit. Evenza delivered highly professional and trained individuals on very short notice. Highly recommended for corporate events.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&auto=format&fit=crop"
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&auto=format&fit=crop&fm=webp"
   },
   {
     id: 3,
     name: "Anjali Desai",
     role: "Exhibition Organizer",
     content: "The level of professionalism from Evenza is unmatched. Their ushers and VIP handlers made our 3-day exhibition a huge success. Will definitely partner with them again.",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop"
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop&fm=webp"
   }
 ];
 
@@ -77,7 +77,7 @@ export function Testimonials() {
                   />
                 </div>
                 <div>
-                  <div className="font-semibold text-foreground">{testimonial.name}</div>
+                  <h3 id={`testimonial-${testimonial.id}`} className="font-semibold text-foreground">{testimonial.name}</h3>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider mt-0.5">{testimonial.role}</div>
                 </div>
               </div>

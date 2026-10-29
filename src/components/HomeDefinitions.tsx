@@ -83,6 +83,13 @@ export function HomeDefinitions() {
     "name": "How to Hire Event Manpower in Jaipur",
     "description":
       "A step-by-step guide to hiring professional event staff, volunteers, and hospitality teams in Jaipur through Evenza.",
+    "image": "https://evenzaa-sable.vercel.app/og-image.jpg",
+    "totalTime": "PT2H",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "INR",
+      "value": "Request Quote"
+    },
     "step": [
       {
         "@type": "HowToStep",
@@ -135,15 +142,18 @@ export function HomeDefinitions() {
               transition={{ delay: idx * 0.06 }}
               className="card p-6 hover:border-gold/20 transition-colors duration-300"
             >
-              <dt className="font-display text-xl text-gold mb-2">{item.term}</dt>
-              <dd className="text-muted-foreground leading-relaxed mb-3">
-                {item.definition}
+              <dt id={`term-${item.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="font-display text-xl text-gold mb-2">{item.term}</dt>
+              <dd className="mb-3">
+                <p className="text-muted-foreground leading-relaxed">
+                  {item.definition}
+                </p>
               </dd>
               <Link
                 to={item.link}
+                aria-label={`Explore ${item.term} in Jaipur`}
                 className="inline-flex items-center gap-1.5 text-xs text-gold hover:text-gold/80 transition-colors font-medium tracking-wide uppercase"
               >
-                Learn more <ArrowRight className="w-3 h-3" />
+                Explore {item.term} <ArrowRight className="w-3 h-3" />
               </Link>
             </motion.div>
           ))}

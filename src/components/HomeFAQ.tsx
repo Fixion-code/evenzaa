@@ -15,7 +15,7 @@ const HOME_FAQS = [
   },
   {
     q: "What types of events does Evenza provide manpower for?",
-    a: "Evenza provides manpower for all event types — destination weddings, corporate summits, exhibitions, trade expos, concerts, live shows, political rallies, sports events, college festivals, product launches, AGMs, and private RSVP events. We operate across Jaipur, Rajasthan, Delhi NCR, Mumbai, Bengaluru, and 30+ cities in India.",
+    a: "Evenza provides manpower for all occasions — destination weddings, corporate summits, exhibitions, trade expos, live concerts, political rallies, athletic meets, college festivals, product launches, AGMs, and private celebrations. We operate across Jaipur, Rajasthan, Delhi NCR, Mumbai, Bengaluru, and 30+ cities in India.",
   },
   {
     q: "How is Evenza different from other manpower agencies in Jaipur?",
@@ -48,7 +48,7 @@ function FAQAccordionItem({ faq, index }: { faq: typeof HOME_FAQS[0]; index: num
         className="w-full flex items-center justify-between gap-4 p-5 text-left bg-card hover:bg-muted/50 transition-colors duration-200"
         aria-expanded={open}
       >
-        <h3 className="font-medium text-foreground leading-snug text-base">{faq.q}</h3>
+        <h3 id={`faq-q-${index + 1}`} className="font-medium text-foreground leading-snug text-base">{faq.q}</h3>
         <ChevronDown
           className={`w-5 h-5 text-gold flex-shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
         />
@@ -62,8 +62,10 @@ function FAQAccordionItem({ faq, index }: { faq: typeof HOME_FAQS[0]; index: num
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.28, ease: "easeInOut" }}
           >
-            <div className="px-5 pb-5 pt-2 text-muted-foreground leading-relaxed text-sm border-t border-border">
-              {faq.a}
+            <div className="px-5 pb-5 pt-2 border-t border-border">
+              <p className="text-muted-foreground leading-relaxed text-sm">
+                {faq.a}
+              </p>
             </div>
           </motion.div>
         )}
@@ -77,9 +79,11 @@ export function HomeFAQ() {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "description": "Frequently asked questions about hiring event manpower, hospitality staff, and event volunteers in Jaipur and across India with Evenza.",
     "mainEntity": HOME_FAQS.map((faq) => ({
       "@type": "Question",
       "name": faq.q,
+      "text": faq.q,
       "acceptedAnswer": {
         "@type": "Answer",
         "text": faq.a,

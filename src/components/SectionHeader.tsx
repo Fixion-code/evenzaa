@@ -4,9 +4,11 @@ interface SectionHeaderProps {
   kicker: string;
   title: React.ReactNode;
   sub?: string;
+  id?: string;
 }
 
-export function SectionHeader({ kicker, title, sub }: SectionHeaderProps) {
+export function SectionHeader({ kicker, title, sub, id }: SectionHeaderProps) {
+  const headerId = id || kicker.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-") + "-heading";
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -18,7 +20,7 @@ export function SectionHeader({ kicker, title, sub }: SectionHeaderProps) {
       <div className="text-gold text-xs tracking-[0.3em] uppercase mb-4">
         {kicker}
       </div>
-      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground leading-tight">
+      <h2 id={headerId} className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground leading-tight">
         {title}
       </h2>
       {sub && (

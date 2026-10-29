@@ -15,7 +15,7 @@ export function About() {
           <div className="text-gold text-xs tracking-[0.3em] uppercase mb-4">
             About Evenza
           </div>
-          <h2 className="font-display text-3xl md:text-5xl text-foreground leading-tight">
+          <h2 id="about-heading" className="font-display text-3xl md:text-5xl text-foreground leading-tight">
             The faces behind the execution
           </h2>
           <div className="gold-divider w-16 my-8" />
@@ -46,7 +46,7 @@ export function About() {
               className="card p-5 md:p-6 group"
             >
               <c.icon className="w-6 h-6 text-gold mb-4 group-hover:scale-110 transition-transform" />
-              <div className="font-display text-xl text-foreground">{c.title}</div>
+              <h3 id={`feature-${c.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="font-display text-xl text-foreground">{c.title}</h3>
               <div className="text-sm text-muted-foreground mt-2">{c.desc}</div>
             </motion.div>
           ))}

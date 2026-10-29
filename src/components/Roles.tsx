@@ -31,7 +31,7 @@ export function Roles() {
           >
             <div className="flex items-center gap-3 mb-3">
               <div className="w-1 h-6 bg-gold group-hover:h-8 transition-all duration-300" />
-              <h3 className="font-display text-2xl text-foreground">{r.title}</h3>
+              <h3 id={`role-${r.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="font-display text-2xl text-foreground">{r.title}</h3>
             </div>
             <p className="text-muted-foreground leading-relaxed pl-4">{r.desc}</p>
           </motion.div>

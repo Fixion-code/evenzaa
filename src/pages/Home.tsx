@@ -48,6 +48,19 @@ export function Home() {
   return (
     <main id="main-content">
       <Helmet>
+        <title>Event Manpower &amp; Hospitality Staff in Jaipur | Evenza</title>
+        <meta
+          name="description"
+          content="Hire trained event manpower, volunteers, and hospitality staff in Jaipur, Rajasthan, and across India. Fast deployment for weddings, corporate events, and expos."
+        />
+        <link rel="canonical" href={homeUrl} />
+        <meta property="og:title" content="Event Manpower &amp; Hospitality Staff in Jaipur | Evenza" />
+        <meta
+          property="og:description"
+          content="Hire trained event manpower, volunteers, and hospitality staff in Jaipur and pan-India. Fast deployment for weddings, corporate summits, and expos."
+        />
+        <meta property="og:url" content={homeUrl} />
+        <meta property="og:type" content="website" />
         <meta name="date" content="2024-01-15" />
         <meta name="last-modified" content="2026-10-29" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>

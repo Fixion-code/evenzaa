@@ -32,7 +32,7 @@ export function Founders() {
                 .map((s) => s[0])
                 .join("")}
             </div>
-            <h3 className="font-display text-2xl text-foreground">{p.name}</h3>
+            <h3 id={`founder-${p.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="font-display text-2xl text-foreground">{p.name}</h3>
             <div className="text-gold text-sm tracking-widest uppercase mt-1 mb-4">
               {p.role}
             </div>

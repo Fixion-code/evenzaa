@@ -48,9 +48,9 @@ export const NAV = [
 
 // ===== SERVICES =====
 export const SERVICES = [
-  { icon: Users, title: "Event Manpower", desc: "Skilled crews deployed for events of any scale, anywhere in India." },
+  { icon: Users, title: "Event Manpower", desc: "Skilled crews deployed for gatherings of any scale, anywhere in India." },
   { icon: Briefcase, title: "Hospitality Crew", desc: "F&B service, guest handling, VIP shadowing — handled with grace." },
-  { icon: PartyPopper, title: "Volunteers", desc: "Trained volunteers for weddings, corporate, social and CSR events." },
+  { icon: PartyPopper, title: "Volunteers", desc: "Trained volunteers for weddings, corporate summits, social and CSR initiatives." },
   { icon: Building2, title: "Production Team", desc: "Show flow, logistics, backstage and stage management." },
   { icon: Calendar, title: "Event Management", desc: "End-to-end coordination — from planning to wrap." },
   { icon: ShieldCheck, title: "On-ground Supervision", desc: "Managers and supervisors to keep every moving part on cue." },
@@ -58,7 +58,7 @@ export const SERVICES = [
 
 // ===== ROLES =====
 export const ROLES = [
-  { title: "Runner", desc: "Quick-on-feet support for any task that comes up mid-event." },
+  { title: "Runner", desc: "Quick-on-feet support for any urgent task that comes up on-site." },
   { title: "Porter", desc: "Luggage, gifts and gear — handled with care from check-in to check-out." },
   { title: "Shadow", desc: "Discreet personal assistance for VIPs, families and guests of honour." },
   { title: "Logistics Crew", desc: "Movement of people, props and material — on time, every time." },
@@ -75,8 +75,8 @@ export const EVENTS = [
   { icon: Building2, title: "Corporate Summits & Conferences", desc: "Registration, hospitality and on-floor management." },
   { icon: Music, title: "Concerts & Live Shows", desc: "Crowd flow, artist handling and production support." },
   { icon: Briefcase, title: "Exhibitions & Expos", desc: "Booth staffing, badge printing and visitor management." },
-  { icon: Heart, title: "Social & CSR Events", desc: "Volunteer mobilisation for cause-driven gatherings." },
-  { icon: PartyPopper, title: "Private & RSVP Events", desc: "Discreet, polished service for intimate gatherings." },
+  { icon: Heart, title: "Social & CSR Initiatives", desc: "Volunteer mobilisation for cause-driven gatherings." },
+  { icon: PartyPopper, title: "Private & RSVP Gatherings", desc: "Discreet, polished service for intimate celebrations." },
 ];
 
 // ===== COVERAGE CITIES =====

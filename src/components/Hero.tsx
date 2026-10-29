@@ -137,14 +137,14 @@ export function Hero() {
               <Sparkles className="w-3 h-3" /> Jaipur · Pan-India
             </motion.div>
 
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] hero-title">
+            <h1 id="home-h1" className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] hero-title">
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0 }}
                 className="block"
               >
-                Event Manpower & Crew in Jaipur
+                Event Manpower & Crew in Jaipur{" "}
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
@@ -152,7 +152,7 @@ export function Hero() {
                 transition={{ duration: 0.7, delay: 0.1 }}
                 className="block highlight"
               >
-                Hospitality Team
+                {" "}Hospitality Team{" "}
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
@@ -160,7 +160,7 @@ export function Hero() {
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-4 text-cream"
               >
-                & Event Partner Across India
+                {" "}& Event Partner Across India
               </motion.span>
             </h1>
 
@@ -170,7 +170,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="mt-8 text-lg text-cream max-w-2xl leading-relaxed"
             >
-              Hire the best event staffing agency in Jaipur. From intimate wedding hospitality teams in the Pink City to large-scale corporate event staffing, exhibition staff, and trained event volunteers across India — Evenza delivers flawless on-ground execution.
+              Hire the best staffing agency in Jaipur. From intimate wedding hospitality teams in the Pink City to large-scale corporate staffing, exhibition crew, and trained volunteers across India — Evenza delivers flawless on-ground execution.
             </motion.p>
 
             <motion.div

@@ -44,7 +44,7 @@ export function Services() {
               <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative flex flex-col h-full">
                 <s.icon className="w-8 h-8 text-gold mb-4 md:mb-5 group-hover:scale-110 transition-transform duration-300" />
-                <h3 className="font-display text-2xl text-foreground mb-3">
+                <h3 id={`service-${s.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="font-display text-2xl text-foreground mb-3">
                   {s.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed flex-1">{s.desc}</p>
@@ -52,9 +52,9 @@ export function Services() {
                   <Link
                     to={href}
                     className="inline-flex items-center gap-1.5 mt-5 text-xs text-gold hover:text-gold/80 transition-colors duration-200 font-medium tracking-wide uppercase"
-                    aria-label={`Learn more about ${s.title}`}
+                    aria-label={`Explore ${s.title} in Jaipur`}
                   >
-                    Learn more <span className="sr-only">about {s.title}</span> <ArrowRight className="w-3 h-3" />
+                    Explore {s.title} <ArrowRight className="w-3 h-3" />
                   </Link>
                 )}
               </div>

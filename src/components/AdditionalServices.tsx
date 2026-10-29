@@ -26,7 +26,7 @@ export function Extras() {
             className="card p-7 text-center group"
           >
             <e.icon className="w-8 h-8 text-gold mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-            <h3 className="font-display text-lg text-foreground mb-2">
+            <h3 id={`extra-${e.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="font-display text-lg text-foreground mb-2">
               {e.title}
             </h3>
             <p className="text-muted-foreground text-sm">{e.desc}</p>

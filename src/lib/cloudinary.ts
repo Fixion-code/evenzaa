@@ -86,9 +86,10 @@ export function cloudinaryUrl(
   if (height) transforms.push(`h_${height}`);
 
   // Remove trailing slash from publicId if present
-  const cleanId = publicId.replace(/^\//, "");
+  const cleanId = publicId.replace(/^\//, "").replace(/\.[^/.]+$/, "");
+  const extension = format === "auto" ? ".webp" : `.${format}`;
 
-  return `${BASE_URL}/${transforms.join(",")}/v1/${cleanId}`;
+  return `${BASE_URL}/${transforms.join(",")}/v1/${cleanId}${extension}`;
 }
 
 /**

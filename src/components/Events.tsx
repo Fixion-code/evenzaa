@@ -26,7 +26,7 @@ export function Events() {
             className="card p-6 md:p-8 group"
           >
             <e.icon className="w-7 h-7 text-gold mb-4 group-hover:scale-110 transition-transform duration-300" />
-            <h3 className="font-display text-xl text-foreground mb-2">
+            <h3 id={`event-${e.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="font-display text-xl text-foreground mb-2">
               {e.title}
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">{e.desc}</p>
